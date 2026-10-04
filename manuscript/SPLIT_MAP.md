@@ -47,7 +47,6 @@ A reduction of 4110 words, 19%, with no reported number leaving the record.
 | 　Abstract | 248 | 141 | front matter; already at 248 of the 250 allowed |
 | 　Highlights | 57 | 32 | front matter; submitted as the separate editable file the guide requires |
 | 　Keywords | 14 | 8 | front matter |
-| 　Data availability statement (mandatory) | 346 | 123 | mandatory. 123 is the measured length of the statement itself, which is the intended text and is not to be shortened. The current count is larger because it still includes the placeholder notice; tools/set_repository_url.py removes that notice when the repository is published, and the section then measures 123. Measured on 4 October 2026 by running the script against a throwaway copy; the target was 159, which was neither the current nor the post-removal length and failed the check the moment the notice was removed |
 | 　Declaration of competing interest | 26 | 26 | mandatory; 26 is the measured length of the statement itself. The editorial note that followed it -- an instruction to amend the sentence if a relationship exists -- was moved out of the submitted document on 4 October 2026. |
 | 　CRediT author contribution statement | 23 | 23 | required by the guide: "Corresponding authors are required to acknowledge co-author contributions using CRediT (Contributor Roles Taxonomy) roles". 23 is the measured length of the two author lines. The lead-in naming who confirmed the roles and on what date, and the paragraph explaining the four unclaimed roles, were moved out of the submitted document on 4 October 2026; no replacement lead-in was invented. |
 | 　Acknowledgements | 41 | 41 | 41 is the measured length of the acknowledgement itself. Two editorial notes beside it were moved out of the submitted document on 4 October 2026. The section has NOT been relocated: the guide says acknowledgements "should be placed in a separate section which appears directly before the reference list", but two other Elsevier journals' guides carry the opposite instruction, so the placement is journal-specific and is not acted on without confirmation at the source. |
@@ -115,7 +114,7 @@ A reduction of 4110 words, 19%, with no reported number leaving the record.
 | 　8.10 Limitations | 1006 | 663 | Ten subjects, one dataset, one montage, Arm A alone for released scores. Compressed but not shortened in substance: every limitation stays named |
 | 9. Conclusion | 523 | 440 | Currently restates the results; a conclusion states what is now known and what follows |
 | Code and Data Availability | 0 | 0 | heading only |
-| 　Statement | 228 | 130 | Mandatory. Overlaps the front-matter data availability statement; the two are reconciled to one statement and one pointer |
+| 　Statement | 237 | 130 | Mandatory. Overlaps the front-matter data availability statement; the two are reconciled to one statement and one pointer |
 | References | 0 | 0 | heading only |
 | 　Dataset | 69 | 55 | reference list; not prose and not counted against the length guidance |
 | 　Architectures evaluated | 78 | 62 | reference list |

@@ -49,7 +49,12 @@ HERE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECTIONS = ["ABSTRACT.md", "INTRODUCTION.md", "RELATED_WORK.md",
             "RESEARCH_GAP.md", "METHODOLOGY.md", "ARCHITECTURES.md",
             "EXPERIMENTAL_SETUP.md", "RESULTS.md", "DISCUSSION.md",
-            "CONCLUSION.md"]
+            "CONCLUSION.md", "CODE_AVAILABILITY.md"]
+# CODE_AVAILABILITY.md was added on 4 October 2026, when the front-matter data
+# availability statement was merged into it. Until then the placeholder was in two
+# places and only one of them was on this list, so the omission was invisible. After
+# the merge it would have meant this check reporting the repository item settled while
+# <repository URL> was still printed in the paper.
 
 PLACEHOLDER = "<repository URL>"
 CREDIT_DRAFT = "CREDIT-DRAFT:"

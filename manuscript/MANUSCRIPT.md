@@ -54,50 +54,6 @@ networks; reproducibility
 
 ---
 
-## Data availability statement (mandatory)
-
-<!-- repository-url-blocker:start -->
-> ### ⚠ Placeholder — not to be submitted as it stands
->
-> `<repository URL>` below is a **placeholder**, and this notice is about the
-> placeholder rather than about a journal requirement. A public repository is
-> **recommended for reproducibility**; whether it is mandatory for this journal
-> must be confirmed from the journal's current submission requirements, and that
-> has not been done. An earlier version of this notice called the repository a
-> submission blocker, which claimed more than was checked. Two things must
-> happen before the address below is submitted as an address, in this order:
->
-> 1. The repository must actually be published (GitHub, or Zenodo for a citable
->    DOI, or both with the Zenodo DOI in the statement).
-> 2. It must be checked that `ALL_FOLDS.csv` in the published copy contains all
->    750 rows and that `python3 -m pytest tests/` passes from a fresh clone.
->    The sentence below promises both; it must not be published on trust.
->
-> Submitting with the placeholder intact is a desk-reject risk, and a data
-> availability statement pointing at a repository that is private or empty is
-> worse than one that says the data are available on request.
->
-> When the repository exists, one command fills the address in everywhere and
-> re-checks the paper: `python3 tools/set_repository_url.py URL`. This whole
-> block disappears at the same time, because it is the reminder, not the
-> statement.
-<!-- repository-url-blocker:end -->
-
-> The EEG recordings analysed in this study are the Drivers Drowsiness Database
-> (DD-Database), openly available from Dryad at
-> https://doi.org/10.5061/dryad.5tb2rbp9c under a CC0 1.0 Universal
-> public-domain dedication. All code used in this study, together with the
-> per-fold results for all 750 folds, is available at `<repository URL>`. Every
-> table and every significance test reported in this paper can be regenerated from
-> those released files without a GPU and without the recordings. The per-window
-> probability files are released for the first construction, from which its
-> calibration analysis is recomputed by the released test suite; for the other two
-> constructions the calibration and threshold analyses are released as computed
-> summaries, and recomputing those from raw scores requires re-running the
-> training stage, for which the code is provided.
-
----
-
 
 ## Declaration of competing interest
 
@@ -2492,15 +2448,16 @@ and one simulator protocol.
 > threshold analyses are released as computed summaries, and recomputing them from
 > raw scores requires re-running the training stage.
 >
-> **Data availability.** The EEG recordings are the DD-Database driver-drowsiness
-> dataset `<citation>`, available from `<source>` under `<licence>`. They are not
-> redistributed here. The window-construction script reproduces each of the three
+> **Data availability.** The EEG recordings are the Drivers Drowsiness Database
+> (DD-Database) [D1], openly available from Dryad at
+> https://doi.org/10.5061/dryad.5tb2rbp9c under a CC0 1.0 Universal public-domain
+> dedication. They are not redistributed here. The window-construction script reproduces each of the three
 > dataset constructions from the original EDF files and verifies the result
 > against the per-subject window counts reported in Supplementary Table S1 before writing
 > anything.
 >
 > **Third-party code.** EEGNet, ShallowConvNet and DeepConvNet use the ARL
-> reference implementation `<citation>`, obtained from
+> reference implementation [A1], obtained from
 > https://github.com/vlawhern/arl-eegmodels.
 
 ---
@@ -2628,5 +2585,5 @@ https://doi.org/10.1175/1520-0493(1950)078<0001:VOFEIT>2.0.CO;2
 
 ---
 
-*Build 08ed16c0f793 · 2026-10-04 · 25336 words · registry 1977 rows.*
+*Build 054862f86a4d · 2026-10-04 · 24951 words · registry 1977 rows.*
 *Rebuild: `python3 tools/build_manuscript.py manuscript manuscript/MANUSCRIPT.md`. A copy whose build id differs from the one the repository produces is not the current manuscript.*

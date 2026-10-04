@@ -101,56 +101,6 @@ networks; reproducibility
 
 ---
 
-## Data availability statement (mandatory)
-
-<!-- repository-url-blocker:start -->
-> ### ⚠ Placeholder — not to be submitted as it stands
->
-> `<repository URL>` below is a **placeholder**, and this notice is about the
-> placeholder rather than about a journal requirement. A public repository is
-> **recommended for reproducibility**; whether it is mandatory for this journal
-> must be confirmed from the journal's current submission requirements, and that
-> has not been done. An earlier version of this notice called the repository a
-> submission blocker, which claimed more than was checked. Two things must
-> happen before the address below is submitted as an address, in this order:
->
-> 1. The repository must actually be published (GitHub, or Zenodo for a citable
->    DOI, or both with the Zenodo DOI in the statement).
-> 2. It must be checked that `ALL_FOLDS.csv` in the published copy contains all
->    750 rows and that `python3 -m pytest tests/` passes from a fresh clone.
->    The sentence below promises both; it must not be published on trust.
->
-> Submitting with the placeholder intact is a desk-reject risk, and a data
-> availability statement pointing at a repository that is private or empty is
-> worse than one that says the data are available on request.
->
-> When the repository exists, one command fills the address in everywhere and
-> re-checks the paper: `python3 tools/set_repository_url.py URL`. This whole
-> block disappears at the same time, because it is the reminder, not the
-> statement.
-<!-- repository-url-blocker:end -->
-
-> The EEG recordings analysed in this study are the Drivers Drowsiness Database
-> (DD-Database), openly available from Dryad at
-> https://doi.org/10.5061/dryad.5tb2rbp9c under a CC0 1.0 Universal
-> public-domain dedication. All code used in this study, together with the
-> per-fold results for all 750 folds, is available at `<repository URL>`. Every
-> table and every significance test reported in this paper can be regenerated from
-> those released files without a GPU and without the recordings. The per-window
-> probability files are released for the first construction, from which its
-> calibration analysis is recomputed by the released test suite; for the other two
-> constructions the calibration and threshold analyses are released as computed
-> summaries, and recomputing those from raw scores requires re-running the
-> training stage, for which the code is provided.
-
----
-
-<!-- not-for-submission:start -->
-Checked against the BSPC guide for authors; the date that guide was last read is
-recorded in `tools/journal_requirements.json` rather than repeated here. **These
-four are mandatory and were missing from the section plan**, so they are drafted
-here rather than left to be noticed at submission.
-<!-- not-for-submission:end -->
 
 ## Declaration of competing interest
 

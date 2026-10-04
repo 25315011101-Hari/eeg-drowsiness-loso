@@ -32,15 +32,16 @@ reproducibility detail in the body rather than in a back-matter statement.
 > threshold analyses are released as computed summaries, and recomputing them from
 > raw scores requires re-running the training stage.
 >
-> **Data availability.** The EEG recordings are the DD-Database driver-drowsiness
-> dataset `<citation>`, available from `<source>` under `<licence>`. They are not
-> redistributed here. The window-construction script reproduces each of the three
+> **Data availability.** The EEG recordings are the Drivers Drowsiness Database
+> (DD-Database) [D1], openly available from Dryad at
+> https://doi.org/10.5061/dryad.5tb2rbp9c under a CC0 1.0 Universal public-domain
+> dedication. They are not redistributed here. The window-construction script reproduces each of the three
 > dataset constructions from the original EDF files and verifies the result
 > against the per-subject window counts reported in Supplementary Table S1 before writing
 > anything.
 >
 > **Third-party code.** EEGNet, ShallowConvNet and DeepConvNet use the ARL
-> reference implementation `<citation>`, obtained from
+> reference implementation [A1], obtained from
 > https://github.com/vlawhern/arl-eegmodels.
 
 ---

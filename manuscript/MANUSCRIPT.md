@@ -100,10 +100,6 @@ networks; reproducibility
 
 ## Other mandatory declarations
 
-Checked against the BSPC guide for authors; the date that guide was last read is
-recorded in `tools/journal_requirements.json` rather than repeated here. **These
-four are mandatory and were missing from the section plan**, so they are drafted
-here rather than left to be noticed at submission.
 
 ### Declaration of competing interest
 
@@ -111,61 +107,31 @@ here rather than left to be noticed at submission.
 > personal relationships that could have appeared to influence the work reported in
 > this paper.
 
-*Amend if any author has a relationship to disclose. The journal requires this to
-be submitted through its declarations tool as well as appearing in the article.*
 
 ### CRediT author contribution statement
 
-The journal requires each author's contribution to be identified using CRediT
-roles. Confirmed by the corresponding author on 1 October 2026:
 
 > **Hari Singh Jatav:** Conceptualization, Methodology, Software, Investigation,
 > Data curation, Writing – original draft, Visualization.
 > **Mitul Kumar Ahirwal:** Conceptualization, Methodology, Validation, Writing –
 > review & editing, Supervision.
 
-*Four roles are claimed by neither author, each on the corresponding author's
-decision of 1 October 2026. **Resources** and **Project administration** were
-considered and declined: the laboratory's facilities are recognised in the
-acknowledgements, which is where institutional support belongs, and supervision
-already covers the guidance that was given, so neither role describes a
-contribution an author made. **Funding acquisition** is empty because no funding
-was received. **Formal analysis** is left unclaimed rather than assigned: CRediT
-does not require every applicable role to be used, and an unused role understates a
-contribution where a misassigned one would misstate it. A role nobody performed is
-not a courtesy, so none of the four is listed.*
 
 ### Acknowledgements
 
-Mandatory as its own section immediately before the reference list. It may not be
-placed on the title page or in a footnote.
 
 > The work was conducted and supported by the Brain–Computer Interface Laboratory,
 > Department of Computer Science and Engineering, Maulana Azad National Institute
 > of Technology Bhopal, India. The authors acknowledge the depositors of the
 > Drivers Drowsiness Database for making the recordings publicly available.
 
-*The first sentence is the corresponding author's own wording. The second is
-retained because the entire empirical content of this paper rests on a dataset
-someone else collected and released; acknowledging that is not a courtesy.*
-
-*"Supported" here describes laboratory facilities, not a grant. It does not
-contradict the funding statement below, and a copy-editor should not reconcile
-the two by changing either.*
 
 ### Funding
 
-The journal prescribes the wording, including for the no-funding case. No funding
-was received for this research, so the prescribed no-funding sentence is used
-verbatim:
 
 > This research did not receive any specific grant from funding agencies in the
 > public, commercial, or not-for-profit sectors.
 
-*Note that the dataset deposit records CONICET and Universidad Nacional de San Juan
-as funders of the **data collection**. That is the depositors' funding, not this
-study's, and must not be reported here as ours. The sentence above is therefore
-correct as it stands and must not be softened to mention them.*
 
 ---
 
@@ -2679,5 +2645,5 @@ https://doi.org/10.1175/1520-0493(1950)078<0001:VOFEIT>2.0.CO;2
 
 ---
 
-*Build 3428d50c657a · 2026-10-04 · 25916 words · registry 1977 rows.*
+*Build e7b8a43e6439 · 2026-10-04 · 25546 words · registry 1977 rows.*
 *Rebuild: `python3 tools/build_manuscript.py manuscript manuscript/MANUSCRIPT.md`. A copy whose build id differs from the one the repository produces is not the current manuscript.*

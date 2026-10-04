@@ -147,10 +147,12 @@ networks; reproducibility
 
 ## Other mandatory declarations
 
+<!-- not-for-submission:start -->
 Checked against the BSPC guide for authors; the date that guide was last read is
 recorded in `tools/journal_requirements.json` rather than repeated here. **These
 four are mandatory and were missing from the section plan**, so they are drafted
 here rather than left to be noticed at submission.
+<!-- not-for-submission:end -->
 
 ### Declaration of competing interest
 
@@ -158,19 +160,24 @@ here rather than left to be noticed at submission.
 > personal relationships that could have appeared to influence the work reported in
 > this paper.
 
+<!-- not-for-submission:start -->
 *Amend if any author has a relationship to disclose. The journal requires this to
 be submitted through its declarations tool as well as appearing in the article.*
+<!-- not-for-submission:end -->
 
 ### CRediT author contribution statement
 
+<!-- not-for-submission:start -->
 The journal requires each author's contribution to be identified using CRediT
 roles. Confirmed by the corresponding author on 1 October 2026:
+<!-- not-for-submission:end -->
 
 > **Hari Singh Jatav:** Conceptualization, Methodology, Software, Investigation,
 > Data curation, Writing – original draft, Visualization.
 > **Mitul Kumar Ahirwal:** Conceptualization, Methodology, Validation, Writing –
 > review & editing, Supervision.
 
+<!-- not-for-submission:start -->
 *Four roles are claimed by neither author, each on the corresponding author's
 decision of 1 October 2026. **Resources** and **Project administration** were
 considered and declined: the laboratory's facilities are recognised in the
@@ -181,38 +188,49 @@ was received. **Formal analysis** is left unclaimed rather than assigned: CRediT
 does not require every applicable role to be used, and an unused role understates a
 contribution where a misassigned one would misstate it. A role nobody performed is
 not a courtesy, so none of the four is listed.*
+<!-- not-for-submission:end -->
 
 ### Acknowledgements
 
+<!-- not-for-submission:start -->
 Mandatory as its own section immediately before the reference list. It may not be
 placed on the title page or in a footnote.
+<!-- not-for-submission:end -->
 
 > The work was conducted and supported by the Brain–Computer Interface Laboratory,
 > Department of Computer Science and Engineering, Maulana Azad National Institute
 > of Technology Bhopal, India. The authors acknowledge the depositors of the
 > Drivers Drowsiness Database for making the recordings publicly available.
 
+<!-- not-for-submission:start -->
 *The first sentence is the corresponding author's own wording. The second is
 retained because the entire empirical content of this paper rests on a dataset
 someone else collected and released; acknowledging that is not a courtesy.*
+<!-- not-for-submission:end -->
 
+<!-- not-for-submission:start -->
 *"Supported" here describes laboratory facilities, not a grant. It does not
 contradict the funding statement below, and a copy-editor should not reconcile
 the two by changing either.*
+<!-- not-for-submission:end -->
 
 ### Funding
 
+<!-- not-for-submission:start -->
 The journal prescribes the wording, including for the no-funding case. No funding
 was received for this research, so the prescribed no-funding sentence is used
 verbatim:
+<!-- not-for-submission:end -->
 
 > This research did not receive any specific grant from funding agencies in the
 > public, commercial, or not-for-profit sectors.
 
+<!-- not-for-submission:start -->
 *Note that the dataset deposit records CONICET and Universidad Nacional de San Juan
 as funders of the **data collection**. That is the depositors' funding, not this
 study's, and must not be reported here as ours. The sentence above is therefore
 correct as it stands and must not be softened to mention them.*
+<!-- not-for-submission:end -->
 
 ---
 

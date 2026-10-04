@@ -131,28 +131,28 @@
     },
     "Other mandatory declarations": {
       "dest": "MAIN",
-      "target_words": 26,
-      "reason": "mandatory"
+      "target_words": 0,
+      "reason": "heading only, since 4 October 2026. The paragraph that stood here recited the guide, named tools/journal_requirements.json by path and called all four declarations below mandatory; source verification on 4 October 2026 established that the funding sentence is recommended rather than prescribed and that the guide says nothing about an acknowledgement being required, so the claim was wrong as well as internal. It is kept in the file inside a not-for-submission block. Compare Code and Data Availability, also a heading with no body."
     },
     "Declaration of competing interest": {
       "dest": "MAIN",
-      "target_words": 30,
-      "reason": "mandatory"
+      "target_words": 26,
+      "reason": "mandatory; 26 is the measured length of the statement itself. The editorial note that followed it -- an instruction to amend the sentence if a relationship exists -- was moved out of the submitted document on 4 October 2026."
     },
     "CRediT author contribution statement": {
       "dest": "MAIN",
-      "target_words": 65,
-      "reason": "mandatory; the count drops when the awaiting-confirmation note is deleted"
+      "target_words": 23,
+      "reason": "required by the guide: \"Corresponding authors are required to acknowledge co-author contributions using CRediT (Contributor Roles Taxonomy) roles\". 23 is the measured length of the two author lines. The lead-in naming who confirmed the roles and on what date, and the paragraph explaining the four unclaimed roles, were moved out of the submitted document on 4 October 2026; no replacement lead-in was invented."
     },
     "Acknowledgements": {
       "dest": "MAIN",
-      "target_words": 72,
-      "reason": "mandatory, and must be its own section before the references"
+      "target_words": 41,
+      "reason": "41 is the measured length of the acknowledgement itself. Two editorial notes beside it were moved out of the submitted document on 4 October 2026. The section has NOT been relocated: the guide says acknowledgements \"should be placed in a separate section which appears directly before the reference list\", but two other Elsevier journals' guides carry the opposite instruction, so the placement is journal-specific and is not acted on without confirmation at the source."
     },
     "Funding": {
       "dest": "MAIN",
-      "target_words": 54,
-      "reason": "mandatory; the prescribed sentence plus the note on whose funding the dataset records"
+      "target_words": 18,
+      "reason": "18 is the measured length of the prescribed no-funding sentence, which this paper uses verbatim. Its lead-in called the wording prescribed; the guide says \"it is recommended to include the following sentence\", so the lead-in overstated the requirement and was moved out of the submitted document on 4 October 2026, along with the note on whose funding the dataset records."
     },
     "Checks run on this page": {
       "dest": "REPOSITORY",

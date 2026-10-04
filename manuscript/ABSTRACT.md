@@ -31,7 +31,35 @@ assembled manuscript, which begins at the title.
 **Calibration of Four-Channel EEG for Driver Drowsiness Detection:
 A 750-Fold Leave-One-Subject-Out Study**
 
+Hari Singh Jatav ^a^, Mitul Kumar Ahirwal ^b,^\*
+
+^a^ Centre for Artificial Intelligence, Maulana Azad National Institute of
+Technology Bhopal, Bhopal, Madhya Pradesh 462003, India
+
+^b^ Department of Computer Science and Engineering, Maulana Azad National Institute
+of Technology Bhopal, Bhopal, Madhya Pradesh 462003, India
+
+\* Corresponding author. E-mail address: mkahirwal@manit.ac.in (M. K. Ahirwal)
+
 <!-- not-for-submission:start -->
+*The title page, settled 4 October 2026. The guide asks for "the given name(s) and
+family name(s) of each author", affiliations "using a lower-case superscript letter",
+each affiliation's "full name and postal address, including the country name", a clear
+indication of who handles correspondence, and the corresponding author's e-mail, which
+is published. It asks for no telephone number, and it does not say whether the title
+page is a separate file or part of the manuscript, so it is here.*
+
+*Four things were decided rather than copied. Titles ("Dr.") and designations
+("Associate Professor") are not part of a name and are left out; so is the scholar
+number, which the guide does not ask for. The street line "Link Road No. 3, Near Kali
+Mata Mandir" was offered and declined: it came from a district portal rather than from
+the institute, and an unverified landmark in a published affiliation is a worse risk
+than a short address — the institute's own page gives "MANIT Bhopal, Bhopal, Madhya
+Pradesh 462003, India". The first author's e-mail is omitted because only the
+corresponding author's is required. The superscripts are written as markdown
+superscript rather than as the characters ᵃ and ᵇ, so that they typeset as superscripts
+rather than depending on a font having those two glyphs.*
+
 *Chosen by the corresponding author on 3 October 2026. The montage is named because
 the study uses four of the deposit's seven channels, and "subject-independent" was
 dropped as a tautology beside "leave-one-subject-out". The journal's guide states no

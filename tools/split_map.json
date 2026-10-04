@@ -106,8 +106,8 @@
   "sections": {
     "Title": {
       "dest": "MAIN",
-      "target_words": 7,
-      "reason": "front matter"
+      "target_words": 64,
+      "reason": "the title and the title page. 64 is the measured length, set on 4 October 2026 when the authors, both affiliations and the corresponding author's e-mail were added. The previous target of 7 was the title alone and would have projected the title page away"
     },
     "Abstract": {
       "dest": "MAIN",

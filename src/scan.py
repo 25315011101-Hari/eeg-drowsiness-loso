@@ -45,6 +45,12 @@ WHITELIST = {
     "14", "15", "16", "17", "18", "20", "25", "30", "40", "50", "60", "100",
     "128", "150", "0.5", "1.5", "2.5", "1.96", "0.05",
     "2018", "2021", "2024", "2025", "2026",
+    # The institute's postal code, on the title page since 4 October 2026. It is an
+    # identifier and not a measurement, which is the same reason a DOI's digits are
+    # skipped above; there is no result file it could be registered in, and leaving it
+    # unregistered would mean the registry check reported the author's own address as a
+    # number with no source on every run.
+    "462003",
 }
 
 SKIP_BEFORE = re.compile(r"(Section|Sections|section|§)\s*$")

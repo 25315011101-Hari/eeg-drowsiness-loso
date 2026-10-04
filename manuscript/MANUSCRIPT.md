@@ -3,6 +3,16 @@
 **Calibration of Four-Channel EEG for Driver Drowsiness Detection:
 A 750-Fold Leave-One-Subject-Out Study**
 
+Hari Singh Jatav ^a^, Mitul Kumar Ahirwal ^b,^\*
+
+^a^ Centre for Artificial Intelligence, Maulana Azad National Institute of
+Technology Bhopal, Bhopal, Madhya Pradesh 462003, India
+
+^b^ Department of Computer Science and Engineering, Maulana Azad National Institute
+of Technology Bhopal, Bhopal, Madhya Pradesh 462003, India
+
+\* Corresponding author. E-mail address: mkahirwal@manit.ac.in (M. K. Ahirwal)
+
 
 ---
 
@@ -2585,5 +2595,5 @@ https://doi.org/10.1175/1520-0493(1950)078<0001:VOFEIT>2.0.CO;2
 
 ---
 
-*Build 054862f86a4d · 2026-10-04 · 24951 words · registry 1977 rows.*
+*Build a2ec1739e0e6 · 2026-10-04 · 25004 words · registry 1977 rows.*
 *Rebuild: `python3 tools/build_manuscript.py manuscript manuscript/MANUSCRIPT.md`. A copy whose build id differs from the one the repository produces is not the current manuscript.*

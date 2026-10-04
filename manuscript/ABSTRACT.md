@@ -145,8 +145,6 @@ networks; reproducibility
 
 ---
 
-## Other mandatory declarations
-
 <!-- not-for-submission:start -->
 Checked against the BSPC guide for authors; the date that guide was last read is
 recorded in `tools/journal_requirements.json` rather than repeated here. **These
@@ -154,7 +152,7 @@ four are mandatory and were missing from the section plan**, so they are drafted
 here rather than left to be noticed at submission.
 <!-- not-for-submission:end -->
 
-### Declaration of competing interest
+## Declaration of competing interest
 
 > The authors declare that they have no known competing financial interests or
 > personal relationships that could have appeared to influence the work reported in
@@ -165,7 +163,7 @@ here rather than left to be noticed at submission.
 be submitted through its declarations tool as well as appearing in the article.*
 <!-- not-for-submission:end -->
 
-### CRediT author contribution statement
+## CRediT author contribution statement
 
 <!-- not-for-submission:start -->
 The journal requires each author's contribution to be identified using CRediT
@@ -190,7 +188,7 @@ contribution where a misassigned one would misstate it. A role nobody performed 
 not a courtesy, so none of the four is listed.*
 <!-- not-for-submission:end -->
 
-### Acknowledgements
+## Acknowledgements
 
 <!-- not-for-submission:start -->
 Mandatory as its own section immediately before the reference list. It may not be
@@ -214,7 +212,7 @@ contradict the funding statement below, and a copy-editor should not reconcile
 the two by changing either.*
 <!-- not-for-submission:end -->
 
-### Funding
+## Funding
 
 <!-- not-for-submission:start -->
 The journal prescribes the wording, including for the no-funding case. No funding

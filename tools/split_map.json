@@ -129,11 +129,6 @@
       "target_words": 123,
       "reason": "mandatory. 123 is the measured length of the statement itself, which is the intended text and is not to be shortened. The current count is larger because it still includes the placeholder notice; tools/set_repository_url.py removes that notice when the repository is published, and the section then measures 123. Measured on 4 October 2026 by running the script against a throwaway copy; the target was 159, which was neither the current nor the post-removal length and failed the check the moment the notice was removed"
     },
-    "Other mandatory declarations": {
-      "dest": "MAIN",
-      "target_words": 0,
-      "reason": "heading only, since 4 October 2026. The paragraph that stood here recited the guide, named tools/journal_requirements.json by path and called all four declarations below mandatory; source verification on 4 October 2026 established that the funding sentence is recommended rather than prescribed and that the guide says nothing about an acknowledgement being required, so the claim was wrong as well as internal. It is kept in the file inside a not-for-submission block. Compare Code and Data Availability, also a heading with no body."
-    },
     "Declaration of competing interest": {
       "dest": "MAIN",
       "target_words": 26,

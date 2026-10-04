@@ -98,17 +98,15 @@ networks; reproducibility
 
 ---
 
-## Other mandatory declarations
 
-
-### Declaration of competing interest
+## Declaration of competing interest
 
 > The authors declare that they have no known competing financial interests or
 > personal relationships that could have appeared to influence the work reported in
 > this paper.
 
 
-### CRediT author contribution statement
+## CRediT author contribution statement
 
 
 > **Hari Singh Jatav:** Conceptualization, Methodology, Software, Investigation,
@@ -117,7 +115,7 @@ networks; reproducibility
 > review & editing, Supervision.
 
 
-### Acknowledgements
+## Acknowledgements
 
 
 > The work was conducted and supported by the Brain–Computer Interface Laboratory,
@@ -126,7 +124,7 @@ networks; reproducibility
 > Drivers Drowsiness Database for making the recordings publicly available.
 
 
-### Funding
+## Funding
 
 
 > This research did not receive any specific grant from funding agencies in the
@@ -2645,5 +2643,5 @@ https://doi.org/10.1175/1520-0493(1950)078<0001:VOFEIT>2.0.CO;2
 
 ---
 
-*Build e7b8a43e6439 · 2026-10-04 · 25546 words · registry 1977 rows.*
+*Build acf03a969ef4 · 2026-10-04 · 25542 words · registry 1977 rows.*
 *Rebuild: `python3 tools/build_manuscript.py manuscript manuscript/MANUSCRIPT.md`. A copy whose build id differs from the one the repository produces is not the current manuscript.*

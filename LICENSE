@@ -1,0 +1,40 @@
+MIT License
+
+Copyright (c) 2026 Hari Singh Jatav and Mitul Kumar Ahirwal,
+Centre for Artificial Intelligence, Maulana Azad National Institute of
+Technology, Bhopal, India
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---
+
+This licence covers the code, the generated result files and the documentation
+in this repository. It does not cover:
+
+  * The DD-Database EEG recordings, which are not distributed here and carry
+    their own terms (CC0 1.0 at the Dryad record cited in the paper).
+  * The ARL reference implementations of EEGNet, ShallowConvNet and
+    DeepConvNet, which are cloned separately from
+    https://github.com/vlawhern/arl-eegmodels and used under their own licence.
+
+NOTE TO THE AUTHORS BEFORE PUBLISHING: this file is a draft. MIT is proposed
+because it is the least restrictive common choice for research code and places
+no obligation on a reviewer who clones the repository, but the choice of licence
+and the wording of the copyright line are the authors' and the institute's to
+make, not the draft's. Delete this note once the choice is confirmed.

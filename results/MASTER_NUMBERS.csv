@@ -1,0 +1,1978 @@
+section,claim,value,note
+data,folds in ALL_FOLDS,750,
+data,folds per arm,250,
+data,architectures,5,
+data,seeds,5,
+data,subjects,10,
+data,window length samples,1280,10 s at 128 Hz
+stats,smallest attainable Wilcoxon p on ten pairs,0.00195312,2 / 2^10 = 1/512
+stats,smallest attainable Spearman p on five points,0.0167,
+data,Arm A windows,9260,"trimmed, every drowsy window kept"
+data,Arm A windows per subject,926,
+data,Arm A drowsy windows,770,
+data,Arm A alert windows,8490,
+data,Arm A prevalence percent,8.3153,
+data,Arm A class-prior Brier reference,0.0762,pi*(1-pi)
+data,Arm A PR-AUC chance level,0.0832,the prior
+data,Arm A always-alert accuracy percent,91.6847,
+data,"Arm A always-alert accuracy percent, 2 dp",91.68,as printed in the manuscript
+data,Arm A S1 drowsy windows,82,
+data,Arm A S2 drowsy windows,58,
+data,Arm A S3 drowsy windows,178,
+data,Arm A S4 drowsy windows,79,
+data,Arm A S5 drowsy windows,60,
+data,Arm A S6 drowsy windows,50,
+data,Arm A S7 drowsy windows,238,
+data,Arm A S8 drowsy windows,11,
+data,Arm A S9 drowsy windows,5,
+data,Arm A S10 drowsy windows,9,
+data,Arm B windows,9920,"untrimmed, subject's own class ratio"
+data,Arm B windows per subject,992,
+data,Arm B drowsy windows,688,
+data,Arm B alert windows,9232,
+data,Arm B prevalence percent,6.9355,
+data,Arm B class-prior Brier reference,0.0645,pi*(1-pi)
+data,Arm B PR-AUC chance level,0.0694,the prior
+data,Arm B always-alert accuracy percent,93.0645,
+data,"Arm B always-alert accuracy percent, 2 dp",93.06,as printed in the manuscript
+data,Arm B S1 drowsy windows,67,
+data,Arm B S2 drowsy windows,46,
+data,Arm B S3 drowsy windows,163,
+data,Arm B S4 drowsy windows,68,
+data,Arm B S5 drowsy windows,47,
+data,Arm B S6 drowsy windows,38,
+data,Arm B S7 drowsy windows,239,
+data,Arm B S8 drowsy windows,8,
+data,Arm B S9 drowsy windows,5,
+data,Arm B S10 drowsy windows,7,
+data,Arm C windows,9260,"trimmed, subject's own class ratio"
+data,Arm C windows per subject,926,
+data,Arm C drowsy windows,673,
+data,Arm C alert windows,8587,
+data,Arm C prevalence percent,7.2678,
+data,Arm C class-prior Brier reference,0.0674,pi*(1-pi)
+data,Arm C PR-AUC chance level,0.0727,the prior
+data,Arm C always-alert accuracy percent,92.7322,
+data,"Arm C always-alert accuracy percent, 2 dp",92.73,as printed in the manuscript
+data,Arm C S1 drowsy windows,65,
+data,Arm C S2 drowsy windows,43,
+data,Arm C S3 drowsy windows,164,
+data,Arm C S4 drowsy windows,63,
+data,Arm C S5 drowsy windows,46,
+data,Arm C S6 drowsy windows,37,
+data,Arm C S7 drowsy windows,238,
+data,Arm C S8 drowsy windows,8,
+data,Arm C S9 drowsy windows,3,
+data,Arm C S10 drowsy windows,6,
+model,EEGNet trainable parameters,1809,
+model,ShallowConvNet trainable parameters,14121,
+model,CNN trainable parameters,44705,
+model,DeepConvNet trainable parameters,150226,
+model,CNN-BiLSTM trainable parameters,180641,
+model,CNN-BiLSTM added parameters as a multiple of the CNN,3.04,"135,936 / 44,705"
+model,CNN-BiLSTM total parameters as a multiple of the CNN,4.04,"180,641 / 44,705"
+model,CNN-BiLSTM minus CNN trainable parameters,135936,the recurrent block's cost
+results,Arm A EEGNet auc SUBJECT-AVERAGED,0.884,
+results,Arm A EEGNet auc seed SD,0.0074,
+results,Arm A EEGNet pr_auc SUBJECT-AVERAGED,0.4314,
+results,Arm A EEGNet pr_auc seed SD,0.0058,
+results,Arm A EEGNet bal_acc SUBJECT-AVERAGED,0.7084,
+results,Arm A EEGNet bal_acc seed SD,0.0128,
+results,Arm A EEGNet f1 SUBJECT-AVERAGED,0.3875,
+results,Arm A EEGNet f1 seed SD,0.032,
+results,Arm A EEGNet precision SUBJECT-AVERAGED,0.3582,
+results,Arm A EEGNet precision seed SD,0.0383,
+results,Arm A EEGNet recall SUBJECT-AVERAGED,0.5217,
+results,Arm A EEGNet recall seed SD,0.0209,
+pooled,Arm A EEGNet auc POOLED,0.9015,
+pooled,Arm A EEGNet auc pooled seed SD,0.0066,
+pooled,Arm A EEGNet pr_auc POOLED,0.5103,
+pooled,Arm A EEGNet pr_auc pooled seed SD,0.0631,
+pooled,Arm A EEGNet bal_acc POOLED,0.8283,
+pooled,Arm A EEGNet bal_acc pooled seed SD,0.0108,
+pooled,Arm A EEGNet brier POOLED,0.101,
+pooled,Arm A EEGNet brier pooled seed SD,0.005,
+pooled,Arm A EEGNet smallest single-seed pooled Brier,0.0972,
+pooled,Arm A EEGNet largest single-seed pooled Brier,0.1079,over the 5 seeds
+pooled,Arm A EEGNet pooled Brier margin over reference,0.0248,"Brier 0.1010, reference 0.0762"
+subject,Arm A EEGNet S1 pr_auc,0.5742,
+subject,Arm A EEGNet S2 pr_auc,0.2566,
+subject,Arm A EEGNet S3 pr_auc,0.7763,
+subject,Arm A EEGNet S4 pr_auc,0.58,
+subject,Arm A EEGNet S5 pr_auc,0.5342,
+subject,Arm A EEGNet S6 pr_auc,0.2478,
+subject,Arm A EEGNet S7 pr_auc,0.8331,
+subject,Arm A EEGNet S8 pr_auc,0.1396,
+subject,Arm A EEGNet S9 pr_auc,0.0294,
+subject,Arm A EEGNet S10 pr_auc,0.3429,
+subject,Arm A EEGNet S1 recall,0.8244,
+subject,Arm A EEGNet S2 recall,0.9345,
+subject,Arm A EEGNet S3 recall,0.8438,
+subject,Arm A EEGNet S4 recall,0.5316,
+subject,Arm A EEGNet S5 recall,0.6133,
+subject,Arm A EEGNet S6 recall,0.296,
+subject,Arm A EEGNet S7 recall,0.9042,
+subject,Arm A EEGNet S8 recall,0.0909,
+subject,Arm A EEGNet S9 recall,0.0,
+subject,Arm A EEGNet S10 recall,0.1778,
+subject,Arm A EEGNet S1 auc,0.9073,
+subject,Arm A EEGNet S2 auc,0.8591,
+subject,Arm A EEGNet S3 auc,0.9083,
+subject,Arm A EEGNet S4 auc,0.9246,
+subject,Arm A EEGNet S5 auc,0.8992,
+subject,Arm A EEGNet S6 auc,0.8196,
+subject,Arm A EEGNet S7 auc,0.9435,
+subject,Arm A EEGNet S8 auc,0.8212,
+subject,Arm A EEGNet S9 auc,0.8524,
+subject,Arm A EEGNet S10 auc,0.9043,
+results,Arm A ShallowConvNet auc SUBJECT-AVERAGED,0.846,
+results,Arm A ShallowConvNet auc seed SD,0.003,
+results,Arm A ShallowConvNet pr_auc SUBJECT-AVERAGED,0.411,
+results,Arm A ShallowConvNet pr_auc seed SD,0.0115,
+results,Arm A ShallowConvNet bal_acc SUBJECT-AVERAGED,0.7002,
+results,Arm A ShallowConvNet bal_acc seed SD,0.0149,
+results,Arm A ShallowConvNet f1 SUBJECT-AVERAGED,0.3538,
+results,Arm A ShallowConvNet f1 seed SD,0.0258,
+results,Arm A ShallowConvNet precision SUBJECT-AVERAGED,0.3189,
+results,Arm A ShallowConvNet precision seed SD,0.0418,
+results,Arm A ShallowConvNet recall SUBJECT-AVERAGED,0.5725,
+results,Arm A ShallowConvNet recall seed SD,0.0161,
+pooled,Arm A ShallowConvNet auc POOLED,0.8801,
+pooled,Arm A ShallowConvNet auc pooled seed SD,0.0065,
+pooled,Arm A ShallowConvNet pr_auc POOLED,0.4742,
+pooled,Arm A ShallowConvNet pr_auc pooled seed SD,0.0482,
+pooled,Arm A ShallowConvNet bal_acc POOLED,0.8147,
+pooled,Arm A ShallowConvNet bal_acc pooled seed SD,0.0038,
+pooled,Arm A ShallowConvNet brier POOLED,0.1291,
+pooled,Arm A ShallowConvNet brier pooled seed SD,0.0086,
+pooled,Arm A ShallowConvNet smallest single-seed pooled Brier,0.1169,
+pooled,Arm A ShallowConvNet largest single-seed pooled Brier,0.1381,over the 5 seeds
+pooled,Arm A ShallowConvNet pooled Brier margin over reference,0.0529,"Brier 0.1291, reference 0.0762"
+subject,Arm A ShallowConvNet S1 pr_auc,0.5804,
+subject,Arm A ShallowConvNet S2 pr_auc,0.2981,
+subject,Arm A ShallowConvNet S3 pr_auc,0.6949,
+subject,Arm A ShallowConvNet S4 pr_auc,0.5997,
+subject,Arm A ShallowConvNet S5 pr_auc,0.4197,
+subject,Arm A ShallowConvNet S6 pr_auc,0.2392,
+subject,Arm A ShallowConvNet S7 pr_auc,0.8342,
+subject,Arm A ShallowConvNet S8 pr_auc,0.1337,
+subject,Arm A ShallowConvNet S9 pr_auc,0.0222,
+subject,Arm A ShallowConvNet S10 pr_auc,0.2877,
+subject,Arm A ShallowConvNet S1 recall,0.8683,
+subject,Arm A ShallowConvNet S2 recall,0.9621,
+subject,Arm A ShallowConvNet S3 recall,0.8753,
+subject,Arm A ShallowConvNet S4 recall,0.6228,
+subject,Arm A ShallowConvNet S5 recall,0.6433,
+subject,Arm A ShallowConvNet S6 recall,0.42,
+subject,Arm A ShallowConvNet S7 recall,0.9076,
+subject,Arm A ShallowConvNet S8 recall,0.1636,
+subject,Arm A ShallowConvNet S9 recall,0.04,
+subject,Arm A ShallowConvNet S10 recall,0.2222,
+subject,Arm A ShallowConvNet S1 auc,0.8972,
+subject,Arm A ShallowConvNet S2 auc,0.8491,
+subject,Arm A ShallowConvNet S3 auc,0.8576,
+subject,Arm A ShallowConvNet S4 auc,0.8947,
+subject,Arm A ShallowConvNet S5 auc,0.8611,
+subject,Arm A ShallowConvNet S6 auc,0.7688,
+subject,Arm A ShallowConvNet S7 auc,0.9308,
+subject,Arm A ShallowConvNet S8 auc,0.8286,
+subject,Arm A ShallowConvNet S9 auc,0.7342,
+subject,Arm A ShallowConvNet S10 auc,0.8384,
+results,Arm A CNN auc SUBJECT-AVERAGED,0.8428,
+results,Arm A CNN auc seed SD,0.0094,
+results,Arm A CNN pr_auc SUBJECT-AVERAGED,0.3382,
+results,Arm A CNN pr_auc seed SD,0.005,
+results,Arm A CNN bal_acc SUBJECT-AVERAGED,0.6182,
+results,Arm A CNN bal_acc seed SD,0.024,
+results,Arm A CNN f1 SUBJECT-AVERAGED,0.2666,
+results,Arm A CNN f1 seed SD,0.0421,
+results,Arm A CNN precision SUBJECT-AVERAGED,0.3394,
+results,Arm A CNN precision seed SD,0.0247,
+results,Arm A CNN recall SUBJECT-AVERAGED,0.2856,
+results,Arm A CNN recall seed SD,0.0662,
+pooled,Arm A CNN auc POOLED,0.8762,
+pooled,Arm A CNN auc pooled seed SD,0.0075,
+pooled,Arm A CNN pr_auc POOLED,0.479,
+pooled,Arm A CNN pr_auc pooled seed SD,0.0215,
+pooled,Arm A CNN bal_acc POOLED,0.7298,
+pooled,Arm A CNN bal_acc pooled seed SD,0.0286,
+pooled,Arm A CNN brier POOLED,0.0671,
+pooled,Arm A CNN brier pooled seed SD,0.0071,
+pooled,Arm A CNN smallest single-seed pooled Brier,0.0618,
+pooled,Arm A CNN largest single-seed pooled Brier,0.0787,over the 5 seeds
+pooled,Arm A CNN pooled Brier margin over reference,-0.0091,"Brier 0.0671, reference 0.0762"
+subject,Arm A CNN S1 pr_auc,0.4411,
+subject,Arm A CNN S2 pr_auc,0.1664,
+subject,Arm A CNN S3 pr_auc,0.6439,
+subject,Arm A CNN S4 pr_auc,0.439,
+subject,Arm A CNN S5 pr_auc,0.4227,
+subject,Arm A CNN S6 pr_auc,0.1642,
+subject,Arm A CNN S7 pr_auc,0.7556,
+subject,Arm A CNN S8 pr_auc,0.0964,
+subject,Arm A CNN S9 pr_auc,0.0414,
+subject,Arm A CNN S10 pr_auc,0.2117,
+subject,Arm A CNN S1 recall,0.3049,
+subject,Arm A CNN S2 recall,0.5966,
+subject,Arm A CNN S3 recall,0.5506,
+subject,Arm A CNN S4 recall,0.2987,
+subject,Arm A CNN S5 recall,0.15,
+subject,Arm A CNN S6 recall,0.148,
+subject,Arm A CNN S7 recall,0.8076,
+subject,Arm A CNN S8 recall,0.0,
+subject,Arm A CNN S9 recall,0.0,
+subject,Arm A CNN S10 recall,0.0,
+subject,Arm A CNN S1 auc,0.8854,
+subject,Arm A CNN S2 auc,0.8015,
+subject,Arm A CNN S3 auc,0.8208,
+subject,Arm A CNN S4 auc,0.8838,
+subject,Arm A CNN S5 auc,0.8869,
+subject,Arm A CNN S6 auc,0.733,
+subject,Arm A CNN S7 auc,0.9168,
+subject,Arm A CNN S8 auc,0.7691,
+subject,Arm A CNN S9 auc,0.8373,
+subject,Arm A CNN S10 auc,0.8933,
+results,Arm A DeepConvNet auc SUBJECT-AVERAGED,0.8123,
+results,Arm A DeepConvNet auc seed SD,0.0079,
+results,Arm A DeepConvNet pr_auc SUBJECT-AVERAGED,0.4051,
+results,Arm A DeepConvNet pr_auc seed SD,0.0108,
+results,Arm A DeepConvNet bal_acc SUBJECT-AVERAGED,0.6271,
+results,Arm A DeepConvNet bal_acc seed SD,0.0264,
+results,Arm A DeepConvNet f1 SUBJECT-AVERAGED,0.3102,
+results,Arm A DeepConvNet f1 seed SD,0.04,
+results,Arm A DeepConvNet precision SUBJECT-AVERAGED,0.504,
+results,Arm A DeepConvNet precision seed SD,0.0671,
+results,Arm A DeepConvNet recall SUBJECT-AVERAGED,0.2885,
+results,Arm A DeepConvNet recall seed SD,0.0648,
+pooled,Arm A DeepConvNet auc POOLED,0.8703,
+pooled,Arm A DeepConvNet auc pooled seed SD,0.0257,
+pooled,Arm A DeepConvNet pr_auc POOLED,0.4987,
+pooled,Arm A DeepConvNet pr_auc pooled seed SD,0.0514,
+pooled,Arm A DeepConvNet bal_acc POOLED,0.727,
+pooled,Arm A DeepConvNet bal_acc pooled seed SD,0.0471,
+pooled,Arm A DeepConvNet brier POOLED,0.0592,
+pooled,Arm A DeepConvNet brier pooled seed SD,0.004,
+pooled,Arm A DeepConvNet smallest single-seed pooled Brier,0.054,
+pooled,Arm A DeepConvNet largest single-seed pooled Brier,0.0644,over the 5 seeds
+pooled,Arm A DeepConvNet pooled Brier margin over reference,-0.017,"Brier 0.0592, reference 0.0762"
+subject,Arm A DeepConvNet S1 pr_auc,0.5787,
+subject,Arm A DeepConvNet S2 pr_auc,0.1778,
+subject,Arm A DeepConvNet S3 pr_auc,0.7631,
+subject,Arm A DeepConvNet S4 pr_auc,0.6087,
+subject,Arm A DeepConvNet S5 pr_auc,0.4229,
+subject,Arm A DeepConvNet S6 pr_auc,0.261,
+subject,Arm A DeepConvNet S7 pr_auc,0.827,
+subject,Arm A DeepConvNet S8 pr_auc,0.126,
+subject,Arm A DeepConvNet S9 pr_auc,0.028,
+subject,Arm A DeepConvNet S10 pr_auc,0.2583,
+subject,Arm A DeepConvNet S1 recall,0.2585,
+subject,Arm A DeepConvNet S2 recall,0.5276,
+subject,Arm A DeepConvNet S3 recall,0.5966,
+subject,Arm A DeepConvNet S4 recall,0.2759,
+subject,Arm A DeepConvNet S5 recall,0.2433,
+subject,Arm A DeepConvNet S6 recall,0.192,
+subject,Arm A DeepConvNet S7 recall,0.7143,
+subject,Arm A DeepConvNet S8 recall,0.0545,
+subject,Arm A DeepConvNet S9 recall,0.0,
+subject,Arm A DeepConvNet S10 recall,0.0222,
+subject,Arm A DeepConvNet S1 auc,0.8959,
+subject,Arm A DeepConvNet S2 auc,0.7828,
+subject,Arm A DeepConvNet S3 auc,0.8803,
+subject,Arm A DeepConvNet S4 auc,0.9056,
+subject,Arm A DeepConvNet S5 auc,0.8171,
+subject,Arm A DeepConvNet S6 auc,0.7511,
+subject,Arm A DeepConvNet S7 auc,0.9293,
+subject,Arm A DeepConvNet S8 auc,0.5508,
+subject,Arm A DeepConvNet S9 auc,0.7949,
+subject,Arm A DeepConvNet S10 auc,0.8149,
+results,Arm A CNN-BiLSTM auc SUBJECT-AVERAGED,0.8213,
+results,Arm A CNN-BiLSTM auc seed SD,0.0221,
+results,Arm A CNN-BiLSTM pr_auc SUBJECT-AVERAGED,0.3986,
+results,Arm A CNN-BiLSTM pr_auc seed SD,0.0207,
+results,Arm A CNN-BiLSTM bal_acc SUBJECT-AVERAGED,0.6962,
+results,Arm A CNN-BiLSTM bal_acc seed SD,0.0258,
+results,Arm A CNN-BiLSTM f1 SUBJECT-AVERAGED,0.3606,
+results,Arm A CNN-BiLSTM f1 seed SD,0.0312,
+results,Arm A CNN-BiLSTM precision SUBJECT-AVERAGED,0.3664,
+results,Arm A CNN-BiLSTM precision seed SD,0.0609,
+results,Arm A CNN-BiLSTM recall SUBJECT-AVERAGED,0.4756,
+results,Arm A CNN-BiLSTM recall seed SD,0.0691,
+pooled,Arm A CNN-BiLSTM auc POOLED,0.8751,
+pooled,Arm A CNN-BiLSTM auc pooled seed SD,0.0242,
+pooled,Arm A CNN-BiLSTM pr_auc POOLED,0.4913,
+pooled,Arm A CNN-BiLSTM pr_auc pooled seed SD,0.046,
+pooled,Arm A CNN-BiLSTM bal_acc POOLED,0.7825,
+pooled,Arm A CNN-BiLSTM bal_acc pooled seed SD,0.0529,
+pooled,Arm A CNN-BiLSTM brier POOLED,0.0781,
+pooled,Arm A CNN-BiLSTM brier pooled seed SD,0.0062,
+pooled,Arm A CNN-BiLSTM smallest single-seed pooled Brier,0.0696,
+pooled,Arm A CNN-BiLSTM largest single-seed pooled Brier,0.0864,over the 5 seeds
+pooled,Arm A CNN-BiLSTM pooled Brier margin over reference,0.0019,"Brier 0.0781, reference 0.0762"
+subject,Arm A CNN-BiLSTM S1 pr_auc,0.4775,
+subject,Arm A CNN-BiLSTM S2 pr_auc,0.3171,
+subject,Arm A CNN-BiLSTM S3 pr_auc,0.7303,
+subject,Arm A CNN-BiLSTM S4 pr_auc,0.5082,
+subject,Arm A CNN-BiLSTM S5 pr_auc,0.4322,
+subject,Arm A CNN-BiLSTM S6 pr_auc,0.29,
+subject,Arm A CNN-BiLSTM S7 pr_auc,0.7978,
+subject,Arm A CNN-BiLSTM S8 pr_auc,0.1438,
+subject,Arm A CNN-BiLSTM S9 pr_auc,0.0133,
+subject,Arm A CNN-BiLSTM S10 pr_auc,0.2757,
+subject,Arm A CNN-BiLSTM S1 recall,0.7341,
+subject,Arm A CNN-BiLSTM S2 recall,0.8552,
+subject,Arm A CNN-BiLSTM S3 recall,0.7,
+subject,Arm A CNN-BiLSTM S4 recall,0.4835,
+subject,Arm A CNN-BiLSTM S5 recall,0.4967,
+subject,Arm A CNN-BiLSTM S6 recall,0.38,
+subject,Arm A CNN-BiLSTM S7 recall,0.7244,
+subject,Arm A CNN-BiLSTM S8 recall,0.1818,
+subject,Arm A CNN-BiLSTM S9 recall,0.0,
+subject,Arm A CNN-BiLSTM S10 recall,0.2,
+subject,Arm A CNN-BiLSTM S1 auc,0.8895,
+subject,Arm A CNN-BiLSTM S2 auc,0.8677,
+subject,Arm A CNN-BiLSTM S3 auc,0.8743,
+subject,Arm A CNN-BiLSTM S4 auc,0.8527,
+subject,Arm A CNN-BiLSTM S5 auc,0.8458,
+subject,Arm A CNN-BiLSTM S6 auc,0.767,
+subject,Arm A CNN-BiLSTM S7 auc,0.8981,
+subject,Arm A CNN-BiLSTM S8 auc,0.7361,
+subject,Arm A CNN-BiLSTM S9 auc,0.6353,
+subject,Arm A CNN-BiLSTM S10 auc,0.8468,
+results,Arm B EEGNet auc SUBJECT-AVERAGED,0.9003,
+results,Arm B EEGNet auc seed SD,0.0079,
+results,Arm B EEGNet pr_auc SUBJECT-AVERAGED,0.4398,
+results,Arm B EEGNet pr_auc seed SD,0.0257,
+results,Arm B EEGNet bal_acc SUBJECT-AVERAGED,0.7249,
+results,Arm B EEGNet bal_acc seed SD,0.0138,
+results,Arm B EEGNet f1 SUBJECT-AVERAGED,0.3971,
+results,Arm B EEGNet f1 seed SD,0.0395,
+results,Arm B EEGNet precision SUBJECT-AVERAGED,0.3687,
+results,Arm B EEGNet precision seed SD,0.0536,
+results,Arm B EEGNet recall SUBJECT-AVERAGED,0.5398,
+results,Arm B EEGNet recall seed SD,0.0218,
+pooled,Arm B EEGNet auc POOLED,0.919,
+pooled,Arm B EEGNet auc pooled seed SD,0.0052,
+pooled,Arm B EEGNet pr_auc POOLED,0.5222,
+pooled,Arm B EEGNet pr_auc pooled seed SD,0.0383,
+pooled,Arm B EEGNet bal_acc POOLED,0.8421,
+pooled,Arm B EEGNet bal_acc pooled seed SD,0.0104,
+pooled,Arm B EEGNet brier POOLED,0.0859,
+pooled,Arm B EEGNet brier pooled seed SD,0.0088,
+pooled,Arm B EEGNet smallest single-seed pooled Brier,0.0764,
+pooled,Arm B EEGNet largest single-seed pooled Brier,0.0961,over the 5 seeds
+pooled,Arm B EEGNet pooled Brier margin over reference,0.0214,"Brier 0.0859, reference 0.0645"
+subject,Arm B EEGNet S1 pr_auc,0.5684,
+subject,Arm B EEGNet S2 pr_auc,0.2445,
+subject,Arm B EEGNet S3 pr_auc,0.767,
+subject,Arm B EEGNet S4 pr_auc,0.6367,
+subject,Arm B EEGNet S5 pr_auc,0.4277,
+subject,Arm B EEGNet S6 pr_auc,0.326,
+subject,Arm B EEGNet S7 pr_auc,0.8713,
+subject,Arm B EEGNet S8 pr_auc,0.0966,
+subject,Arm B EEGNet S9 pr_auc,0.1159,
+subject,Arm B EEGNet S10 pr_auc,0.3436,
+subject,Arm B EEGNet S1 recall,0.8358,
+subject,Arm B EEGNet S2 recall,0.9261,
+subject,Arm B EEGNet S3 recall,0.7951,
+subject,Arm B EEGNet S4 recall,0.6088,
+subject,Arm B EEGNet S5 recall,0.5702,
+subject,Arm B EEGNet S6 recall,0.3526,
+subject,Arm B EEGNet S7 recall,0.9163,
+subject,Arm B EEGNet S8 recall,0.05,
+subject,Arm B EEGNet S9 recall,0.2,
+subject,Arm B EEGNet S10 recall,0.1429,
+subject,Arm B EEGNet S1 auc,0.92,
+subject,Arm B EEGNet S2 auc,0.8648,
+subject,Arm B EEGNet S3 auc,0.9087,
+subject,Arm B EEGNet S4 auc,0.9421,
+subject,Arm B EEGNet S5 auc,0.8868,
+subject,Arm B EEGNet S6 auc,0.8675,
+subject,Arm B EEGNet S7 auc,0.958,
+subject,Arm B EEGNet S8 auc,0.7688,
+subject,Arm B EEGNet S9 auc,0.9275,
+subject,Arm B EEGNet S10 auc,0.9592,
+results,Arm B ShallowConvNet auc SUBJECT-AVERAGED,0.8472,
+results,Arm B ShallowConvNet auc seed SD,0.0141,
+results,Arm B ShallowConvNet pr_auc SUBJECT-AVERAGED,0.3994,
+results,Arm B ShallowConvNet pr_auc seed SD,0.0144,
+results,Arm B ShallowConvNet bal_acc SUBJECT-AVERAGED,0.706,
+results,Arm B ShallowConvNet bal_acc seed SD,0.0122,
+results,Arm B ShallowConvNet f1 SUBJECT-AVERAGED,0.3195,
+results,Arm B ShallowConvNet f1 seed SD,0.0336,
+results,Arm B ShallowConvNet precision SUBJECT-AVERAGED,0.2598,
+results,Arm B ShallowConvNet precision seed SD,0.0383,
+results,Arm B ShallowConvNet recall SUBJECT-AVERAGED,0.5957,
+results,Arm B ShallowConvNet recall seed SD,0.074,
+pooled,Arm B ShallowConvNet auc POOLED,0.8782,
+pooled,Arm B ShallowConvNet auc pooled seed SD,0.0191,
+pooled,Arm B ShallowConvNet pr_auc POOLED,0.4302,
+pooled,Arm B ShallowConvNet pr_auc pooled seed SD,0.1178,
+pooled,Arm B ShallowConvNet bal_acc POOLED,0.8042,
+pooled,Arm B ShallowConvNet bal_acc pooled seed SD,0.0173,
+pooled,Arm B ShallowConvNet brier POOLED,0.1369,
+pooled,Arm B ShallowConvNet brier pooled seed SD,0.0495,
+pooled,Arm B ShallowConvNet smallest single-seed pooled Brier,0.11,
+pooled,Arm B ShallowConvNet largest single-seed pooled Brier,0.2246,over the 5 seeds
+pooled,Arm B ShallowConvNet pooled Brier margin over reference,0.0724,"Brier 0.1369, reference 0.0645"
+subject,Arm B ShallowConvNet S1 pr_auc,0.4554,
+subject,Arm B ShallowConvNet S2 pr_auc,0.2616,
+subject,Arm B ShallowConvNet S3 pr_auc,0.6229,
+subject,Arm B ShallowConvNet S4 pr_auc,0.6707,
+subject,Arm B ShallowConvNet S5 pr_auc,0.3266,
+subject,Arm B ShallowConvNet S6 pr_auc,0.3254,
+subject,Arm B ShallowConvNet S7 pr_auc,0.8588,
+subject,Arm B ShallowConvNet S8 pr_auc,0.052,
+subject,Arm B ShallowConvNet S9 pr_auc,0.0933,
+subject,Arm B ShallowConvNet S10 pr_auc,0.3269,
+subject,Arm B ShallowConvNet S1 recall,0.794,
+subject,Arm B ShallowConvNet S2 recall,0.9435,
+subject,Arm B ShallowConvNet S3 recall,0.8675,
+subject,Arm B ShallowConvNet S4 recall,0.6971,
+subject,Arm B ShallowConvNet S5 recall,0.5447,
+subject,Arm B ShallowConvNet S6 recall,0.4895,
+subject,Arm B ShallowConvNet S7 recall,0.8669,
+subject,Arm B ShallowConvNet S8 recall,0.125,
+subject,Arm B ShallowConvNet S9 recall,0.2,
+subject,Arm B ShallowConvNet S10 recall,0.4286,
+subject,Arm B ShallowConvNet S1 auc,0.8545,
+subject,Arm B ShallowConvNet S2 auc,0.866,
+subject,Arm B ShallowConvNet S3 auc,0.834,
+subject,Arm B ShallowConvNet S4 auc,0.9057,
+subject,Arm B ShallowConvNet S5 auc,0.8247,
+subject,Arm B ShallowConvNet S6 auc,0.8247,
+subject,Arm B ShallowConvNet S7 auc,0.9406,
+subject,Arm B ShallowConvNet S8 auc,0.7814,
+subject,Arm B ShallowConvNet S9 auc,0.7685,
+subject,Arm B ShallowConvNet S10 auc,0.8721,
+results,Arm B CNN auc SUBJECT-AVERAGED,0.8662,
+results,Arm B CNN auc seed SD,0.0128,
+results,Arm B CNN pr_auc SUBJECT-AVERAGED,0.3599,
+results,Arm B CNN pr_auc seed SD,0.0193,
+results,Arm B CNN bal_acc SUBJECT-AVERAGED,0.601,
+results,Arm B CNN bal_acc seed SD,0.0216,
+results,Arm B CNN f1 SUBJECT-AVERAGED,0.2449,
+results,Arm B CNN f1 seed SD,0.0312,
+results,Arm B CNN precision SUBJECT-AVERAGED,0.4052,
+results,Arm B CNN precision seed SD,0.0335,
+results,Arm B CNN recall SUBJECT-AVERAGED,0.2318,
+results,Arm B CNN recall seed SD,0.0542,
+pooled,Arm B CNN auc POOLED,0.8722,
+pooled,Arm B CNN auc pooled seed SD,0.013,
+pooled,Arm B CNN pr_auc POOLED,0.4084,
+pooled,Arm B CNN pr_auc pooled seed SD,0.0722,
+pooled,Arm B CNN bal_acc POOLED,0.6742,
+pooled,Arm B CNN bal_acc pooled seed SD,0.0567,
+pooled,Arm B CNN brier POOLED,0.0577,
+pooled,Arm B CNN brier pooled seed SD,0.0056,
+pooled,Arm B CNN smallest single-seed pooled Brier,0.0501,
+pooled,Arm B CNN largest single-seed pooled Brier,0.0648,over the 5 seeds
+pooled,Arm B CNN pooled Brier margin over reference,-0.0068,"Brier 0.0577, reference 0.0645"
+subject,Arm B CNN S1 pr_auc,0.4174,
+subject,Arm B CNN S2 pr_auc,0.1241,
+subject,Arm B CNN S3 pr_auc,0.6209,
+subject,Arm B CNN S4 pr_auc,0.3749,
+subject,Arm B CNN S5 pr_auc,0.3087,
+subject,Arm B CNN S6 pr_auc,0.1931,
+subject,Arm B CNN S7 pr_auc,0.7583,
+subject,Arm B CNN S8 pr_auc,0.0736,
+subject,Arm B CNN S9 pr_auc,0.4008,
+subject,Arm B CNN S10 pr_auc,0.3274,
+subject,Arm B CNN S1 recall,0.1254,
+subject,Arm B CNN S2 recall,0.5,
+subject,Arm B CNN S3 recall,0.4393,
+subject,Arm B CNN S4 recall,0.1118,
+subject,Arm B CNN S5 recall,0.1489,
+subject,Arm B CNN S6 recall,0.1474,
+subject,Arm B CNN S7 recall,0.5649,
+subject,Arm B CNN S8 recall,0.0,
+subject,Arm B CNN S9 recall,0.28,
+subject,Arm B CNN S10 recall,0.0,
+subject,Arm B CNN S1 auc,0.8897,
+subject,Arm B CNN S2 auc,0.8066,
+subject,Arm B CNN S3 auc,0.8165,
+subject,Arm B CNN S4 auc,0.8777,
+subject,Arm B CNN S5 auc,0.8771,
+subject,Arm B CNN S6 auc,0.7733,
+subject,Arm B CNN S7 auc,0.9201,
+subject,Arm B CNN S8 auc,0.8115,
+subject,Arm B CNN S9 auc,0.9434,
+subject,Arm B CNN S10 auc,0.9459,
+results,Arm B DeepConvNet auc SUBJECT-AVERAGED,0.793,
+results,Arm B DeepConvNet auc seed SD,0.0328,
+results,Arm B DeepConvNet pr_auc SUBJECT-AVERAGED,0.3841,
+results,Arm B DeepConvNet pr_auc seed SD,0.0177,
+results,Arm B DeepConvNet bal_acc SUBJECT-AVERAGED,0.6213,
+results,Arm B DeepConvNet bal_acc seed SD,0.0329,
+results,Arm B DeepConvNet f1 SUBJECT-AVERAGED,0.2707,
+results,Arm B DeepConvNet f1 seed SD,0.0562,
+results,Arm B DeepConvNet precision SUBJECT-AVERAGED,0.4754,
+results,Arm B DeepConvNet precision seed SD,0.0874,
+results,Arm B DeepConvNet recall SUBJECT-AVERAGED,0.2823,
+results,Arm B DeepConvNet recall seed SD,0.085,
+pooled,Arm B DeepConvNet auc POOLED,0.8617,
+pooled,Arm B DeepConvNet auc pooled seed SD,0.0242,
+pooled,Arm B DeepConvNet pr_auc POOLED,0.4134,
+pooled,Arm B DeepConvNet pr_auc pooled seed SD,0.0904,
+pooled,Arm B DeepConvNet bal_acc POOLED,0.7049,
+pooled,Arm B DeepConvNet bal_acc pooled seed SD,0.0835,
+pooled,Arm B DeepConvNet brier POOLED,0.0603,
+pooled,Arm B DeepConvNet brier pooled seed SD,0.0047,
+pooled,Arm B DeepConvNet smallest single-seed pooled Brier,0.0568,
+pooled,Arm B DeepConvNet largest single-seed pooled Brier,0.0684,over the 5 seeds
+pooled,Arm B DeepConvNet pooled Brier margin over reference,-0.0042,"Brier 0.0603, reference 0.0645"
+subject,Arm B DeepConvNet S1 pr_auc,0.5111,
+subject,Arm B DeepConvNet S2 pr_auc,0.1243,
+subject,Arm B DeepConvNet S3 pr_auc,0.7077,
+subject,Arm B DeepConvNet S4 pr_auc,0.5971,
+subject,Arm B DeepConvNet S5 pr_auc,0.3129,
+subject,Arm B DeepConvNet S6 pr_auc,0.373,
+subject,Arm B DeepConvNet S7 pr_auc,0.8532,
+subject,Arm B DeepConvNet S8 pr_auc,0.0989,
+subject,Arm B DeepConvNet S9 pr_auc,0.0253,
+subject,Arm B DeepConvNet S10 pr_auc,0.2372,
+subject,Arm B DeepConvNet S1 recall,0.4209,
+subject,Arm B DeepConvNet S2 recall,0.5174,
+subject,Arm B DeepConvNet S3 recall,0.4491,
+subject,Arm B DeepConvNet S4 recall,0.1941,
+subject,Arm B DeepConvNet S5 recall,0.2936,
+subject,Arm B DeepConvNet S6 recall,0.2579,
+subject,Arm B DeepConvNet S7 recall,0.6117,
+subject,Arm B DeepConvNet S8 recall,0.05,
+subject,Arm B DeepConvNet S9 recall,0.0,
+subject,Arm B DeepConvNet S10 recall,0.0286,
+subject,Arm B DeepConvNet S1 auc,0.8816,
+subject,Arm B DeepConvNet S2 auc,0.7754,
+subject,Arm B DeepConvNet S3 auc,0.8567,
+subject,Arm B DeepConvNet S4 auc,0.9018,
+subject,Arm B DeepConvNet S5 auc,0.825,
+subject,Arm B DeepConvNet S6 auc,0.8147,
+subject,Arm B DeepConvNet S7 auc,0.9414,
+subject,Arm B DeepConvNet S8 auc,0.539,
+subject,Arm B DeepConvNet S9 auc,0.6805,
+subject,Arm B DeepConvNet S10 auc,0.7134,
+results,Arm B CNN-BiLSTM auc SUBJECT-AVERAGED,0.859,
+results,Arm B CNN-BiLSTM auc seed SD,0.0161,
+results,Arm B CNN-BiLSTM pr_auc SUBJECT-AVERAGED,0.397,
+results,Arm B CNN-BiLSTM pr_auc seed SD,0.0384,
+results,Arm B CNN-BiLSTM bal_acc SUBJECT-AVERAGED,0.7253,
+results,Arm B CNN-BiLSTM bal_acc seed SD,0.0136,
+results,Arm B CNN-BiLSTM f1 SUBJECT-AVERAGED,0.3724,
+results,Arm B CNN-BiLSTM f1 seed SD,0.0172,
+results,Arm B CNN-BiLSTM precision SUBJECT-AVERAGED,0.3472,
+results,Arm B CNN-BiLSTM precision seed SD,0.0167,
+results,Arm B CNN-BiLSTM recall SUBJECT-AVERAGED,0.532,
+results,Arm B CNN-BiLSTM recall seed SD,0.0394,
+pooled,Arm B CNN-BiLSTM auc POOLED,0.874,
+pooled,Arm B CNN-BiLSTM auc pooled seed SD,0.0306,
+pooled,Arm B CNN-BiLSTM pr_auc POOLED,0.4603,
+pooled,Arm B CNN-BiLSTM pr_auc pooled seed SD,0.0823,
+pooled,Arm B CNN-BiLSTM bal_acc POOLED,0.7891,
+pooled,Arm B CNN-BiLSTM bal_acc pooled seed SD,0.0546,
+pooled,Arm B CNN-BiLSTM brier POOLED,0.0743,
+pooled,Arm B CNN-BiLSTM brier pooled seed SD,0.0058,
+pooled,Arm B CNN-BiLSTM smallest single-seed pooled Brier,0.067,
+pooled,Arm B CNN-BiLSTM largest single-seed pooled Brier,0.081,over the 5 seeds
+pooled,Arm B CNN-BiLSTM pooled Brier margin over reference,0.0098,"Brier 0.0743, reference 0.0645"
+subject,Arm B CNN-BiLSTM S1 pr_auc,0.4088,
+subject,Arm B CNN-BiLSTM S2 pr_auc,0.2159,
+subject,Arm B CNN-BiLSTM S3 pr_auc,0.702,
+subject,Arm B CNN-BiLSTM S4 pr_auc,0.516,
+subject,Arm B CNN-BiLSTM S5 pr_auc,0.3127,
+subject,Arm B CNN-BiLSTM S6 pr_auc,0.3716,
+subject,Arm B CNN-BiLSTM S7 pr_auc,0.7819,
+subject,Arm B CNN-BiLSTM S8 pr_auc,0.0762,
+subject,Arm B CNN-BiLSTM S9 pr_auc,0.2646,
+subject,Arm B CNN-BiLSTM S10 pr_auc,0.3207,
+subject,Arm B CNN-BiLSTM S1 recall,0.6806,
+subject,Arm B CNN-BiLSTM S2 recall,0.9087,
+subject,Arm B CNN-BiLSTM S3 recall,0.7472,
+subject,Arm B CNN-BiLSTM S4 recall,0.6324,
+subject,Arm B CNN-BiLSTM S5 recall,0.4894,
+subject,Arm B CNN-BiLSTM S6 recall,0.4789,
+subject,Arm B CNN-BiLSTM S7 recall,0.6485,
+subject,Arm B CNN-BiLSTM S8 recall,0.1,
+subject,Arm B CNN-BiLSTM S9 recall,0.32,
+subject,Arm B CNN-BiLSTM S10 recall,0.3143,
+subject,Arm B CNN-BiLSTM S1 auc,0.8698,
+subject,Arm B CNN-BiLSTM S2 auc,0.8546,
+subject,Arm B CNN-BiLSTM S3 auc,0.883,
+subject,Arm B CNN-BiLSTM S4 auc,0.8986,
+subject,Arm B CNN-BiLSTM S5 auc,0.8572,
+subject,Arm B CNN-BiLSTM S6 auc,0.8243,
+subject,Arm B CNN-BiLSTM S7 auc,0.8927,
+subject,Arm B CNN-BiLSTM S8 auc,0.729,
+subject,Arm B CNN-BiLSTM S9 auc,0.8394,
+subject,Arm B CNN-BiLSTM S10 auc,0.942,
+results,Arm C EEGNet auc SUBJECT-AVERAGED,0.8831,
+results,Arm C EEGNet auc seed SD,0.0095,
+results,Arm C EEGNet pr_auc SUBJECT-AVERAGED,0.4073,
+results,Arm C EEGNet pr_auc seed SD,0.0074,
+results,Arm C EEGNet bal_acc SUBJECT-AVERAGED,0.7176,
+results,Arm C EEGNet bal_acc seed SD,0.0139,
+results,Arm C EEGNet f1 SUBJECT-AVERAGED,0.3819,
+results,Arm C EEGNet f1 seed SD,0.0315,
+results,Arm C EEGNet precision SUBJECT-AVERAGED,0.3463,
+results,Arm C EEGNet precision seed SD,0.0379,
+results,Arm C EEGNet recall SUBJECT-AVERAGED,0.5343,
+results,Arm C EEGNet recall seed SD,0.0303,
+pooled,Arm C EEGNet auc POOLED,0.9155,
+pooled,Arm C EEGNet auc pooled seed SD,0.0041,
+pooled,Arm C EEGNet pr_auc POOLED,0.5079,
+pooled,Arm C EEGNet pr_auc pooled seed SD,0.0501,
+pooled,Arm C EEGNet bal_acc POOLED,0.8444,
+pooled,Arm C EEGNet bal_acc pooled seed SD,0.004,
+pooled,Arm C EEGNet brier POOLED,0.0952,
+pooled,Arm C EEGNet brier pooled seed SD,0.0071,
+pooled,Arm C EEGNet smallest single-seed pooled Brier,0.0884,
+pooled,Arm C EEGNet largest single-seed pooled Brier,0.1035,over the 5 seeds
+pooled,Arm C EEGNet pooled Brier margin over reference,0.0278,"Brier 0.0952, reference 0.0674"
+subject,Arm C EEGNet S1 pr_auc,0.5024,
+subject,Arm C EEGNet S2 pr_auc,0.2023,
+subject,Arm C EEGNet S3 pr_auc,0.7692,
+subject,Arm C EEGNet S4 pr_auc,0.5474,
+subject,Arm C EEGNet S5 pr_auc,0.4526,
+subject,Arm C EEGNet S6 pr_auc,0.2462,
+subject,Arm C EEGNet S7 pr_auc,0.8538,
+subject,Arm C EEGNet S8 pr_auc,0.179,
+subject,Arm C EEGNet S9 pr_auc,0.0142,
+subject,Arm C EEGNet S10 pr_auc,0.3055,
+subject,Arm C EEGNet S1 recall,0.8338,
+subject,Arm C EEGNet S2 recall,0.9674,
+subject,Arm C EEGNet S3 recall,0.8488,
+subject,Arm C EEGNet S4 recall,0.5556,
+subject,Arm C EEGNet S5 recall,0.5609,
+subject,Arm C EEGNet S6 recall,0.3459,
+subject,Arm C EEGNet S7 recall,0.9143,
+subject,Arm C EEGNet S8 recall,0.15,
+subject,Arm C EEGNet S9 recall,0.0,
+subject,Arm C EEGNet S10 recall,0.1667,
+subject,Arm C EEGNet S1 auc,0.9072,
+subject,Arm C EEGNet S2 auc,0.8678,
+subject,Arm C EEGNet S3 auc,0.9118,
+subject,Arm C EEGNet S4 auc,0.941,
+subject,Arm C EEGNet S5 auc,0.8845,
+subject,Arm C EEGNet S6 auc,0.8323,
+subject,Arm C EEGNet S7 auc,0.9507,
+subject,Arm C EEGNet S8 auc,0.8189,
+subject,Arm C EEGNet S9 auc,0.7595,
+subject,Arm C EEGNet S10 auc,0.9572,
+results,Arm C ShallowConvNet auc SUBJECT-AVERAGED,0.8332,
+results,Arm C ShallowConvNet auc seed SD,0.0184,
+results,Arm C ShallowConvNet pr_auc SUBJECT-AVERAGED,0.3724,
+results,Arm C ShallowConvNet pr_auc seed SD,0.0189,
+results,Arm C ShallowConvNet bal_acc SUBJECT-AVERAGED,0.6943,
+results,Arm C ShallowConvNet bal_acc seed SD,0.0219,
+results,Arm C ShallowConvNet f1 SUBJECT-AVERAGED,0.3121,
+results,Arm C ShallowConvNet f1 seed SD,0.0301,
+results,Arm C ShallowConvNet precision SUBJECT-AVERAGED,0.2811,
+results,Arm C ShallowConvNet precision seed SD,0.0297,
+results,Arm C ShallowConvNet recall SUBJECT-AVERAGED,0.5687,
+results,Arm C ShallowConvNet recall seed SD,0.0547,
+pooled,Arm C ShallowConvNet auc POOLED,0.8614,
+pooled,Arm C ShallowConvNet auc pooled seed SD,0.028,
+pooled,Arm C ShallowConvNet pr_auc POOLED,0.3767,
+pooled,Arm C ShallowConvNet pr_auc pooled seed SD,0.0341,
+pooled,Arm C ShallowConvNet bal_acc POOLED,0.798,
+pooled,Arm C ShallowConvNet bal_acc pooled seed SD,0.0278,
+pooled,Arm C ShallowConvNet brier POOLED,0.1383,
+pooled,Arm C ShallowConvNet brier pooled seed SD,0.0126,
+pooled,Arm C ShallowConvNet smallest single-seed pooled Brier,0.1231,
+pooled,Arm C ShallowConvNet largest single-seed pooled Brier,0.1488,over the 5 seeds
+pooled,Arm C ShallowConvNet pooled Brier margin over reference,0.0709,"Brier 0.1383, reference 0.0674"
+subject,Arm C ShallowConvNet S1 pr_auc,0.5534,
+subject,Arm C ShallowConvNet S2 pr_auc,0.1814,
+subject,Arm C ShallowConvNet S3 pr_auc,0.6488,
+subject,Arm C ShallowConvNet S4 pr_auc,0.549,
+subject,Arm C ShallowConvNet S5 pr_auc,0.33,
+subject,Arm C ShallowConvNet S6 pr_auc,0.2132,
+subject,Arm C ShallowConvNet S7 pr_auc,0.8188,
+subject,Arm C ShallowConvNet S8 pr_auc,0.1228,
+subject,Arm C ShallowConvNet S9 pr_auc,0.0254,
+subject,Arm C ShallowConvNet S10 pr_auc,0.281,
+subject,Arm C ShallowConvNet S1 recall,0.8585,
+subject,Arm C ShallowConvNet S2 recall,0.9907,
+subject,Arm C ShallowConvNet S3 recall,0.8659,
+subject,Arm C ShallowConvNet S4 recall,0.4635,
+subject,Arm C ShallowConvNet S5 recall,0.6435,
+subject,Arm C ShallowConvNet S6 recall,0.3892,
+subject,Arm C ShallowConvNet S7 recall,0.8429,
+subject,Arm C ShallowConvNet S8 recall,0.2,
+subject,Arm C ShallowConvNet S9 recall,0.0667,
+subject,Arm C ShallowConvNet S10 recall,0.3667,
+subject,Arm C ShallowConvNet S1 auc,0.9008,
+subject,Arm C ShallowConvNet S2 auc,0.8369,
+subject,Arm C ShallowConvNet S3 auc,0.8279,
+subject,Arm C ShallowConvNet S4 auc,0.9079,
+subject,Arm C ShallowConvNet S5 auc,0.8667,
+subject,Arm C ShallowConvNet S6 auc,0.8064,
+subject,Arm C ShallowConvNet S7 auc,0.9167,
+subject,Arm C ShallowConvNet S8 auc,0.7761,
+subject,Arm C ShallowConvNet S9 auc,0.6202,
+subject,Arm C ShallowConvNet S10 auc,0.8724,
+results,Arm C CNN auc SUBJECT-AVERAGED,0.8469,
+results,Arm C CNN auc seed SD,0.0173,
+results,Arm C CNN pr_auc SUBJECT-AVERAGED,0.2946,
+results,Arm C CNN pr_auc seed SD,0.0121,
+results,Arm C CNN bal_acc SUBJECT-AVERAGED,0.5987,
+results,Arm C CNN bal_acc seed SD,0.0226,
+results,Arm C CNN f1 SUBJECT-AVERAGED,0.2186,
+results,Arm C CNN f1 seed SD,0.0338,
+results,Arm C CNN precision SUBJECT-AVERAGED,0.287,
+results,Arm C CNN precision seed SD,0.0646,
+results,Arm C CNN recall SUBJECT-AVERAGED,0.2395,
+results,Arm C CNN recall seed SD,0.0614,
+pooled,Arm C CNN auc POOLED,0.8764,
+pooled,Arm C CNN auc pooled seed SD,0.0107,
+pooled,Arm C CNN pr_auc POOLED,0.466,
+pooled,Arm C CNN pr_auc pooled seed SD,0.0373,
+pooled,Arm C CNN bal_acc POOLED,0.7269,
+pooled,Arm C CNN bal_acc pooled seed SD,0.0279,
+pooled,Arm C CNN brier POOLED,0.0608,
+pooled,Arm C CNN brier pooled seed SD,0.0066,
+pooled,Arm C CNN smallest single-seed pooled Brier,0.051,
+pooled,Arm C CNN largest single-seed pooled Brier,0.0694,over the 5 seeds
+pooled,Arm C CNN pooled Brier margin over reference,-0.0066,"Brier 0.0608, reference 0.0674"
+subject,Arm C CNN S1 pr_auc,0.4063,
+subject,Arm C CNN S2 pr_auc,0.1173,
+subject,Arm C CNN S3 pr_auc,0.6418,
+subject,Arm C CNN S4 pr_auc,0.3645,
+subject,Arm C CNN S5 pr_auc,0.3267,
+subject,Arm C CNN S6 pr_auc,0.1302,
+subject,Arm C CNN S7 pr_auc,0.75,
+subject,Arm C CNN S8 pr_auc,0.0626,
+subject,Arm C CNN S9 pr_auc,0.0404,
+subject,Arm C CNN S10 pr_auc,0.1061,
+subject,Arm C CNN S1 recall,0.2,
+subject,Arm C CNN S2 recall,0.4791,
+subject,Arm C CNN S3 recall,0.5476,
+subject,Arm C CNN S4 recall,0.1302,
+subject,Arm C CNN S5 recall,0.1304,
+subject,Arm C CNN S6 recall,0.1081,
+subject,Arm C CNN S7 recall,0.8,
+subject,Arm C CNN S8 recall,0.0,
+subject,Arm C CNN S9 recall,0.0,
+subject,Arm C CNN S10 recall,0.0,
+subject,Arm C CNN S1 auc,0.8881,
+subject,Arm C CNN S2 auc,0.7996,
+subject,Arm C CNN S3 auc,0.8251,
+subject,Arm C CNN S4 auc,0.8883,
+subject,Arm C CNN S5 auc,0.8773,
+subject,Arm C CNN S6 auc,0.7623,
+subject,Arm C CNN S7 auc,0.9161,
+subject,Arm C CNN S8 auc,0.8295,
+subject,Arm C CNN S9 auc,0.8228,
+subject,Arm C CNN S10 auc,0.8599,
+results,Arm C DeepConvNet auc SUBJECT-AVERAGED,0.8339,
+results,Arm C DeepConvNet auc seed SD,0.0251,
+results,Arm C DeepConvNet pr_auc SUBJECT-AVERAGED,0.3862,
+results,Arm C DeepConvNet pr_auc seed SD,0.0128,
+results,Arm C DeepConvNet bal_acc SUBJECT-AVERAGED,0.6277,
+results,Arm C DeepConvNet bal_acc seed SD,0.0145,
+results,Arm C DeepConvNet f1 SUBJECT-AVERAGED,0.2998,
+results,Arm C DeepConvNet f1 seed SD,0.0233,
+results,Arm C DeepConvNet precision SUBJECT-AVERAGED,0.3953,
+results,Arm C DeepConvNet precision seed SD,0.025,
+results,Arm C DeepConvNet recall SUBJECT-AVERAGED,0.2865,
+results,Arm C DeepConvNet recall seed SD,0.0318,
+pooled,Arm C DeepConvNet auc POOLED,0.8874,
+pooled,Arm C DeepConvNet auc pooled seed SD,0.0196,
+pooled,Arm C DeepConvNet pr_auc POOLED,0.5093,
+pooled,Arm C DeepConvNet pr_auc pooled seed SD,0.0812,
+pooled,Arm C DeepConvNet bal_acc POOLED,0.734,
+pooled,Arm C DeepConvNet bal_acc pooled seed SD,0.023,
+pooled,Arm C DeepConvNet brier POOLED,0.0511,
+pooled,Arm C DeepConvNet brier pooled seed SD,0.0063,
+pooled,Arm C DeepConvNet smallest single-seed pooled Brier,0.0453,
+pooled,Arm C DeepConvNet largest single-seed pooled Brier,0.0598,over the 5 seeds
+pooled,Arm C DeepConvNet pooled Brier margin over reference,-0.0163,"Brier 0.0511, reference 0.0674"
+subject,Arm C DeepConvNet S1 pr_auc,0.4957,
+subject,Arm C DeepConvNet S2 pr_auc,0.1502,
+subject,Arm C DeepConvNet S3 pr_auc,0.7534,
+subject,Arm C DeepConvNet S4 pr_auc,0.5608,
+subject,Arm C DeepConvNet S5 pr_auc,0.3483,
+subject,Arm C DeepConvNet S6 pr_auc,0.269,
+subject,Arm C DeepConvNet S7 pr_auc,0.8458,
+subject,Arm C DeepConvNet S8 pr_auc,0.1656,
+subject,Arm C DeepConvNet S9 pr_auc,0.0198,
+subject,Arm C DeepConvNet S10 pr_auc,0.2531,
+subject,Arm C DeepConvNet S1 recall,0.4462,
+subject,Arm C DeepConvNet S2 recall,0.4698,
+subject,Arm C DeepConvNet S3 recall,0.639,
+subject,Arm C DeepConvNet S4 recall,0.2603,
+subject,Arm C DeepConvNet S5 recall,0.2652,
+subject,Arm C DeepConvNet S6 recall,0.1405,
+subject,Arm C DeepConvNet S7 recall,0.6185,
+subject,Arm C DeepConvNet S8 recall,0.025,
+subject,Arm C DeepConvNet S9 recall,0.0,
+subject,Arm C DeepConvNet S10 recall,0.0,
+subject,Arm C DeepConvNet S1 auc,0.8807,
+subject,Arm C DeepConvNet S2 auc,0.8043,
+subject,Arm C DeepConvNet S3 auc,0.8808,
+subject,Arm C DeepConvNet S4 auc,0.9184,
+subject,Arm C DeepConvNet S5 auc,0.8237,
+subject,Arm C DeepConvNet S6 auc,0.7659,
+subject,Arm C DeepConvNet S7 auc,0.9369,
+subject,Arm C DeepConvNet S8 auc,0.712,
+subject,Arm C DeepConvNet S9 auc,0.7965,
+subject,Arm C DeepConvNet S10 auc,0.8204,
+results,Arm C CNN-BiLSTM auc SUBJECT-AVERAGED,0.8472,
+results,Arm C CNN-BiLSTM auc seed SD,0.0332,
+results,Arm C CNN-BiLSTM pr_auc SUBJECT-AVERAGED,0.3772,
+results,Arm C CNN-BiLSTM pr_auc seed SD,0.0251,
+results,Arm C CNN-BiLSTM bal_acc SUBJECT-AVERAGED,0.7142,
+results,Arm C CNN-BiLSTM bal_acc seed SD,0.0269,
+results,Arm C CNN-BiLSTM f1 SUBJECT-AVERAGED,0.3535,
+results,Arm C CNN-BiLSTM f1 seed SD,0.0161,
+results,Arm C CNN-BiLSTM precision SUBJECT-AVERAGED,0.2997,
+results,Arm C CNN-BiLSTM precision seed SD,0.0251,
+results,Arm C CNN-BiLSTM recall SUBJECT-AVERAGED,0.5258,
+results,Arm C CNN-BiLSTM recall seed SD,0.061,
+pooled,Arm C CNN-BiLSTM auc POOLED,0.8961,
+pooled,Arm C CNN-BiLSTM auc pooled seed SD,0.0163,
+pooled,Arm C CNN-BiLSTM pr_auc POOLED,0.4775,
+pooled,Arm C CNN-BiLSTM pr_auc pooled seed SD,0.0442,
+pooled,Arm C CNN-BiLSTM bal_acc POOLED,0.8188,
+pooled,Arm C CNN-BiLSTM bal_acc pooled seed SD,0.027,
+pooled,Arm C CNN-BiLSTM brier POOLED,0.0808,
+pooled,Arm C CNN-BiLSTM brier pooled seed SD,0.0078,
+pooled,Arm C CNN-BiLSTM smallest single-seed pooled Brier,0.0729,
+pooled,Arm C CNN-BiLSTM largest single-seed pooled Brier,0.0929,over the 5 seeds
+pooled,Arm C CNN-BiLSTM pooled Brier margin over reference,0.0134,"Brier 0.0808, reference 0.0674"
+subject,Arm C CNN-BiLSTM S1 pr_auc,0.4495,
+subject,Arm C CNN-BiLSTM S2 pr_auc,0.2091,
+subject,Arm C CNN-BiLSTM S3 pr_auc,0.7247,
+subject,Arm C CNN-BiLSTM S4 pr_auc,0.5268,
+subject,Arm C CNN-BiLSTM S5 pr_auc,0.3877,
+subject,Arm C CNN-BiLSTM S6 pr_auc,0.221,
+subject,Arm C CNN-BiLSTM S7 pr_auc,0.8211,
+subject,Arm C CNN-BiLSTM S8 pr_auc,0.232,
+subject,Arm C CNN-BiLSTM S9 pr_auc,0.0122,
+subject,Arm C CNN-BiLSTM S10 pr_auc,0.1874,
+subject,Arm C CNN-BiLSTM S1 recall,0.7354,
+subject,Arm C CNN-BiLSTM S2 recall,0.9163,
+subject,Arm C CNN-BiLSTM S3 recall,0.7841,
+subject,Arm C CNN-BiLSTM S4 recall,0.581,
+subject,Arm C CNN-BiLSTM S5 recall,0.5435,
+subject,Arm C CNN-BiLSTM S6 recall,0.3838,
+subject,Arm C CNN-BiLSTM S7 recall,0.8311,
+subject,Arm C CNN-BiLSTM S8 recall,0.25,
+subject,Arm C CNN-BiLSTM S9 recall,0.0,
+subject,Arm C CNN-BiLSTM S10 recall,0.2333,
+subject,Arm C CNN-BiLSTM S1 auc,0.8853,
+subject,Arm C CNN-BiLSTM S2 auc,0.8598,
+subject,Arm C CNN-BiLSTM S3 auc,0.8843,
+subject,Arm C CNN-BiLSTM S4 auc,0.9023,
+subject,Arm C CNN-BiLSTM S5 auc,0.8667,
+subject,Arm C CNN-BiLSTM S6 auc,0.7809,
+subject,Arm C CNN-BiLSTM S7 auc,0.924,
+subject,Arm C CNN-BiLSTM S8 auc,0.8413,
+subject,Arm C CNN-BiLSTM S9 auc,0.6999,
+subject,Arm C CNN-BiLSTM S10 auc,0.8278,
+stats,Arm A EEGNet vs ShallowConvNet ROC-AUC p,0.0039,9/10 for EEGNet
+stats,Arm A EEGNet vs CNN ROC-AUC p,0.002,10/10 for EEGNet
+stats,Arm A EEGNet vs DeepConvNet ROC-AUC p,0.002,10/10 for EEGNet
+stats,Arm A EEGNet vs CNN-BiLSTM ROC-AUC p,0.0039,9/10 for EEGNet
+stats,Arm A ShallowConvNet vs CNN ROC-AUC p,0.625,7/10 for ShallowConvNet
+stats,Arm A ShallowConvNet vs DeepConvNet ROC-AUC p,0.2754,7/10 for ShallowConvNet
+stats,Arm A ShallowConvNet vs CNN-BiLSTM ROC-AUC p,0.1934,7/10 for ShallowConvNet
+stats,Arm A CNN vs DeepConvNet ROC-AUC p,0.375,5/10 for CNN
+stats,Arm A CNN vs CNN-BiLSTM ROC-AUC p,0.6953,6/10 for CNN
+stats,Arm A DeepConvNet vs CNN-BiLSTM ROC-AUC p,0.7695,5/10 for DeepConvNet
+stats,Arm A smallest p among non-EEGNet ROC-AUC pairs,0.1934,0 of 6 significant
+stats,Arm A EEGNet ROC-AUC pairs significant,4,of 4 pairs involving EEGNet
+stats,Arm A EEGNet ROC-AUC pairs tested,4,
+stats,Arm A CNN vs CNN-BiLSTM auc p,0.6953,"0.8428 -> 0.8213, 4/10 improved"
+stats,Arm A CNN vs CNN-BiLSTM pr_auc p,0.0059,"0.3382 -> 0.3986, 9/10 improved"
+stats,Arm A CNN vs CNN-BiLSTM bal_acc p,0.0098,"0.6182 -> 0.6962, 8/10 improved"
+stats,Arm A CNN vs CNN-BiLSTM f1 p,0.0195,"0.2666 -> 0.3606, 7/10 improved; 1 tied, so 9 pair(s) tested, floor 0.003906"
+stats,Arm A rho parameters vs ROC-AUC,-0.9,p=0.0833
+stats,Arm A p for parameters vs ROC-AUC,0.0833,
+stats,Arm A EEGNet rho drowsy count vs PR-AUC raw,0.9152,p=0.0002
+stats,Arm A EEGNet rho drowsy count vs PR-AUC minus prevalence,0.903,p=0.0003
+stats,Arm A EEGNet rho drowsy count vs PR-AUC over prevalence,-0.5636,p=0.0897
+stats,Arm A EEGNet p drowsy count vs PR-AUC raw,0.0002,
+stats,Arm A EEGNet p drowsy count vs PR-AUC minus prevalence,0.0003,
+stats,Arm A EEGNet p drowsy count vs PR-AUC over prevalence,0.0897,
+stats,Arm A ShallowConvNet rho drowsy count vs PR-AUC raw,0.9515,p=0.0000
+stats,Arm A ShallowConvNet rho drowsy count vs PR-AUC minus prevalence,0.8909,p=0.0005
+stats,Arm A ShallowConvNet rho drowsy count vs PR-AUC over prevalence,-0.4303,p=0.2145
+stats,Arm A ShallowConvNet p drowsy count vs PR-AUC raw,0.0,
+stats,Arm A ShallowConvNet p drowsy count vs PR-AUC minus prevalence,0.0005,
+stats,Arm A ShallowConvNet p drowsy count vs PR-AUC over prevalence,0.2145,
+stats,Arm A CNN rho drowsy count vs PR-AUC raw,0.9273,p=0.0001
+stats,Arm A CNN rho drowsy count vs PR-AUC minus prevalence,0.8667,p=0.0012
+stats,Arm A CNN rho drowsy count vs PR-AUC over prevalence,-0.6121,p=0.0600
+stats,Arm A CNN p drowsy count vs PR-AUC raw,0.0001,
+stats,Arm A CNN p drowsy count vs PR-AUC minus prevalence,0.0012,
+stats,Arm A CNN p drowsy count vs PR-AUC over prevalence,0.06,
+stats,Arm A DeepConvNet rho drowsy count vs PR-AUC raw,0.9273,p=0.0001
+stats,Arm A DeepConvNet rho drowsy count vs PR-AUC minus prevalence,0.8909,p=0.0005
+stats,Arm A DeepConvNet rho drowsy count vs PR-AUC over prevalence,-0.4182,p=0.2291
+stats,Arm A DeepConvNet p drowsy count vs PR-AUC raw,0.0001,
+stats,Arm A DeepConvNet p drowsy count vs PR-AUC minus prevalence,0.0005,
+stats,Arm A DeepConvNet p drowsy count vs PR-AUC over prevalence,0.2291,
+stats,Arm A CNN-BiLSTM rho drowsy count vs PR-AUC raw,0.9758,p=0.0000
+stats,Arm A CNN-BiLSTM rho drowsy count vs PR-AUC minus prevalence,0.9152,p=0.0002
+stats,Arm A CNN-BiLSTM rho drowsy count vs PR-AUC over prevalence,-0.2727,p=0.4458
+stats,Arm A CNN-BiLSTM p drowsy count vs PR-AUC raw,0.0,
+stats,Arm A CNN-BiLSTM p drowsy count vs PR-AUC minus prevalence,0.0002,
+stats,Arm A CNN-BiLSTM p drowsy count vs PR-AUC over prevalence,0.4458,
+stats,Arm B EEGNet vs ShallowConvNet ROC-AUC p,0.0098,8/10 for EEGNet
+stats,Arm B EEGNet vs CNN ROC-AUC p,0.0645,8/10 for EEGNet
+stats,Arm B EEGNet vs DeepConvNet ROC-AUC p,0.002,10/10 for EEGNet
+stats,Arm B EEGNet vs CNN-BiLSTM ROC-AUC p,0.002,10/10 for EEGNet
+stats,Arm B ShallowConvNet vs CNN ROC-AUC p,0.4922,5/10 for ShallowConvNet
+stats,Arm B ShallowConvNet vs DeepConvNet ROC-AUC p,0.1934,6/10 for ShallowConvNet
+stats,Arm B ShallowConvNet vs CNN-BiLSTM ROC-AUC p,0.4922,5/10 for ShallowConvNet
+stats,Arm B CNN vs DeepConvNet ROC-AUC p,0.2754,6/10 for CNN
+stats,Arm B CNN vs CNN-BiLSTM ROC-AUC p,0.8457,6/10 for CNN
+stats,Arm B DeepConvNet vs CNN-BiLSTM ROC-AUC p,0.084,3/10 for DeepConvNet
+stats,Arm B smallest p among non-EEGNet ROC-AUC pairs,0.084,0 of 6 significant
+stats,Arm B EEGNet ROC-AUC pairs significant,3,of 4 pairs involving EEGNet
+stats,Arm B EEGNet ROC-AUC pairs tested,4,
+stats,Arm B CNN vs CNN-BiLSTM auc p,0.8457,"0.8662 -> 0.8590, 4/10 improved"
+stats,Arm B CNN vs CNN-BiLSTM pr_auc p,0.2324,"0.3599 -> 0.3970, 7/10 improved"
+stats,Arm B CNN vs CNN-BiLSTM bal_acc p,0.002,"0.6010 -> 0.7253, 10/10 improved"
+stats,Arm B CNN vs CNN-BiLSTM f1 p,0.0195,"0.2449 -> 0.3724, 9/10 improved"
+stats,Arm B rho parameters vs ROC-AUC,-0.5,p=0.4500
+stats,Arm B p for parameters vs ROC-AUC,0.45,
+stats,Arm B EEGNet rho drowsy count vs PR-AUC raw,0.8909,p=0.0005
+stats,Arm B EEGNet rho drowsy count vs PR-AUC minus prevalence,0.8909,p=0.0005
+stats,Arm B EEGNet rho drowsy count vs PR-AUC over prevalence,-0.8061,p=0.0049
+stats,Arm B EEGNet p drowsy count vs PR-AUC raw,0.0005,
+stats,Arm B EEGNet p drowsy count vs PR-AUC minus prevalence,0.0005,
+stats,Arm B EEGNet p drowsy count vs PR-AUC over prevalence,0.0049,
+stats,Arm B ShallowConvNet rho drowsy count vs PR-AUC raw,0.8303,p=0.0029
+stats,Arm B ShallowConvNet rho drowsy count vs PR-AUC minus prevalence,0.8061,p=0.0049
+stats,Arm B ShallowConvNet rho drowsy count vs PR-AUC over prevalence,-0.6727,p=0.0330
+stats,Arm B ShallowConvNet p drowsy count vs PR-AUC raw,0.0029,
+stats,Arm B ShallowConvNet p drowsy count vs PR-AUC minus prevalence,0.0049,
+stats,Arm B ShallowConvNet p drowsy count vs PR-AUC over prevalence,0.033,
+stats,Arm B CNN rho drowsy count vs PR-AUC raw,0.5879,p=0.0739
+stats,Arm B CNN rho drowsy count vs PR-AUC minus prevalence,0.4424,p=0.2004
+stats,Arm B CNN rho drowsy count vs PR-AUC over prevalence,-0.7091,p=0.0217
+stats,Arm B CNN p drowsy count vs PR-AUC raw,0.0739,
+stats,Arm B CNN p drowsy count vs PR-AUC minus prevalence,0.2004,
+stats,Arm B CNN p drowsy count vs PR-AUC over prevalence,0.0217,
+stats,Arm B DeepConvNet rho drowsy count vs PR-AUC raw,0.9152,p=0.0002
+stats,Arm B DeepConvNet rho drowsy count vs PR-AUC minus prevalence,0.8909,p=0.0005
+stats,Arm B DeepConvNet rho drowsy count vs PR-AUC over prevalence,-0.4788,p=0.1615
+stats,Arm B DeepConvNet p drowsy count vs PR-AUC raw,0.0002,
+stats,Arm B DeepConvNet p drowsy count vs PR-AUC minus prevalence,0.0005,
+stats,Arm B DeepConvNet p drowsy count vs PR-AUC over prevalence,0.1615,
+stats,Arm B CNN-BiLSTM rho drowsy count vs PR-AUC raw,0.7939,p=0.0061
+stats,Arm B CNN-BiLSTM rho drowsy count vs PR-AUC minus prevalence,0.7939,p=0.0061
+stats,Arm B CNN-BiLSTM rho drowsy count vs PR-AUC over prevalence,-0.8788,p=0.0008
+stats,Arm B CNN-BiLSTM p drowsy count vs PR-AUC raw,0.0061,
+stats,Arm B CNN-BiLSTM p drowsy count vs PR-AUC minus prevalence,0.0061,
+stats,Arm B CNN-BiLSTM p drowsy count vs PR-AUC over prevalence,0.0008,
+stats,Arm C EEGNet vs ShallowConvNet ROC-AUC p,0.002,10/10 for EEGNet
+stats,Arm C EEGNet vs CNN ROC-AUC p,0.0488,8/10 for EEGNet
+stats,Arm C EEGNet vs DeepConvNet ROC-AUC p,0.0195,9/10 for EEGNet
+stats,Arm C EEGNet vs CNN-BiLSTM ROC-AUC p,0.0137,9/10 for EEGNet
+stats,Arm C ShallowConvNet vs CNN ROC-AUC p,0.625,7/10 for ShallowConvNet
+stats,Arm C ShallowConvNet vs DeepConvNet ROC-AUC p,0.625,6/10 for ShallowConvNet
+stats,Arm C ShallowConvNet vs CNN-BiLSTM ROC-AUC p,0.4922,5/10 for ShallowConvNet
+stats,Arm C CNN vs DeepConvNet ROC-AUC p,0.625,5/10 for CNN
+stats,Arm C CNN vs CNN-BiLSTM ROC-AUC p,0.5566,4/10 for CNN
+stats,Arm C DeepConvNet vs CNN-BiLSTM ROC-AUC p,0.4316,3/10 for DeepConvNet
+stats,Arm C smallest p among non-EEGNet ROC-AUC pairs,0.4316,0 of 6 significant
+stats,Arm C EEGNet ROC-AUC pairs significant,4,of 4 pairs involving EEGNet
+stats,Arm C EEGNet ROC-AUC pairs tested,4,
+stats,Arm C CNN vs CNN-BiLSTM auc p,0.5566,"0.8469 -> 0.8472, 6/10 improved"
+stats,Arm C CNN vs CNN-BiLSTM pr_auc p,0.0039,"0.2946 -> 0.3772, 9/10 improved"
+stats,Arm C CNN vs CNN-BiLSTM bal_acc p,0.0039,"0.5987 -> 0.7142, 9/10 improved"
+stats,Arm C CNN vs CNN-BiLSTM f1 p,0.0039,"0.2186 -> 0.3535, 9/10 improved; 1 tied, so 9 pair(s) tested, floor 0.003906"
+stats,Arm C rho parameters vs ROC-AUC,-0.1,p=0.9500
+stats,Arm C p for parameters vs ROC-AUC,0.95,
+stats,Arm C EEGNet rho drowsy count vs PR-AUC raw,0.903,p=0.0003
+stats,Arm C EEGNet rho drowsy count vs PR-AUC minus prevalence,0.8788,p=0.0008
+stats,Arm C EEGNet rho drowsy count vs PR-AUC over prevalence,-0.5273,p=0.1173
+stats,Arm C EEGNet p drowsy count vs PR-AUC raw,0.0003,
+stats,Arm C EEGNet p drowsy count vs PR-AUC minus prevalence,0.0008,
+stats,Arm C EEGNet p drowsy count vs PR-AUC over prevalence,0.1173,
+stats,Arm C ShallowConvNet rho drowsy count vs PR-AUC raw,0.9152,p=0.0002
+stats,Arm C ShallowConvNet rho drowsy count vs PR-AUC minus prevalence,0.8788,p=0.0008
+stats,Arm C ShallowConvNet rho drowsy count vs PR-AUC over prevalence,-0.5879,p=0.0739
+stats,Arm C ShallowConvNet p drowsy count vs PR-AUC raw,0.0002,
+stats,Arm C ShallowConvNet p drowsy count vs PR-AUC minus prevalence,0.0008,
+stats,Arm C ShallowConvNet p drowsy count vs PR-AUC over prevalence,0.0739,
+stats,Arm C CNN rho drowsy count vs PR-AUC raw,0.9758,p=0.0000
+stats,Arm C CNN rho drowsy count vs PR-AUC minus prevalence,0.9152,p=0.0002
+stats,Arm C CNN rho drowsy count vs PR-AUC over prevalence,-0.6242,p=0.0537
+stats,Arm C CNN p drowsy count vs PR-AUC raw,0.0,
+stats,Arm C CNN p drowsy count vs PR-AUC minus prevalence,0.0002,
+stats,Arm C CNN p drowsy count vs PR-AUC over prevalence,0.0537,
+stats,Arm C DeepConvNet rho drowsy count vs PR-AUC raw,0.903,p=0.0003
+stats,Arm C DeepConvNet rho drowsy count vs PR-AUC minus prevalence,0.8788,p=0.0008
+stats,Arm C DeepConvNet rho drowsy count vs PR-AUC over prevalence,-0.3818,p=0.2763
+stats,Arm C DeepConvNet p drowsy count vs PR-AUC raw,0.0003,
+stats,Arm C DeepConvNet p drowsy count vs PR-AUC minus prevalence,0.0008,
+stats,Arm C DeepConvNet p drowsy count vs PR-AUC over prevalence,0.2763,
+stats,Arm C CNN-BiLSTM rho drowsy count vs PR-AUC raw,0.9394,p=0.0001
+stats,Arm C CNN-BiLSTM rho drowsy count vs PR-AUC minus prevalence,0.903,p=0.0003
+stats,Arm C CNN-BiLSTM rho drowsy count vs PR-AUC over prevalence,-0.3818,p=0.2763
+stats,Arm C CNN-BiLSTM p drowsy count vs PR-AUC raw,0.0001,
+stats,Arm C CNN-BiLSTM p drowsy count vs PR-AUC minus prevalence,0.0003,
+stats,Arm C CNN-BiLSTM p drowsy count vs PR-AUC over prevalence,0.2763,
+stats,A-B ordering agreement auc,0.7,p=0.2333
+stats,A-B ordering agreement auc p,0.2333,
+stats,A-C ordering agreement auc,0.3,p=0.6833
+stats,A-C ordering agreement auc p,0.6833,
+stats,B-C ordering agreement auc,0.8,p=0.1333
+stats,B-C ordering agreement auc p,0.1333,
+stats,A-B ordering agreement pr_auc,0.9,p=0.0833
+stats,A-B ordering agreement pr_auc p,0.0833,
+stats,A-C ordering agreement pr_auc,0.7,p=0.2333
+stats,A-C ordering agreement pr_auc p,0.2333,
+stats,B-C ordering agreement pr_auc,0.6,p=0.3500
+stats,B-C ordering agreement pr_auc p,0.35,
+stats,A-B ordering agreement bal_acc,0.7,p=0.2333
+stats,A-B ordering agreement bal_acc p,0.2333,
+stats,A-C ordering agreement bal_acc,0.9,p=0.0833
+stats,A-C ordering agreement bal_acc p,0.0833,
+stats,B-C ordering agreement bal_acc,0.9,p=0.0833
+stats,B-C ordering agreement bal_acc p,0.0833,
+stats,A-B ordering agreement f1,1.0,p=0.0167
+stats,A-B ordering agreement f1 p,0.0167,
+stats,A-C ordering agreement f1,1.0,p=0.0167
+stats,A-C ordering agreement f1 p,0.0167,
+stats,B-C ordering agreement f1,1.0,p=0.0167
+stats,B-C ordering agreement f1 p,0.0167,
+stats,A vs C EEGNet auc p,0.4922,"balancing isolated; 0.8840 -> 0.8831, 6/10 higher on C"
+stats,A vs C EEGNet auc delta,-0.0009,
+stats,A vs C ShallowConvNet auc p,0.625,"balancing isolated; 0.8460 -> 0.8332, 5/10 higher on C"
+stats,A vs C ShallowConvNet auc delta,-0.0128,
+stats,A vs C CNN auc p,0.8457,"balancing isolated; 0.8428 -> 0.8469, 5/10 higher on C"
+stats,A vs C CNN auc delta,0.0041,
+stats,A vs C DeepConvNet auc p,0.0488,"balancing isolated; 0.8123 -> 0.8339, 9/10 higher on C"
+stats,A vs C DeepConvNet auc delta,0.0217,
+stats,A vs C CNN-BiLSTM auc p,0.0488,"balancing isolated; 0.8213 -> 0.8472, 7/10 higher on C"
+stats,A vs C CNN-BiLSTM auc delta,0.0259,
+stats,A vs C EEGNet pr_auc p,0.1055,"balancing isolated; 0.4314 -> 0.4073, 2/10 higher on C"
+stats,A vs C EEGNet pr_auc delta,-0.0242,
+stats,A vs C ShallowConvNet pr_auc p,0.0039,"balancing isolated; 0.4110 -> 0.3724, 1/10 higher on C"
+stats,A vs C ShallowConvNet pr_auc delta,-0.0386,
+stats,A vs C CNN pr_auc p,0.002,"balancing isolated; 0.3382 -> 0.2946, 0/10 higher on C"
+stats,A vs C CNN pr_auc delta,-0.0436,
+stats,A vs C DeepConvNet pr_auc p,0.1934,"balancing isolated; 0.4051 -> 0.3862, 3/10 higher on C"
+stats,A vs C DeepConvNet pr_auc delta,-0.019,
+stats,A vs C CNN-BiLSTM pr_auc p,0.2324,"balancing isolated; 0.3986 -> 0.3772, 3/10 higher on C"
+stats,A vs C CNN-BiLSTM pr_auc delta,-0.0214,
+stats,A vs C EEGNet bal_acc p,0.1055,"balancing isolated; 0.7084 -> 0.7176, 8/10 higher on C"
+stats,A vs C EEGNet bal_acc delta,0.0092,
+stats,A vs C ShallowConvNet bal_acc p,0.4316,"balancing isolated; 0.7002 -> 0.6943, 4/10 higher on C"
+stats,A vs C ShallowConvNet bal_acc delta,-0.0059,
+stats,A vs C CNN bal_acc p,0.0742,"balancing isolated; 0.6182 -> 0.5987, 2/10 higher on C; 1 tied, so 9 pair(s) tested, floor 0.003906"
+stats,A vs C CNN bal_acc delta,-0.0195,
+stats,A vs C DeepConvNet bal_acc p,0.4922,"balancing isolated; 0.6271 -> 0.6277, 3/10 higher on C"
+stats,A vs C DeepConvNet bal_acc delta,0.0005,
+stats,A vs C CNN-BiLSTM bal_acc p,0.0039,"balancing isolated; 0.6962 -> 0.7142, 9/10 higher on C"
+stats,A vs C CNN-BiLSTM bal_acc delta,0.018,
+stats,A vs C EEGNet f1 p,0.9102,"balancing isolated; 0.3875 -> 0.3819, 5/10 higher on C; 1 tied, so 9 pair(s) tested, floor 0.003906"
+stats,A vs C EEGNet f1 delta,-0.0056,
+stats,A vs C ShallowConvNet f1 p,0.0059,"balancing isolated; 0.3538 -> 0.3121, 1/10 higher on C"
+stats,A vs C ShallowConvNet f1 delta,-0.0417,
+stats,A vs C CNN f1 p,0.0469,"balancing isolated; 0.2666 -> 0.2186, 1/10 higher on C; 3 tied, so 7 pair(s) tested, floor 0.015625"
+stats,A vs C CNN f1 delta,-0.048,
+stats,A vs C DeepConvNet f1 p,0.1641,"balancing isolated; 0.3102 -> 0.2998, 2/10 higher on C; 1 tied, so 9 pair(s) tested, floor 0.003906"
+stats,A vs C DeepConvNet f1 delta,-0.0105,
+stats,A vs C CNN-BiLSTM f1 p,0.9102,"balancing isolated; 0.3606 -> 0.3535, 3/10 higher on C; 1 tied, so 9 pair(s) tested, floor 0.003906"
+stats,A vs C CNN-BiLSTM f1 delta,-0.0071,
+stats,A vs C significant tests of twenty,7,balancing isolated
+stats,A vs C smallest p over twenty tests,0.002,balancing isolated
+stats,B vs C EEGNet auc p,0.375,"trimming isolated; 0.9003 -> 0.8831, 3/10 higher on C"
+stats,B vs C EEGNet auc delta,-0.0172,
+stats,B vs C ShallowConvNet auc p,0.4922,"trimming isolated; 0.8472 -> 0.8332, 4/10 higher on C"
+stats,B vs C ShallowConvNet auc delta,-0.014,
+stats,B vs C CNN auc p,0.4922,"trimming isolated; 0.8662 -> 0.8469, 4/10 higher on C"
+stats,B vs C CNN auc delta,-0.0193,
+stats,B vs C DeepConvNet auc p,0.1602,"trimming isolated; 0.7930 -> 0.8339, 6/10 higher on C"
+stats,B vs C DeepConvNet auc delta,0.041,
+stats,B vs C CNN-BiLSTM auc p,0.9219,"trimming isolated; 0.8590 -> 0.8472, 7/10 higher on C"
+stats,B vs C CNN-BiLSTM auc delta,-0.0118,
+stats,B vs C EEGNet pr_auc p,0.1309,"trimming isolated; 0.4398 -> 0.4073, 3/10 higher on C"
+stats,B vs C EEGNet pr_auc delta,-0.0325,
+stats,B vs C ShallowConvNet pr_auc p,0.3223,"trimming isolated; 0.3994 -> 0.3724, 4/10 higher on C"
+stats,B vs C ShallowConvNet pr_auc delta,-0.027,
+stats,B vs C CNN pr_auc p,0.1602,"trimming isolated; 0.3599 -> 0.2946, 2/10 higher on C"
+stats,B vs C CNN pr_auc delta,-0.0653,
+stats,B vs C DeepConvNet pr_auc p,0.6953,"trimming isolated; 0.3841 -> 0.3862, 5/10 higher on C"
+stats,B vs C DeepConvNet pr_auc delta,0.0021,
+stats,B vs C CNN-BiLSTM pr_auc p,0.9219,"trimming isolated; 0.3970 -> 0.3772, 6/10 higher on C"
+stats,B vs C CNN-BiLSTM pr_auc delta,-0.0199,
+stats,B vs C EEGNet bal_acc p,0.7695,"trimming isolated; 0.7249 -> 0.7176, 4/10 higher on C"
+stats,B vs C EEGNet bal_acc delta,-0.0073,
+stats,B vs C ShallowConvNet bal_acc p,0.625,"trimming isolated; 0.7060 -> 0.6943, 5/10 higher on C"
+stats,B vs C ShallowConvNet bal_acc delta,-0.0117,
+stats,B vs C CNN bal_acc p,0.9102,"trimming isolated; 0.6010 -> 0.5987, 4/10 higher on C; 1 tied, so 9 pair(s) tested, floor 0.003906"
+stats,B vs C CNN bal_acc delta,-0.0023,
+stats,B vs C DeepConvNet bal_acc p,0.7695,"trimming isolated; 0.6213 -> 0.6277, 5/10 higher on C"
+stats,B vs C DeepConvNet bal_acc delta,0.0064,
+stats,B vs C CNN-BiLSTM bal_acc p,0.9219,"trimming isolated; 0.7253 -> 0.7142, 4/10 higher on C"
+stats,B vs C CNN-BiLSTM bal_acc delta,-0.0111,
+stats,B vs C EEGNet f1 p,0.625,"trimming isolated; 0.3971 -> 0.3819, 5/10 higher on C"
+stats,B vs C EEGNet f1 delta,-0.0152,
+stats,B vs C ShallowConvNet f1 p,0.7695,"trimming isolated; 0.3195 -> 0.3121, 5/10 higher on C"
+stats,B vs C ShallowConvNet f1 delta,-0.0074,
+stats,B vs C CNN f1 p,0.9453,"trimming isolated; 0.2449 -> 0.2186, 4/10 higher on C; 2 tied, so 8 pair(s) tested, floor 0.007812"
+stats,B vs C CNN f1 delta,-0.0263,
+stats,B vs C DeepConvNet f1 p,0.25,"trimming isolated; 0.2707 -> 0.2998, 6/10 higher on C; 1 tied, so 9 pair(s) tested, floor 0.003906"
+stats,B vs C DeepConvNet f1 delta,0.0291,
+stats,B vs C CNN-BiLSTM f1 p,0.8457,"trimming isolated; 0.3724 -> 0.3535, 5/10 higher on C"
+stats,B vs C CNN-BiLSTM f1 delta,-0.019,
+stats,B vs C significant tests of twenty,0,trimming isolated
+stats,B vs C smallest p over twenty tests,0.1309,trimming isolated
+stats,significant prevalence-corrected correlations,14 of 15,
+stats,minimum rho among the significant prevalence-corrected correlations,0.7939,
+stats,maximum p among the significant prevalence-corrected correlations,0.0061,
+confusion,Arm A DeepConvNet TN,8212,
+confusion,Arm A DeepConvNet FP,278,
+confusion,Arm A DeepConvNet FN,395,
+confusion,Arm A DeepConvNet TP,375,
+confusion,Arm A DeepConvNet pooled recall,0.4868,
+confusion,Arm A DeepConvNet pooled precision,0.5741,
+confusion,Arm A DeepConvNet pooled accuracy percent,92.73,
+confusion,Arm A CNN TN,8095,
+confusion,Arm A CNN FP,395,
+confusion,Arm A CNN FN,380,
+confusion,Arm A CNN TP,390,
+confusion,Arm A CNN pooled recall,0.5062,
+confusion,Arm A CNN pooled precision,0.4966,
+confusion,Arm A CNN pooled accuracy percent,91.6263,
+confusion,Arm A CNN-BiLSTM TN,7800,
+confusion,Arm A CNN-BiLSTM FP,690,
+confusion,Arm A CNN-BiLSTM FN,272,
+confusion,Arm A CNN-BiLSTM TP,498,
+confusion,Arm A CNN-BiLSTM pooled recall,0.6462,
+confusion,Arm A CNN-BiLSTM pooled precision,0.419,
+confusion,Arm A CNN-BiLSTM pooled accuracy percent,89.6069,
+confusion,Arm A EEGNet TN,7631,
+confusion,Arm A EEGNet FP,859,
+confusion,Arm A EEGNet FN,187,
+confusion,Arm A EEGNet TP,583,
+confusion,Arm A EEGNet pooled recall,0.7577,
+confusion,Arm A EEGNet pooled precision,0.4045,
+confusion,Arm A EEGNet pooled accuracy percent,88.7106,
+confusion,Arm A ShallowConvNet TN,7090,
+confusion,Arm A ShallowConvNet FP,1400,
+confusion,Arm A ShallowConvNet FN,158,
+confusion,Arm A ShallowConvNet TP,612,
+confusion,Arm A ShallowConvNet pooled recall,0.7943,
+confusion,Arm A ShallowConvNet pooled precision,0.304,
+confusion,Arm A ShallowConvNet pooled accuracy percent,83.1706,
+confusion,Arm A EEGNet pooled accuracy percent seed SD,0.8065,
+confusion,Arm A EEGNet smallest single-seed pooled accuracy percent,87.365,
+confusion,Arm A EEGNet largest single-seed pooled accuracy percent,89.3737,over the 5 seeds
+confusion,Arm A EEGNet pooled recall seed SD,0.0193,
+confusion,Arm A EEGNet smallest single-seed pooled recall,0.7351,
+confusion,Arm A EEGNet largest single-seed pooled recall,0.7792,over the 5 seeds
+confusion,Arm A EEGNet pooled precision seed SD,0.0209,
+confusion,Arm A EEGNet smallest single-seed pooled precision,0.3701,
+confusion,Arm A EEGNet largest single-seed pooled precision,0.4216,over the 5 seeds
+confusion,Arm A ShallowConvNet pooled accuracy percent seed SD,1.3482,
+confusion,Arm A ShallowConvNet smallest single-seed pooled accuracy percent,81.6631,
+confusion,Arm A ShallowConvNet largest single-seed pooled accuracy percent,84.9676,over the 5 seeds
+confusion,Arm A ShallowConvNet pooled recall seed SD,0.0167,
+confusion,Arm A ShallowConvNet smallest single-seed pooled recall,0.7792,
+confusion,Arm A ShallowConvNet largest single-seed pooled recall,0.8156,over the 5 seeds
+confusion,Arm A ShallowConvNet pooled precision seed SD,0.017,
+confusion,Arm A ShallowConvNet smallest single-seed pooled precision,0.2875,
+confusion,Arm A ShallowConvNet largest single-seed pooled precision,0.3301,over the 5 seeds
+confusion,Arm A CNN pooled accuracy percent seed SD,1.1684,
+confusion,Arm A CNN smallest single-seed pooled accuracy percent,89.8704,
+confusion,Arm A CNN largest single-seed pooled accuracy percent,92.8402,over the 5 seeds
+confusion,Arm A CNN pooled recall seed SD,0.0759,
+confusion,Arm A CNN smallest single-seed pooled recall,0.3987,
+confusion,Arm A CNN largest single-seed pooled recall,0.5948,over the 5 seeds
+confusion,Arm A CNN pooled precision seed SD,0.0697,
+confusion,Arm A CNN smallest single-seed pooled precision,0.4225,
+confusion,Arm A CNN largest single-seed pooled precision,0.6055,over the 5 seeds
+confusion,Arm A DeepConvNet pooled accuracy percent seed SD,0.4206,
+confusion,Arm A DeepConvNet smallest single-seed pooled accuracy percent,92.1922,
+confusion,Arm A DeepConvNet largest single-seed pooled accuracy percent,93.1749,over the 5 seeds
+confusion,Arm A DeepConvNet pooled recall seed SD,0.1054,
+confusion,Arm A DeepConvNet smallest single-seed pooled recall,0.3922,
+confusion,Arm A DeepConvNet largest single-seed pooled recall,0.6545,over the 5 seeds
+confusion,Arm A DeepConvNet pooled precision seed SD,0.0378,
+confusion,Arm A DeepConvNet smallest single-seed pooled precision,0.5245,
+confusion,Arm A DeepConvNet largest single-seed pooled precision,0.6229,over the 5 seeds
+confusion,Arm A CNN-BiLSTM pooled accuracy percent seed SD,0.9334,
+confusion,Arm A CNN-BiLSTM smallest single-seed pooled accuracy percent,88.4773,
+confusion,Arm A CNN-BiLSTM largest single-seed pooled accuracy percent,90.9071,over the 5 seeds
+confusion,Arm A CNN-BiLSTM pooled recall seed SD,0.1242,
+confusion,Arm A CNN-BiLSTM smallest single-seed pooled recall,0.4532,
+confusion,Arm A CNN-BiLSTM largest single-seed pooled recall,0.7364,over the 5 seeds
+confusion,Arm A CNN-BiLSTM pooled precision seed SD,0.025,
+confusion,Arm A CNN-BiLSTM smallest single-seed pooled precision,0.3962,
+confusion,Arm A CNN-BiLSTM largest single-seed pooled precision,0.4632,over the 5 seeds
+confusion,Arm A Spearman pooled accuracy vs pooled recall,-1.0,"p=0.0167, five architectures, exact permutation p"
+confusion,Arm A p for Spearman pooled accuracy vs pooled recall,0.0167,exact permutation p over 120 orderings
+confusion,Arm A most accurate minus EEGNet accuracy points,4.0,DeepConvNet 92.73 % against EEGNet 88.71 %
+results,Arm A EEGNet recall POOLED,0.7577,
+results,Arm A EEGNet pooled minus subject-averaged recall,0.236,
+results,Arm A ShallowConvNet recall POOLED,0.7943,
+results,Arm A ShallowConvNet pooled minus subject-averaged recall,0.2218,
+results,Arm A CNN recall POOLED,0.5062,
+results,Arm A CNN pooled minus subject-averaged recall,0.2206,
+results,Arm A DeepConvNet recall POOLED,0.4868,
+results,Arm A DeepConvNet pooled minus subject-averaged recall,0.1982,
+results,Arm A CNN-BiLSTM recall POOLED,0.6462,
+results,Arm A CNN-BiLSTM pooled minus subject-averaged recall,0.1707,
+results,Arm A EEGNet degenerate folds,9,of 50
+results,Arm A ShallowConvNet degenerate folds,4,of 50
+results,Arm A CNN degenerate folds,17,of 50
+results,Arm A DeepConvNet degenerate folds,11,of 50
+results,Arm A CNN-BiLSTM degenerate folds,7,of 50
+spread,Arm A EEGNet subject SD of PR-AUC,0.2692,
+spread,Arm A EEGNet seed SD of PR-AUC,0.0058,
+spread,Arm A EEGNet subject to seed SD ratio,46.4039,
+spread,Arm A ShallowConvNet subject SD of PR-AUC,0.2603,
+spread,Arm A ShallowConvNet seed SD of PR-AUC,0.0115,
+spread,Arm A ShallowConvNet subject to seed SD ratio,22.6748,
+spread,Arm A CNN subject SD of PR-AUC,0.2399,
+spread,Arm A CNN seed SD of PR-AUC,0.005,
+spread,Arm A CNN subject to seed SD ratio,47.7655,
+spread,Arm A DeepConvNet subject SD of PR-AUC,0.2773,
+spread,Arm A DeepConvNet seed SD of PR-AUC,0.0108,
+spread,Arm A DeepConvNet subject to seed SD ratio,25.7714,
+spread,Arm A CNN-BiLSTM subject SD of PR-AUC,0.244,
+spread,Arm A CNN-BiLSTM seed SD of PR-AUC,0.0207,
+spread,Arm A CNN-BiLSTM subject to seed SD ratio,11.7801,
+spread,Arm A minimum subject to seed SD ratio,11.7801,
+spread,Arm A maximum subject to seed SD ratio,47.7655,
+spread,Arm A minimum subject PR-AUC over architectures,0.0269,S9
+spread,Arm A maximum subject PR-AUC over architectures,0.8095,S7
+stats,Arm A rho ROC-AUC (pooled) vs pooled Brier,0.8,p=0.1333
+stats,Arm A p for ROC-AUC (pooled) vs pooled Brier,0.1333,
+stats,Arm A rho ROC-AUC (subject_averaged) vs pooled Brier,0.8,p=0.1333
+stats,Arm A p for ROC-AUC (subject_averaged) vs pooled Brier,0.1333,
+results,Arm A EEGNet minus ShallowConvNet subject-averaged ROC-AUC,0.0379,
+results,Arm A ShallowConvNet minus CNN subject-averaged ROC-AUC,0.0033,
+results,Arm A CNN minus CNN-BiLSTM subject-averaged ROC-AUC,0.0214,
+results,Arm A CNN-BiLSTM minus DeepConvNet subject-averaged ROC-AUC,0.0091,
+confusion,Arm B CNN TN,8966,
+confusion,Arm B CNN FP,266,
+confusion,Arm B CNN FN,428,
+confusion,Arm B CNN TP,260,
+confusion,Arm B CNN pooled recall,0.3773,
+confusion,Arm B CNN pooled precision,0.4937,
+confusion,Arm B CNN pooled accuracy percent,92.998,
+confusion,Arm B DeepConvNet TN,8871,
+confusion,Arm B DeepConvNet FP,361,
+confusion,Arm B DeepConvNet FN,379,
+confusion,Arm B DeepConvNet TP,309,
+confusion,Arm B DeepConvNet pooled recall,0.4488,
+confusion,Arm B DeepConvNet pooled precision,0.4613,
+confusion,Arm B DeepConvNet pooled accuracy percent,92.5423,
+confusion,Arm B EEGNet TN,8420,
+confusion,Arm B EEGNet FP,812,
+confusion,Arm B EEGNet FN,157,
+confusion,Arm B EEGNet TP,531,
+confusion,Arm B EEGNet pooled recall,0.7721,
+confusion,Arm B EEGNet pooled precision,0.3955,
+confusion,Arm B EEGNet pooled accuracy percent,90.2339,
+confusion,Arm B CNN-BiLSTM TN,8491,
+confusion,Arm B CNN-BiLSTM FP,741,
+confusion,Arm B CNN-BiLSTM FN,235,
+confusion,Arm B CNN-BiLSTM TP,453,
+confusion,Arm B CNN-BiLSTM pooled recall,0.6584,
+confusion,Arm B CNN-BiLSTM pooled precision,0.3795,
+confusion,Arm B CNN-BiLSTM pooled accuracy percent,90.1653,
+confusion,Arm B ShallowConvNet TN,7578,
+confusion,Arm B ShallowConvNet FP,1654,
+confusion,Arm B ShallowConvNet FN,146,
+confusion,Arm B ShallowConvNet TP,542,
+confusion,Arm B ShallowConvNet pooled recall,0.7875,
+confusion,Arm B ShallowConvNet pooled precision,0.2467,
+confusion,Arm B ShallowConvNet pooled accuracy percent,81.8528,
+confusion,Arm B EEGNet pooled accuracy percent seed SD,1.3462,
+confusion,Arm B EEGNet smallest single-seed pooled accuracy percent,88.7903,
+confusion,Arm B EEGNet largest single-seed pooled accuracy percent,91.9254,over the 5 seeds
+confusion,Arm B EEGNet pooled recall seed SD,0.0282,
+confusion,Arm B EEGNet smallest single-seed pooled recall,0.7515,
+confusion,Arm B EEGNet largest single-seed pooled recall,0.8198,over the 5 seeds
+confusion,Arm B EEGNet pooled precision seed SD,0.0389,
+confusion,Arm B EEGNet smallest single-seed pooled precision,0.356,
+confusion,Arm B EEGNet largest single-seed pooled precision,0.4508,over the 5 seeds
+confusion,Arm B ShallowConvNet pooled accuracy percent seed SD,6.2246,
+confusion,Arm B ShallowConvNet smallest single-seed pooled accuracy percent,70.877,
+confusion,Arm B ShallowConvNet largest single-seed pooled accuracy percent,85.7157,over the 5 seeds
+confusion,Arm B ShallowConvNet pooled recall seed SD,0.0546,
+confusion,Arm B ShallowConvNet smallest single-seed pooled recall,0.7209,
+confusion,Arm B ShallowConvNet largest single-seed pooled recall,0.8663,over the 5 seeds
+confusion,Arm B ShallowConvNet pooled precision seed SD,0.0479,
+confusion,Arm B ShallowConvNet smallest single-seed pooled precision,0.1757,
+confusion,Arm B ShallowConvNet largest single-seed pooled precision,0.294,over the 5 seeds
+confusion,Arm B CNN pooled accuracy percent seed SD,0.8977,
+confusion,Arm B CNN smallest single-seed pooled accuracy percent,92.0363,
+confusion,Arm B CNN largest single-seed pooled accuracy percent,94.3347,over the 5 seeds
+confusion,Arm B CNN pooled recall seed SD,0.1214,
+confusion,Arm B CNN smallest single-seed pooled recall,0.1962,
+confusion,Arm B CNN largest single-seed pooled recall,0.4898,over the 5 seeds
+confusion,Arm B CNN pooled precision seed SD,0.1019,
+confusion,Arm B CNN smallest single-seed pooled precision,0.4103,
+confusion,Arm B CNN largest single-seed pooled precision,0.6658,over the 5 seeds
+confusion,Arm B DeepConvNet pooled accuracy percent seed SD,1.0115,
+confusion,Arm B DeepConvNet smallest single-seed pooled accuracy percent,90.7964,
+confusion,Arm B DeepConvNet largest single-seed pooled accuracy percent,93.2661,over the 5 seeds
+confusion,Arm B DeepConvNet pooled recall seed SD,0.1858,
+confusion,Arm B DeepConvNet smallest single-seed pooled recall,0.1672,
+confusion,Arm B DeepConvNet largest single-seed pooled recall,0.6323,over the 5 seeds
+confusion,Arm B DeepConvNet pooled precision seed SD,0.0503,
+confusion,Arm B DeepConvNet smallest single-seed pooled precision,0.3973,
+confusion,Arm B DeepConvNet largest single-seed pooled precision,0.5207,over the 5 seeds
+confusion,Arm B CNN-BiLSTM pooled accuracy percent seed SD,1.2158,
+confusion,Arm B CNN-BiLSTM smallest single-seed pooled accuracy percent,88.498,
+confusion,Arm B CNN-BiLSTM largest single-seed pooled accuracy percent,91.4919,over the 5 seeds
+confusion,Arm B CNN-BiLSTM pooled recall seed SD,0.12,
+confusion,Arm B CNN-BiLSTM smallest single-seed pooled recall,0.4753,
+confusion,Arm B CNN-BiLSTM largest single-seed pooled recall,0.7849,over the 5 seeds
+confusion,Arm B CNN-BiLSTM pooled precision seed SD,0.0419,
+confusion,Arm B CNN-BiLSTM smallest single-seed pooled precision,0.3238,
+confusion,Arm B CNN-BiLSTM largest single-seed pooled precision,0.4223,over the 5 seeds
+confusion,Arm B Spearman pooled accuracy vs pooled recall,-0.9,"p=0.0833, five architectures, exact permutation p"
+confusion,Arm B p for Spearman pooled accuracy vs pooled recall,0.0833,exact permutation p over 120 orderings
+confusion,Arm B most accurate minus EEGNet accuracy points,2.8,CNN 93.00 % against EEGNet 90.23 %
+results,Arm B EEGNet recall POOLED,0.7721,
+results,Arm B EEGNet pooled minus subject-averaged recall,0.2323,
+results,Arm B ShallowConvNet recall POOLED,0.7875,
+results,Arm B ShallowConvNet pooled minus subject-averaged recall,0.1918,
+results,Arm B CNN recall POOLED,0.3773,
+results,Arm B CNN pooled minus subject-averaged recall,0.1456,
+results,Arm B DeepConvNet recall POOLED,0.4488,
+results,Arm B DeepConvNet pooled minus subject-averaged recall,0.1665,
+results,Arm B CNN-BiLSTM recall POOLED,0.6584,
+results,Arm B CNN-BiLSTM pooled minus subject-averaged recall,0.1264,
+results,Arm B EEGNet degenerate folds,5,of 50
+results,Arm B ShallowConvNet degenerate folds,4,of 50
+results,Arm B CNN degenerate folds,12,of 50
+results,Arm B DeepConvNet degenerate folds,12,of 50
+results,Arm B CNN-BiLSTM degenerate folds,3,of 50
+spread,Arm B EEGNet subject SD of PR-AUC,0.2649,
+spread,Arm B EEGNet seed SD of PR-AUC,0.0257,
+spread,Arm B EEGNet subject to seed SD ratio,10.295,
+spread,Arm B ShallowConvNet subject SD of PR-AUC,0.2554,
+spread,Arm B ShallowConvNet seed SD of PR-AUC,0.0144,
+spread,Arm B ShallowConvNet subject to seed SD ratio,17.6864,
+spread,Arm B CNN subject SD of PR-AUC,0.2111,
+spread,Arm B CNN seed SD of PR-AUC,0.0193,
+spread,Arm B CNN subject to seed SD ratio,10.9514,
+spread,Arm B DeepConvNet subject SD of PR-AUC,0.277,
+spread,Arm B DeepConvNet seed SD of PR-AUC,0.0177,
+spread,Arm B DeepConvNet subject to seed SD ratio,15.6951,
+spread,Arm B CNN-BiLSTM subject SD of PR-AUC,0.2166,
+spread,Arm B CNN-BiLSTM seed SD of PR-AUC,0.0384,
+spread,Arm B CNN-BiLSTM subject to seed SD ratio,5.6339,
+spread,Arm B minimum subject to seed SD ratio,5.6339,
+spread,Arm B maximum subject to seed SD ratio,17.6864,
+spread,Arm B minimum subject PR-AUC over architectures,0.0794,S8
+spread,Arm B maximum subject PR-AUC over architectures,0.8247,S7
+stats,Arm B rho ROC-AUC (pooled) vs pooled Brier,0.8,p=0.1333
+stats,Arm B p for ROC-AUC (pooled) vs pooled Brier,0.1333,
+stats,Arm B rho ROC-AUC (subject_averaged) vs pooled Brier,0.0,p=1.0000
+stats,Arm B p for ROC-AUC (subject_averaged) vs pooled Brier,1.0,
+results,Arm B EEGNet minus CNN subject-averaged ROC-AUC,0.0341,
+results,Arm B CNN minus CNN-BiLSTM subject-averaged ROC-AUC,0.0072,
+results,Arm B CNN-BiLSTM minus ShallowConvNet subject-averaged ROC-AUC,0.0118,
+results,Arm B ShallowConvNet minus DeepConvNet subject-averaged ROC-AUC,0.0543,
+confusion,Arm C DeepConvNet TN,8328,
+confusion,Arm C DeepConvNet FP,259,
+confusion,Arm C DeepConvNet FN,338,
+confusion,Arm C DeepConvNet TP,335,
+confusion,Arm C DeepConvNet pooled recall,0.4981,
+confusion,Arm C DeepConvNet pooled precision,0.5641,
+confusion,Arm C DeepConvNet pooled accuracy percent,93.5551,
+confusion,Arm C CNN TN,8247,
+confusion,Arm C CNN FP,340,
+confusion,Arm C CNN FN,341,
+confusion,Arm C CNN TP,332,
+confusion,Arm C CNN pooled recall,0.4933,
+confusion,Arm C CNN pooled precision,0.494,
+confusion,Arm C CNN pooled accuracy percent,92.6458,
+confusion,Arm C EEGNet TN,7759,
+confusion,Arm C EEGNet FP,828,
+confusion,Arm C EEGNet FN,145,
+confusion,Arm C EEGNet TP,528,
+confusion,Arm C EEGNet pooled recall,0.7851,
+confusion,Arm C EEGNet pooled precision,0.3896,
+confusion,Arm C EEGNet pooled accuracy percent,89.4968,
+confusion,Arm C CNN-BiLSTM TN,7774,
+confusion,Arm C CNN-BiLSTM FP,813,
+confusion,Arm C CNN-BiLSTM FN,180,
+confusion,Arm C CNN-BiLSTM TP,493,
+confusion,Arm C CNN-BiLSTM pooled recall,0.7322,
+confusion,Arm C CNN-BiLSTM pooled precision,0.3775,
+confusion,Arm C CNN-BiLSTM pooled accuracy percent,89.2765,
+confusion,Arm C ShallowConvNet TN,7092,
+confusion,Arm C ShallowConvNet FP,1495,
+confusion,Arm C ShallowConvNet FN,155,
+confusion,Arm C ShallowConvNet TP,518,
+confusion,Arm C ShallowConvNet pooled recall,0.77,
+confusion,Arm C ShallowConvNet pooled precision,0.2575,
+confusion,Arm C ShallowConvNet pooled accuracy percent,82.1879,
+confusion,Arm C EEGNet pooled accuracy percent seed SD,1.2683,
+confusion,Arm C EEGNet smallest single-seed pooled accuracy percent,88.0022,
+confusion,Arm C EEGNet largest single-seed pooled accuracy percent,91.2311,over the 5 seeds
+confusion,Arm C EEGNet pooled recall seed SD,0.021,
+confusion,Arm C EEGNet smallest single-seed pooled recall,0.7548,
+confusion,Arm C EEGNet largest single-seed pooled recall,0.8053,over the 5 seeds
+confusion,Arm C EEGNet pooled precision seed SD,0.0331,
+confusion,Arm C EEGNet smallest single-seed pooled precision,0.3554,
+confusion,Arm C EEGNet largest single-seed pooled precision,0.4398,over the 5 seeds
+confusion,Arm C ShallowConvNet pooled accuracy percent seed SD,1.5394,
+confusion,Arm C ShallowConvNet smallest single-seed pooled accuracy percent,80.6803,
+confusion,Arm C ShallowConvNet largest single-seed pooled accuracy percent,83.9741,over the 5 seeds
+confusion,Arm C ShallowConvNet pooled recall seed SD,0.0569,
+confusion,Arm C ShallowConvNet smallest single-seed pooled recall,0.7221,
+confusion,Arm C ShallowConvNet largest single-seed pooled recall,0.8529,over the 5 seeds
+confusion,Arm C ShallowConvNet pooled precision seed SD,0.0212,
+confusion,Arm C ShallowConvNet smallest single-seed pooled precision,0.233,
+confusion,Arm C ShallowConvNet largest single-seed pooled precision,0.2819,over the 5 seeds
+confusion,Arm C CNN pooled accuracy percent seed SD,1.0875,
+confusion,Arm C CNN smallest single-seed pooled accuracy percent,91.4039,
+confusion,Arm C CNN largest single-seed pooled accuracy percent,94.3844,over the 5 seeds
+confusion,Arm C CNN pooled recall seed SD,0.0709,
+confusion,Arm C CNN smallest single-seed pooled recall,0.3923,
+confusion,Arm C CNN largest single-seed pooled recall,0.5736,over the 5 seeds
+confusion,Arm C CNN pooled precision seed SD,0.1076,
+confusion,Arm C CNN smallest single-seed pooled precision,0.4313,
+confusion,Arm C CNN largest single-seed pooled precision,0.704,over the 5 seeds
+confusion,Arm C DeepConvNet pooled accuracy percent seed SD,0.685,
+confusion,Arm C DeepConvNet smallest single-seed pooled accuracy percent,92.635,
+confusion,Arm C DeepConvNet largest single-seed pooled accuracy percent,94.2333,over the 5 seeds
+confusion,Arm C DeepConvNet pooled recall seed SD,0.0433,
+confusion,Arm C DeepConvNet smallest single-seed pooled recall,0.422,
+confusion,Arm C DeepConvNet largest single-seed pooled recall,0.5305,over the 5 seeds
+confusion,Arm C DeepConvNet pooled precision seed SD,0.0558,
+confusion,Arm C DeepConvNet smallest single-seed pooled precision,0.4922,
+confusion,Arm C DeepConvNet largest single-seed pooled precision,0.6209,over the 5 seeds
+confusion,Arm C CNN-BiLSTM pooled accuracy percent seed SD,0.8711,
+confusion,Arm C CNN-BiLSTM smallest single-seed pooled accuracy percent,88.5205,
+confusion,Arm C CNN-BiLSTM largest single-seed pooled accuracy percent,90.4428,over the 5 seeds
+confusion,Arm C CNN-BiLSTM pooled recall seed SD,0.0624,
+confusion,Arm C CNN-BiLSTM smallest single-seed pooled recall,0.6285,
+confusion,Arm C CNN-BiLSTM largest single-seed pooled recall,0.7964,over the 5 seeds
+confusion,Arm C CNN-BiLSTM pooled precision seed SD,0.0214,
+confusion,Arm C CNN-BiLSTM smallest single-seed pooled precision,0.3595,
+confusion,Arm C CNN-BiLSTM largest single-seed pooled precision,0.4138,over the 5 seeds
+confusion,largest pooled accuracy seed SD,6.2246,Arm B ShallowConvNet
+confusion,largest pooled accuracy seed SD elsewhere,1.5394,every other architecture-by-arm cell is below this
+confusion,Arm C Spearman pooled accuracy vs pooled recall,-0.6,"p=0.3500, five architectures, exact permutation p"
+confusion,Arm C p for Spearman pooled accuracy vs pooled recall,0.35,exact permutation p over 120 orderings
+confusion,Arm C most accurate minus EEGNet accuracy points,4.1,DeepConvNet 93.56 % against EEGNet 89.50 %
+results,Arm C EEGNet recall POOLED,0.7851,
+results,Arm C EEGNet pooled minus subject-averaged recall,0.2508,
+results,Arm C ShallowConvNet recall POOLED,0.77,
+results,Arm C ShallowConvNet pooled minus subject-averaged recall,0.2012,
+results,Arm C CNN recall POOLED,0.4933,
+results,Arm C CNN pooled minus subject-averaged recall,0.2538,
+results,Arm C DeepConvNet recall POOLED,0.4981,
+results,Arm C DeepConvNet pooled minus subject-averaged recall,0.2116,
+results,Arm C CNN-BiLSTM recall POOLED,0.7322,
+results,Arm C CNN-BiLSTM pooled minus subject-averaged recall,0.2064,
+results,Arm C EEGNet degenerate folds,9,of 50
+results,Arm C ShallowConvNet degenerate folds,4,of 50
+results,Arm C CNN degenerate folds,20,of 50
+results,Arm C DeepConvNet degenerate folds,14,of 50
+results,Arm C CNN-BiLSTM degenerate folds,7,of 50
+spread,Arm C EEGNet subject SD of PR-AUC,0.2679,
+spread,Arm C EEGNet seed SD of PR-AUC,0.0074,
+spread,Arm C EEGNet subject to seed SD ratio,36.1317,
+spread,Arm C ShallowConvNet subject SD of PR-AUC,0.257,
+spread,Arm C ShallowConvNet seed SD of PR-AUC,0.0189,
+spread,Arm C ShallowConvNet subject to seed SD ratio,13.6282,
+spread,Arm C CNN subject SD of PR-AUC,0.2492,
+spread,Arm C CNN seed SD of PR-AUC,0.0121,
+spread,Arm C CNN subject to seed SD ratio,20.6749,
+spread,Arm C DeepConvNet subject SD of PR-AUC,0.2708,
+spread,Arm C DeepConvNet seed SD of PR-AUC,0.0128,
+spread,Arm C DeepConvNet subject to seed SD ratio,21.0764,
+spread,Arm C CNN-BiLSTM subject SD of PR-AUC,0.2557,
+spread,Arm C CNN-BiLSTM seed SD of PR-AUC,0.0251,
+spread,Arm C CNN-BiLSTM subject to seed SD ratio,10.1688,
+spread,Arm C minimum subject to seed SD ratio,10.1688,
+spread,Arm C maximum subject to seed SD ratio,36.1317,
+spread,Arm C minimum subject PR-AUC over architectures,0.0224,S9
+spread,Arm C maximum subject PR-AUC over architectures,0.8179,S7
+stats,Arm C rho ROC-AUC (pooled) vs pooled Brier,-0.1,p=0.9500
+stats,Arm C p for ROC-AUC (pooled) vs pooled Brier,0.95,
+stats,Arm C rho ROC-AUC (subject_averaged) vs pooled Brier,0.0,p=1.0000
+stats,Arm C p for ROC-AUC (subject_averaged) vs pooled Brier,1.0,
+results,Arm C EEGNet minus CNN-BiLSTM subject-averaged ROC-AUC,0.0359,
+results,Arm C CNN-BiLSTM minus CNN subject-averaged ROC-AUC,0.0003,
+results,Arm C CNN minus DeepConvNet subject-averaged ROC-AUC,0.013,
+results,Arm C DeepConvNet minus ShallowConvNet subject-averaged ROC-AUC,0.0007,
+calib,Arm A CNN raw ECE SUBJECT-AVERAGED,0.0605,
+calib,Arm A CNN raw Brier SUBJECT-AVERAGED,0.0671,
+calib,Arm A CNN platt ECE SUBJECT-AVERAGED,0.0447,
+calib,Arm A CNN platt Brier SUBJECT-AVERAGED,0.0585,
+calib,Arm A CNN isotonic ECE SUBJECT-AVERAGED,0.0473,
+calib,Arm A CNN isotonic Brier SUBJECT-AVERAGED,0.0604,
+calib,Arm A CNN raw vs platt Brier p,0.0488,9/10 improved
+calib,Arm A CNN raw vs platt ECE p,0.084,7/10 improved
+calib,Arm A CNN-BiLSTM raw ECE SUBJECT-AVERAGED,0.0912,
+calib,Arm A CNN-BiLSTM raw Brier SUBJECT-AVERAGED,0.0781,
+calib,Arm A CNN-BiLSTM platt ECE SUBJECT-AVERAGED,0.0561,
+calib,Arm A CNN-BiLSTM platt Brier SUBJECT-AVERAGED,0.059,
+calib,Arm A CNN-BiLSTM isotonic ECE SUBJECT-AVERAGED,0.0584,
+calib,Arm A CNN-BiLSTM isotonic Brier SUBJECT-AVERAGED,0.0599,
+calib,Arm A CNN-BiLSTM raw vs platt Brier p,0.0488,9/10 improved
+calib,Arm A CNN-BiLSTM raw vs platt ECE p,0.0488,9/10 improved
+calib,Arm A EEGNet raw ECE SUBJECT-AVERAGED,0.195,
+calib,Arm A EEGNet raw Brier SUBJECT-AVERAGED,0.1009,
+calib,Arm A EEGNet platt ECE SUBJECT-AVERAGED,0.0625,
+calib,Arm A EEGNet platt Brier SUBJECT-AVERAGED,0.0635,
+calib,Arm A EEGNet isotonic ECE SUBJECT-AVERAGED,0.0603,
+calib,Arm A EEGNet isotonic Brier SUBJECT-AVERAGED,0.061,
+calib,Arm A EEGNet raw vs platt Brier p,0.0371,8/10 improved
+calib,Arm A EEGNet raw vs platt ECE p,0.002,10/10 improved
+calib,Arm A architectures above the reference raw,2 of 3,
+calib,Arm A architectures above the reference after platt,0 of 3,
+calib,Arm A EEGNet ECE as a multiple of the best-calibrated architecture,3.2,best is CNN
+repro,Arm A EEGNet folds identical on bal_acc between runs,44,of 50
+repro,Arm A EEGNet folds identical on f1 between runs,44,of 50
+repro,Arm A EEGNet folds identical on recall between runs,49,of 50
+repro,Arm A EEGNet run 1 mean auc,0.884,
+repro,Arm A EEGNet run 2 mean auc,0.884,
+repro,Arm A EEGNet run 1 mean pr_auc,0.4317,
+repro,Arm A EEGNet run 2 mean pr_auc,0.4314,
+repro,Arm A EEGNet run 1 mean bal_acc,0.7092,
+repro,Arm A EEGNet run 2 mean bal_acc,0.7084,
+repro,Arm A EEGNet run 1 mean ROC-AUC,0.884,
+repro,Arm A EEGNet run 2 mean ROC-AUC,0.884,
+repro,Arm A EEGNet largest single-fold ROC-AUC difference,0.0032,
+repro,Arm A EEGNet folds identical between runs,7,"of 50, to within 1e-12"
+repro,Arm A EEGNet folds bit-identical between runs,5,of 50
+repro,Arm A EEGNet largest subject-level auc shift between runs,0.0006,
+repro,Arm A EEGNet overall auc shift between runs,0.0001,
+repro,Arm A EEGNet seed SD of auc,0.0074,
+repro,Arm A EEGNet largest subject-level f1 shift between runs,0.0118,
+repro,Arm A EEGNet overall f1 shift between runs,0.001,
+repro,Arm A EEGNet seed SD of f1,0.032,
+thresh,Arm A CNN sel-F1 bal_acc p,0.5703,0.618 -> 0.616
+thresh,Arm A CNN sel-F1 F1 p,0.375,0.267 -> 0.260
+thresh,Arm A CNN sel-F1 ba_fixed,0.6182,
+thresh,Arm A CNN sel-F1 ba_sel,0.6163,
+thresh,Arm A CNN sel-F1 f1_fixed,0.2666,
+thresh,Arm A CNN sel-F1 f1_sel,0.2598,
+thresh,Arm A CNN sel-F1 thr_f1_mean,0.4606,
+thresh,Arm A CNN sel-F1 thr_f1_sd,0.1626,
+thresh,Arm A CNN sel-F1 thr_ba_mean,0.0442,
+thresh,Arm A CNN sel-F1 thr_ba_sd,0.0336,
+thresh,Arm A CNN sel-BA bal_acc p,0.2324,0.618 -> 0.649
+thresh,Arm A CNN sel-BA F1 p,1.0,0.267 -> 0.269
+thresh,Arm A CNN sel-BA ba_fixed,0.6182,
+thresh,Arm A CNN sel-BA ba_sel,0.6486,
+thresh,Arm A CNN sel-BA f1_fixed,0.2666,
+thresh,Arm A CNN sel-BA f1_sel,0.2689,
+thresh,Arm A CNN sel-BA thr_f1_mean,0.4606,
+thresh,Arm A CNN sel-BA thr_f1_sd,0.1626,
+thresh,Arm A CNN sel-BA thr_ba_mean,0.0442,
+thresh,Arm A CNN sel-BA thr_ba_sd,0.0336,
+thresh,Arm A CNN-BiLSTM sel-F1 bal_acc p,0.0488,0.696 -> 0.677
+thresh,Arm A CNN-BiLSTM sel-F1 F1 p,0.4961,0.361 -> 0.354
+thresh,Arm A CNN-BiLSTM sel-F1 ba_fixed,0.6962,
+thresh,Arm A CNN-BiLSTM sel-F1 ba_sel,0.6772,
+thresh,Arm A CNN-BiLSTM sel-F1 f1_fixed,0.3606,
+thresh,Arm A CNN-BiLSTM sel-F1 f1_sel,0.3543,
+thresh,Arm A CNN-BiLSTM sel-F1 thr_f1_mean,0.6593,
+thresh,Arm A CNN-BiLSTM sel-F1 thr_f1_sd,0.141,
+thresh,Arm A CNN-BiLSTM sel-F1 thr_ba_mean,0.2081,
+thresh,Arm A CNN-BiLSTM sel-F1 thr_ba_sd,0.1255,
+thresh,Arm A CNN-BiLSTM sel-BA bal_acc p,0.2324,0.696 -> 0.717
+thresh,Arm A CNN-BiLSTM sel-BA F1 p,0.1055,0.361 -> 0.334
+thresh,Arm A CNN-BiLSTM sel-BA ba_fixed,0.6962,
+thresh,Arm A CNN-BiLSTM sel-BA ba_sel,0.7171,
+thresh,Arm A CNN-BiLSTM sel-BA f1_fixed,0.3606,
+thresh,Arm A CNN-BiLSTM sel-BA f1_sel,0.3345,
+thresh,Arm A CNN-BiLSTM sel-BA thr_f1_mean,0.6593,
+thresh,Arm A CNN-BiLSTM sel-BA thr_f1_sd,0.141,
+thresh,Arm A CNN-BiLSTM sel-BA thr_ba_mean,0.2081,
+thresh,Arm A CNN-BiLSTM sel-BA thr_ba_sd,0.1255,
+thresh,Arm A EEGNet sel-F1 bal_acc p,0.0273,0.709 -> 0.667
+thresh,Arm A EEGNet sel-F1 F1 p,0.1641,0.389 -> 0.348
+thresh,Arm A EEGNet sel-F1 ba_fixed,0.7092,
+thresh,Arm A EEGNet sel-F1 ba_sel,0.6667,
+thresh,Arm A EEGNet sel-F1 f1_fixed,0.3885,
+thresh,Arm A EEGNet sel-F1 f1_sel,0.3482,
+thresh,Arm A EEGNet sel-F1 thr_f1_mean,0.6903,
+thresh,Arm A EEGNet sel-F1 thr_f1_sd,0.0497,
+thresh,Arm A EEGNet sel-F1 thr_ba_mean,0.4092,
+thresh,Arm A EEGNet sel-F1 thr_ba_sd,0.0492,
+thresh,Arm A EEGNet sel-BA bal_acc p,0.8457,0.709 -> 0.707
+thresh,Arm A EEGNet sel-BA F1 p,0.3594,0.389 -> 0.368
+thresh,Arm A EEGNet sel-BA ba_fixed,0.7092,
+thresh,Arm A EEGNet sel-BA ba_sel,0.7071,
+thresh,Arm A EEGNet sel-BA f1_fixed,0.3885,
+thresh,Arm A EEGNet sel-BA f1_sel,0.3676,
+thresh,Arm A EEGNet sel-BA thr_f1_mean,0.6903,
+thresh,Arm A EEGNet sel-BA thr_f1_sd,0.0497,
+thresh,Arm A EEGNet sel-BA thr_ba_mean,0.4092,
+thresh,Arm A EEGNet sel-BA thr_ba_sd,0.0492,
+calib,Arm B DeepConvNet raw ECE SUBJECT-AVERAGED,0.0679,
+calib,Arm B DeepConvNet raw Brier SUBJECT-AVERAGED,0.0603,
+calib,Arm B DeepConvNet platt ECE SUBJECT-AVERAGED,0.0631,
+calib,Arm B DeepConvNet platt Brier SUBJECT-AVERAGED,0.0592,
+calib,Arm B DeepConvNet isotonic ECE SUBJECT-AVERAGED,0.0613,
+calib,Arm B DeepConvNet isotonic Brier SUBJECT-AVERAGED,0.0577,
+calib,Arm B DeepConvNet raw vs platt Brier p,0.7695,5/10 improved
+calib,Arm B DeepConvNet raw vs platt ECE p,0.7695,4/10 improved
+calib,Arm B EEGNet raw ECE SUBJECT-AVERAGED,0.1717,
+calib,Arm B EEGNet raw Brier SUBJECT-AVERAGED,0.0859,
+calib,Arm B EEGNet platt ECE SUBJECT-AVERAGED,0.0547,
+calib,Arm B EEGNet platt Brier SUBJECT-AVERAGED,0.0538,
+calib,Arm B EEGNet isotonic ECE SUBJECT-AVERAGED,0.0548,
+calib,Arm B EEGNet isotonic Brier SUBJECT-AVERAGED,0.0522,
+calib,Arm B EEGNet raw vs platt Brier p,0.0488,8/10 improved
+calib,Arm B EEGNet raw vs platt ECE p,0.002,10/10 improved
+calib,Arm B ShallowConvNet raw ECE SUBJECT-AVERAGED,0.2049,
+calib,Arm B ShallowConvNet raw Brier SUBJECT-AVERAGED,0.1369,
+calib,Arm B ShallowConvNet platt ECE SUBJECT-AVERAGED,0.0605,
+calib,Arm B ShallowConvNet platt Brier SUBJECT-AVERAGED,0.0584,
+calib,Arm B ShallowConvNet isotonic ECE SUBJECT-AVERAGED,0.0595,
+calib,Arm B ShallowConvNet isotonic Brier SUBJECT-AVERAGED,0.0583,
+calib,Arm B ShallowConvNet raw vs platt Brier p,0.0273,9/10 improved
+calib,Arm B ShallowConvNet raw vs platt ECE p,0.0039,9/10 improved
+calib,Arm B architectures above the reference raw,2 of 3,
+calib,Arm B architectures above the reference after platt,0 of 3,
+calib,Arm B EEGNet ECE as a multiple of the best-calibrated architecture,2.5,best is DeepConvNet
+repro,Arm B CNN folds identical on bal_acc between runs,50,of 50
+repro,Arm B CNN folds identical on f1 between runs,50,of 50
+repro,Arm B CNN folds identical on recall between runs,50,of 50
+repro,Arm B CNN run 1 mean auc,0.8662,
+repro,Arm B CNN run 2 mean auc,0.8662,
+repro,Arm B CNN run 1 mean pr_auc,0.3599,
+repro,Arm B CNN run 2 mean pr_auc,0.3599,
+repro,Arm B CNN run 1 mean bal_acc,0.601,
+repro,Arm B CNN run 2 mean bal_acc,0.601,
+repro,Arm B CNN-BiLSTM folds identical on bal_acc between runs,50,of 50
+repro,Arm B CNN-BiLSTM folds identical on f1 between runs,50,of 50
+repro,Arm B CNN-BiLSTM folds identical on recall between runs,50,of 50
+repro,Arm B CNN-BiLSTM run 1 mean auc,0.859,
+repro,Arm B CNN-BiLSTM run 2 mean auc,0.859,
+repro,Arm B CNN-BiLSTM run 1 mean pr_auc,0.397,
+repro,Arm B CNN-BiLSTM run 2 mean pr_auc,0.397,
+repro,Arm B CNN-BiLSTM run 1 mean bal_acc,0.7253,
+repro,Arm B CNN-BiLSTM run 2 mean bal_acc,0.7253,
+repro,Arm B DeepConvNet folds identical on bal_acc between runs,12,of 50
+repro,Arm B DeepConvNet folds identical on f1 between runs,16,of 50
+repro,Arm B DeepConvNet folds identical on recall between runs,18,of 50
+repro,Arm B DeepConvNet run 1 mean auc,0.79,
+repro,Arm B DeepConvNet run 2 mean auc,0.793,
+repro,Arm B DeepConvNet run 1 mean pr_auc,0.3802,
+repro,Arm B DeepConvNet run 2 mean pr_auc,0.3841,
+repro,Arm B DeepConvNet run 1 mean bal_acc,0.6279,
+repro,Arm B DeepConvNet run 2 mean bal_acc,0.6213,
+repro,Arm B EEGNet folds identical on bal_acc between runs,43,of 50
+repro,Arm B EEGNet folds identical on f1 between runs,43,of 50
+repro,Arm B EEGNet folds identical on recall between runs,49,of 50
+repro,Arm B EEGNet run 1 mean auc,0.9003,
+repro,Arm B EEGNet run 2 mean auc,0.9003,
+repro,Arm B EEGNet run 1 mean pr_auc,0.4398,
+repro,Arm B EEGNet run 2 mean pr_auc,0.4398,
+repro,Arm B EEGNet run 1 mean bal_acc,0.7251,
+repro,Arm B EEGNet run 2 mean bal_acc,0.7249,
+repro,Arm B ShallowConvNet folds identical on bal_acc between runs,7,of 50
+repro,Arm B ShallowConvNet folds identical on f1 between runs,8,of 50
+repro,Arm B ShallowConvNet folds identical on recall between runs,24,of 50
+repro,Arm B ShallowConvNet run 1 mean auc,0.8415,
+repro,Arm B ShallowConvNet run 2 mean auc,0.8472,
+repro,Arm B ShallowConvNet run 1 mean pr_auc,0.3959,
+repro,Arm B ShallowConvNet run 2 mean pr_auc,0.3994,
+repro,Arm B ShallowConvNet run 1 mean bal_acc,0.7175,
+repro,Arm B ShallowConvNet run 2 mean bal_acc,0.706,
+repro,Arm B CNN run 1 mean ROC-AUC,0.8662,
+repro,Arm B CNN run 2 mean ROC-AUC,0.8662,
+repro,Arm B CNN largest single-fold ROC-AUC difference,0.0,
+repro,Arm B CNN folds identical between runs,50,"of 50, to within 1e-12; NOT an independent re-execution -- every fold is bit-identical, so this file was carried over"
+repro,Arm B CNN folds bit-identical between runs,50,"of 50; NOT an independent re-execution -- every fold is bit-identical, so this file was carried over"
+repro,Arm B CNN largest subject-level auc shift between runs,0.0,
+repro,Arm B CNN overall auc shift between runs,0.0,
+repro,Arm B CNN seed SD of auc,0.0128,
+repro,Arm B CNN largest subject-level f1 shift between runs,0.0,
+repro,Arm B CNN overall f1 shift between runs,0.0,
+repro,Arm B CNN seed SD of f1,0.0312,
+repro,Arm B CNN-BiLSTM run 1 mean ROC-AUC,0.859,
+repro,Arm B CNN-BiLSTM run 2 mean ROC-AUC,0.859,
+repro,Arm B CNN-BiLSTM largest single-fold ROC-AUC difference,0.0,
+repro,Arm B CNN-BiLSTM folds identical between runs,50,"of 50, to within 1e-12; NOT an independent re-execution -- every fold is bit-identical, so this file was carried over"
+repro,Arm B CNN-BiLSTM folds bit-identical between runs,50,"of 50; NOT an independent re-execution -- every fold is bit-identical, so this file was carried over"
+repro,Arm B CNN-BiLSTM largest subject-level auc shift between runs,0.0,
+repro,Arm B CNN-BiLSTM overall auc shift between runs,0.0,
+repro,Arm B CNN-BiLSTM seed SD of auc,0.0161,
+repro,Arm B CNN-BiLSTM largest subject-level f1 shift between runs,0.0,
+repro,Arm B CNN-BiLSTM overall f1 shift between runs,0.0,
+repro,Arm B CNN-BiLSTM seed SD of f1,0.0172,
+repro,Arm B EEGNet run 1 mean ROC-AUC,0.9003,
+repro,Arm B EEGNet run 2 mean ROC-AUC,0.9003,
+repro,Arm B EEGNet largest single-fold ROC-AUC difference,0.0002,
+repro,Arm B EEGNet folds identical between runs,27,"of 50, to within 1e-12"
+repro,Arm B EEGNet folds bit-identical between runs,25,of 50
+repro,Arm B EEGNet largest subject-level auc shift between runs,0.0,
+repro,Arm B EEGNet overall auc shift between runs,0.0,
+repro,Arm B EEGNet seed SD of auc,0.0079,
+repro,Arm B EEGNet largest subject-level f1 shift between runs,0.0015,
+repro,Arm B EEGNet overall f1 shift between runs,0.0001,
+repro,Arm B EEGNet seed SD of f1,0.0395,
+repro,Arm B DeepConvNet run 1 mean ROC-AUC,0.79,
+repro,Arm B DeepConvNet run 2 mean ROC-AUC,0.793,
+repro,Arm B DeepConvNet largest single-fold ROC-AUC difference,0.202,
+repro,Arm B DeepConvNet folds identical between runs,0,"of 50, to within 1e-12"
+repro,Arm B DeepConvNet folds bit-identical between runs,0,of 50
+repro,Arm B DeepConvNet largest subject-level auc shift between runs,0.0407,
+repro,Arm B DeepConvNet overall auc shift between runs,0.003,
+repro,Arm B DeepConvNet seed SD of auc,0.0328,
+repro,Arm B DeepConvNet largest subject-level f1 shift between runs,0.1273,
+repro,Arm B DeepConvNet overall f1 shift between runs,0.0213,
+repro,Arm B DeepConvNet seed SD of f1,0.0562,
+repro,Arm B ShallowConvNet run 1 mean ROC-AUC,0.8415,
+repro,Arm B ShallowConvNet run 2 mean ROC-AUC,0.8472,
+repro,Arm B ShallowConvNet largest single-fold ROC-AUC difference,0.2219,
+repro,Arm B ShallowConvNet folds identical between runs,1,"of 50, to within 1e-12"
+repro,Arm B ShallowConvNet folds bit-identical between runs,0,of 50
+repro,Arm B ShallowConvNet largest subject-level auc shift between runs,0.0334,
+repro,Arm B ShallowConvNet overall auc shift between runs,0.0057,
+repro,Arm B ShallowConvNet seed SD of auc,0.0141,
+repro,Arm B ShallowConvNet largest subject-level f1 shift between runs,0.0702,
+repro,Arm B ShallowConvNet overall f1 shift between runs,0.001,
+repro,Arm B ShallowConvNet seed SD of f1,0.0336,
+calib,Arm C DeepConvNet raw ECE SUBJECT-AVERAGED,0.046,
+calib,Arm C DeepConvNet raw Brier SUBJECT-AVERAGED,0.0511,
+calib,Arm C DeepConvNet platt ECE SUBJECT-AVERAGED,0.0502,
+calib,Arm C DeepConvNet platt Brier SUBJECT-AVERAGED,0.0529,
+calib,Arm C DeepConvNet isotonic ECE SUBJECT-AVERAGED,0.0509,
+calib,Arm C DeepConvNet isotonic Brier SUBJECT-AVERAGED,0.0528,
+calib,Arm C DeepConvNet raw vs platt Brier p,0.5566,6/10 improved
+calib,Arm C DeepConvNet raw vs platt ECE p,0.625,6/10 improved
+calib,Arm C EEGNet raw ECE SUBJECT-AVERAGED,0.1918,
+calib,Arm C EEGNet raw Brier SUBJECT-AVERAGED,0.0952,
+calib,Arm C EEGNet platt ECE SUBJECT-AVERAGED,0.058,
+calib,Arm C EEGNet platt Brier SUBJECT-AVERAGED,0.0573,
+calib,Arm C EEGNet isotonic ECE SUBJECT-AVERAGED,0.0576,
+calib,Arm C EEGNet isotonic Brier SUBJECT-AVERAGED,0.0551,
+calib,Arm C EEGNet raw vs platt Brier p,0.0371,9/10 improved
+calib,Arm C EEGNet raw vs platt ECE p,0.002,10/10 improved
+calib,Arm C ShallowConvNet raw ECE SUBJECT-AVERAGED,0.2001,
+calib,Arm C ShallowConvNet raw Brier SUBJECT-AVERAGED,0.1383,
+calib,Arm C ShallowConvNet platt ECE SUBJECT-AVERAGED,0.0724,
+calib,Arm C ShallowConvNet platt Brier SUBJECT-AVERAGED,0.0658,
+calib,Arm C ShallowConvNet isotonic ECE SUBJECT-AVERAGED,0.0709,
+calib,Arm C ShallowConvNet isotonic Brier SUBJECT-AVERAGED,0.0663,
+calib,Arm C ShallowConvNet raw vs platt Brier p,0.0371,8/10 improved
+calib,Arm C ShallowConvNet raw vs platt ECE p,0.0059,9/10 improved
+calib,Arm C architectures above the reference raw,2 of 3,
+calib,Arm C architectures above the reference after platt,0 of 3,
+calib,Arm C EEGNet ECE as a multiple of the best-calibrated architecture,4.2,best is DeepConvNet
+thresh,Arm C DeepConvNet sel-F1 bal_acc p,0.0059,0.628 -> 0.661
+thresh,Arm C DeepConvNet sel-F1 F1 p,0.0273,0.300 -> 0.342
+thresh,Arm C DeepConvNet sel-F1 ba_fixed,0.628,
+thresh,Arm C DeepConvNet sel-F1 ba_sel,0.661,
+thresh,Arm C DeepConvNet sel-F1 f1_fixed,0.3,
+thresh,Arm C DeepConvNet sel-F1 f1_sel,0.342,
+thresh,Arm C DeepConvNet sel-F1 thr_f1_mean,0.3171,
+thresh,Arm C DeepConvNet sel-F1 thr_f1_sd,0.0521,
+thresh,Arm C DeepConvNet sel-F1 thr_ba_mean,0.0958,
+thresh,Arm C DeepConvNet sel-F1 thr_ba_sd,0.0352,
+thresh,Arm C DeepConvNet sel-BA bal_acc p,0.0137,0.628 -> 0.694
+thresh,Arm C DeepConvNet sel-BA F1 p,0.375,0.300 -> 0.330
+thresh,Arm C DeepConvNet sel-BA ba_fixed,0.628,
+thresh,Arm C DeepConvNet sel-BA ba_sel,0.694,
+thresh,Arm C DeepConvNet sel-BA f1_fixed,0.3,
+thresh,Arm C DeepConvNet sel-BA f1_sel,0.33,
+thresh,Arm C DeepConvNet sel-BA thr_f1_mean,0.3171,
+thresh,Arm C DeepConvNet sel-BA thr_f1_sd,0.0521,
+thresh,Arm C DeepConvNet sel-BA thr_ba_mean,0.0958,
+thresh,Arm C DeepConvNet sel-BA thr_ba_sd,0.0352,
+thresh,Arm C EEGNet sel-F1 bal_acc p,0.0098,0.718 -> 0.659
+thresh,Arm C EEGNet sel-F1 F1 p,0.1641,0.382 -> 0.330
+thresh,Arm C EEGNet sel-F1 ba_fixed,0.718,
+thresh,Arm C EEGNet sel-F1 ba_sel,0.659,
+thresh,Arm C EEGNet sel-F1 f1_fixed,0.382,
+thresh,Arm C EEGNet sel-F1 f1_sel,0.33,
+thresh,Arm C EEGNet sel-F1 thr_f1_mean,0.721,
+thresh,Arm C EEGNet sel-F1 thr_f1_sd,0.0538,
+thresh,Arm C EEGNet sel-F1 thr_ba_mean,0.4192,
+thresh,Arm C EEGNet sel-F1 thr_ba_sd,0.0404,
+thresh,Arm C EEGNet sel-BA bal_acc p,0.625,0.718 -> 0.712
+thresh,Arm C EEGNet sel-BA F1 p,0.1289,0.382 -> 0.354
+thresh,Arm C EEGNet sel-BA ba_fixed,0.718,
+thresh,Arm C EEGNet sel-BA ba_sel,0.712,
+thresh,Arm C EEGNet sel-BA f1_fixed,0.382,
+thresh,Arm C EEGNet sel-BA f1_sel,0.354,
+thresh,Arm C EEGNet sel-BA thr_f1_mean,0.721,
+thresh,Arm C EEGNet sel-BA thr_f1_sd,0.0538,
+thresh,Arm C EEGNet sel-BA thr_ba_mean,0.4192,
+thresh,Arm C EEGNet sel-BA thr_ba_sd,0.0404,
+thresh,Arm C ShallowConvNet sel-F1 bal_acc p,0.0488,0.694 -> 0.652
+thresh,Arm C ShallowConvNet sel-F1 F1 p,1.0,0.312 -> 0.313
+thresh,Arm C ShallowConvNet sel-F1 ba_fixed,0.694,
+thresh,Arm C ShallowConvNet sel-F1 ba_sel,0.652,
+thresh,Arm C ShallowConvNet sel-F1 f1_fixed,0.312,
+thresh,Arm C ShallowConvNet sel-F1 f1_sel,0.313,
+thresh,Arm C ShallowConvNet sel-F1 thr_f1_mean,0.8257,
+thresh,Arm C ShallowConvNet sel-F1 thr_f1_sd,0.0581,
+thresh,Arm C ShallowConvNet sel-F1 thr_ba_mean,0.48,
+thresh,Arm C ShallowConvNet sel-F1 thr_ba_sd,0.0862,
+thresh,Arm C ShallowConvNet sel-BA bal_acc p,0.2324,0.694 -> 0.690
+thresh,Arm C ShallowConvNet sel-BA F1 p,0.4922,0.312 -> 0.307
+thresh,Arm C ShallowConvNet sel-BA ba_fixed,0.694,
+thresh,Arm C ShallowConvNet sel-BA ba_sel,0.69,
+thresh,Arm C ShallowConvNet sel-BA f1_fixed,0.312,
+thresh,Arm C ShallowConvNet sel-BA f1_sel,0.307,
+thresh,Arm C ShallowConvNet sel-BA thr_f1_mean,0.8257,
+thresh,Arm C ShallowConvNet sel-BA thr_f1_sd,0.0581,
+thresh,Arm C ShallowConvNet sel-BA thr_ba_mean,0.48,
+thresh,Arm C ShallowConvNet sel-BA thr_ba_sd,0.0862,
+calib,Arm A CNN raw ECE POOLED,0.0526,not comparable with the subject-averaged column
+calib,Arm A CNN platt ECE POOLED,0.01,not comparable with the subject-averaged column
+calib,Arm A CNN isotonic ECE POOLED,0.0206,not comparable with the subject-averaged column
+calib,Arm A CNN-BiLSTM raw ECE POOLED,0.0792,not comparable with the subject-averaged column
+calib,Arm A CNN-BiLSTM platt ECE POOLED,0.0145,not comparable with the subject-averaged column
+calib,Arm A CNN-BiLSTM isotonic ECE POOLED,0.0261,not comparable with the subject-averaged column
+calib,Arm A EEGNet raw ECE POOLED,0.1944,not comparable with the subject-averaged column
+calib,Arm A EEGNet platt ECE POOLED,0.0351,not comparable with the subject-averaged column
+calib,Arm A EEGNet isotonic ECE POOLED,0.0262,not comparable with the subject-averaged column
+calib,Arm B CNN raw ECE POOLED,0.0435,not comparable with the subject-averaged column
+calib,Arm B CNN-BiLSTM raw ECE POOLED,0.0862,not comparable with the subject-averaged column
+calib,Arm A folds measured for recalibration monotonicity,150,15 probability file(s)
+calib,Arm A Platt fits with a positive slope,150,of 150
+calib,Arm A smallest fitted Platt slope,0.3243,
+calib,Arm A largest fitted Platt slope,1.3312,
+calib,Arm A largest Platt change in fold ROC-AUC,0.0000397267,"attributable to epsilon-clip ties, not reordering"
+calib,Arm A largest Platt change in fold PR-AUC,0.003413347,"attributable to epsilon-clip ties, not reordering"
+calib,Arm A folds on which the epsilon-clip created ties under Platt,10,of 150
+calib,Arm A most ties created on one fold by the epsilon-clip,95,
+calib,Arm A folds on which isotonic lowered ROC-AUC,123,of 150
+calib,Arm A folds on which isotonic lowered PR-AUC,144,of 150
+calib,Arm A largest isotonic fall in fold ROC-AUC,-0.3643,
+calib,Arm A largest isotonic fall in fold PR-AUC,-0.3155,
+calib,Arm A median distinct scores per fold before isotonic,926,
+calib,Arm A median distinct scores per fold after isotonic,25,
+calib,Arm A EEGNet subject-averaged ROC-AUC change after Platt,0.0000009981,"ROC-AUC raw 0.884025, recalibrated 0.884026"
+calib,Arm A EEGNet subject-averaged PR-AUC change after Platt,0.0000222899,"PR-AUC raw 0.431710, recalibrated 0.431732"
+calib,Arm A CNN subject-averaged ROC-AUC change after Platt,0,"ROC-AUC raw 0.842776, recalibrated 0.842776"
+calib,Arm A CNN subject-averaged PR-AUC change after Platt,0,"PR-AUC raw 0.338237, recalibrated 0.338237"
+calib,Arm A CNN-BiLSTM subject-averaged ROC-AUC change after Platt,0,"ROC-AUC raw 0.821331, recalibrated 0.821331"
+calib,Arm A CNN-BiLSTM subject-averaged PR-AUC change after Platt,0,"PR-AUC raw 0.398585, recalibrated 0.398585"
+data,Arm A probability files released,15,
+data,"Arm A probability files released, megabytes",3.2,measured from the release
+data,shortest recording samples,887040,the trim target
+data,longest recording samples,944640,
+data,shortest recording hours,1.925,
+data,longest recording hours,2.05,
+data,total recorded signal hours,40.29,untrimmed
+data,trimmed total signal hours,38.5,twenty recordings at the trim length
+data,smallest subject window total before balancing,992,the per-subject budget; equals Arm B windows per subject
+data,"drowsy windows before balancing, all subjects",782,untrimmed
+data,drowsy windows lost to trimming in Arm A,12,
+data,S1 windows before balancing,1232,
+data,S1 drowsy windows before balancing,83,
+data,S1 alert windows before balancing,1149,
+data,S1 prevalence before balancing percent,6.74,
+data,S2 windows before balancing,1304,
+data,S2 drowsy windows before balancing,60,
+data,S2 alert windows before balancing,1244,
+data,S2 prevalence before balancing percent,4.6,
+data,S3 windows before balancing,1085,
+data,S3 drowsy windows before balancing,178,
+data,S3 alert windows before balancing,907,
+data,S3 prevalence before balancing percent,16.41,
+data,S4 windows before balancing,1189,
+data,S4 drowsy windows before balancing,81,
+data,S4 alert windows before balancing,1108,
+data,S4 prevalence before balancing percent,6.81,
+data,S5 windows before balancing,1279,
+data,S5 drowsy windows before balancing,61,
+data,S5 alert windows before balancing,1218,
+data,S5 prevalence before balancing percent,4.77,
+data,S6 windows before balancing,1319,
+data,S6 drowsy windows before balancing,51,
+data,S6 alert windows before balancing,1268,
+data,S6 prevalence before balancing percent,3.87,
+data,S7 windows before balancing,992,
+data,S7 drowsy windows before balancing,239,
+data,S7 alert windows before balancing,753,
+data,S7 prevalence before balancing percent,24.09,
+data,S8 windows before balancing,1410,
+data,S8 drowsy windows before balancing,12,
+data,S8 alert windows before balancing,1398,
+data,S8 prevalence before balancing percent,0.85,
+data,S9 windows before balancing,1431,
+data,S9 drowsy windows before balancing,7,
+data,S9 alert windows before balancing,1424,
+data,S9 prevalence before balancing percent,0.49,
+data,S10 windows before balancing,1417,
+data,S10 drowsy windows before balancing,10,
+data,S10 alert windows before balancing,1407,
+data,S10 prevalence before balancing percent,0.71,
+multiplicity,nominal significance level,0.05,
+multiplicity,"EEGNet pairs, ROC-AUC comparisons",12,
+multiplicity,"EEGNet pairs, ROC-AUC at nominal level",11,
+multiplicity,"EEGNet pairs, ROC-AUC surviving BH",10,
+multiplicity,"EEGNet pairs, ROC-AUC surviving BY",8,
+multiplicity,"other architecture pairs, ROC-AUC comparisons",18,
+multiplicity,"other architecture pairs, ROC-AUC at nominal level",0,
+multiplicity,"other architecture pairs, ROC-AUC surviving BH",0,
+multiplicity,"other architecture pairs, ROC-AUC surviving BY",0,
+multiplicity,"ablation, CNN against CNN-BiLSTM comparisons",9,
+multiplicity,"ablation, CNN against CNN-BiLSTM at nominal level",8,
+multiplicity,"ablation, CNN against CNN-BiLSTM surviving BH",8,
+multiplicity,"ablation, CNN against CNN-BiLSTM surviving BY",6,
+multiplicity,"arm A against arm C, balancing isolated comparisons",20,
+multiplicity,"arm A against arm C, balancing isolated at nominal level",7,
+multiplicity,"arm A against arm C, balancing isolated surviving BH",4,
+multiplicity,"arm A against arm C, balancing isolated surviving BY",0,
+multiplicity,"arm B against arm C, trimming isolated comparisons",20,
+multiplicity,"arm B against arm C, trimming isolated at nominal level",0,
+multiplicity,"arm B against arm C, trimming isolated surviving BH",0,
+multiplicity,"arm B against arm C, trimming isolated surviving BY",0,
+multiplicity,"recalibration, Platt against raw comparisons",18,
+multiplicity,"recalibration, Platt against raw at nominal level",13,
+multiplicity,"recalibration, Platt against raw surviving BH",5,
+multiplicity,"recalibration, Platt against raw surviving BY",3,
+multiplicity,threshold selection against 0.5 comparisons,24,
+multiplicity,threshold selection against 0.5 at nominal level,7,
+multiplicity,threshold selection against 0.5 surviving BH,0,
+multiplicity,threshold selection against 0.5 surviving BY,0,
+multiplicity,parameter count against ROC-AUC comparisons,3,
+multiplicity,parameter count against ROC-AUC at nominal level,0,
+multiplicity,parameter count against ROC-AUC surviving BH,0,
+multiplicity,parameter count against ROC-AUC surviving BY,0,
+multiplicity,cross-arm ordering agreement comparisons,12,
+multiplicity,cross-arm ordering agreement at nominal level,3,
+multiplicity,cross-arm ordering agreement surviving BH,0,
+multiplicity,cross-arm ordering agreement surviving BY,0,
+multiplicity,ROC-AUC against pooled Brier comparisons,6,
+multiplicity,ROC-AUC against pooled Brier at nominal level,0,
+multiplicity,ROC-AUC against pooled Brier surviving BH,0,
+multiplicity,ROC-AUC against pooled Brier surviving BY,0,
+multiplicity,accuracy against pooled recall comparisons,3,
+multiplicity,accuracy against pooled recall at nominal level,1,
+multiplicity,accuracy against pooled recall surviving BH,1,
+multiplicity,accuracy against pooled recall surviving BY,0,
+multiplicity,drowsy count vs PR-AUC comparisons,45,
+multiplicity,drowsy count vs PR-AUC at nominal level,32,
+multiplicity,drowsy count vs PR-AUC surviving BH,32,
+multiplicity,drowsy count vs PR-AUC surviving BY,30,
+multiplicity,"all registered comparisons, tests performed",190,
+multiplicity,"all registered comparisons, at nominal level",82,
+multiplicity,"all registered comparisons, surviving BH",57,
+multiplicity,"all registered comparisons, surviving BY",24,
+multiplicity,"all registered comparisons, global-null reference count",9.5,alpha x number of comparisons
+multiplicity,"drowsy-count / prevalence family, tests performed",45,
+multiplicity,"drowsy-count / prevalence family, at nominal level",32,
+multiplicity,"drowsy-count / prevalence family, surviving BH",32,
+multiplicity,"drowsy-count / prevalence family, surviving BY",30,
+multiplicity,"drowsy-count / prevalence family, global-null reference count",2.25,alpha x number of comparisons
+multiplicity,"remaining comparisons, tests performed",145,
+multiplicity,"remaining comparisons, at nominal level",50,
+multiplicity,"remaining comparisons, surviving BH",22,
+multiplicity,"remaining comparisons, surviving BY",0,
+multiplicity,"remaining comparisons, global-null reference count",7.25,alpha x number of comparisons
+multiplicity,analysis families,12,
+multiplicity,one-family BY survivors from the prevalence family,24,
+multiplicity,smallest attainable Wilcoxon p on nine pairs,0.00390625,one tied subject leaves nine non-zero differences
+multiplicity,Holm family ceiling for the ten-pair Wilcoxon floor,25,"beyond this m, alpha/m falls below the floor"
+multiplicity,Holm family ceiling for the nine-pair Wilcoxon floor,12,
+multiplicity,Holm family ceiling for the five-point Spearman floor,3,"2/5! and alpha/3 are both 1/60, so this boundary is an equality"
+data,rows in MASTER_NUMBERS.csv,1977,self-referential; counts this row

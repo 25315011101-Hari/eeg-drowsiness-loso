@@ -1,0 +1,673 @@
+{
+  "_comment": [
+    "Where each unit of the paper goes: MAIN article, SUPPLEMENTARY material, or",
+    "REPOSITORY. Declared here as data, checked by tools/check_split_map.py, and NOT",
+    "yet applied -- nothing has been cut. This file is a map, and the map is made",
+    "before the cutting so that no numerical result, statistical claim or piece of",
+    "reproducibility evidence is removed by accident.",
+    "",
+    "The governing rule, from the corresponding author, 30 September 2026:",
+    "  scientific evidence is not hidden in the supplementary material.",
+    "So every unit that leaves MAIN must say, in main_retains, what stays in the main",
+    "article so that the conclusion it supports is still stated and still supported",
+    "there. check_split_map.py fails if any does not.",
+    "",
+    "Word counts are NOT declared here. The checker reads them from the assembled",
+    "manuscript, so the projection cannot drift from the paper it projects."
+  ],
+  "applied": false,
+  "phase": "moved",
+  "_phase_note": [
+    "Where applying this map has got to. 'planned' means nothing has been done;",
+    "'moved' means every unit bound for the supplement is now in",
+    "manuscript/SUPPLEMENTARY.md and the two wide tables are reduced in the article",
+    "and complete there, but the sections that stay have NOT yet been condensed to",
+    "their targets; 'condensed' means they have, and at that point applied becomes",
+    "true and the checker starts requiring each section to be at or below target.",
+    "Moved on 30 September 2026: S1, S2, S3, S4, S5 and the article renumbered to",
+    "Tables 1-6. No value was deleted at any point -- see the word accounting in",
+    "tools/move_to_supplementary.py and the cell-by-cell check in",
+    "tests/test_pipeline.py::test_a_table_split_across_both_documents_loses_no_cell."
+  ],
+  "_applied_note": [
+    "false means the map is a plan and the manuscript is untouched: the checker then",
+    "requires each MAIN target to be at or below the section's current length, since a",
+    "target above it is not a reduction. Set it to true only when the cutting is done;",
+    "the checker then reverses the test and requires each section to be at or below its",
+    "declared target, so the map becomes the thing that holds the article's length",
+    "rather than a record of an intention."
+  ],
+  "target": {
+    "guidance_words": 5000,
+    "guidance_quote": "Full papers, describing original work...should normally be about 5,000 words.",
+    "guidance_source": "tools/journal_requirements.json -> not_enforced_here.article_words",
+    "current_body_words": 28462,
+    "band": [
+      16500,
+      18500
+    ],
+    "note": [
+      "Recalculated empirically on 1 October 2026, after three condensation batches",
+      "measured what a careful condensation actually costs. The two earlier target sets",
+      "were estimates: a uniform 60 % cut of prose, then a uniform 45 %. Neither held.",
+      "",
+      "What the three batches measured, each keeping every number, p-value, caveat and",
+      "coverage statement:",
+      "  Batch 1  Overview, 7.1-7.2      2,489 -> 1,648   prose cut 43 %",
+      "  Batch 2  7.3, 7.3.1, 7.4        2,334 -> 1,757   prose cut 28 %",
+      "  Batch 3  7.5-7.10               4,820 -> 3,966   prose cut 20 %",
+      "",
+      "The first classifier tried was numeric density -- numbers per 100 words of prose --",
+      "and it ordered the three batches correctly (3.5, 4.3, 4.6 against 43 %, 28 %, 20 %).",
+      "It is still the wrong classifier, because it counts how many numbers a section",
+      "MENTIONS rather than how many it OWNS. A Discussion section citing twenty results",
+      "scores as dense as a Results section establishing them, and compresses quite",
+      "differently: a borrowed number can become a pointer, an owned one cannot.",
+      "",
+      "Targets are therefore computed from OWNED density: numeric values appearing in",
+      "this section and in no other, per 100 words of its prose. The bands are anchored",
+      "on the three batches and never promise a deeper cut than one of them achieved:",
+      "  owned/100 >= 4.0  ->  cut 20 %   (it establishes its own evidence)",
+      "  2.0 to 4.0        ->  cut 28 %",
+      "  below 2.0         ->  cut 43 %   (expository, or citing what other sections own)",
+      "",
+      "The measure separates the paper sharply. Section 7.3 owns 8.4 values per 100 words",
+      "and resisted condensation; 8.1, 8.2, 3.2, 6.7 and Contributions own none at all --",
+      "every number they carry is established elsewhere -- and condense like prose.",
+      "",
+      "This projects the body of Sections 1-9 to about 17,500 words, from 24,881 now and",
+      "28,462 before any of this began. That is 3.5x the guide's 'about 5,000 words',",
+      "and it is a measurement rather than an aspiration: the two earlier figures, 11,371",
+      "and 13,223, were produced by assuming a cut rate instead of observing one.",
+      "",
+      "The rule also finds about 2,070 words of room still inside the already-condensed",
+      "Results, concentrated in 7.6, 7.7, 7.9, 7.10 and the Overview -- sections that cite",
+      "many values and own few. Their targets are left at their achieved figures rather",
+      "than lowered, because revisiting finished work is the author’s call and not this",
+      "file’s."
+    ],
+    "tier_2_if_required": [
+      "If an editor asks for a further reduction, the next three units to move whole,",
+      "in this order, are 7.3.1 (pooled against subject-averaged recall), 7.5.1",
+      "(expected calibration error) and 7.4 (between-subject against seed variation).",
+      "Each is a self-contained measurement whose headline sentence can stand in the",
+      "section above it, and together they are about 1,400 words of main text. They are",
+      "listed rather than moved because each one currently carries a claim the",
+      "Discussion leans on, and moving them needs the same main_retains discipline as",
+      "the entries below, written deliberately and not under deadline."
+    ]
+  },
+  "destinations": {
+    "MAIN": "Stays in the submitted article. target_words is what it should be cut to; where it equals the current count, nothing is cut.",
+    "BOTH": "A reduced form in the article and the complete form in the supplementary material. Used only for tables whose full width does not fit a two-column page but whose content a reader must be able to see. main_form says what the reduced form shows.",
+    "SUPPLEMENTARY": "Moves out of the article into the supplementary PDF, which is submitted with it and is part of the published record.",
+    "REPOSITORY": "Belongs to the released code and data, not to either document. Used only for material that is about the verification machinery rather than about the study."
+  },
+  "sections": {
+    "Title": {
+      "dest": "MAIN",
+      "target_words": 7,
+      "reason": "front matter"
+    },
+    "Abstract": {
+      "dest": "MAIN",
+      "target_words": 141,
+      "reason": "front matter; already at 248 of the 250 allowed"
+    },
+    "Highlights": {
+      "dest": "MAIN",
+      "target_words": 32,
+      "reason": "front matter; submitted as the separate editable file the guide requires"
+    },
+    "Keywords": {
+      "dest": "MAIN",
+      "target_words": 8,
+      "reason": "front matter"
+    },
+    "Data availability statement (mandatory)": {
+      "dest": "MAIN",
+      "target_words": 159,
+      "reason": "mandatory. The current count includes the placeholder blocker notice, which is removed by tools/set_repository_url.py when the repository is published"
+    },
+    "Other mandatory declarations": {
+      "dest": "MAIN",
+      "target_words": 26,
+      "reason": "mandatory"
+    },
+    "Declaration of competing interest": {
+      "dest": "MAIN",
+      "target_words": 30,
+      "reason": "mandatory"
+    },
+    "CRediT author contribution statement": {
+      "dest": "MAIN",
+      "target_words": 65,
+      "reason": "mandatory; the count drops when the awaiting-confirmation note is deleted"
+    },
+    "Acknowledgements": {
+      "dest": "MAIN",
+      "target_words": 72,
+      "reason": "mandatory, and must be its own section before the references"
+    },
+    "Funding": {
+      "dest": "MAIN",
+      "target_words": 54,
+      "reason": "mandatory; the prescribed sentence plus the note on whose funding the dataset records"
+    },
+    "Checks run on this page": {
+      "dest": "REPOSITORY",
+      "reason": "A table of this repository's own checker output. It is evidence about the front matter, not part of it, and no reader of the article needs it.",
+      "main_retains": "Nothing needs to stay: the limits it reports are the journal's own, and tools/journal_requirements.json plus tools/check_frontmatter.py hold them in the released code."
+    },
+    "1. Introduction": {
+      "dest": "MAIN",
+      "target_words": 146,
+      "reason": "opening"
+    },
+    "What we found by asking three questions the field has not asked together": {
+      "dest": "MAIN",
+      "target_words": 480,
+      "reason": "The three questions and their answers are the paper. Condensed by removing the worked restatement of each answer, which Section 7 gives in full."
+    },
+    "Contributions": {
+      "dest": "MAIN",
+      "target_words": 486,
+      "reason": "Kept as a list. Currently argues each contribution; a contribution list states them and lets the sections argue."
+    },
+    "Organisation": {
+      "dest": "MAIN",
+      "target_words": 43,
+      "reason": "roadmap paragraph"
+    },
+    "2. Related Work": {
+      "dest": "MAIN",
+      "target_words": 0,
+      "reason": "section opening; the drafting note that stood here is now inside not-for-submission markers, so the section has no own prose left and its target is its measured length (1 October 2026)"
+    },
+    "2.1 What the field detects, and how it reports it": {
+      "dest": "MAIN",
+      "target_words": 262,
+      "reason": "establishes the reporting problem the paper addresses"
+    },
+    "2.2 Architectures": {
+      "dest": "MAIN",
+      "target_words": 232,
+      "reason": "places the five models in the literature"
+    },
+    "2.3 The closest cross-subject work": {
+      "dest": "MAIN",
+      "target_words": 228,
+      "reason": "the direct comparison a reviewer will look for"
+    },
+    "2.4 Calibration: a literature this field has not drawn on": {
+      "dest": "MAIN",
+      "target_words": 308,
+      "reason": "the gap the paper's main finding sits in; the least compressible part of Section 2"
+    },
+    "2.5 The dataset, and what makes three constructions necessary": {
+      "dest": "MAIN",
+      "target_words": 343,
+      "reason": "Keeps why three constructions are necessary; the worked enumeration of what each construction does moves to Section 4.4, where it is not repeated"
+    },
+    "3. Research Gap": {
+      "dest": "MAIN",
+      "target_words": 34,
+      "reason": "section opening; the section is compressed rather than removed because the gap statement is what the contributions answer"
+    },
+    "3.1 Subject-independent evaluation is not consistently reported": {
+      "dest": "MAIN",
+      "target_words": 72,
+      "reason": "one gap, one paragraph"
+    },
+    "3.2 Accuracy is reported without the two quantities that make it readable": {
+      "dest": "MAIN",
+      "target_words": 145,
+      "reason": "the gap the accuracy-against-recall result answers"
+    },
+    "3.3 Probability calibration is not treated as an evaluation dimension": {
+      "dest": "MAIN",
+      "target_words": 88,
+      "reason": "the gap the calibration result answers"
+    },
+    "3.4 Uncertainty is computed over the wrong source of variation": {
+      "dest": "MAIN",
+      "target_words": 39,
+      "reason": "the gap Section 7.4 answers"
+    },
+    "3.5 What this study does about them": {
+      "dest": "MAIN",
+      "target_words": 90,
+      "reason": "Overlaps Contributions; reduced to a pointer so the two do not say the same thing twice"
+    },
+    "4. Methodology": {
+      "dest": "MAIN",
+      "target_words": 35,
+      "reason": "section opening"
+    },
+    "4.1 Dataset": {
+      "dest": "MAIN",
+      "target_words": 198,
+      "reason": "essential: what was recorded, from whom, under what licence"
+    },
+    "4.2 Preprocessing": {
+      "dest": "MAIN",
+      "target_words": 66,
+      "reason": "essential and already short"
+    },
+    "4.3 Window extraction and labelling": {
+      "dest": "MAIN",
+      "target_words": 333,
+      "reason": "The rule must be stated exactly, since the label definition is what the whole study measures. The per-subject arithmetic behind it moves to Table S1"
+    },
+    "4.4 Per-subject budget and the three dataset arms": {
+      "dest": "MAIN",
+      "target_words": 492,
+      "reason": "the three-construction design, which is a named contribution"
+    },
+    "4.5 Dataset construction is verified, not assumed": {
+      "dest": "SUPPLEMENTARY",
+      "becomes": "Supplementary Note 1 — Dataset construction is verified, not assumed",
+      "reason": "This is about the verification machinery: that the window counts were recomputed rather than trusted. A reader needs to know it was done, not how the check works.",
+      "main_retains": "One sentence at the end of 4.4 stating that every window count in Table 1 is regenerated from the recordings by the released code, and that Arm B's counts are independently checkable without them, with a pointer to the supplementary section and to results/README.md."
+    },
+    "5. Architectures": {
+      "dest": "MAIN",
+      "target_words": 30,
+      "reason": "section opening"
+    },
+    "5.1 The five models": {
+      "dest": "MAIN",
+      "target_words": 61,
+      "reason": "essential; carries Table 2"
+    },
+    "5.2 Reference implementations, and the one change made to them": {
+      "dest": "MAIN",
+      "target_words": 40,
+      "reason": "Reproducibility-essential and irreducible: a single undocumented change to a reference implementation invalidates a comparison"
+    },
+    "5.3 The two prespecified models": {
+      "dest": "MAIN",
+      "target_words": 277,
+      "reason": "The CNN and CNN-BiLSTM are the ablation pair, so their layer stacks must be stated. Condensed by letting Figure 1, which stays in the article, carry the per-layer comparison the prose currently walks through in words"
+    },
+    "5.4 Input shape": {
+      "dest": "MAIN",
+      "target_words": 15,
+      "reason": "one sentence, already minimal"
+    },
+    "6. Experimental Setup": {
+      "dest": "MAIN",
+      "target_words": 23,
+      "reason": "section opening"
+    },
+    "6.1 Subject-independent evaluation": {
+      "dest": "MAIN",
+      "target_words": 90,
+      "reason": "the 7/2/1 LOSO protocol; irreducible"
+    },
+    "6.2 Normalisation and class weighting": {
+      "dest": "MAIN",
+      "target_words": 58,
+      "reason": "affects every result; must be stated"
+    },
+    "6.3 Training": {
+      "dest": "MAIN",
+      "target_words": 97,
+      "reason": "optimiser, schedule, stopping rule; reproducibility-essential"
+    },
+    "6.4 Metrics": {
+      "dest": "MAIN",
+      "target_words": 116,
+      "reason": "defines every quantity reported, including the two averaging conventions"
+    },
+    "6.5 Statistical testing": {
+      "dest": "MAIN",
+      "target_words": 256,
+      "reason": "which test, on what, paired how"
+    },
+    "6.5.1 Multiplicity, and why the analyses are reported as exploratory": {
+      "dest": "MAIN",
+      "target_words": 217,
+      "reason": "The decision-relevant statement stays in the article: the analyses are exploratory, the family sizes, and the fact that a Holm ceiling exists below which no test in a family of that size can reject. The derivation of those ceilings in exact rational arithmetic moves to the supplementary material, listed in fragments below."
+    },
+    "6.6 Recalibration and threshold selection": {
+      "dest": "MAIN",
+      "target_words": 383,
+      "reason": "The out-of-subject recalibration protocol is the paper's main intervention and cannot be summarised away; the worked example of one fold moves to the supplementary"
+    },
+    "6.7 Reproducibility": {
+      "dest": "MAIN",
+      "target_words": 153,
+      "reason": "Reduced to what a reader needs: what is released, what is not, and where. The catalogue of checks belongs to manuscript/REPRODUCIBILITY.md in the repository"
+    },
+    "7. Results": {
+      "dest": "MAIN",
+      "target_words": 400,
+      "reason": "section opening; carries Figure 2"
+    },
+    "Overview": {
+      "dest": "MAIN",
+      "target_words": 331,
+      "reason": "Holds the pooled-against-subject-averaged distinction, which every table below depends on for its reading. Not compressible below the statement of both conventions and which sections use which."
+    },
+    "7.1 Architecture comparison": {
+      "dest": "MAIN",
+      "target_words": 579,
+      "reason": "primary result; carries Table 3"
+    },
+    "7.1.1 Arms A and C isolate the effect of balancing": {
+      "dest": "MAIN",
+      "target_words": 219,
+      "reason": "one of the two single-factor contrasts the design exists to give"
+    },
+    "7.1.2 Arms B and C isolate the effect of trimming": {
+      "dest": "MAIN",
+      "target_words": 244,
+      "reason": "the other single-factor contrast"
+    },
+    "7.2 The CNN / CNN-BiLSTM ablation": {
+      "dest": "MAIN",
+      "target_words": 275,
+      "reason": "a named contribution"
+    },
+    "7.3 At a fixed threshold, accuracy moves against every other measure": {
+      "dest": "MAIN",
+      "target_words": 862,
+      "reason": "The accuracy-against-recall finding, one of the paper's three headline results; carries Table 4 and Figure 3"
+    },
+    "7.3.1 Pooled and subject-averaged recall differ by a large margin": {
+      "dest": "MAIN",
+      "target_words": 292,
+      "reason": "Kept because it is what makes every recall number in the paper readable. First candidate for tier 2 if a further cut is demanded"
+    },
+    "7.4 Between-subject variation dominates seed variation": {
+      "dest": "MAIN",
+      "target_words": 581,
+      "reason": "answers gap 3.4 and is what Section 8.7 argues from; carries Figure 4"
+    },
+    "7.5 Probability reliability": {
+      "dest": "MAIN",
+      "target_words": 770,
+      "reason": "the central finding; carries Table 5 and Figure 5"
+    },
+    "7.5.1 Expected calibration error": {
+      "dest": "MAIN",
+      "target_words": 344,
+      "reason": "the second reliability measure, reported because the Brier score alone does not separate calibration from discrimination"
+    },
+    "7.6 Out-of-subject logistic recalibration removes the reliability gap": {
+      "dest": "MAIN",
+      "target_words": 1176,
+      "reason": "the paper's intervention and its result; carries Table 6 and Figure 6"
+    },
+    "7.7 Run-to-run variability differs sharply between architectures": {
+      "dest": "MAIN",
+      "target_words": 788,
+      "reason": "Reduced to the finding and its range. Section 8.8 argues from it, so it stays in the article rather than moving. Target synchronised to the measured length, which had already passed the earlier target of 789 by one word (1 October 2026)"
+    },
+    "7.8 Where threshold selection helped, the scores were stably offset": {
+      "dest": "SUPPLEMENTARY",
+      "becomes": "Supplementary Note 2 — Where threshold selection helped, the scores were stably offset",
+      "reason": "A sensitivity analysis on a secondary intervention. Threshold selection is not the paper's proposal; recalibration is. The full per-arm, per-architecture offset analysis is supporting evidence for a negative result.",
+      "main_retains": "In 7.6 and again in 8.6: the sentence naming the single architecture-and-arm combination where threshold selection helped, with its value and the statement that it did not help in the others, and a pointer to the supplementary section for the per-fold offsets."
+    },
+    "7.9 Summary of findings": {
+      "dest": "MAIN",
+      "target_words": 513,
+      "reason": "The table a reviewer reads first. Condensed to one line per finding with its construction coverage"
+    },
+    "7.10 Multiplicity": {
+      "dest": "MAIN",
+      "target_words": 364,
+      "reason": "The decision-relevant summary stays in the article: 190 unique comparisons, 82 nominal, 57 surviving BH, 24 surviving BY, and that all 24 come from one family. The per-family table moves to the supplementary"
+    },
+    "Coverage of each analysis": {
+      "dest": "SUPPLEMENTARY",
+      "becomes": "Supplementary Note 3 — Coverage of each analysis",
+      "reason": "A completeness audit: which of the three constructions each analysis covers, and where a blank means missing coverage. It is about the study's own gaps rather than about its findings.",
+      "main_retains": "The statement, in the Section 7 opening, that a finding is claimed for all three constructions only where it replicates on all three, and that the analyses not covering all three are named in Table S3 -- plus, in 8.10, the limitation that the calibration analysis has released per-window scores for Arm A alone."
+    },
+    "8. Discussion": {
+      "dest": "MAIN",
+      "target_words": 42,
+      "reason": "section opening; the registry-provenance and numbering notes that stood here are now inside not-for-submission markers, so the target is the measured length of what remains (1 October 2026)"
+    },
+    "8.1 One architecture separates; the rest of the ordering is not a measurement": {
+      "dest": "MAIN",
+      "target_words": 323,
+      "reason": "the paper's negative claim about leaderboards"
+    },
+    "8.2 The recurrent block changes detection, not ranking": {
+      "dest": "MAIN",
+      "target_words": 226,
+      "reason": "interprets the ablation"
+    },
+    "8.3 Accuracy gives a misleading picture of minority-class detection here": {
+      "dest": "MAIN",
+      "target_words": 260,
+      "reason": "interprets the headline accuracy result"
+    },
+    "8.4 Of the two construction choices, balancing is the one that matters": {
+      "dest": "MAIN",
+      "target_words": 278,
+      "reason": "interprets the two single-factor contrasts"
+    },
+    "8.5 Ranking quality and probability reliability are separate properties": {
+      "dest": "MAIN",
+      "target_words": 257,
+      "reason": "the paper's conceptual contribution"
+    },
+    "8.6 Out-of-subject recalibration closes the gap; threshold selection helps in one case only": {
+      "dest": "MAIN",
+      "target_words": 617,
+      "reason": "interprets the intervention, and is where the threshold-selection result is retained for 7.8"
+    },
+    "8.7 Subject-level variation, not seed variation, is what an interval must represent": {
+      "dest": "MAIN",
+      "target_words": 259,
+      "reason": "a methodological recommendation other groups can act on"
+    },
+    "8.8 Reproducibility is architecture-dependent, and this affects how the tables are read": {
+      "dest": "MAIN",
+      "target_words": 218,
+      "reason": "interprets 7.7"
+    },
+    "8.9 What this means for a deployed system": {
+      "dest": "MAIN",
+      "target_words": 210,
+      "reason": "the applied implication a Control journal will look for"
+    },
+    "8.10 Limitations": {
+      "dest": "MAIN",
+      "target_words": 663,
+      "reason": "Ten subjects, one dataset, one montage, Arm A alone for released scores. Compressed but not shortened in substance: every limitation stays named"
+    },
+    "9. Conclusion": {
+      "dest": "MAIN",
+      "target_words": 440,
+      "reason": "Currently restates the results; a conclusion states what is now known and what follows"
+    },
+    "Code and Data Availability": {
+      "dest": "MAIN",
+      "target_words": 0,
+      "reason": "heading only"
+    },
+    "Statement": {
+      "dest": "MAIN",
+      "target_words": 130,
+      "reason": "Mandatory. Overlaps the front-matter data availability statement; the two are reconciled to one statement and one pointer"
+    },
+    "References": {
+      "dest": "MAIN",
+      "target_words": 0,
+      "reason": "heading only"
+    },
+    "Dataset": {
+      "dest": "MAIN",
+      "target_words": 55,
+      "reason": "reference list; not prose and not counted against the length guidance"
+    },
+    "Architectures evaluated": {
+      "dest": "MAIN",
+      "target_words": 62,
+      "reason": "reference list"
+    },
+    "Comparable cross-subject EEG drowsiness work": {
+      "dest": "MAIN",
+      "target_words": 24,
+      "reason": "reference list"
+    },
+    "Surveys establishing what the field reports": {
+      "dest": "MAIN",
+      "target_words": 80,
+      "reason": "reference list"
+    },
+    "Evaluation methodology": {
+      "dest": "MAIN",
+      "target_words": 37,
+      "reason": "reference list"
+    },
+    "Probability calibration": {
+      "dest": "MAIN",
+      "target_words": 156,
+      "reason": "reference list"
+    }
+  },
+  "tables": {
+    "S1": {
+      "dest": "SUPPLEMENTARY",
+      "becomes": "Table S1",
+      "caption": "Windows available per subject before any construction rule is applied.",
+      "reason": "Ten rows of per-subject arithmetic. It is the input to the construction rule, not a result of the study.",
+      "main_retains": "The per-arm totals in Table 1, which are what every later number is computed over, and the statement in 4.3 that Arm B's counts are reproducible from the public recordings alone."
+    },
+    "1": {
+      "dest": "MAIN",
+      "reason": "The three constructions with their window counts, drowsy counts, prevalences and always-alert baselines. Every result in the paper is read against this table; it cannot leave"
+    },
+    "2": {
+      "dest": "MAIN",
+      "reason": "The five architectures and their trainable parameter counts. Five rows, and it carries the capacity comparison the ablation rests on"
+    },
+    "3": {
+      "dest": "MAIN",
+      "reason": "Subject-averaged ranking quality on all three constructions: the primary comparison table"
+    },
+    "4": {
+      "dest": "BOTH",
+      "becomes": "Table S2 (full)",
+      "caption": "Pooled confusion matrices at the default 0.5 threshold, all three constructions.",
+      "reason": "Five architectures x three constructions x four cells plus the derived rates is wider than a two-column page holds at readable type.",
+      "main_form": "The article keeps recall, precision and accuracy per architecture for all three constructions, with the drowsy-window denominator stated once -- so the accuracy-against-recall claim is checkable in the article. The four raw confusion cells per architecture, per seed, go to Table S2.",
+      "main_retains": "Named in main_form: the three derived rates on all three arms, which is what Section 7.3 argues from and what Figure 3 plots."
+    },
+    "5": {
+      "dest": "MAIN",
+      "reason": "Pooled Brier score against each construction's class-prior reference. This is the table the central finding is read from"
+    },
+    "6": {
+      "dest": "BOTH",
+      "becomes": "Table S4 (full)",
+      "caption": "Expected calibration error and Brier score, raw and after each repair.",
+      "reason": "Two measures x two repairs x five architectures x three constructions does not fit a two-column page.",
+      "main_form": "The article keeps Brier score raw and after out-of-subject recalibration, for all five architectures on all three constructions -- the comparison Section 7.6's claim is made on. Expected calibration error and the threshold-selection column go to Table S4.",
+      "main_retains": "Named in main_form, plus the sentence in 7.5.1 giving the direction and range of the ECE change for every architecture, so the ECE result is stated in the article even though its table is not."
+    },
+    "S3": {
+      "dest": "SUPPLEMENTARY",
+      "becomes": "Table S3",
+      "caption": "Which construction each analysis covers.",
+      "reason": "A coverage audit of the study's own completeness.",
+      "main_retains": "The replication rule in the Section 7 opening, and the Arm-A-only limitation on released per-window scores in 8.10."
+    },
+    "S5": {
+      "dest": "SUPPLEMENTARY",
+      "becomes": "Table S5",
+      "caption": "Multiplicity, per analysis family.",
+      "reason": "Twelve families with four counts each, plus three summary rows. The decision it supports is a single sentence.",
+      "main_retains": "In 7.10: 190 unique comparisons, 82 reaching the nominal level, 57 surviving Benjamini-Hochberg, 24 surviving Benjamini-Yekutieli, and that all 24 survivors come from the drowsy-count family -- together with the statement that the analyses are reported as exploratory. The full table is also released as results/MULTIPLICITY.csv."
+    }
+  },
+  "figures": {
+    "_comment": [
+      "Renumbered on 30 September 2026 into true order of first appearance. The",
+      "architecture drawing is cited in 5.3 and every other figure in Section 7, so the",
+      "architecture drawing appears first and is Figure 1. It was numbered 6 while",
+      "sitting in Section 5, which is the numbering a production editor queries.",
+      "",
+      "It also stays in the main article, on the corresponding author's decision of",
+      "30 September 2026: the CNN baseline against the CNN-BiLSTM is a named",
+      "contribution of this paper and the drawing is where a reader sees what the",
+      "ablation actually changes. The earlier entry proposed moving it to supplementary",
+      "to hold the main article to five figures; that proposal is withdrawn, and the",
+      "article carries six figures plus one supplementary."
+    ],
+    "1": {
+      "dest": "MAIN",
+      "file": "figure1_cnn_against_cnn_bilstm",
+      "reason": "The CNN baseline and the CNN-BiLSTM drawn against each other, with the shared convolutional trunk drawn once. The ablation is a named contribution, and this is the one place a reader sees what the recurrent block replaces. First cited in 5.3, which is why it is Figure 1"
+    },
+    "2": {
+      "dest": "MAIN",
+      "file": "figure2_study_design",
+      "reason": "The design in one picture: three constructions, five architectures, 750 folds. It is what makes the rest of the paper readable"
+    },
+    "3": {
+      "dest": "MAIN",
+      "file": "figure3_accuracy_against_recall",
+      "reason": "carries the accuracy-against-recall finding"
+    },
+    "4": {
+      "dest": "MAIN",
+      "file": "figure4_subject_against_seed_spread",
+      "reason": "carries the subject-against-seed variation finding"
+    },
+    "5": {
+      "dest": "MAIN",
+      "file": "figure5_brier_partition",
+      "reason": "carries the central reliability finding, and is cited from both 7.5 and 8.5"
+    },
+    "6": {
+      "dest": "MAIN",
+      "file": "figure6_recalibration",
+      "reason": "carries the recalibration result, and is cited from both 7.6 and 8.6"
+    },
+    "S1": {
+      "dest": "SUPPLEMENTARY",
+      "file": "figureS1_overview",
+      "reason": "Already supplementary, and on a scientific ground rather than for space: its reliability panels can be drawn for Arm A alone, and this paper claims findings where they replicate on all three.",
+      "main_retains": "Nothing is lost: every panel of it is a view of a result reported in the article, and the reason it cannot be drawn for three arms is stated in 8.10."
+    },
+    "code": {
+      "dest": "REPOSITORY",
+      "file": "fig6_code_structure",
+      "reason": "A diagram of this repository's own module structure. It was never a paper figure.",
+      "main_retains": "Nothing: it is about the code, and the code is released."
+    }
+  },
+  "fragments": {
+    "_comment": [
+      "Material below heading level that moves, named by the section that hosts it.",
+      "These are not separate units in the manuscript, so the checker verifies only",
+      "that the host section exists and is classified -- it cannot measure them."
+    ],
+    "holm_ceiling_derivation": {
+      "host": "6.5.1 Multiplicity, and why the analyses are reported as exploratory",
+      "dest": "SUPPLEMENTARY",
+      "reason": "The derivation of each family's Holm ceiling in exact rational arithmetic, including that the five-point Spearman floor of 2/5! equals alpha/3 exactly and so the ceiling is an equality rather than a strict inequality.",
+      "main_retains": "The ceilings themselves as stated values, and the sentence that no test in a Wilcoxon family of 26 or more can reject at n = 10 whatever the data. The derivation is also in the released tools/check_multiplicity.py, which re-derives it on every run."
+    },
+    "recalibration_worked_example": {
+      "host": "6.6 Recalibration and threshold selection",
+      "dest": "SUPPLEMENTARY",
+      "reason": "The fold-by-fold worked example of fitting the logistic recalibration on the other nine subjects.",
+      "main_retains": "The protocol stated once: a per-fold logistic recalibration fitted on the nine training subjects and applied to the held-out subject, never fitted on the held-out subject. That sentence is the whole guarantee; the example only illustrates it."
+    },
+    "per_fold_results": {
+      "host": "6.7 Reproducibility",
+      "dest": "REPOSITORY",
+      "reason": "All 750 per-fold rows. No journal prints them and no supplementary PDF should; they are a CSV.",
+      "main_retains": "The statement that all 750 per-fold results are released, with the address, and that every table and significance test in the paper regenerates from them without a GPU and without the recordings."
+    }
+  }
+}

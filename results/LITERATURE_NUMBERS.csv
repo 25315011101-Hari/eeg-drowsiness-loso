@@ -1,0 +1,71 @@
+section,claim,value,note
+literature,[S1] Hassan et al. 2025: records screened,267,"https://link.springer.com/article/10.1007/s11571-025-10320-3 ; ""A total of 267 publications were retrieved through initial database searches"""
+literature,[S1] Hassan et al. 2025: papers analysed,87,"https://link.springer.com/article/10.1007/s11571-025-10320-3 ; ""Ultimately, 87 studies met the eligibility criteria and were included in the final systematic review"""
+literature,[S2] Ghaffari fam et al. 2026: studies reviewed,69,"https://pmc.ncbi.nlm.nih.gov/articles/PMC13265076/ ; ""A total of 69 studies met the inclusion criteria""; search ran ""up to 31 August 2025"""
+literature,"[S2] median reported accuracy, deep learning, percent",94.48,"https://pmc.ncbi.nlm.nih.gov/articles/PMC13265076/ ; ""median accuracy (94.48% vs. 91.80%)"""
+literature,"[S2] median reported accuracy, classical machine learning, percent",91.80,"https://pmc.ncbi.nlm.nih.gov/articles/PMC13265076/ ; ""median accuracy (94.48% vs. 91.80%)"""
+literature,"[S2] lowest reported accuracy across studies, percent",67,"https://pmc.ncbi.nlm.nih.gov/articles/PMC13265076/ ; ""Reported accuracies range widely, from as low as 67.0% to a perfect 100%"""
+literature,"[S2] highest reported accuracy across studies, percent",100,"https://pmc.ncbi.nlm.nih.gov/articles/PMC13265076/ ; ""Reported accuracies range widely, from as low as 67.0% to a perfect 100%"""
+literature,[S2] studies rated high risk of bias,27,"https://pmc.ncbi.nlm.nih.gov/articles/PMC13265076/ ; ""27 studies were rated as high risk"""
+literature,"[S2] simulator-based studies, percent",73.4,"https://pmc.ncbi.nlm.nih.gov/articles/PMC13265076/ ; ""73.4%"" conducted in simulated or controlled environments"
+literature,[C1] Cui et al. 2022: subjects,11,"https://doi.org/10.1109/TNNLS.2022.3147208 ; verified verbatim in the arXiv v4 abstract, https://arxiv.org/abs/2107.09507v4 (18 Feb 2022); the published IEEE version was not accessible"
+literature,"[C1] Cui et al. 2022: mean LOSO accuracy, percent",78.35,"https://doi.org/10.1109/TNNLS.2022.3147208 ; verified verbatim in the arXiv v4 abstract, https://arxiv.org/abs/2107.09507v4 (18 Feb 2022); the published IEEE version was not accessible"
+literature,"[C1] conventional baseline accuracy, lower bound, percent",53.40,"https://doi.org/10.1109/TNNLS.2022.3147208 ; verified verbatim in the arXiv v4 abstract, https://arxiv.org/abs/2107.09507v4 (18 Feb 2022); the published IEEE version was not accessible"
+literature,"[C1] conventional baseline accuracy, upper bound, percent",72.68,"https://doi.org/10.1109/TNNLS.2022.3147208 ; verified verbatim in the arXiv v4 abstract, https://arxiv.org/abs/2107.09507v4 (18 Feb 2022); the published IEEE version was not accessible"
+literature,"[C1] earlier deep method accuracy, lower bound, percent",71.75,"https://doi.org/10.1109/TNNLS.2022.3147208 ; verified verbatim in the arXiv v4 abstract, https://arxiv.org/abs/2107.09507v4 (18 Feb 2022); the published IEEE version was not accessible"
+literature,"[C1] earlier deep method accuracy, upper bound, percent",75.19,"https://doi.org/10.1109/TNNLS.2022.3147208 ; verified verbatim in the arXiv v4 abstract, https://arxiv.org/abs/2107.09507v4 (18 Feb 2022); the published IEEE version was not accessible"
+literature,[C1] Cui et al. 2022: evaluation samples,2952,https://arxiv.org/pdf/2107.09507
+literature,[C1] Cui et al. 2022: alert samples,1731,https://arxiv.org/pdf/2107.09507
+literature,[C1] Cui et al. 2022: drowsy samples,1221,https://arxiv.org/pdf/2107.09507
+literature,"[C1] Cui et al. 2022: drowsy prevalence, percent",41.4,computed as 1221/2952 from https://arxiv.org/pdf/2107.09507
+literature,"[C1] Cui et al. 2022: always-alert baseline, percent",58.6,computed as 1731/2952 from https://arxiv.org/pdf/2107.09507
+literature,[D1] DD-Database: volunteers,10,https://doi.org/10.5061/dryad.5tb2rbp9c
+literature,"[D1] DD-Database: youngest volunteer age, years",20,https://doi.org/10.5061/dryad.5tb2rbp9c
+literature,"[D1] DD-Database: oldest volunteer age, years",50,https://doi.org/10.5061/dryad.5tb2rbp9c
+literature,[D1] DD-Database: trials per volunteer,2,https://doi.org/10.5061/dryad.5tb2rbp9c
+literature,[D1] DD-Database: hours per trial,2,https://doi.org/10.5061/dryad.5tb2rbp9c
+literature,[D1] DD-Database: total hours recorded,40,https://doi.org/10.5061/dryad.5tb2rbp9c
+literature,[D1] DD-Database: EEG channels,4,https://doi.org/10.5061/dryad.5tb2rbp9c
+literature,[D1] DD-Database: EOG channels,2,https://doi.org/10.5061/dryad.5tb2rbp9c
+literature,[D1] DD-Database: ECG channels,1,https://doi.org/10.5061/dryad.5tb2rbp9c
+literature,[A1] Lawhern et al. 2018: EEGNet publication year,2018,https://doi.org/10.1088/1741-2552/aace8c
+literature,[A2] Schirrmeister et al. 2017: publication year,2017,https://doi.org/10.1002/hbm.23730
+literature,[A2] DeepConvNet convolution-pooling stages,5,https://doi.org/10.1002/hbm.23730
+literature,[P1] Guo et al. 2017: publication year,2017,https://proceedings.mlr.press/v70/guo17a.html
+literature,[P2] Van Calster et al. 2019: publication year,2019,https://doi.org/10.1186/s12916-019-1466-7
+literature,[P3] Naeini et al. 2015: publication year,2015,https://ojs.aaai.org/index.php/AAAI/article/view/9602
+literature,[P4] Zadrozny and Elkan 2002: publication year,2002,https://doi.org/10.1145/775047.775151
+literature,[P5] Platt 2000: publication year,2000,https://research.aston.ac.uk/en/publications/advances-in-large-margin-classifiers/
+literature,[P6] Brier 1950: publication year,1950,https://ui.adsabs.harvard.edu/abs/1950MWRv...78....1B/abstract
+literature,[E1] Saito and Rehmsmeier 2015: publication year,2015,https://doi.org/10.1371/journal.pone.0118432
+literature,[E2] Varoquaux 2018: publication year,2018,https://doi.org/10.1016/j.neuroimage.2017.06.061
+literature,[R1] Garces Correa et al. 2014: publication year,2014,https://pubmed.ncbi.nlm.nih.gov/23972332/
+literature,"[S1] highest accuracy quoted in the survey, percent",99.23,"https://link.springer.com/article/10.1007/s11571-025-10320-3 ; quoted among the survey's reported accuracies; not re-located verbatim in the full-text fetch, so this row is the weakest of the S1 set"
+literature,[S3] Peker et al. 2026: journal volume,279,https://doi.org/10.1016/j.measurement.2026.121676
+literature,[S3] Peker et al. 2026: article number,121676,https://doi.org/10.1016/j.measurement.2026.121676
+literature,[S3] Peker et al. 2026: publication year,2026,https://doi.org/10.1016/j.measurement.2026.121676
+literature,[S3] pages,31,https://doi.org/10.1016/j.measurement.2026.121676
+literature,[S3] numbered references,155,https://doi.org/10.1016/j.measurement.2026.121676
+literature,[S3] reference number given to DD-Database,62,https://doi.org/10.1016/j.measurement.2026.121676
+literature,[S3] table number of the dataset comparison table,3,https://doi.org/10.1016/j.measurement.2026.121676
+literature,[S3] page on which DD-Database is described in body text,8,https://doi.org/10.1016/j.measurement.2026.121676
+literature,"[S3] DD-Database volunteers, as restated by this review",10,https://doi.org/10.1016/j.measurement.2026.121676
+literature,"[S3] DD-Database total hours, as restated by this review",40,https://doi.org/10.1016/j.measurement.2026.121676
+literature,[S3] occurrences of Brier in the full text,0,https://doi.org/10.1016/j.measurement.2026.121676
+literature,[S3] occurrences of probability calibration in the full text,0,https://doi.org/10.1016/j.measurement.2026.121676
+literature,[S3] occurrences of leave-one-subject-out in the full text,0,https://doi.org/10.1016/j.measurement.2026.121676
+literature,[S3] occurrences of majority class in the full text,0,https://doi.org/10.1016/j.measurement.2026.121676
+literature,[S3] occurrences of class prior in the full text,0,https://doi.org/10.1016/j.measurement.2026.121676
+literature,[S3] occurrences of Platt in the full text,0,https://doi.org/10.1016/j.measurement.2026.121676
+literature,[S3] occurrences of isotonic in the full text,0,https://doi.org/10.1016/j.measurement.2026.121676
+literature,[S3] occurrences of expected calibration error in the full text,0,https://doi.org/10.1016/j.measurement.2026.121676
+literature,[S3] occurrences of reliability diagram in the full text,0,https://doi.org/10.1016/j.measurement.2026.121676
+literature,[S3] occurrences of imbalance in the full text,2,https://doi.org/10.1016/j.measurement.2026.121676
+literature,[S3] occurrences of subject-independent in the full text,2,https://doi.org/10.1016/j.measurement.2026.121676
+literature,"[S3] occurrences of calibration in the full text, all sensor or setup calibration",11,https://doi.org/10.1016/j.measurement.2026.121676
+literature,"[S3] physiological-system accuracy range reported, lower bound, percent",64,https://doi.org/10.1016/j.measurement.2026.121676
+literature,"[S3] physiological-system accuracy range reported, upper bound, percent",98.7,https://doi.org/10.1016/j.measurement.2026.121676
+literature,"[S3] vehicle-vision accuracy range reported, lower bound, percent",82,https://doi.org/10.1016/j.measurement.2026.121676
+literature,"[S3] vehicle-vision accuracy range reported, upper bound, percent",87.7,https://doi.org/10.1016/j.measurement.2026.121676
+literature,"[S3] intrusive hybrid accuracy range reported, lower bound, percent",77,https://doi.org/10.1016/j.measurement.2026.121676
+literature,"[S3] intrusive hybrid accuracy range reported, upper bound, percent",95.4,https://doi.org/10.1016/j.measurement.2026.121676

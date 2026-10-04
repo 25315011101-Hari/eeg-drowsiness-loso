@@ -1,0 +1,12 @@
+arm,model,cal,ece_pooled,note
+A,CNN,raw,0.0526,computed from the per-window probability files; NOT comparable to the subject-averaged column
+A,CNN,platt,0.01,computed from the per-window probability files; NOT comparable to the subject-averaged column
+A,CNN,isotonic,0.0206,computed from the per-window probability files; NOT comparable to the subject-averaged column
+A,CNN-BiLSTM,raw,0.0792,computed from the per-window probability files; NOT comparable to the subject-averaged column
+A,CNN-BiLSTM,platt,0.0145,computed from the per-window probability files; NOT comparable to the subject-averaged column
+A,CNN-BiLSTM,isotonic,0.0261,computed from the per-window probability files; NOT comparable to the subject-averaged column
+A,EEGNet,raw,0.1944,computed from the per-window probability files; NOT comparable to the subject-averaged column
+A,EEGNet,platt,0.0351,computed from the per-window probability files; NOT comparable to the subject-averaged column
+A,EEGNet,isotonic,0.0262,computed from the per-window probability files; NOT comparable to the subject-averaged column
+B,CNN,raw,0.0435,computed from the per-window probability files; NOT comparable to the subject-averaged column
+B,CNN-BiLSTM,raw,0.0862,computed from the per-window probability files; NOT comparable to the subject-averaged column

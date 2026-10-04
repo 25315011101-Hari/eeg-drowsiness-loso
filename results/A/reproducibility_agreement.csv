@@ -1,0 +1,2 @@
+arm,model,n_folds,identical_bal_acc,identical_f1,identical_recall,mean_1_auc,mean_2_auc,mean_1_pr_auc,mean_2_pr_auc,mean_1_bal_acc,mean_2_bal_acc
+A,EEGNet,50,44,44,49,0.8840254674751203,0.8839657424511684,0.4317097901546717,0.4314233660221177,0.7091811506226054,0.7083680470233269

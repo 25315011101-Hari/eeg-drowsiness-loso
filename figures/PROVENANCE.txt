@@ -1,0 +1,343 @@
+WHERE EVERY NUMBER IN EVERY FIGURE COMES FROM
+==============================================================================
+
+Source of record: results/MASTER_NUMBERS.csv (1977 rows).
+Each line below is one value a figure plots, with the registry claim
+it was read from. No figure contains a number that is not in this list.
+
+
+------------------------------------------------------------------------------
+figure2_study_design  —  17 distinct registry value(s)
+------------------------------------------------------------------------------
+  subjects                                                       10.0
+  seeds                                                          5.0
+  architectures                                                  5.0
+  folds in ALL_FOLDS                                             750.0
+  window length samples                                          1280.0
+  Arm A windows                                                  9260.0
+  Arm A windows per subject                                      926.0
+  Arm A drowsy windows                                           770.0
+  Arm A prevalence percent                                       8.3153
+  Arm B windows                                                  9920.0
+  Arm B windows per subject                                      992.0
+  Arm B drowsy windows                                           688.0
+  Arm B prevalence percent                                       6.9355
+  Arm C windows                                                  9260.0
+  Arm C windows per subject                                      926.0
+  Arm C drowsy windows                                           673.0
+  Arm C prevalence percent                                       7.2678
+
+------------------------------------------------------------------------------
+figure5_brier_partition  —  15 distinct registry value(s)
+------------------------------------------------------------------------------
+  Arm A ShallowConvNet pooled Brier margin over reference        0.0529
+  Arm A EEGNet pooled Brier margin over reference                0.0248
+  Arm A CNN-BiLSTM pooled Brier margin over reference            0.0019
+  Arm A CNN pooled Brier margin over reference                   -0.0091
+  Arm A DeepConvNet pooled Brier margin over reference           -0.017
+  Arm B ShallowConvNet pooled Brier margin over reference        0.0724
+  Arm B EEGNet pooled Brier margin over reference                0.0214
+  Arm B CNN-BiLSTM pooled Brier margin over reference            0.0098
+  Arm B CNN pooled Brier margin over reference                   -0.0068
+  Arm B DeepConvNet pooled Brier margin over reference           -0.0042
+  Arm C ShallowConvNet pooled Brier margin over reference        0.0709
+  Arm C EEGNet pooled Brier margin over reference                0.0278
+  Arm C CNN-BiLSTM pooled Brier margin over reference            0.0134
+  Arm C CNN pooled Brier margin over reference                   -0.0066
+  Arm C DeepConvNet pooled Brier margin over reference           -0.0163
+
+------------------------------------------------------------------------------
+figure3_accuracy_against_recall  —  39 distinct registry value(s)
+------------------------------------------------------------------------------
+  Arm A EEGNet pooled accuracy percent                           88.7106
+  Arm A ShallowConvNet pooled accuracy percent                   83.1706
+  Arm A CNN pooled accuracy percent                              91.6263
+  Arm A DeepConvNet pooled accuracy percent                      92.73
+  Arm A CNN-BiLSTM pooled accuracy percent                       89.6069
+  Arm A EEGNet pooled recall                                     0.7577
+  Arm A ShallowConvNet pooled recall                             0.7943
+  Arm A CNN pooled recall                                        0.5062
+  Arm A DeepConvNet pooled recall                                0.4868
+  Arm A CNN-BiLSTM pooled recall                                 0.6462
+  Arm A always-alert accuracy percent, 2 dp                      91.68
+  Arm A Spearman pooled accuracy vs pooled recall                -1.0
+  Arm A p for Spearman pooled accuracy vs pooled recall          0.0167
+  Arm B EEGNet pooled accuracy percent                           90.2339
+  Arm B ShallowConvNet pooled accuracy percent                   81.8528
+  Arm B CNN pooled accuracy percent                              92.998
+  Arm B DeepConvNet pooled accuracy percent                      92.5423
+  Arm B CNN-BiLSTM pooled accuracy percent                       90.1653
+  Arm B EEGNet pooled recall                                     0.7721
+  Arm B ShallowConvNet pooled recall                             0.7875
+  Arm B CNN pooled recall                                        0.3773
+  Arm B DeepConvNet pooled recall                                0.4488
+  Arm B CNN-BiLSTM pooled recall                                 0.6584
+  Arm B always-alert accuracy percent, 2 dp                      93.06
+  Arm B Spearman pooled accuracy vs pooled recall                -0.9
+  Arm B p for Spearman pooled accuracy vs pooled recall          0.0833
+  Arm C EEGNet pooled accuracy percent                           89.4968
+  Arm C ShallowConvNet pooled accuracy percent                   82.1879
+  Arm C CNN pooled accuracy percent                              92.6458
+  Arm C DeepConvNet pooled accuracy percent                      93.5551
+  Arm C CNN-BiLSTM pooled accuracy percent                       89.2765
+  Arm C EEGNet pooled recall                                     0.7851
+  Arm C ShallowConvNet pooled recall                             0.77
+  Arm C CNN pooled recall                                        0.4933
+  Arm C DeepConvNet pooled recall                                0.4981
+  Arm C CNN-BiLSTM pooled recall                                 0.7322
+  Arm C always-alert accuracy percent, 2 dp                      92.73
+  Arm C Spearman pooled accuracy vs pooled recall                -0.6
+  Arm C p for Spearman pooled accuracy vs pooled recall          0.35
+
+------------------------------------------------------------------------------
+figure6_recalibration  —  21 distinct registry value(s)
+------------------------------------------------------------------------------
+  Arm A class-prior Brier reference                              0.0762
+  Arm B class-prior Brier reference                              0.0645
+  Arm C class-prior Brier reference                              0.0674
+  Arm A EEGNet raw Brier SUBJECT-AVERAGED                        0.1009
+  Arm A CNN raw Brier SUBJECT-AVERAGED                           0.0671
+  Arm A CNN-BiLSTM raw Brier SUBJECT-AVERAGED                    0.0781
+  Arm B EEGNet raw Brier SUBJECT-AVERAGED                        0.0859
+  Arm B ShallowConvNet raw Brier SUBJECT-AVERAGED                0.1369
+  Arm B DeepConvNet raw Brier SUBJECT-AVERAGED                   0.0603
+  Arm C EEGNet raw Brier SUBJECT-AVERAGED                        0.0952
+  Arm C ShallowConvNet raw Brier SUBJECT-AVERAGED                0.1383
+  Arm C DeepConvNet raw Brier SUBJECT-AVERAGED                   0.0511
+  Arm A EEGNet platt Brier SUBJECT-AVERAGED                      0.0635
+  Arm A CNN platt Brier SUBJECT-AVERAGED                         0.0585
+  Arm A CNN-BiLSTM platt Brier SUBJECT-AVERAGED                  0.059
+  Arm B EEGNet platt Brier SUBJECT-AVERAGED                      0.0538
+  Arm B ShallowConvNet platt Brier SUBJECT-AVERAGED              0.0584
+  Arm B DeepConvNet platt Brier SUBJECT-AVERAGED                 0.0592
+  Arm C EEGNet platt Brier SUBJECT-AVERAGED                      0.0573
+  Arm C ShallowConvNet platt Brier SUBJECT-AVERAGED              0.0658
+  Arm C DeepConvNet platt Brier SUBJECT-AVERAGED                 0.0529
+
+------------------------------------------------------------------------------
+figure4_subject_against_seed_spread  —  51 distinct registry value(s)
+------------------------------------------------------------------------------
+  Arm A EEGNet subject SD of PR-AUC                              0.2692
+  Arm A EEGNet seed SD of PR-AUC                                 0.0058
+  Arm A EEGNet subject to seed SD ratio                          46.4039
+  Arm A ShallowConvNet subject SD of PR-AUC                      0.2603
+  Arm A ShallowConvNet seed SD of PR-AUC                         0.0115
+  Arm A ShallowConvNet subject to seed SD ratio                  22.6748
+  Arm A CNN subject SD of PR-AUC                                 0.2399
+  Arm A CNN seed SD of PR-AUC                                    0.005
+  Arm A CNN subject to seed SD ratio                             47.7655
+  Arm A DeepConvNet subject SD of PR-AUC                         0.2773
+  Arm A DeepConvNet seed SD of PR-AUC                            0.0108
+  Arm A DeepConvNet subject to seed SD ratio                     25.7714
+  Arm A CNN-BiLSTM subject SD of PR-AUC                          0.244
+  Arm A CNN-BiLSTM seed SD of PR-AUC                             0.0207
+  Arm A CNN-BiLSTM subject to seed SD ratio                      11.7801
+  Arm A minimum subject to seed SD ratio                         11.7801
+  Arm A maximum subject to seed SD ratio                         47.7655
+  Arm B EEGNet subject SD of PR-AUC                              0.2649
+  Arm B EEGNet seed SD of PR-AUC                                 0.0257
+  Arm B EEGNet subject to seed SD ratio                          10.295
+  Arm B ShallowConvNet subject SD of PR-AUC                      0.2554
+  Arm B ShallowConvNet seed SD of PR-AUC                         0.0144
+  Arm B ShallowConvNet subject to seed SD ratio                  17.6864
+  Arm B CNN subject SD of PR-AUC                                 0.2111
+  Arm B CNN seed SD of PR-AUC                                    0.0193
+  Arm B CNN subject to seed SD ratio                             10.9514
+  Arm B DeepConvNet subject SD of PR-AUC                         0.277
+  Arm B DeepConvNet seed SD of PR-AUC                            0.0177
+  Arm B DeepConvNet subject to seed SD ratio                     15.6951
+  Arm B CNN-BiLSTM subject SD of PR-AUC                          0.2166
+  Arm B CNN-BiLSTM seed SD of PR-AUC                             0.0384
+  Arm B CNN-BiLSTM subject to seed SD ratio                      5.6339
+  Arm B minimum subject to seed SD ratio                         5.6339
+  Arm B maximum subject to seed SD ratio                         17.6864
+  Arm C EEGNet subject SD of PR-AUC                              0.2679
+  Arm C EEGNet seed SD of PR-AUC                                 0.0074
+  Arm C EEGNet subject to seed SD ratio                          36.1317
+  Arm C ShallowConvNet subject SD of PR-AUC                      0.257
+  Arm C ShallowConvNet seed SD of PR-AUC                         0.0189
+  Arm C ShallowConvNet subject to seed SD ratio                  13.6282
+  Arm C CNN subject SD of PR-AUC                                 0.2492
+  Arm C CNN seed SD of PR-AUC                                    0.0121
+  Arm C CNN subject to seed SD ratio                             20.6749
+  Arm C DeepConvNet subject SD of PR-AUC                         0.2708
+  Arm C DeepConvNet seed SD of PR-AUC                            0.0128
+  Arm C DeepConvNet subject to seed SD ratio                     21.0764
+  Arm C CNN-BiLSTM subject SD of PR-AUC                          0.2557
+  Arm C CNN-BiLSTM seed SD of PR-AUC                             0.0251
+  Arm C CNN-BiLSTM subject to seed SD ratio                      10.1688
+  Arm C minimum subject to seed SD ratio                         10.1688
+  Arm C maximum subject to seed SD ratio                         36.1317
+
+------------------------------------------------------------------------------
+figureS1_overview  —  153 distinct registry value(s)
+------------------------------------------------------------------------------
+  Arm A EEGNet auc SUBJECT-AVERAGED                              0.884
+  Arm A EEGNet auc seed SD                                       0.0074
+  Arm B EEGNet auc SUBJECT-AVERAGED                              0.9003
+  Arm B EEGNet auc seed SD                                       0.0079
+  Arm C EEGNet auc SUBJECT-AVERAGED                              0.8831
+  Arm C EEGNet auc seed SD                                       0.0095
+  Arm A ShallowConvNet auc SUBJECT-AVERAGED                      0.846
+  Arm A ShallowConvNet auc seed SD                               0.003
+  Arm B ShallowConvNet auc SUBJECT-AVERAGED                      0.8472
+  Arm B ShallowConvNet auc seed SD                               0.0141
+  Arm C ShallowConvNet auc SUBJECT-AVERAGED                      0.8332
+  Arm C ShallowConvNet auc seed SD                               0.0184
+  Arm A CNN auc SUBJECT-AVERAGED                                 0.8428
+  Arm A CNN auc seed SD                                          0.0094
+  Arm B CNN auc SUBJECT-AVERAGED                                 0.8662
+  Arm B CNN auc seed SD                                          0.0128
+  Arm C CNN auc SUBJECT-AVERAGED                                 0.8469
+  Arm C CNN auc seed SD                                          0.0173
+  Arm A DeepConvNet auc SUBJECT-AVERAGED                         0.8123
+  Arm A DeepConvNet auc seed SD                                  0.0079
+  Arm B DeepConvNet auc SUBJECT-AVERAGED                         0.793
+  Arm B DeepConvNet auc seed SD                                  0.0328
+  Arm C DeepConvNet auc SUBJECT-AVERAGED                         0.8339
+  Arm C DeepConvNet auc seed SD                                  0.0251
+  Arm A CNN-BiLSTM auc SUBJECT-AVERAGED                          0.8213
+  Arm A CNN-BiLSTM auc seed SD                                   0.0221
+  Arm B CNN-BiLSTM auc SUBJECT-AVERAGED                          0.859
+  Arm B CNN-BiLSTM auc seed SD                                   0.0161
+  Arm C CNN-BiLSTM auc SUBJECT-AVERAGED                          0.8472
+  Arm C CNN-BiLSTM auc seed SD                                   0.0332
+  Arm A prevalence percent                                       8.3153
+  Arm B prevalence percent                                       6.9355
+  Arm C prevalence percent                                       7.2678
+  Arm A EEGNet pr_auc SUBJECT-AVERAGED                           0.4314
+  Arm A EEGNet pr_auc seed SD                                    0.0058
+  Arm B EEGNet pr_auc SUBJECT-AVERAGED                           0.4398
+  Arm B EEGNet pr_auc seed SD                                    0.0257
+  Arm C EEGNet pr_auc SUBJECT-AVERAGED                           0.4073
+  Arm C EEGNet pr_auc seed SD                                    0.0074
+  Arm A ShallowConvNet pr_auc SUBJECT-AVERAGED                   0.411
+  Arm A ShallowConvNet pr_auc seed SD                            0.0115
+  Arm B ShallowConvNet pr_auc SUBJECT-AVERAGED                   0.3994
+  Arm B ShallowConvNet pr_auc seed SD                            0.0144
+  Arm C ShallowConvNet pr_auc SUBJECT-AVERAGED                   0.3724
+  Arm C ShallowConvNet pr_auc seed SD                            0.0189
+  Arm A CNN pr_auc SUBJECT-AVERAGED                              0.3382
+  Arm A CNN pr_auc seed SD                                       0.005
+  Arm B CNN pr_auc SUBJECT-AVERAGED                              0.3599
+  Arm B CNN pr_auc seed SD                                       0.0193
+  Arm C CNN pr_auc SUBJECT-AVERAGED                              0.2946
+  Arm C CNN pr_auc seed SD                                       0.0121
+  Arm A DeepConvNet pr_auc SUBJECT-AVERAGED                      0.4051
+  Arm A DeepConvNet pr_auc seed SD                               0.0108
+  Arm B DeepConvNet pr_auc SUBJECT-AVERAGED                      0.3841
+  Arm B DeepConvNet pr_auc seed SD                               0.0177
+  Arm C DeepConvNet pr_auc SUBJECT-AVERAGED                      0.3862
+  Arm C DeepConvNet pr_auc seed SD                               0.0128
+  Arm A CNN-BiLSTM pr_auc SUBJECT-AVERAGED                       0.3986
+  Arm A CNN-BiLSTM pr_auc seed SD                                0.0207
+  Arm B CNN-BiLSTM pr_auc SUBJECT-AVERAGED                       0.397
+  Arm B CNN-BiLSTM pr_auc seed SD                                0.0384
+  Arm C CNN-BiLSTM pr_auc SUBJECT-AVERAGED                       0.3772
+  Arm C CNN-BiLSTM pr_auc seed SD                                0.0251
+  Arm A EEGNet recall SUBJECT-AVERAGED                           0.5217
+  Arm A EEGNet recall seed SD                                    0.0209
+  Arm B EEGNet recall SUBJECT-AVERAGED                           0.5398
+  Arm B EEGNet recall seed SD                                    0.0218
+  Arm C EEGNet recall SUBJECT-AVERAGED                           0.5343
+  Arm C EEGNet recall seed SD                                    0.0303
+  Arm A ShallowConvNet recall SUBJECT-AVERAGED                   0.5725
+  Arm A ShallowConvNet recall seed SD                            0.0161
+  Arm B ShallowConvNet recall SUBJECT-AVERAGED                   0.5957
+  Arm B ShallowConvNet recall seed SD                            0.074
+  Arm C ShallowConvNet recall SUBJECT-AVERAGED                   0.5687
+  Arm C ShallowConvNet recall seed SD                            0.0547
+  Arm A CNN recall SUBJECT-AVERAGED                              0.2856
+  Arm A CNN recall seed SD                                       0.0662
+  Arm B CNN recall SUBJECT-AVERAGED                              0.2318
+  Arm B CNN recall seed SD                                       0.0542
+  Arm C CNN recall SUBJECT-AVERAGED                              0.2395
+  Arm C CNN recall seed SD                                       0.0614
+  Arm A DeepConvNet recall SUBJECT-AVERAGED                      0.2885
+  Arm A DeepConvNet recall seed SD                               0.0648
+  Arm B DeepConvNet recall SUBJECT-AVERAGED                      0.2823
+  Arm B DeepConvNet recall seed SD                               0.085
+  Arm C DeepConvNet recall SUBJECT-AVERAGED                      0.2865
+  Arm C DeepConvNet recall seed SD                               0.0318
+  Arm A CNN-BiLSTM recall SUBJECT-AVERAGED                       0.4756
+  Arm A CNN-BiLSTM recall seed SD                                0.0691
+  Arm B CNN-BiLSTM recall SUBJECT-AVERAGED                       0.532
+  Arm B CNN-BiLSTM recall seed SD                                0.0394
+  Arm C CNN-BiLSTM recall SUBJECT-AVERAGED                       0.5258
+  Arm C CNN-BiLSTM recall seed SD                                0.061
+  Arm A EEGNet brier POOLED                                      0.101
+  Arm A EEGNet brier pooled seed SD                              0.005
+  Arm B EEGNet brier POOLED                                      0.0859
+  Arm B EEGNet brier pooled seed SD                              0.0088
+  Arm C EEGNet brier POOLED                                      0.0952
+  Arm C EEGNet brier pooled seed SD                              0.0071
+  Arm A ShallowConvNet brier POOLED                              0.1291
+  Arm A ShallowConvNet brier pooled seed SD                      0.0086
+  Arm B ShallowConvNet brier POOLED                              0.1369
+  Arm B ShallowConvNet brier pooled seed SD                      0.0495
+  Arm C ShallowConvNet brier POOLED                              0.1383
+  Arm C ShallowConvNet brier pooled seed SD                      0.0126
+  Arm A CNN brier POOLED                                         0.0671
+  Arm A CNN brier pooled seed SD                                 0.0071
+  Arm B CNN brier POOLED                                         0.0577
+  Arm B CNN brier pooled seed SD                                 0.0056
+  Arm C CNN brier POOLED                                         0.0608
+  Arm C CNN brier pooled seed SD                                 0.0066
+  Arm A DeepConvNet brier POOLED                                 0.0592
+  Arm A DeepConvNet brier pooled seed SD                         0.004
+  Arm B DeepConvNet brier POOLED                                 0.0603
+  Arm B DeepConvNet brier pooled seed SD                         0.0047
+  Arm C DeepConvNet brier POOLED                                 0.0511
+  Arm C DeepConvNet brier pooled seed SD                         0.0063
+  Arm A CNN-BiLSTM brier POOLED                                  0.0781
+  Arm A CNN-BiLSTM brier pooled seed SD                          0.0062
+  Arm B CNN-BiLSTM brier POOLED                                  0.0743
+  Arm B CNN-BiLSTM brier pooled seed SD                          0.0058
+  Arm C CNN-BiLSTM brier POOLED                                  0.0808
+  Arm C CNN-BiLSTM brier pooled seed SD                          0.0078
+  Arm A class-prior Brier reference                              0.0762
+  Arm B class-prior Brier reference                              0.0645
+  Arm C class-prior Brier reference                              0.0674
+  Arm A EEGNet raw ECE SUBJECT-AVERAGED                          0.195
+  Arm B EEGNet raw ECE SUBJECT-AVERAGED                          0.1717
+  Arm C EEGNet raw ECE SUBJECT-AVERAGED                          0.1918
+  Arm B ShallowConvNet raw ECE SUBJECT-AVERAGED                  0.2049
+  Arm C ShallowConvNet raw ECE SUBJECT-AVERAGED                  0.2001
+  Arm A CNN raw ECE SUBJECT-AVERAGED                             0.0605
+  Arm B DeepConvNet raw ECE SUBJECT-AVERAGED                     0.0679
+  Arm C DeepConvNet raw ECE SUBJECT-AVERAGED                     0.046
+  Arm A CNN-BiLSTM raw ECE SUBJECT-AVERAGED                      0.0912
+  Arm A EEGNet pooled accuracy percent                           88.7106
+  Arm B EEGNet pooled accuracy percent                           90.2339
+  Arm C EEGNet pooled accuracy percent                           89.4968
+  Arm A ShallowConvNet pooled accuracy percent                   83.1706
+  Arm B ShallowConvNet pooled accuracy percent                   81.8528
+  Arm C ShallowConvNet pooled accuracy percent                   82.1879
+  Arm A CNN pooled accuracy percent                              91.6263
+  Arm B CNN pooled accuracy percent                              92.998
+  Arm C CNN pooled accuracy percent                              92.6458
+  Arm A DeepConvNet pooled accuracy percent                      92.73
+  Arm B DeepConvNet pooled accuracy percent                      92.5423
+  Arm C DeepConvNet pooled accuracy percent                      93.5551
+  Arm A CNN-BiLSTM pooled accuracy percent                       89.6069
+  Arm B CNN-BiLSTM pooled accuracy percent                       90.1653
+  Arm C CNN-BiLSTM pooled accuracy percent                       89.2765
+  Arm A always-alert accuracy percent, 2 dp                      91.68
+  Arm B always-alert accuracy percent, 2 dp                      93.06
+  Arm C always-alert accuracy percent, 2 dp                      92.73
+
+==============================================================================
+296 registry value(s) plotted in total, across 6 figure(s).
+
+Computed from the released per-window scores rather than from a
+registry row:
+
+  figureS1_overview panels (d), (e), (f)  —  reliability diagrams
+      read results/A/probs_<model>_seed<n>.npz, the per-window
+      predictions released for Arm A. The curves are binned from those
+      scores directly; panel (e) refits Platt scaling per fold on the
+      other nine subjects, exactly as src/calibrate.py does.
+      Arm A is the only construction whose scores are released, which
+      is why all three reliability panels are Arm A and say so.
+
+Regenerate this file:  python3 tools/figure_provenance.py

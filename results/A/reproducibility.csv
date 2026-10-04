@@ -1,0 +1,2 @@
+arm,model,metric,n_folds,mean_1,mean_2,largest_fold_difference,folds_identical,folds_bit_identical,validation_pairs_identical,max_subject_shift_auc,overall_shift_auc,seed_sd_auc,max_subject_shift_f1,overall_shift_f1,seed_sd_f1
+A,EEGNet,auc,50,0.8840254674751203,0.8839657424511684,0.0032131274939101173,7,5,False,0.0006336586313571146,5.972502395212853e-05,0.0073809759644608815,0.0117647058823529,0.0009945254840701412,0.031964408941589174

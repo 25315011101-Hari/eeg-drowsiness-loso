@@ -1,0 +1,4 @@
+arm,model,ece_raw,ece_platt,ece_isotonic,brier_raw,brier_platt,brier_isotonic,p_brier,n_brier,p_ece,n_ece,brier_reference,above_reference_raw,above_reference_platt
+C,DeepConvNet,0.046,0.0502,0.0509,0.0511,0.0529,0.0528,0.5566,6,0.625,6,0.0674,False,False
+C,EEGNet,0.1918,0.058,0.0576,0.0952,0.0573,0.0551,0.0371,9,0.002,10,0.0674,True,False
+C,ShallowConvNet,0.2001,0.0724,0.0709,0.1383,0.0658,0.0663,0.0371,8,0.0059,9,0.0674,True,False

@@ -1,0 +1,68 @@
+cff-version: 1.2.0
+message: >-
+  If you use this code, the released per-fold results or the figures, please cite
+  the paper. If you use the EEG recordings, cite the DD-Database record as well —
+  it is a separate dataset with its own DOI and is not distributed here.
+title: >-
+  EEG driver-drowsiness detection under leave-one-subject-out evaluation:
+  code, released per-fold results and number registry
+abstract: >-
+  Five convolutional and recurrent-convolutional architectures (EEGNet,
+  ShallowConvNet, a one-dimensional CNN, DeepConvNet and a CNN-BiLSTM) evaluated
+  on the four-channel DD-Database montage under leave-one-subject-out
+  cross-validation with five seeds, across three window-set constructions of the
+  same ten recordings: 750 folds in total. Every number in the paper is
+  regenerated from the released result files into a registry, and a single
+  preflight command re-checks the whole manuscript against it.
+type: software
+authors:
+  - given-names: Hari Singh
+    family-names: Jatav
+    email: 25315011101@stu.manit.ac.in
+    affiliation: >-
+      Centre for Artificial Intelligence, Maulana Azad National Institute of
+      Technology, Bhopal, India
+    # orcid: https://orcid.org/<ORCID iD>   # add once confirmed; not guessed here
+  # Corresponding author for the article, on the authors' decision of
+  # 1 October 2026: editorial correspondence, proofs and post-acceptance queries
+  # go to this address.
+  - given-names: Mitul Kumar
+    family-names: Ahirwal
+    email: mkahirwal@manit.ac.in
+    affiliation: >-
+      Department of Computer Science and Engineering, Maulana Azad National
+      Institute of Technology, Bhopal, India
+    # orcid: https://orcid.org/<ORCID iD>   # add once confirmed; not guessed here
+license: MIT
+repository-code: <repository URL>
+keywords:
+  - EEG
+  - driver drowsiness
+  - leave-one-subject-out cross-validation
+  - probability calibration
+  - Brier score
+  - class imbalance
+  - reproducibility
+
+# Fill this in once the paper has a DOI. Until then the software citation above
+# stands on its own; nothing here is written from memory or guessed.
+preferred-citation:
+  type: article
+  title: >-
+    Calibration of Four-Channel EEG for Driver Drowsiness Detection:
+    A 750-Fold Leave-One-Subject-Out Study
+  authors:
+    - given-names: Hari Singh
+      family-names: Jatav
+    - given-names: Mitul Kumar
+      family-names: Ahirwal
+  journal: Biomedical Signal Processing and Control
+  year: 2026
+  # The title above was chosen by the corresponding author on 3 October 2026,
+  # replacing the one chosen on 18 September; ABSTRACT.md keeps that one and the
+  # three earlier drafts. The paper is not yet submitted, so no status, DOI, volume
+  # or pages are claimed.
+  # doi:    <article DOI>      # on acceptance
+  # volume: <volume>
+  # start:  <first page>
+  # end:    <last page>

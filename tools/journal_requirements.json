@@ -1,0 +1,229 @@
+{
+  "_comment": [
+    "The target journal's front-matter limits, as machine-readable data rather than",
+    "numbers typed into a checker. Every entry carries the sentence it came from, so",
+    "the limit and its evidence cannot drift apart. Read by tools/check_frontmatter.py",
+    "and tools/check_submission_ready.py; nothing here is duplicated in code.",
+    "",
+    "To re-verify: open the URL below, find each quoted sentence, and update BOTH the",
+    "value and the quote together. Then set verified.date to the day you did it.",
+    "Changing a value without changing its quote is the failure this file prevents."
+  ],
+  "journal": {
+    "name": "Biomedical Signal Processing and Control",
+    "publisher": "Elsevier",
+    "article_type": "Full paper (original research)"
+  },
+  "source": {
+    "document": "Guide for Authors",
+    "url": "https://www.sciencedirect.com/journal/biomedical-signal-processing-and-control/publish/guide-for-authors",
+    "note": "The journal's own guide, not a summary of it and not a general Elsevier page."
+  },
+  "verified": {
+    "date": "2026-09-26",
+    "by": "fetched from the URL above and read for each quoted sentence",
+    "supersedes": "2026-09-16",
+    "recheck_after_days": 180,
+    "note": [
+      "This is the date the limits below were last read at the source. It is not a",
+      "claim that they are current today. A guide for authors changes without notice,",
+      "so tools/check_submission_ready.py reports this entry as PENDING once it is",
+      "older than recheck_after_days, and re-verification is a pre-submission item."
+    ]
+  },
+  "limits": {
+    "abstract_words": {
+      "value": 250,
+      "quote": "You are required to provide a concise and factual abstract which does not exceed 250 words."
+    },
+    "keywords_max": {
+      "value": 7,
+      "quote": "You are required to provide 1 to 7 keywords for indexing purposes."
+    },
+    "keywords_min": {
+      "value": 1,
+      "quote": "You are required to provide 1 to 7 keywords for indexing purposes."
+    },
+    "highlights_min": {
+      "value": 3,
+      "quote": "Highlights should consist of 3 to 5 bullet points, each a maximum of 85 characters, including spaces."
+    },
+    "highlights_max": {
+      "value": 5,
+      "quote": "Highlights should consist of 3 to 5 bullet points, each a maximum of 85 characters, including spaces."
+    },
+    "highlight_chars": {
+      "value": 85,
+      "quote": "Highlights should consist of 3 to 5 bullet points, each a maximum of 85 characters, including spaces."
+    }
+  },
+  "not_enforced_here": {
+    "_comment": [
+      "Requirements read at the same source and in the same pass, which this checker",
+      "deliberately does not test. They are listed so that the absence of a check is a",
+      "recorded decision rather than an oversight, and so that the next person to read",
+      "the guide can see what was already read."
+    ],
+    "abstract_structure": {
+      "value": null,
+      "quote": "You are required to provide a concise and factual abstract which does not exceed 250 words.",
+      "why": "The guide states a length and a character ('concise and factual'); it does not require a structured abstract and does not forbid one. Earlier drafts of this repository asserted 'and unstructured' as a journal requirement. That was not in the guide. The abstract here is narrative, which the guide permits, but it is a choice and is no longer recorded as a rule."
+    },
+    "article_words": {
+      "value": 5000,
+      "verified": "2026-09-30",
+      "quote": "Full papers, describing original work, i.e. the technical development and the clinical / experimental study to prove the concept / value of a novel technique and should normally be about 5,000 words.",
+      "other_types": {
+        "short_communication": 2000,
+        "technical_note": 5000,
+        "review": 10000
+      },
+      "silent_on": [
+        "The guide does not say whether the 5,000 words include or exclude tables, figure",
+        "captions, references, the abstract or supplementary material. Re-read at the source",
+        "on 30 September 2026 specifically to settle that question, and it is not settled",
+        "there. This repository therefore reports the article's length BOTH ways and treats",
+        "neither as the official figure."
+      ],
+      "no_stated_penalty": [
+        "The guide states no page limit, no excess-length charge and no consequence for",
+        "exceeding the recommended length. 'Should normally be about' is guidance. That is",
+        "not a licence to run long; it means a longer paper is an editorial judgement rather",
+        "than a desk-reject rule, and the judgement is the editor's."
+      ],
+      "why": "'Normally about' is guidance, not a limit. Reported by tools/check_split_map.py as information; never a failure."
+    },
+    "highlights_separate_file": {
+      "value": true,
+      "quote": "Submit highlights as a separate editable file in the online submission system.",
+      "why": "A packaging requirement of the submission system, not of the text. The highlights live in manuscript/ABSTRACT.md so they stay with the paper they summarise; producing the separate file is a submission-packaging step."
+    },
+    "graphical_abstract_pixels": {
+      "value": [
+        531,
+        1328
+      ],
+      "quote": "Ensure the image is 531 x 1328 pixels (h x w) or proportionally more, and is readable at a size of 5 x 13 cm.",
+      "why": "Optional for this journal, and not drafted. If one is added it becomes a figure check, not a front-matter check."
+    },
+    "figure_resolution": {
+      "value": {
+        "line_art_dpi": 1000,
+        "line_art_px_single_column": 3543,
+        "line_art_px_full_page": 7480,
+        "photograph_dpi": 300,
+        "photograph_px_single_column": 1063,
+        "photograph_px_full_page": 2244
+      },
+      "quote": [
+        "Bitmapped line drawings: Minimum resolution 1000 dpi (min. width: single column: 3543 pixels; full page: 7480 pixels)",
+        "Photographs (color or grayscale): Minimum resolution 300 dpi (min. width: single column: 1063 pixels; full page: 2244 pixels)"
+      ],
+      "why": "A property of the figure files, not of the front matter. Belongs to the print-ready figure check, which is not yet written."
+    },
+    "reference_style": {
+      "value": "numbered, square brackets, order of appearance",
+      "quote": [
+        "Indicate references by adding a number within square brackets in the text.",
+        "Number references in the order they appear in your article."
+      ],
+      "why": "Checked by tools/check_crossrefs.py against manuscript/REFERENCES.md, which is where citation order is resolvable."
+    },
+    "supplementary_material": {
+      "value": true,
+      "verified": "2026-09-30",
+      "quote": [
+        "We encourage the use of supplementary materials such as applications, images and sound clips to enhance research.",
+        "Submit all supplementary materials at the same time as your manuscript.",
+        "Include a concise, descriptive caption for each supplementary file.",
+        "After submission supplementary files can only be added or replaced in the revision stage of the editorial process.",
+        "Be aware that all supplementary materials provided will appear online in the exact same way as received. These files will not be checked, formatted or typeset by the production team."
+      ],
+      "why": [
+        "Three operational consequences, recorded because each one is a way to lose work at",
+        "submission. The supplementary file must be FINISHED when the manuscript is submitted,",
+        "not added later. It must carry its own caption. And it is published exactly as sent and",
+        "is never typeset, so manuscript/SUPPLEMENTARY.md must be delivered as a laid-out PDF",
+        "rather than as a source file."
+      ],
+      "size_limit": null,
+      "peer_reviewed": "not stated in the guide"
+    },
+    "article_title": {
+      "value": null,
+      "verified": "2026-10-02",
+      "provenance": [
+        "HOW THIS WAS OBTAINED, stated exactly, because it is weaker than the entries above.",
+        "The page was fetched on 2 October 2026 through an automated reader that answers a",
+        "question against the retrieved page; the sentences below are as that reader returned",
+        "them. They were NOT transcribed by hand from the rendered guide, which is how the",
+        "abstract, keyword and highlight quotes above were taken. A second, independent fetch",
+        "attempted from a different environment on the same day returned HTTP 403 from",
+        "ScienceDirect, so the wording has one source and not two.",
+        "CONSEQUENCE: these entries sit in not_enforced_here and nothing is enforced on them.",
+        "Before submission, open the guide in a browser and confirm each sentence by eye. If a",
+        "sentence differs, change the quote and the value together, as this file requires."
+      ],
+      "quote": "Article titles should be concise and informative. Please avoid abbreviations and formulae, where possible, unless they are established and widely understood, e.g. DNA.",
+      "silent_on": [
+        "The guide states NO title length limit, in words or characters.",
+        "The guide states NO capitalization rule: neither title case nor sentence case is",
+        "prescribed or forbidden. Read at the source on 2 October 2026 specifically to settle",
+        "that question, because a title change was under consideration, and it is not settled",
+        "there. So the capitalization of this paper's title is an author choice, like the",
+        "licence, and must not be recorded or argued as a journal requirement."
+      ],
+      "why": [
+        "There is no value to enforce. The one substantive rule -- avoid abbreviations unless",
+        "established and widely understood -- is satisfied: the only abbreviation in the title",
+        "is EEG, which sits in the same class as the guide's own example, DNA."
+      ]
+    },
+    "title_page": {
+      "value": true,
+      "verified": "2026-10-02",
+      "provenance": [
+        "HOW THIS WAS OBTAINED, stated exactly, because it is weaker than the entries above.",
+        "The page was fetched on 2 October 2026 through an automated reader that answers a",
+        "question against the retrieved page; the sentences below are as that reader returned",
+        "them. They were NOT transcribed by hand from the rendered guide, which is how the",
+        "abstract, keyword and highlight quotes above were taken. A second, independent fetch",
+        "attempted from a different environment on the same day returned HTTP 403 from",
+        "ScienceDirect, so the wording has one source and not two.",
+        "CONSEQUENCE: these entries sit in not_enforced_here and nothing is enforced on them.",
+        "Before submission, open the guide in a browser and confirm each sentence by eye. If a",
+        "sentence differs, change the quote and the value together, as this file requires."
+      ],
+      "quote": [
+        "Provide the given name(s) and family name(s) of each author.",
+        "Indicate affiliations using a lower-case superscript letter.",
+        "Present the full name and postal address of each affiliation, including the country name.",
+        "Clearly indicate who will handle correspondence.",
+        "The email address of the corresponding author must be included on the title page and will be published.",
+        "A 'present address' (or 'permanent address') can be indicated by a footnote."
+      ],
+      "required_elements": [
+        "article title",
+        "each author's given name(s) and family name(s), in submission order",
+        "each affiliation's full name and postal address including the country, marked with a lower-case superscript letter",
+        "which author handles correspondence, indicated clearly",
+        "the corresponding author's email address -- mandatory, and it is published"
+      ],
+      "telephone": {
+        "required": false,
+        "note": [
+          "The guide states NO requirement for a telephone number on the title page. This is",
+          "recorded because the opposite was asserted in this project on 1 and 2 October 2026",
+          "-- a telephone number was listed as a thing the author had to supply -- from the",
+          "general Elsevier convention rather than from this journal's guide. It was read at",
+          "the source on 2 October 2026 and is not there. Do not ask for it again."
+        ]
+      },
+      "why": [
+        "A packaging requirement of the submission, not of the manuscript text, and the title",
+        "page does not exist yet. It is recorded here so that building it needs no guesswork:",
+        "the only thing still missing from the repository is each affiliation's postal address."
+      ]
+    }
+  }
+}

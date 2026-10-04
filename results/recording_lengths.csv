@@ -1,0 +1,4 @@
+quantity,value,unit,note
+shortest_recording,887040,samples,the trim target for Arms A and C
+longest_recording,944640,samples,
+total_recorded_signal,40.29,hours,twenty recordings untrimmed

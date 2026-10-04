@@ -1,0 +1,7 @@
+arm,claim,value,note
+A,"EEGNet subject-averaged ROC-AUC change after Platt",0.0000009981,"ROC-AUC raw 0.884025, recalibrated 0.884026"
+A,"EEGNet subject-averaged PR-AUC change after Platt",0.0000222899,"PR-AUC raw 0.431710, recalibrated 0.431732"
+A,"CNN subject-averaged ROC-AUC change after Platt",0,"ROC-AUC raw 0.842776, recalibrated 0.842776"
+A,"CNN subject-averaged PR-AUC change after Platt",0,"PR-AUC raw 0.338237, recalibrated 0.338237"
+A,"CNN-BiLSTM subject-averaged ROC-AUC change after Platt",0,"ROC-AUC raw 0.821331, recalibrated 0.821331"
+A,"CNN-BiLSTM subject-averaged PR-AUC change after Platt",0,"PR-AUC raw 0.398585, recalibrated 0.398585"

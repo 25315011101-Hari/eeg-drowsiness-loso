@@ -1,0 +1,5 @@
+training smoke test passed 2026-10-01T13:34:09
+checked against:
+  src/train_loso.py      modified 2026-09-16T10:00:27
+  src/models.py          modified 2026-09-25T12:22:12
+  config.py              modified 2026-09-30T06:09:44

@@ -1,0 +1,61 @@
+# The EEG recordings. Not ours to redistribute; see LICENSE and the paper's data
+# availability statement.
+data/
+
+# The ARL reference implementation, cloned rather than vendored so that the
+# version used is whatever the clone command pins.
+arl/
+
+# Python build and cache artefacts.
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ipynb_checkpoints/
+.mypy_cache/
+.ruff_cache/
+
+# Environments.
+.venv/
+venv/
+env/
+
+# Editor and OS noise.
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
+
+# Build and audit material that is not part of the release. Settled by the
+# corresponding author on 4 October 2026, when this directory was first made a git
+# repository, and recorded here rather than only in a commit message because a
+# .gitignore is what the next person to clone actually reads.
+#
+#   snapshots/     33 build bundles, 60 of the package's 70 MB. REPRODUCIBILITY.md
+#                  section 2 states that several of them contain claims this paper
+#                  has since withdrawn and that nothing is quoted, reviewed or
+#                  released from an old snapshot. Publishing them would contradict
+#                  that sentence and hand a reader withdrawn claims.
+#                  tools/snapshot.py still writes here and nothing reads the folder:
+#                  the audit test reads snapshot.py's declarations, not the zips.
+#   deliverables/  working documents about the paper -- audit records, the
+#                  condensation spreadsheet, the problem-statement draft -- not
+#                  parts of it.
+#   pdf/           the built article and supplement. Both are reproducible from the
+#                  tracked sources with tools/build_pdf.py, and publishing the
+#                  article PDF is a preprint-posting question, separate from
+#                  releasing the pipeline.
+#
+# None of the three is deleted. They stay in the working copy; they are simply not
+# what is published.
+snapshots/
+deliverables/
+pdf/
+
+# Deliberately NOT ignored, because they are the release:
+#   results/     the 750 per-fold rows, the registry, Arm A's probability files
+#   figures/     the figures and figures/PROVENANCE.txt
+#   manuscript/  the section files the manuscript is built from
+# A .gitignore that swallowed any of those would turn a reproducible package back
+# into a claim, which is the failure this repository exists to avoid.

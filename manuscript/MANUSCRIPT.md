@@ -2444,7 +2444,7 @@ and one simulator protocol.
 ## Statement
 
 > **Code availability.** All code used in this study is available at
-> `<repository URL>`. It covers the full pipeline: window construction from the
+> https://github.com/25315011101-Hari/eeg-drowsiness-loso. It covers the full pipeline: window construction from the
 > raw EDF recordings, leave-one-subject-out training of all five architectures,
 > out-of-subject probability recalibration and threshold selection, every
 > statistic reported, and a script that regenerates all tables in Section 7
@@ -2595,5 +2595,5 @@ https://doi.org/10.1175/1520-0493(1950)078<0001:VOFEIT>2.0.CO;2
 
 ---
 
-*Build a2ec1739e0e6 · 2026-10-04 · 25004 words · registry 1977 rows.*
+*Build 3c5cb5bf85fd · 2026-10-04 · 25003 words · registry 1977 rows.*
 *Rebuild: `python3 tools/build_manuscript.py manuscript manuscript/MANUSCRIPT.md`. A copy whose build id differs from the one the repository produces is not the current manuscript.*

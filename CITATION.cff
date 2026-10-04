@@ -34,7 +34,7 @@ authors:
       Institute of Technology, Bhopal, India
     # orcid: https://orcid.org/<ORCID iD>   # add once confirmed; not guessed here
 license: MIT
-repository-code: <repository URL>
+repository-code: https://github.com/25315011101-Hari/eeg-drowsiness-loso
 keywords:
   - EEG
   - driver drowsiness

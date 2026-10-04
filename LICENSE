@@ -32,9 +32,3 @@ in this repository. It does not cover:
   * The ARL reference implementations of EEGNet, ShallowConvNet and
     DeepConvNet, which are cloned separately from
     https://github.com/vlawhern/arl-eegmodels and used under their own licence.
-
-NOTE TO THE AUTHORS BEFORE PUBLISHING: this file is a draft. MIT is proposed
-because it is the least restrictive common choice for research code and places
-no obligation on a reviewer who clones the repository, but the choice of licence
-and the wording of the copyright line are the authors' and the institute's to
-make, not the draft's. Delete this note once the choice is confirmed.

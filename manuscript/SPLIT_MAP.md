@@ -114,7 +114,7 @@ A reduction of 4110 words, 19%, with no reported number leaving the record.
 | 　8.10 Limitations | 1006 | 663 | Ten subjects, one dataset, one montage, Arm A alone for released scores. Compressed but not shortened in substance: every limitation stays named |
 | 9. Conclusion | 523 | 440 | Currently restates the results; a conclusion states what is now known and what follows |
 | Code and Data Availability | 0 | 0 | heading only |
-| 　Statement | 237 | 130 | Mandatory. Overlaps the front-matter data availability statement; the two are reconciled to one statement and one pointer |
+| 　Statement | 236 | 130 | Mandatory. Overlaps the front-matter data availability statement; the two are reconciled to one statement and one pointer |
 | References | 0 | 0 | heading only |
 | 　Dataset | 69 | 55 | reference list; not prose and not counted against the length guidance |
 | 　Architectures evaluated | 78 | 62 | reference list |

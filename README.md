@@ -402,9 +402,8 @@ promises all three.
 ## Licence and citation
 
 The code, the released result files and the documentation are under the MIT
-licence in [`LICENSE`](LICENSE) — **which the authors must confirm before the
-repository is made public**; the file says so at its foot and the note is to be
-deleted once the choice is settled. The licence covers neither the EEG recordings,
+licence in [`LICENSE`](LICENSE), confirmed by both authors on 5 October 2026. The
+licence covers neither the EEG recordings,
 which are not distributed here, nor the ARL model implementations, which are cloned
 from their own repository under their own terms.
 

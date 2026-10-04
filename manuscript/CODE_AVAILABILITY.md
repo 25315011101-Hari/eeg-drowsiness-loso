@@ -18,7 +18,7 @@ reproducibility detail in the body rather than in a back-matter statement.
 ## Statement
 
 > **Code availability.** All code used in this study is available at
-> `<repository URL>`. It covers the full pipeline: window construction from the
+> https://github.com/25315011101-Hari/eeg-drowsiness-loso. It covers the full pipeline: window construction from the
 > raw EDF recordings, leave-one-subject-out training of all five architectures,
 > out-of-subject probability recalibration and threshold selection, every
 > statistic reported, and a script that regenerates all tables in Section 7
@@ -50,7 +50,7 @@ reproducibility detail in the body rather than in a back-matter statement.
 
 ## Longer version (for the end of Methods)
 
-> The complete pipeline is released as code at `<repository URL>`, together with
+> The complete pipeline is released as code at https://github.com/25315011101-Hari/eeg-drowsiness-loso, together with
 > the per-fold results for all 750 folds and the calibration and threshold
 > summaries. The per-window probability files those two analyses were computed
 > from are released for Arm A only — fifteen files, three architectures at five

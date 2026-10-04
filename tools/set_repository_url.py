@@ -14,8 +14,12 @@ It does three things and refuses to do any of them carelessly:
   1. Rejects an address that is not a plausible public repository URL, so that a
      typo or a leftover angle-bracket cannot be written into the paper.
   2. Replaces the placeholder everywhere it appears -- the manuscript sections,
-     the status page, CITATION.cff -- rather than in the one place somebody
-     remembers.
+     the assembled manuscript, CITATION.cff -- rather than in the one place
+     somebody remembers. Not the status page: this line said "the status page"
+     until 4 October 2026, which contradicted the note above TARGETS thirty lines
+     below it. REPRODUCIBILITY.md talks about the placeholder instead of carrying
+     it, and substituting a real URL there would turn a sentence about a
+     placeholder into a sentence calling a real address a placeholder.
   3. Removes the blocker notice from the data-availability section, because a
      reminder to publish the repository is not a sentence to publish once it is
      published.

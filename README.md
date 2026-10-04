@@ -365,8 +365,14 @@ git remote add origin https://github.com/<user>/<repo>.git
 git push -u origin main
 ```
 
-Then fill the address into the paper — all five files that carry it, in one
-command, with the paper re-checked afterwards:
+Then fill the address into the paper in one command, with the paper re-checked
+afterwards. The script checks five files and rewrites each one that still carries
+the placeholder; when this was measured on 4 October 2026 by running it against a
+throwaway copy, four did — `manuscript/ABSTRACT.md` (2 occurrences),
+`manuscript/CODE_AVAILABILITY.md` (2), the assembled `manuscript/MANUSCRIPT.md`
+(3) and `CITATION.cff` (1). `manuscript/MASTER_FILE.md` is the fifth, on the list
+so that a copy already on disk is not left stale, and it holds none because its
+generator never writes the placeholder:
 
 ```bash
 python3 tools/set_repository_url.py https://github.com/<user>/<repo>

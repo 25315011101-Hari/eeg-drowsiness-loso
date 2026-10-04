@@ -104,10 +104,15 @@ networks; reproducibility
 ## Data availability statement (mandatory)
 
 <!-- repository-url-blocker:start -->
-> ### ⚠ BLOCKER — must not be submitted in this state
+> ### ⚠ Placeholder — not to be submitted as it stands
 >
-> `<repository URL>` below is a **placeholder**. Two things must happen before
-> submission, in this order:
+> `<repository URL>` below is a **placeholder**, and this notice is about the
+> placeholder rather than about a journal requirement. A public repository is
+> **recommended for reproducibility**; whether it is mandatory for this journal
+> must be confirmed from the journal's current submission requirements, and that
+> has not been done. An earlier version of this notice called the repository a
+> submission blocker, which claimed more than was checked. Two things must
+> happen before the address below is submitted as an address, in this order:
 >
 > 1. The repository must actually be published (GitHub, or Zenodo for a citable
 >    DOI, or both with the Zenodo DOI in the statement).

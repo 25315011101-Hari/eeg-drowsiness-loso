@@ -47,7 +47,7 @@ A reduction of 4175 words, 19%, with no reported number leaving the record.
 | 　Abstract | 248 | 141 | front matter; already at 248 of the 250 allowed |
 | 　Highlights | 57 | 32 | front matter; submitted as the separate editable file the guide requires |
 | 　Keywords | 14 | 8 | front matter |
-| 　Data availability statement (mandatory) | 279 | 159 | mandatory. The current count includes the placeholder blocker notice, which is removed by tools/set_repository_url.py when the repository is published |
+| 　Data availability statement (mandatory) | 346 | 159 | mandatory. The current count includes the placeholder blocker notice, which is removed by tools/set_repository_url.py when the repository is published |
 | 　Other mandatory declarations | 46 | 26 | mandatory |
 | 　　Declaration of competing interest | 53 | 30 | mandatory |
 | 　　CRediT author contribution statement | 157 | 65 | mandatory; the count drops when the awaiting-confirmation note is deleted |

@@ -57,10 +57,15 @@ networks; reproducibility
 ## Data availability statement (mandatory)
 
 <!-- repository-url-blocker:start -->
-> ### ⚠ BLOCKER — must not be submitted in this state
+> ### ⚠ Placeholder — not to be submitted as it stands
 >
-> `<repository URL>` below is a **placeholder**. Two things must happen before
-> submission, in this order:
+> `<repository URL>` below is a **placeholder**, and this notice is about the
+> placeholder rather than about a journal requirement. A public repository is
+> **recommended for reproducibility**; whether it is mandatory for this journal
+> must be confirmed from the journal's current submission requirements, and that
+> has not been done. An earlier version of this notice called the repository a
+> submission blocker, which claimed more than was checked. Two things must
+> happen before the address below is submitted as an address, in this order:
 >
 > 1. The repository must actually be published (GitHub, or Zenodo for a citable
 >    DOI, or both with the Zenodo DOI in the statement).
@@ -2674,5 +2679,5 @@ https://doi.org/10.1175/1520-0493(1950)078<0001:VOFEIT>2.0.CO;2
 
 ---
 
-*Build 9b125f0f2c59 · 2026-10-04 · 25844 words · registry 1977 rows.*
+*Build 3428d50c657a · 2026-10-04 · 25916 words · registry 1977 rows.*
 *Rebuild: `python3 tools/build_manuscript.py manuscript manuscript/MANUSCRIPT.md`. A copy whose build id differs from the one the repository produces is not the current manuscript.*

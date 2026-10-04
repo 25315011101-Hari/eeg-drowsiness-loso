@@ -18,11 +18,18 @@ second file to keep in step, and nothing can be marked done by accident.
 
 ---
 
-## 1. 🔴 Repository — blocks submission
+## 1. 🟠 Repository — recommended for reproducibility
 
-The data-availability statement promises a reader can fetch files that reproduce
-every table in the paper. Until the repository is public, that promise points at a
-placeholder address.
+A public repository is **recommended for reproducibility**; whether it is mandatory
+for this journal must be confirmed from the journal's current submission
+requirements, and that has not been done. This heading read "blocks submission"
+until 4 October 2026, which stated as settled something nobody had checked; the
+correction is recorded here rather than made silently.
+
+What is settled is narrower and still holds. The data-availability statement
+promises a reader can fetch files that reproduce every table in the paper, and
+until the repository is public that promise points at a placeholder address — so
+the placeholder, not the repository, is what must not reach a journal.
 
 **The package is already a git repository with its commits made.** Publishing is:
 
@@ -32,8 +39,11 @@ git push -u origin main
 python3 tools/set_repository_url.py https://github.com/<user>/<repo>
 ```
 
-The second command fills the address into all five files that carry it, removes
-the blocker notice from the data-availability section, and re-runs preflight.
+The second command rewrites every file that still carries the placeholder — four of
+the five it checks, measured by running it against a throwaway copy on 4 October
+2026; the fifth, `MASTER_FILE.md`, is on the list so a stale copy is not left behind
+and holds none, because its generator never writes the placeholder. It also removes
+the placeholder notice from the data-availability section and re-runs preflight.
 
 **Then check by hand, from a fresh clone** — no script can do this from inside the
 package it is checking:

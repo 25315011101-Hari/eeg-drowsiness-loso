@@ -117,8 +117,8 @@ a reported score.
 The nominal level throughout is α = 0.05. This study performs **190 distinct
 inferential comparisons** in 12 analysis families, one per question asked. The count
 is not an estimate: `src/multiplicity.py` re-runs every family against the released
-fold data and writes `results/MULTIPLICITY.csv`, and the pre-submission checks fail
-if that table and a fresh recomputation disagree. A comparison performed twice under
+fold data and writes `results/MULTIPLICITY.csv`, and the released test suite fails if that table
+and a fresh recomputation disagree. A comparison performed twice under
 two names (the CNN against CNN-BiLSTM ROC-AUC test, which appears both among the
 architecture pairs and in the ablation) is counted once.
 

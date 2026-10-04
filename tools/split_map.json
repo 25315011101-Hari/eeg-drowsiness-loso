@@ -337,8 +337,8 @@
     },
     "7. Results": {
       "dest": "MAIN",
-      "target_words": 400,
-      "reason": "section opening; carries Figure 2"
+      "target_words": 329,
+      "reason": "measured on 4 October 2026, after the change-log blockquote at the head of the section was rewritten as a present-tense statement of what the study does not claim. The six before-and-after items were addressed to a reader of an earlier draft; the four that state a non-claim survive in present tense and the two that restate structure do not, being given in Section 6 and Sections 7.1.1-7.1.2 already"
     },
     "Overview": {
       "dest": "MAIN",
@@ -367,8 +367,8 @@
     },
     "7.3 At a fixed threshold, accuracy moves against every other measure": {
       "dest": "MAIN",
-      "target_words": 862,
-      "reason": "The accuracy-against-recall finding, one of the paper's three headline results; carries Table 4 and Figure 3"
+      "target_words": 837,
+      "reason": "measured on 4 October 2026, after the dated correction note about inverting per-fold precision was rewritten as a methodological statement and the sentence retracting an earlier draft's wording was removed, the two exceptions it referred to being stated with their values in the sentence before it"
     },
     "7.3.1 Pooled and subject-averaged recall differ by a large margin": {
       "dest": "MAIN",
@@ -397,8 +397,8 @@
     },
     "7.7 Run-to-run variability differs sharply between architectures": {
       "dest": "MAIN",
-      "target_words": 788,
-      "reason": "Reduced to the finding and its range. Section 8.8 argues from it, so it stays in the article rather than moving. Target synchronised to the measured length, which had already passed the earlier target of 789 by one word (1 October 2026)"
+      "target_words": 753,
+      "reason": "measured on 4 October 2026, after the dated correction note about an earlier analysis mislabelling fifty-fold means as subject-level means was removed. No number was lost: 0.0407, 0.0328, 0.1273 and 0.0562 are all in the retained sentence"
     },
     "7.8 Where threshold selection helped, the scores were stably offset": {
       "dest": "SUPPLEMENTARY",
@@ -408,8 +408,8 @@
     },
     "7.9 Summary of findings": {
       "dest": "MAIN",
-      "target_words": 513,
-      "reason": "The table a reviewer reads first. Condensed to one line per finding with its construction coverage"
+      "target_words": 512,
+      "reason": "measured on 4 October 2026: 'the draft-3 claim that DeepConvNet ranks lowest is withdrawn' became 'no claim is made that DeepConvNet ranks lowest', one word shorter"
     },
     "7.10 Multiplicity": {
       "dest": "MAIN",

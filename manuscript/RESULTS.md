@@ -8,26 +8,16 @@ result files, and every value appears in `MASTER_NUMBERS.csv`, which is the only
 list of values this manuscript cites.
 <!-- not-for-submission:end -->
 
-> **Claims this study withdrew or narrowed once the third construction was
-> measured, and what replaced them.**
-> (i) Arm C (trimmed with proportional balancing) is added throughout: 250 new
-> folds, bringing the study to **750 folds**.
-> (ii) **"DeepConvNet ranks lowest" is withdrawn.** On Arm C it does not, and on all
-> three arms no pair of architectures other than those involving EEGNet separates
-> significantly *on ROC-AUC*. The ranking claim is narrowed to EEGNet alone, which is
-> what the paired tests support. Those same pairs do separate on balanced accuracy,
-> and Section 7.1 now says so.
-> (iii) **The capacity correlation is withdrawn completely**, not merely reported as
-> unreplicated: ρ = −0.900 → −0.500 → −0.100 across the three arms.
-> (iv) **Threshold selection is no longer stated as never helping.** On Arm C
-> DeepConvNet gains significantly under both rules. The claim is replaced by a
-> mechanism that predicts when it helps and when it hurts (Supplementary Note 2).
-> (v) **Both construction choices are now isolated.** Arm A against Arm C isolates
-> balancing (Section 7.1.1); Arm B against Arm C isolates trimming (Section 7.1.2). The
-> answer is asymmetric: balancing moves seven of twenty tests, trimming moves none.
-> (vi) The CNN / CNN-BiLSTM ablation no longer claims to isolate the
-> sequence-reduction component "and nothing else": the recurrent block also
-> quadruples the parameter count, and Section 7.2 says so.
+> **What this study does not claim, and why.**
+> No pair of architectures other than those involving EEGNet separates significantly
+> *on ROC-AUC* on any of the three constructions, so no ranking among the lower four
+> is claimed; those same pairs do separate on balanced accuracy, which Section 7.1
+> reports. No relation between parameter count and ranking quality is claimed:
+> ρ = −0.900 → −0.500 → −0.100 across the three arms, nominal on none. Threshold
+> selection is not claimed to help or to fail universally; where it helps is reported
+> with the mechanism proposed for it (Supplementary Note 2). The CNN / CNN-BiLSTM
+> ablation is not claimed to isolate the sequence-reduction component alone, because
+> the recurrent block also quadruples the parameter count (Section 7.2).
 >
 > **Findings that hold on all three constructions.** The three-against-two
 > Brier partition, the EEGNet ranking result, the ablation, the accuracy argument,
@@ -141,8 +131,8 @@ subject, so that floor holds throughout.
 **What does not replicate: the rest of the ROC-AUC ordering.** **None of the six
 pairs not involving EEGNet reaches significance on ROC-AUC on any arm** (smallest
 p = 0.1934, 0.0840, 0.4316 on Arms A, B, C), so the apparent ranking of the lower
-four is not a measurement; the draft-3 claim that DeepConvNet ranks lowest is
-withdrawn, it being fourth on Arm C by 0.0007 (0.8339 against 0.8332), p = 0.6250.
+four is not a measurement, and no claim is made that DeepConvNet ranks lowest: it is
+fourth on Arm C by 0.0007 (0.8339 against 0.8332), p = 0.6250.
 **This concerns ranking quality only**: on balanced accuracy four of those six pairs
 separate on Arm A, four on Arm B and five on Arm C, the ablation of Section 7.2 among
 them. They fail to separate on the *ordering* of windows, not on behaviour at a fixed
@@ -261,12 +251,12 @@ not called the cleanest *ablation*, for the capacity reason above.
 > architectures is 0.0167, so only a perfect reversal clears 0.05.
 
 True positives come from the per-fold recall and drowsy-window counts in
-`ALL_FOLDS.csv`; false positives were counted directly from the predictions in
-`ALL_POOLED.csv`. *(Correction, 16 September 2026.* Drafts 1 to 3 inverted per-fold
-precision to obtain false positives, which is undefined at precision zero: every degenerate fold, including folds that predicted some windows drowsy and got all of
-them wrong. That **under-counted false positives** by 0 to 17 windows per
-architecture, moving the accuracy column by up to 0.23 points. Table 4 uses the
-recorded counts and supersedes the earlier ones; no conclusion changes.)
+`ALL_FOLDS.csv`; false positives are counted directly from the predictions in
+`ALL_POOLED.csv`. They are **not** obtained by inverting per-fold precision, which is
+undefined at precision zero — the case for every degenerate fold, including folds that
+predicted some windows drowsy and got all of them wrong. Inverting precision
+**under-counts false positives** by 0 to 17 windows per architecture here and moves
+the accuracy column by up to 0.23 points, so Table 4 uses the recorded counts.
 
 **Table 4. Pooled confusion matrices at the default 0.5 threshold, all three
 constructions.** Counts summed over the ten folds within a seed, then averaged over
@@ -326,8 +316,7 @@ and balanced accuracy are used throughout and accuracy is reported only here. **
 not beaten on all measures, which is stated rather than omitted**: on Arm C
 DeepConvNet has the lowest pooled Brier score of the five (0.0511 against the
 class-prior reference 0.0674, EEGNet's 0.0952 being above it) and the highest pooled
-precision (0.564 against 0.390). An earlier draft called it "beaten on every metric
-reported in this paper", false on both counts. **No architecture here is best on every
+precision (0.564 against 0.390).  **No architecture here is best on every
 measure, and which appears best depends on which measure is asked for.**
 
 ### 7.3.1 Pooled and subject-averaged recall differ by a large margin
@@ -760,10 +749,7 @@ ROC-AUC and 0.0213 in F1. An individual *subject's* mean shifts four to fourteen
 times further, and **for both architectures and both metrics it exceeds the
 seed-to-seed standard deviation this paper reports as the ±**: a single subject's
 ROC-AUC moves 0.0407 for DeepConvNet against a reported ± of 0.0328, its F1 0.1273
-against 0.0562. *(Correction, 16 September 2026.* An earlier analysis based on two
-constructions labelled the overall fifty-fold means as subject-level means; the
-subject-level figures are the bold ones above, and the conclusion is unchanged and
-now supported by a larger margin.)
+against 0.0562. 
 
 The consequence for reading the tables above is direct. For ShallowConvNet and
 DeepConvNet the ± over five seeds **understates** the run-to-run uncertainty, because
@@ -773,7 +759,7 @@ intermediate ordering as meaningful, which Section 7.1 withdraws on independent
 grounds. For architectures not repeated the reported ± is likewise a lower bound:
 four of five on Arm A, two of five on Arm B, and all five on Arm C.
 
-The Arm B numbers in this draft are from **run 2**, because the recalibration
+The Arm B numbers reported here are from **run 2**, because the recalibration
 described in Section 6.6 was computed from that run's probabilities. Run 1 is retained in
 `backup/ALL_FOLDS_armB_run1.csv`.
 
@@ -789,8 +775,8 @@ restates, it does not add.
    paired comparisons, nominal in eleven (exception p = 0.0645), five on the
    attainable floor of 0.0020; highest PR-AUC on all three.
 2. **No other pair separates on ROC-AUC** (Section 7.1): none of the six non-EEGNet pairs is
-   significant on any arm (smallest p = 0.0840), and the draft-3 claim that
-   DeepConvNet ranks lowest is withdrawn. Those same pairs *do* separate on balanced
+   significant on any arm (smallest p = 0.0840), and no claim is made that
+   DeepConvNet ranks lowest. Those same pairs *do* separate on balanced
    accuracy, four to five of six per arm, so the failure is specific to ranking.
 3. **Parameter count is not shown to predict ranking quality** (Section 7.1): ρ decays
    −0.900 (p = 0.0833) → −0.500 → **−0.100 (p = 0.9500)**, nominal on none. Withdrawn

@@ -5,7 +5,7 @@ Do not edit this page: edit the map and regenerate, or the two will disagree and
 page will be the one that is wrong.*
 
 The journal's guidance is that a full paper "should normally be about 5,000 words".
-Sections 1–9 of this manuscript are **21642**. This page is the plan for that, made
+Sections 1–9 of this manuscript are **21445**. This page is the plan for that, made
 before any cutting, so that nothing is removed by whoever happens to be editing.
 
 **Status: MOVED — every supplementary unit is now in `manuscript/SUPPLEMENTARY.md`, the two wide tables are reduced in the article and complete there, and the article's tables are renumbered 1–6. The sections that stay have **not** been condensed yet.**
@@ -18,10 +18,10 @@ reader gets. `tools/check_split_map.py` fails if any unit does not, and
 
 | | Now | Projected in the article |
 |---|---|---|
-| Sections 1–9 | 21642 words | **17467 words** |
-| Against the 5,000-word guidance | 4.33× | 3.49× |
+| Sections 1–9 | 21445 words | **17335 words** |
+| Against the 5,000-word guidance | 4.29× | 3.47× |
 
-A reduction of 4175 words, 19%, with no reported number leaving the record.
+A reduction of 4110 words, 19%, with no reported number leaving the record.
 
 
 ## Leaving the article
@@ -54,7 +54,7 @@ A reduction of 4175 words, 19%, with no reported number leaving the record.
 | 　Funding | 18 | 18 | 18 is the measured length of the prescribed no-funding sentence, which this paper uses verbatim. Its lead-in called the wording prescribed; the guide says "it is recommended to include the following sentence", so the lead-in overstated the requirement and was moved out of the submitted document on 4 October 2026, along with the note on whose funding the dataset records. |
 | 1. Introduction | 237 | 146 | opening |
 | 　What we found by asking three questions the field has not asked together | 576 | 480 | The three questions and their answers are the paper. Condensed by removing the worked restatement of each answer, which Section 7 gives in full. |
-| 　Contributions | 551 | 486 | Kept as a list. Currently argues each contribution; a contribution list states them and lets the sections argue. |
+| 　Contributions | 542 | 486 | Kept as a list. Currently argues each contribution; a contribution list states them and lets the sections argue. |
 | 　Organisation | 59 | 43 | roadmap paragraph |
 | 2. Related Work | 0 | 0 | section opening; the drafting note that stood here is now inside not-for-submission markers, so the section has no own prose left and its target is its measured length (1 October 2026) |
 | 　2.1 What the field detects, and how it reports it | 385 | 262 | establishes the reporting problem the paper addresses |
@@ -68,7 +68,7 @@ A reduction of 4175 words, 19%, with no reported number leaving the record.
 | 　3.3 Probability calibration is not treated as an evaluation dimension | 133 | 88 | the gap the calibration result answers |
 | 　3.4 Uncertainty is computed over the wrong source of variation | 63 | 39 | the gap Section 7.4 answers |
 | 　3.5 What this study does about them | 124 | 90 | Overlaps Contributions; reduced to a pointer so the two do not say the same thing twice |
-| 4. Methodology | 49 | 35 | section opening |
+| 4. Methodology | 43 | 35 | section opening |
 | 　4.1 Dataset | 305 | 198 | essential: what was recorded, from whom, under what licence |
 | 　4.2 Preprocessing | 108 | 66 | essential and already short |
 | 　4.3 Window extraction and labelling | 524 | 333 | The rule must be stated exactly, since the label definition is what the whole study measures. The per-subject arithmetic behind it moves to Table S1 |
@@ -84,35 +84,35 @@ A reduction of 4175 words, 19%, with no reported number leaving the record.
 | 　6.3 Training | 154 | 97 | optimiser, schedule, stopping rule; reproducibility-essential |
 | 　6.4 Metrics | 186 | 116 | defines every quantity reported, including the two averaging conventions |
 | 　6.5 Statistical testing | 405 | 256 | which test, on what, paired how |
-| 　　6.5.1 Multiplicity, and why the analyses are reported as exploratory | 358 | 217 | The decision-relevant statement stays in the article: the analyses are exploratory, the family sizes, and the fact that a Holm ceiling exists below which no test in a family of that size can reject. The derivation of those ceilings in exact rational arithmetic moves to the supplementary material, listed in fragments below. |
+| 　　6.5.1 Multiplicity, and why the analyses are reported as exploratory | 359 | 217 | The decision-relevant statement stays in the article: the analyses are exploratory, the family sizes, and the fact that a Holm ceiling exists below which no test in a family of that size can reject. The derivation of those ceilings in exact rational arithmetic moves to the supplementary material, listed in fragments below. |
 | 　6.6 Recalibration and threshold selection | 631 | 383 | The out-of-subject recalibration protocol is the paper's main intervention and cannot be summarised away; the worked example of one fold moves to the supplementary |
 | 　6.7 Reproducibility | 260 | 153 | Reduced to what a reader needs: what is released, what is not, and where. The catalogue of checks belongs to manuscript/REPRODUCIBILITY.md in the repository |
-| 7. Results | 430 | 400 | section opening; carries Figure 2 |
+| 7. Results | 329 | 329 | measured on 4 October 2026, after the change-log blockquote at the head of the section was rewritten as a present-tense statement of what the study does not claim. The six before-and-after items were addressed to a reader of an earlier draft; the four that state a non-claim survive in present tense and the two that restate structure do not, being given in Section 6 and Sections 7.1.1-7.1.2 already |
 | 　Overview | 331 | 331 | Holds the pooled-against-subject-averaged distinction, which every table below depends on for its reading. Not compressible below the statement of both conventions and which sections use which. |
 | 　7.1 Architecture comparison | 579 | 579 | primary result; carries Table 3 |
 | 　　7.1.1 Arms A and C isolate the effect of balancing | 219 | 219 | one of the two single-factor contrasts the design exists to give |
 | 　　7.1.2 Arms B and C isolate the effect of trimming | 244 | 244 | the other single-factor contrast |
 | 　7.2 The CNN / CNN-BiLSTM ablation | 275 | 275 | a named contribution |
-| 　7.3 At a fixed threshold, accuracy moves against every other measure | 862 | 862 | The accuracy-against-recall finding, one of the paper's three headline results; carries Table 4 and Figure 3 |
+| 　7.3 At a fixed threshold, accuracy moves against every other measure | 837 | 837 | measured on 4 October 2026, after the dated correction note about inverting per-fold precision was rewritten as a methodological statement and the sentence retracting an earlier draft's wording was removed, the two exceptions it referred to being stated with their values in the sentence before it |
 | 　　7.3.1 Pooled and subject-averaged recall differ by a large margin | 292 | 292 | Kept because it is what makes every recall number in the paper readable. First candidate for tier 2 if a further cut is demanded |
 | 　7.4 Between-subject variation dominates seed variation | 581 | 581 | answers gap 3.4 and is what Section 8.7 argues from; carries Figure 4 |
 | 　7.5 Probability reliability | 770 | 770 | the central finding; carries Table 5 and Figure 5 |
 | 　　7.5.1 Expected calibration error | 344 | 344 | the second reliability measure, reported because the Brier score alone does not separate calibration from discrimination |
 | 　7.6 Out-of-subject logistic recalibration removes the reliability gap | 1176 | 1176 | the paper's intervention and its result; carries Table 6 and Figure 6 |
-| 　7.7 Run-to-run variability differs sharply between architectures | 793 | 788 | Reduced to the finding and its range. Section 8.8 argues from it, so it stays in the article rather than moving. Target synchronised to the measured length, which had already passed the earlier target of 789 by one word (1 October 2026) |
-| 　7.9 Summary of findings | 513 | 513 | The table a reviewer reads first. Condensed to one line per finding with its construction coverage |
+| 　7.7 Run-to-run variability differs sharply between architectures | 753 | 753 | measured on 4 October 2026, after the dated correction note about an earlier analysis mislabelling fifty-fold means as subject-level means was removed. No number was lost: 0.0407, 0.0328, 0.1273 and 0.0562 are all in the retained sentence |
+| 　7.9 Summary of findings | 512 | 512 | measured on 4 October 2026: 'the draft-3 claim that DeepConvNet ranks lowest is withdrawn' became 'no claim is made that DeepConvNet ranks lowest', one word shorter |
 | 　7.10 Multiplicity | 364 | 364 | The decision-relevant summary stays in the article: 190 unique comparisons, 82 nominal, 57 surviving BH, 24 surviving BY, and that all 24 come from one family. The per-family table moves to the supplementary |
 | 8. Discussion | 42 | 42 | section opening; the registry-provenance and numbering notes that stood here are now inside not-for-submission markers, so the target is the measured length of what remains (1 October 2026) |
-| 　8.1 One architecture separates; the rest of the ordering is not a measurement | 385 | 323 | the paper's negative claim about leaderboards |
+| 　8.1 One architecture separates; the rest of the ordering is not a measurement | 384 | 323 | the paper's negative claim about leaderboards |
 | 　8.2 The recurrent block changes detection, not ranking | 303 | 226 | interprets the ablation |
 | 　8.3 Accuracy gives a misleading picture of minority-class detection here | 367 | 260 | interprets the headline accuracy result |
-| 　8.4 Of the two construction choices, balancing is the one that matters | 376 | 278 | interprets the two single-factor contrasts |
+| 　8.4 Of the two construction choices, balancing is the one that matters | 371 | 278 | interprets the two single-factor contrasts |
 | 　8.5 Ranking quality and probability reliability are separate properties | 356 | 257 | the paper's conceptual contribution |
-| 　8.6 Out-of-subject recalibration closes the gap; threshold selection helps in one case only | 957 | 617 | interprets the intervention, and is where the threshold-selection result is retained for 7.8 |
+| 　8.6 Out-of-subject recalibration closes the gap; threshold selection helps in one case only | 943 | 617 | interprets the intervention, and is where the threshold-selection result is retained for 7.8 |
 | 　8.7 Subject-level variation, not seed variation, is what an interval must represent | 399 | 259 | a methodological recommendation other groups can act on |
 | 　8.8 Reproducibility is architecture-dependent, and this affects how the tables are read | 295 | 218 | interprets 7.7 |
 | 　8.9 What this means for a deployed system | 322 | 210 | the applied implication a Control journal will look for |
-| 　8.10 Limitations | 1002 | 663 | Ten subjects, one dataset, one montage, Arm A alone for released scores. Compressed but not shortened in substance: every limitation stays named |
+| 　8.10 Limitations | 1006 | 663 | Ten subjects, one dataset, one montage, Arm A alone for released scores. Compressed but not shortened in substance: every limitation stays named |
 | 9. Conclusion | 523 | 440 | Currently restates the results; a conclusion states what is now known and what follows |
 | Code and Data Availability | 0 | 0 | heading only |
 | 　Statement | 228 | 130 | Mandatory. Overlaps the front-matter data availability statement; the two are reconciled to one statement and one pointer |

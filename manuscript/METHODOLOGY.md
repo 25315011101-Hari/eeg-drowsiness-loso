@@ -2,7 +2,7 @@
 
 The dataset, how the recordings become labelled windows, and how the three window-set
 constructions are built. Every parameter below was read out of the scripts that
-produced the results rather than from an earlier document. The architectures are
+produced the results. The architectures are
 described in Section 5 and the evaluation protocol in Section 6.
 
 ## 4.1 Dataset

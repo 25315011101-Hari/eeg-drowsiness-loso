@@ -13,8 +13,8 @@ registry makes the generator fail rather than print an old value.
 | | |
 |---|---|
 | Target journal | Biomedical Signal Processing and Control |
-| Manuscript build | `acf03a969ef4` |
-| Manuscript length | `25542 words`, from the build stamp |
+| Manuscript build | `08ed16c0f793` |
+| Manuscript length | `25336 words`, from the build stamp |
 | Registry | 1977 rows |
 | Dataset | Drivers Drowsiness Database (DD-Database), Dryad 10.5061/dryad.5tb2rbp9c, CC0 1.0 |
 

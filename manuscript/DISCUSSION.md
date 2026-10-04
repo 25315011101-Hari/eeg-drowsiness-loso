@@ -48,9 +48,9 @@ order windows.
 **The capacity hypothesis is withdrawn.** The natural reading — that a smaller model
 wins because the training set is small — was tested as a rank correlation between
 parameter count and ROC-AUC, giving ρ = −0.900 (p = 0.0833), −0.500 (0.4500) and
-−0.100 (0.9500), significant on none and decaying monotonically to nothing. An earlier
-analysis based on two constructions called it "not replicated"; with the third
-construction the honest description is stronger. **The Arm A correlation was an artefact of the two extremes, and one of
+−0.100 (0.9500), significant on none and decaying monotonically to nothing. Two
+constructions would support only the weaker description "not replicated"; the third is
+what makes withdrawal the honest one. **The Arm A correlation was an artefact of the two extremes, and one of
 them has since moved**: DeepConvNet is lowest on Arms A and B but fourth of five on
 Arm C. What remains is a statement about one architecture rather than about a
 capacity axis, and one made on two ranking metrics only, since Section 8.5 places
@@ -144,8 +144,8 @@ itself (0.0832, 0.0694, 0.0727), rather than against 0.5.
 
 ## 8.4 Of the two construction choices, balancing is the one that matters
 
-An earlier analysis based on two constructions could not say which construction
-choice — trimming to equal duration, or how the class ratio is handled — was
+Two constructions alone cannot say which construction
+choice — trimming to equal duration, or how the class ratio is handled — is
 responsible for the differences between arms, because Arms A and B differ in both. **Arm C settles both**, completing three of the
 four cells and so giving two controlled contrasts: A and C share their trimming and
 differ only in balancing, B and C share their balancing rule and differ only in
@@ -269,9 +269,8 @@ scale was wrong: **the reliability gap is a matter of scale, not of ordering.**
 Isotonic regression reaches comparable values but is not uniformly better, as one
 expects of a more flexible estimator at these fold sizes.
 
-**Threshold selection is the alternative route to the same goal, and an earlier
-analysis based on two constructions reported that it never works. Arm C requires that
-claim to be narrowed.** Selecting the
+**Threshold selection is the alternative route to the same goal, and it helps in one
+case only.** Selecting the
 F1-optimal or balanced-accuracy-optimal threshold on the nine training subjects and
 applying it to the tenth was evaluated on the three architectures with retained
 probabilities on Arms A and C: twenty-four tests, of which seven reach significance:
@@ -473,9 +472,10 @@ they bound the conclusions.
    pooled scores.
 
 4. **Threshold selection was evaluated on two constructions, not three.** Section 8.6
-   covers Arms A and C; it was not run on Arm B, so the narrowing of the draft-3 claim
-   rests on one construction's evidence and the mechanism proposed for it (stability
-   and direction of the selected threshold) is untested on a third.
+   covers Arms A and C; it was not run on Arm B, so the finding that threshold
+   selection helps in one case only rests on one construction's evidence, and the
+   mechanism proposed for it (stability and direction of the selected threshold) is
+   untested on a third.
 
 5. **Four channels and one montage.** All results are for O1, O2, C3 and C4 at 128 Hz.
    The architectures' relative standing may depend on the channel count — the

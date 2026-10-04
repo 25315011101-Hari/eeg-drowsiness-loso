@@ -93,9 +93,8 @@ more than the standard deviation this paper reports as its ±.
    dimension none of the three most recent reviews treats, finding that three of five
    architectures (including the highest-ranking one) score worse than a constant
    predictor emitting the class prior, with the same partition on all three
-   constructions. *We do not claim priority*: an earlier draft said "the first report,
-   to our knowledge", and that is withdrawn, because priority rests on a systematic
-   search that was not performed. What is stated instead is checkable.
+   constructions. *We do not claim priority*: no systematic
+   search for earlier reports was performed, so no claim to be first is made. What is stated instead is checkable.
 
 3. **A demonstration that the gap is one of scale rather than of ordering**:
    out-of-subject logistic recalibration, fitted per fold on the other nine subjects,

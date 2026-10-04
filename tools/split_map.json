@@ -126,8 +126,8 @@
     },
     "Data availability statement (mandatory)": {
       "dest": "MAIN",
-      "target_words": 159,
-      "reason": "mandatory. The current count includes the placeholder blocker notice, which is removed by tools/set_repository_url.py when the repository is published"
+      "target_words": 123,
+      "reason": "mandatory. 123 is the measured length of the statement itself, which is the intended text and is not to be shortened. The current count is larger because it still includes the placeholder notice; tools/set_repository_url.py removes that notice when the repository is published, and the section then measures 123. Measured on 4 October 2026 by running the script against a throwaway copy; the target was 159, which was neither the current nor the post-removal length and failed the check the moment the notice was removed"
     },
     "Other mandatory declarations": {
       "dest": "MAIN",

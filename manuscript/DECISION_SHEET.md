@@ -18,7 +18,7 @@ second file to keep in step, and nothing can be marked done by accident.
 
 ---
 
-## 1. 🟠 Repository — recommended for reproducibility
+## 1. 🟢 Repository — published 5 October 2026
 
 A public repository is **recommended for reproducibility**; whether it is mandatory
 for this journal must be confirmed from the journal's current submission
@@ -26,31 +26,33 @@ requirements, and that has not been done. This heading read "blocks submission"
 until 4 October 2026, which stated as settled something nobody had checked; the
 correction is recorded here rather than made silently.
 
-What is settled is narrower and still holds. The data-availability statement
-promises a reader can fetch files that reproduce every table in the paper, and
-until the repository is public that promise points at a placeholder address — so
-the placeholder, not the repository, is what must not reach a journal.
+The data-availability statement promises a reader can fetch files that reproduce
+every table in the paper. Until 5 October 2026 that promise pointed at a placeholder
+address; it now points at a published repository, and the three checks below were run
+against a fresh clone of it rather than against this working copy.
 
-**The package is already a git repository with its commits made.** Publishing is:
+**Published at https://github.com/25315011101-Hari/eeg-drowsiness-loso on
+5 October 2026**, nine commits and 149 files, into a public repository of that exact
+name that already existed and was empty — checked with `git ls-remote` before
+anything was written. `tools/set_repository_url.py` filled the address into
+`CODE_AVAILABILITY.md` twice, the assembled manuscript and `CITATION.cff`: four of
+the five files it checks, the fifth being `MASTER_FILE.md`, which is on the list so a
+stale copy is not left behind and holds none because its generator never writes the
+placeholder.
 
-```
-git remote add origin https://github.com/<user>/<repo>.git
-git push -u origin main
-python3 tools/set_repository_url.py https://github.com/<user>/<repo>
-```
+**Checked from a fresh clone on 5 October 2026** — no script can do this from inside
+the package it is checking, so it was done from a clone taken with no credentials, the
+way a reader would:
 
-The second command rewrites every file that still carries the placeholder — four of
-the five it checks, measured by running it against a throwaway copy on 4 October
-2026; the fifth, `MASTER_FILE.md`, is on the list so a stale copy is not left behind
-and holds none, because its generator never writes the placeholder. It also removes
-the placeholder notice from the data-availability section and re-runs preflight.
+- [x] the repository clones publicly, with no sign-in — nine commits, 149 files
+- [x] `results/ALL_FOLDS.csv` there has 750 rows: 250 per arm, five models, five
+      seeds, ten subjects
+- [x] `python3 tools/preflight.py` passes there — ALL CHECKS PASS, 25 of 25.
+      `training smoke` reports PENDING because that clone has no TensorFlow, which is
+      the documented expected state
 
-**Then check by hand, from a fresh clone** — no script can do this from inside the
-package it is checking:
-
-- [ ] the repository opens in a **signed-out** browser
-- [ ] `results/ALL_FOLDS.csv` there has 750 rows
-- [ ] `python3 tools/preflight.py` passes there
+The licence was confirmed in the same step: MIT, with the draft note deleted from
+`LICENSE` and the "authors must confirm" sentence from `README.md`.
 
 **Optional but preferred:** archive a GitHub release on Zenodo for a DOI, and pass
 `--doi 10.5281/zenodo.<id>`. A DOI survives a repository being renamed, made

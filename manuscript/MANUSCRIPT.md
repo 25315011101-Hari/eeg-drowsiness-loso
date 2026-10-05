@@ -2595,5 +2595,5 @@ https://doi.org/10.1175/1520-0493(1950)078<0001:VOFEIT>2.0.CO;2
 
 ---
 
-*Build 3c5cb5bf85fd · 2026-10-04 · 25003 words · registry 1977 rows.*
+*Build 3c5cb5bf85fd · 2026-10-05 · 25003 words · registry 1977 rows.*
 *Rebuild: `python3 tools/build_manuscript.py manuscript manuscript/MANUSCRIPT.md`. A copy whose build id differs from the one the repository produces is not the current manuscript.*

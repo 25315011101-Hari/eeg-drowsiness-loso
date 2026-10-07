@@ -93,6 +93,40 @@
       ],
       "why": "'Normally about' is guidance, not a limit. Reported by tools/check_split_map.py as information; never a failure."
     },
+    "manuscript_source_file": {
+      "value": [
+        ".doc",
+        ".docx",
+        ".tex"
+      ],
+      "pdf_accepted_as_source": false,
+      "provenance": [
+        "HOW THIS WAS OBTAINED, stated exactly, because it is weaker than every other",
+        "entry in this file and it is the requirement this repository acts on hardest.",
+        "The sentence below was written into this project on 4 October 2026, as read from",
+        "the guide, in the working script that became tools/build_docx.py. That script",
+        "lived outside the repository until 7 October 2026, so until this entry existed",
+        "the requirement that caused a whole build tool to be written was recorded",
+        "NOWHERE in the package -- which is why it is recorded here now.",
+        "It was NOT re-read at the source on 7 October 2026: a fetch of the guide was",
+        "refused from this environment, as it was on 2 October 2026, and a web search did",
+        "not surface the sentence. So the wording has one source, taken on one day, and no",
+        "second reading.",
+        "CONSEQUENCE: nothing is enforced on it, and confirming this sentence by eye in a",
+        "browser is a pre-submission item alongside re-reading the limits above."
+      ],
+      "quote": "Save files in an editable format, using the extension .doc/.docx for Word files and .tex for LaTeX files. A PDF is not an acceptable source file.",
+      "why": [
+        "Acted upon rather than checked. No script can usefully test 'the file you upload",
+        "is editable'; what the repository can do is produce one, so tools/build_docx.py",
+        "builds the .docx from the same twelve section files the PDF is built from.",
+        "This is also why tools/build_pdf.py is no longer the end of the line. The PDF",
+        "remains the file to READ and to cite a page of; the .docx is the file to SUBMIT.",
+        "manuscript/REPRODUCIBILITY.md section 1 said the PDF was the only file to review,",
+        "cite or submit, which was written before this sentence was read and was corrected",
+        "on 7 October 2026."
+      ]
+    },
     "highlights_separate_file": {
       "value": true,
       "quote": "Submit highlights as a separate editable file in the online submission system.",

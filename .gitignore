@@ -46,12 +46,18 @@ Thumbs.db
 #                  tracked sources with tools/build_pdf.py, and publishing the
 #                  article PDF is a preprint-posting question, separate from
 #                  releasing the pipeline.
+#   docx/          the editable manuscript the journal requires, added 7 October 2026
+#                  with tools/build_docx.py. Ignored for the same reason as pdf/ and
+#                  not for a new one: it is a generated file, reproducible from the
+#                  tracked sources by one command, and a tracked copy of it would be
+#                  the fourth place a build could go stale.
 #
-# None of the three is deleted. They stay in the working copy; they are simply not
+# None of the four is deleted. They stay in the working copy; they are simply not
 # what is published.
 snapshots/
 deliverables/
 pdf/
+docx/
 
 # Deliberately NOT ignored, because they are the release:
 #   results/     the 750 per-fold rows, the registry, Arm A's probability files

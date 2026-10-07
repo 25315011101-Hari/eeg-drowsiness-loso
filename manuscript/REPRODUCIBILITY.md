@@ -12,7 +12,20 @@ so that question has one answer.
 ## 1. The manuscript
 
 **`Manuscript_BSPC_<date>_build_<id>.pdf`** — built, not edited. It is the only file
-to review, cite or submit.
+to review or to cite a page of.
+
+**It is not the file to submit.** The guide for authors says "A PDF is not an
+acceptable source file" and asks for `.doc`, `.docx` or `.tex`, so the file that goes
+to the journal is `Manuscript_BSPC_<date>_build_<id>.docx`, built by
+`tools/build_docx.py` from the same twelve section files and carrying the same build
+id. Section 1 said "the only file to review, cite or submit" until 7 October 2026 —
+written before that sentence of the guide was read, and corrected here rather than
+quietly, because a wrong statement about which file is the paper is exactly the
+confusion this page exists to end. The guide's sentence, and the fact that it has one
+source and one reading, is recorded in `tools/journal_requirements.json`.
+
+Both files are built from `manuscript/MANUSCRIPT.md`, so the build id is the one
+thing to compare between them: a .docx and a .pdf with the same id are the same paper.
 
 **The build id is in the filename and printed at the end of the last page.** Every
 build used to carry the same filename, so a downloads folder filled with
@@ -63,9 +76,9 @@ It is assembled by `tools/build_manuscript.py` from the twelve section files bel
 in submission order, with the Hindi glosses, the "notes for the next pass"
 sections and the blocks marked `<!-- not-for-submission -->` removed — the last of
 those covers the front-matter preamble and the superseded title drafts, which are
-editorial matter a reviewer should never see. The blocker notice on the
-data-availability statement is deliberately kept, because the placeholder it warns
-about is still in the built text. **The body text is never edited in the manuscript**; it is edited
+editorial matter a reviewer should never see. The former data-availability blocker
+notice referred to a repository placeholder that has since been removed after the
+repository URL was recorded. **The body text is never edited in the manuscript**; it is edited
 in a section file and the manuscript is rebuilt. Anything wrong in the PDF is wrong
 in a section file.
 

@@ -123,6 +123,28 @@ def test_the_file_carries_no_other_content(built):
         assert [n for n in z.namelist() if n.startswith("word/media/")] == []
 
 
+def test_each_bullet_is_a_literal_line_of_the_manuscript(bullets):
+    """A second witness to the extraction, which otherwise has only one.
+
+    Every other test here compares the document against bullets_from(), which is what
+    the builder used. An extraction that went wrong would be wrong identically on both
+    sides and all of them would pass. This test does not call bullets_from(), does not
+    call check_frontmatter.sections(), and does not look at the .docx: it searches the
+    raw manuscript for each bullet as a literal "- ..." line, and counts the bullet
+    lines between the Highlights heading and the one after it. If the section parser
+    ever picks up the wrong block, these two disagree.
+    """
+    raw = manuscript_text()
+    for b in bullets:
+        assert re.search(r"(?m)^- %s$" % re.escape(b), raw), b
+
+    start = raw.index("\n## Highlights\n")
+    nxt = raw.index("\n## ", start + 1)
+    block = raw[start:nxt]
+    found = re.findall(r"(?m)^- (.+)$", block)
+    assert found == bullets, "the raw section and the parsed section disagree"
+
+
 def test_the_limits_are_read_from_the_guide_and_not_from_this_code(bullets):
     L = C.limits(C.requirements())
     assert L["highlights_min"] <= len(bullets) <= L["highlights_max"]

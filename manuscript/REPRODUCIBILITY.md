@@ -178,7 +178,7 @@ Twenty-five checks, one verdict. This list is the one `tools/preflight.py` print
 
 | Check | What fails it |
 |---|---|
-| tests | any of the 76 tests |
+| tests | any test in `tests/`. The count below is of `test_pipeline.py` alone — any of the 76 tests there — and is held to the suite by `test_the_reproducibility_page_states_the_size_of_the_suite_it_describes`, which fails if the two drift apart. The builders' own suites (`test_build_docx.py`, `test_build_highlights.py`, `test_check_submission_package.py`) run in the same command and are not in that count |
 | registry | the registry cannot be rebuilt from the result files |
 | row counts | a document claims a registry size the registry does not have |
 | scan | a number in a section is in neither registry |
@@ -230,6 +230,39 @@ the date the guide for authors was last read at the source; the check reports th
 item open once that reading is more than 180 days old. Neither can establish that
 the answer is still right — only that somebody looked recently enough for the
 answer to be evidence rather than recollection.
+
+**Final submission package audit.** The four files that go to the journal are built
+from this repository but are not part of it -- `docx/` is ignored, for the same reason
+`pdf/` is -- so no check that runs here can see them. Build them and check them
+together, on the day:
+
+```
+python3 tools/build_docx.py
+python3 tools/build_highlights.py
+python3 tools/build_pdf.py
+python3 tools/build_pdf.py --supplementary
+python3 tools/check_submission_package.py
+```
+
+The gate is `PACKAGE READY  (10 of 10 checks passed)`. It checks that all four files
+exist under the naming convention, that every one carries the build id the manuscript
+currently stamps itself with, that the .docx still holds every table, image and
+non-ASCII character the manuscript does, that the highlights are this manuscript's and
+within the guide's quoted limits, that every supplementary item the article cites is in
+the supplement with its caption, that no placeholder survives into either built
+document, and that no two words are printed on top of each other.
+
+That last one is there for a reason. On 7 October 2026 the supplementary PDF printed
+"DeepConvNet8,212" -- a model name over the next column's number -- eight times across
+two tables, and every check in this repository passed on that file. It was found by a
+person reading it. A check only a person can perform is a check that will eventually
+not be performed.
+
+It is deliberately NOT part of `preflight.py`. Preflight checks the repository and
+runs on every change; this needs four built artefacts that the repository does not
+keep, and making them a precondition of the daily check would couple the two for no
+gain. It is a pre-submission step, and it is written down here so that it is a step
+rather than an intention.
 
 ## 5. What is still open
 

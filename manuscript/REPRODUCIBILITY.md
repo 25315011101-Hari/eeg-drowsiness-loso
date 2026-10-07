@@ -216,11 +216,10 @@ What is not the paper's to settle, plus the one check it cannot run without a GP
 python3 tools/check_submission_ready.py
 ```
 
-Each of the three author decisions is confirmed by deleting the draft note that
-says it is not — so there is no second file to keep in step, and nothing can be
-marked done by accident. `manuscript/DECISION_SHEET.md` sets out all three,
-including what each CRediT role means and the two roles the current proposal
-leaves unclaimed.
+Each author decision is confirmed by deleting the draft note that says it is not —
+so there is no second file to keep in step, and nothing can be marked done by
+accident. `manuscript/DECISION_SHEET.md` sets them out, including what each CRediT
+role means and the two roles the proposal considered and declined.
 
 That command also answers two items that are nobody's decision but age in the same
 way. The training smoke test is the only test that builds real models, and it needs
@@ -236,10 +235,19 @@ answer to be evidence rather than recollection.
 
 | | Item | Whose decision |
 |---|---|---|
-| 🟠 | CRediT roles: a proposal is drafted and must be confirmed. Two roles the proposal leaves unclaimed — Resources and Project administration — need an explicit yes or no, since the acknowledgement says the BCI Laboratory conducted and supported the work. `DECISION_SHEET.md` §2 | Both authors |
+| 🟠 | Supplementary structure: whether Tables S5, S2 and S4 each get a Supplementary Note of their own. They follow Note 3 without second-level headings of their own, although they concern different analyses; Note 3 presents Table S3 as its coverage table. A structural question, not a demonstrated error. The numbering is not to be changed before it is answered. `DECISION_SHEET.md` §5 | Both authors |
 | 🟠 | `CITATION.cff` leaves the article DOI, volume, pages and both ORCID iDs empty because none of them exists yet. Fill in on acceptance. | Corresponding author |
 | 🟠 | Structure: eight sections, or nine with Architectures separate (72 cross-references, checker exists) | Supervisor |
-| 🟠 | Which of the seven drafted figures the submission carries, and in what order | Author and supervisor |
+
+**Which figures the submission carries, and in what order, is settled** — this row was
+still listed as open until 7 October 2026, which was wrong by then. Six figures in the
+article and one in the supplement, each placed once beside its caption in the section
+that first cites it, the article's running 1 to 6 in citation order; the eighth file,
+`fig6_code_structure`, is the repository's own module diagram and not a paper figure.
+The table in section 8 lists all of them, `tools/check_figure_placement.py` checks the
+placement, `tools/check_print_ready.py` checks the artwork against the guide's
+quotations, and `figures/PROVENANCE.txt` traces every plotted value to the registry.
+None of that was in doubt; only this row said otherwise.
 
 Settled on 18 September 2026, by the corresponding author:
 

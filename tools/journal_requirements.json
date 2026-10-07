@@ -173,6 +173,26 @@
         "After submission supplementary files can only be added or replaced in the revision stage of the editorial process.",
         "Be aware that all supplementary materials provided will appear online in the exact same way as received. These files will not be checked, formatted or typeset by the production team."
       ],
+      "silent_on": [
+        "The guide text reviewed on 30 September 2026 does not state how supplementary",
+        "tables must be numbered: not that they must run in the order the article cites",
+        "them, not in the order they appear in the supplementary document, and not any",
+        "other numbering rule. The question was not asked at that reading.",
+        "",
+        "Measured on 7 October 2026 against build 3c5cb5bf85fd, recorded so that nobody",
+        "measures it a second time:",
+        "    the article cites       S1, Figure S1, S2, S4, S5, S3",
+        "    the supplement carries  Figure S1, S1, S3, S5, S2, S4",
+        "    tools/split_map.json records the 30 September 2026 move that assigned the",
+        "    numbers and gives no reason for the order; the phrases 'citation order' and",
+        "    'order of appearance' do not occur anywhere in it.",
+        "",
+        "STATUS: an open pre-submission question, not an error. Nothing has been changed.",
+        "Read the guide at the source before deciding, and settle the structural question",
+        "in manuscript/DECISION_SHEET.md section 5 FIRST: the reason for the current",
+        "ordering has not been established, and a renumbering decided before the grouping",
+        "would be decided without knowing what the sections are."
+      ],
       "why": [
         "Three operational consequences, recorded because each one is a way to lose work at",
         "submission. The supplementary file must be FINISHED when the manuscript is submitted,",

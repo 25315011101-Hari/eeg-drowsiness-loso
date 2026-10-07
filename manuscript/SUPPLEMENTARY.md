@@ -230,7 +230,7 @@ Recall and accuracy carry ± the standard deviation across the five seeds; preci
 does not, for the reason given with Table 4.
 
 | Arm | Model | TN | FP | FN | TP | Recall | Precision | Accuracy |
-|---|---|---|---|---|---|---|---|---|
+|---|--------|---|---|---|---|-----|---|------|
 | **A** | DeepConvNet | 8,212 | 278 | 395 | 375 | 0.487 ± 0.105 | 0.574 | 92.73 ± 0.42 % |
 | **A** | CNN | 8,095 | 395 | 380 | 390 | 0.506 ± 0.076 | 0.497 | 91.63 ± 1.17 % |
 | **A** | CNN-BiLSTM | 7,800 | 690 | 272 | 498 | 0.646 ± 0.124 | 0.419 | 89.61 ± 0.93 % |
@@ -259,7 +259,7 @@ a Brier + Platt value that Platt recalibration carried from above the constructi
 class-prior Brier reference to below it.
 
 | Arm | Model | ECE raw | ECE + Platt | ECE + isotonic | Brier raw | Brier + Platt | Brier + isotonic |
-|---|---|---|---|---|---|---|---|
+|---|--------|---|-----|-----|---|-----|-----|
 | **A** | CNN | 0.0605 | 0.0447 | 0.0473 | 0.0671 | 0.0585 | 0.0604 |
 | **A** | CNN-BiLSTM | 0.0912 | 0.0561 | 0.0584 | 0.0781 | **0.0590** | 0.0599 |
 | **A** | EEGNet | 0.1950 | 0.0625 | 0.0603 | 0.1009 | **0.0635** | 0.0610 |

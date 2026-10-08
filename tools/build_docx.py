@@ -288,7 +288,11 @@ def audit(source, path, tables):
 # word count, check_generated.py treats it as the volatile line, snapshot.py stamps a
 # bundle with it -- so it stays in MANUSCRIPT.md and is removed here instead. It is
 # the repository's own bookkeeping and not a sentence of the paper.
-STAMP = re.compile(r"(?m)^---\n\n\*Build [0-9a-f]+ · .*\n\*Rebuild:.*$")
+# No leading `^---\n\n`: the horizontal rules were removed from the manuscript on
+# 8 October 2026 and the stamp no longer has one above it. The rest of the pattern is
+# unchanged, and the check below still refuses to build if the stamp is not found at
+# all, which is what stops a repository build stamp reaching a journal.
+STAMP = re.compile(r"(?m)^\*Build [0-9a-f]+ · .*\n\*Rebuild:.*$")
 
 
 def without_build_stamp(source, work_dir):

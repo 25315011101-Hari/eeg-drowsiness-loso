@@ -24,8 +24,6 @@ assembled manuscript, which begins at the title.
 > source वाक्य के साथ `tools/journal_requirements.json` में रखी है, और गिनती script से
 > जाँची गई है।
 
----
-
 ## Title
 
 **Calibration of Four-Channel EEG for Driver Drowsiness Detection:
@@ -79,8 +77,6 @@ requirement (tools/journal_requirements.json, not_enforced_here.article_title).*
   driver-drowsiness detection under leave-one-subject-out evaluation**
 <!-- not-for-submission:end -->
 
----
-
 ## Abstract
 
 Reported accuracies for EEG-based driver-drowsiness detection routinely exceed 90 %,
@@ -109,8 +105,6 @@ calibration error on all three, leads all twelve paired comparisons and separate
 eleven; no other pair separates on ROC-AUC. All 750 per-fold results and the
 pipeline are released.
 
----
-
 ## Highlights
 
 - Five EEG models, leave-one-subject-out, three window constructions, 750 folds
@@ -119,15 +113,11 @@ pipeline are released.
 - Recalibration closes the gap; ranking unchanged where measured (Arm A)
 - All 750 per-fold results and the full analysis pipeline are released
 
----
-
 ## Keywords
 
 Electroencephalography; driver drowsiness detection; leave-one-subject-out
 cross-validation; probability calibration; class imbalance; convolutional neural
 networks; reproducibility
-
----
 
 
 ## Declaration of competing interest
@@ -207,8 +197,6 @@ as funders of the **data collection**. That is the depositors' funding, not this
 study's, and must not be reported here as ours. The sentence above is therefore
 correct as it stands and must not be softened to mention them.*
 <!-- not-for-submission:end -->
-
----
 
 ## Notes for the next pass — not part of the paper
 

@@ -127,8 +127,6 @@ paper's "seven male, three female". Read at the source on 2 October 2026.
   working on despite its size.
 
 <!-- not-for-submission:end -->
----
-
 **[R1]** Garcés Correa, A., Orosco, L., & Laciar, E. (2014). Automatic detection
 of drowsiness in EEG records based on multimodal analysis. *Medical Engineering
 & Physics*, 36(2), 244–249. https://doi.org/10.1016/j.medengphy.2013.07.011
@@ -146,8 +144,6 @@ of drowsiness in EEG records based on multimodal analysis. *Medical Engineering
 > Different data, different montage, different sampling rate, different
 > annotation criterion. **Cite it only as prior work by the same group on EEG
 > drowsiness detection — never as a description of DD-Database or its protocol.**
-
----
 
 ## Architectures evaluated
 
@@ -169,8 +165,6 @@ https://doi.org/10.1002/hbm.23730
 
 > Verified from https://onlinelibrary.wiley.com/doi/full/10.1002/hbm.23730 and
 > arXiv:1703.05051. This is the source of both ShallowConvNet and DeepConvNet.
-
----
 
 ## Comparable cross-subject EEG drowsiness work
 
@@ -214,8 +208,6 @@ https://doi.org/10.1109/TNNLS.2022.3147208
 > Their per-subject counts are uneven enough that a pooled prevalence flatters the
 > comparison on some subjects; Related Work says so rather than resting weight on
 > the aggregate alone.
-
----
 
 ## Surveys establishing what the field reports
 
@@ -343,8 +335,6 @@ https://doi.org/10.1016/j.measurement.2026.121676
 > evidence about the review, and [P1]–[P6] show the machinery is standard
 > elsewhere.
 
----
-
 ## Evaluation methodology
 
 **[E1]** Saito, T., & Rehmsmeier, M. (2015). The precision-recall plot is more
@@ -360,8 +350,6 @@ https://doi.org/10.1016/j.neuroimage.2017.06.061
 
 > Verified from https://pubmed.ncbi.nlm.nih.gov/28655633/ and arXiv:1706.07581.
 > Supports the paper's insistence that the interval be taken over subjects.
-
----
 
 ## Probability calibration
 

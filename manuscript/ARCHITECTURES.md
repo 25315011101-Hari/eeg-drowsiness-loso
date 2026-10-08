@@ -81,7 +81,7 @@ controlled architectural comparison. Only the block beneath it differs.
 
 ## 5.4 Input shape
 
-Inputs are shaped to each family's convention — (1,280 × 4) for the
-one-dimensional models, (4 × 1,280 × 1) for the EEGNet family — but the underlying
+Inputs are shaped to each family's convention: (1,280 × 4) for the
+one-dimensional models, (4 × 1,280 × 1) for the EEGNet family, but the underlying
 windows are identical.
 

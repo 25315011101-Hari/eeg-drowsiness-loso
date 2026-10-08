@@ -14,8 +14,6 @@ of Technology Bhopal, Bhopal, Madhya Pradesh 462003, India
 \* Corresponding author. E-mail address: mkahirwal@manit.ac.in (M. K. Ahirwal)
 
 
----
-
 ## Abstract
 
 Reported accuracies for EEG-based driver-drowsiness detection routinely exceed 90 %,
@@ -44,8 +42,6 @@ calibration error on all three, leads all twelve paired comparisons and separate
 eleven; no other pair separates on ROC-AUC. All 750 per-fold results and the
 pipeline are released.
 
----
-
 ## Highlights
 
 - Five EEG models, leave-one-subject-out, three window constructions, 750 folds
@@ -54,15 +50,11 @@ pipeline are released.
 - Recalibration closes the gap; ranking unchanged where measured (Arm A)
 - All 750 per-fold results and the full analysis pipeline are released
 
----
-
 ## Keywords
 
 Electroencephalography; driver drowsiness detection; leave-one-subject-out
 cross-validation; probability calibration; class imbalance; convolutional neural
 networks; reproducibility
-
----
 
 
 ## Declaration of competing interest
@@ -96,11 +88,6 @@ networks; reproducibility
 > This research did not receive any specific grant from funding agencies in the
 > public, commercial, or not-for-profit sectors.
 
-
----
-
-
----
 
 # 1. Introduction
 
@@ -241,10 +228,6 @@ architectures, Section 6 the evaluation protocol and its two averaging conventio
 Section 7 reports the results, Section 8 discusses what they license, Section 8.10 the
 limitations, and Section 9 concludes.
 
----
-
-
----
 
 # 2. Related Work
 
@@ -268,9 +251,9 @@ review rates 27 of its 69 studies at high risk of bias, citing "dataset construc
 labeling procedures, insufficient reporting of ground-truth generation, and inadequate
 validation strategies" [S2].
 
-The 2026 review names the problem without pursuing its consequence — accuracy "can be
+The 2026 review names the problem without pursuing its consequence: accuracy "can be
 misleading in imbalanced settings where drowsy samples are relatively rare", with a
-call to "move beyond accuracy-centered comparisons" [S3] — while its own vocabulary
+call to "move beyond accuracy-centered comparisons" [S3], while its own vocabulary
 stops at accuracy, precision, recall, specificity and F1, all threshold metrics
 computed after a decision has been taken. This study extends that concern with a
 measurement: on all three constructions the two most accurate architectures are
@@ -315,9 +298,9 @@ comparison a reader is most likely to want.
 was seen.** EEGNet, ShallowConvNet and DeepConvNet were taken from their authors'
 reference implementations without architectural change beyond the output-layer
 adaptation of Section 5; the CNN and CNN-BiLSTM have no published configuration to
-adopt and were fixed in advance rather than tuned. This bounds the claim — the
+adopt and were fixed in advance rather than tuned. This bounds the claim: the
 comparison is between these configurations, not between architectures at their best,
-and for two of the five the configuration is ours — but it buys the fact that no
+and for two of the five the configuration is ours, but it buys the fact that no
 search was fitted to ten subjects.
 
 ## 2.3 The closest cross-subject work
@@ -347,9 +330,9 @@ pooled prevalence understates how uneven the comparison is subject by subject; t
 point stands at the aggregate level, which is where they report.
 
 Neither survey establishes how common subject-independent evaluation actually is. [S2]
-gives the reason — "incomplete reporting in several studies, including missing details
+gives the reason: "incomplete reporting in several studies, including missing details
 on sample characteristics, annotation methods, and validation schemes restricts the
-reliability of cross-study synthesis" — and [S1] makes no such statement, so this is
+reliability of cross-study synthesis", and [S1] makes no such statement, so this is
 one review's finding and not two. That is itself the finding.
 
 ## 2.4 Calibration: a literature this field has not drawn on
@@ -441,10 +424,6 @@ of them. A finding surviving all three is evidence that it is not specific to on
 evaluated construction choice, without establishing generalisation beyond this
 dataset; a single-construction analysis cannot test that sensitivity at all.
 
----
-
-
----
 
 # 3. Research Gap
 
@@ -454,8 +433,6 @@ reports it. Every claim here is either a statement about the reviewed literature
 a forward reference to a measurement made later in the paper; none is new evidence.
 
 
----
-
 ## 3.1 Subject-independent evaluation is not consistently reported
 
 A drowsiness detector is deployed on a driver it has never seen, so evaluation should
@@ -463,16 +440,16 @@ hold out whole subjects; a protocol mixing one subject's windows across training
 test measures something closer to within-subject memorisation. The strongest
 cross-subject work adopts leave-one-subject-out explicitly (Section 2.3), but how
 common the practice is cannot be established from the surveys: [S2] names the
-obstacle — "incomplete reporting in several studies, including missing details on
-sample characteristics, annotation methods, and validation schemes" — and [S1] does
+obstacle: "incomplete reporting in several studies, including missing details on
+sample characteristics, annotation methods, and validation schemes", and [S1] does
 not address the question at all. **That silence is the gap.** It is not a claim that
 the field evaluates badly, but that from the published record a reader often cannot
 tell.
 
 ## 3.2 Accuracy is reported without the two quantities that make it readable
 
-Drowsiness events are rare — the positive class is 6.94 %, 7.27 % or 8.32 % of windows
-in the three constructions used here — so accuracy is dominated by the majority class
+Drowsiness events are rare: the positive class is 6.94 %, 7.27 % or 8.32 % of windows
+in the three constructions used here, so accuracy is dominated by the majority class
 and the precision–recall curve is the more informative summary [E1].
 
 That much is well understood. The gap is that **the class ratio and the majority-class
@@ -526,8 +503,6 @@ runs on **three constructions of the same ten recordings**, claiming a result fo
 three only where it replicates on all three and otherwise naming the constructions it
 covers (Section 4.4).
 
-
----
 
 # 4. Methodology
 
@@ -634,23 +609,23 @@ result towards the subjects with the longest usable recordings. An equal budget 
 therefore drawn from every subject, the budget being the smallest subject total, and
 windows within a subject were drawn without replacement using a fixed seed.
 
-Three arms were constructed from two binary choices — whether recordings are trimmed
-to a common length, and how each subject's class ratio is handled — three of the four
+Three arms were constructed from two binary choices (whether recordings are trimmed
+to a common length, and how each subject's class ratio is handled), three of the four
 combinations being run.
 
-**Arm A — trimmed, drowsy-preserving.** Every recording was first trimmed to the
+**Arm A: trimmed, drowsy-preserving.** Every recording was first trimmed to the
 length of the shortest, 887,040 samples (1.925 h), keeping the later portion, so
 that all sessions contribute an equal duration; total duration is then 38.5 h. All
 drowsy windows of a subject were retained and the budget filled with alert windows.
 This yields **9,260 windows, 926 per subject, of which 770 (8.32 %) are drowsy**.
 
-**Arm B — untrimmed, prevalence-preserving.** No trimming; the full 40.29 h is
+**Arm B: untrimmed, prevalence-preserving.** No trimming; the full 40.29 h is
 used. The number of drowsy windows kept for a subject is the budget multiplied by
 that subject's own prevalence, so each subject's class ratio is carried through
 unchanged. This yields **9,920 windows, 992 per subject, of which 688 (6.94 %) are
 drowsy**.
 
-**Arm C — trimmed, prevalence-preserving.** Trimming as in Arm A, balancing as in
+**Arm C: trimmed, prevalence-preserving.** Trimming as in Arm A, balancing as in
 Arm B. This yields **9,260 windows, 926 per subject, of which 673 (7.27 %) are
 drowsy**.
 
@@ -693,8 +668,6 @@ that constant.
 
 Every window count in Table 1 is regenerated from the EDF files by the released construction script, which refuses to write unless its internal and reference checks both pass; Arm B's counts are reproducible from the public recordings alone. Supplementary Note 1 gives the two checks and the rebuild result.
 
-
----
 
 # 5. Architectures
 
@@ -779,12 +752,10 @@ controlled architectural comparison. Only the block beneath it differs.
 
 ## 5.4 Input shape
 
-Inputs are shaped to each family's convention — (1,280 × 4) for the
-one-dimensional models, (4 × 1,280 × 1) for the EEGNet family — but the underlying
+Inputs are shaped to each family's convention: (1,280 × 4) for the
+one-dimensional models, (4 × 1,280 × 1) for the EEGNet family, but the underlying
 windows are identical.
 
-
----
 
 # 6. Experimental Setup
 
@@ -920,8 +891,8 @@ size. Holm's first threshold is α/m, so a test whose smallest attainable p exce
 Wilcoxon floor gives a ceiling of m = 25, the nine-pair floor m = 12, and the
 five-point Spearman floor m = 3; beyond those sizes the procedure returns the same
 verdict whatever the data show, which is an absence of measurement rather than
-conservatism. The Spearman ceiling is reached with exact equality — 2/5! and α/3 are
-both 1/60 — so this study's accuracy-against-recall result sits precisely on the
+conservatism. The Spearman ceiling is reached with exact equality: 2/5! and α/3 are
+both 1/60, so this study's accuracy-against-recall result sits precisely on the
 Holm boundary for its three-test family, and whether it survives turns on whether
 the comparison is written ≤ or <. A criterion that a convention decides is not one
 this paper will rest a claim on.
@@ -1006,14 +977,14 @@ it does not leak test labels, which is the property that matters for validity.
 Setting a seed does not make a GPU run deterministic, and this study does not claim
 that it does. Two repeated-execution checks were made, and they differ in strength.
 
-**Check 1 — Arm B, three architectures, validation pairs verified.** Arm B was
+**Check 1: Arm B, three architectures, validation pairs verified.** Arm B was
 executed twice, several hours apart, under the same preprocessing, the same five
 seeds and validation-subject assignments confirmed identical on all 150 folds, so the
 two runs differ only in GPU non-determinism. EEGNet, ShallowConvNet and DeepConvNet
 were genuinely re-executed; CNN and CNN-BiLSTM were not, which is verifiable rather
 than assumed: every one of their folds is bit-identical between the two files.
 
-**Check 2 — Arm A, EEGNet only, validation pairs unverified.** An earlier Arm A
+**Check 2: Arm A, EEGNet only, validation pairs unverified.** An earlier Arm A
 execution of EEGNet was retained. Against the current run it agrees to full
 floating-point precision on balanced accuracy and F1 for 44 of the 50 folds and on
 recall for 49 of 50; no mean over folds differs by more than 0.0008 (ROC-AUC 0.8840
@@ -1030,10 +1001,6 @@ in Section 7.
 All 750 folds are retained individually with their metrics, epoch count and
 validation-subject pair.
 
----
-
-
----
 
 # 7. Results
 
@@ -1071,7 +1038,7 @@ results.
 **Figure S1**, in the supplementary material, collects the study in one
 multi-panel overview for readers who want the whole comparison on one page. It is
 supplementary rather than a main figure because its reliability panels can be drawn
-only for Arm A — the one construction whose per-window scores are released — and
+only for Arm A (the one construction whose per-window scores are released) and
 this paper reports findings where they replicate on all three.
 
 ## Overview
@@ -1084,9 +1051,9 @@ arm, 250 per arm, **750 in total**.
 **Two averaging conventions, kept strictly apart.** A *subject-averaged* value is
 computed inside a fold and averaged over the ten subjects, each weighted equally; a
 *pooled* value concatenates all ten folds within a seed and scores them once,
-weighting each subject by its window count. The two differ substantially here —
+weighting each subject by its window count. The two differ substantially here:
 pooled recall exceeds subject-averaged recall by 0.13 to 0.25 for every architecture
-on all three arms — so each table states which it uses. **Subject-averaged is the
+on all three arms, so each table states which it uses. **Subject-averaged is the
 default**, every significance test being a paired test on the ten subject-level
 differences; pooled values are used in Section 7.3 and Section 7.5. **Accuracy exists only
 as a pooled quantity**, here and in the Discussion. No table mixes the two.
@@ -1241,8 +1208,8 @@ this is no *measurable* effect rather than no effect.
 The CNN and the CNN-BiLSTM share their convolutional trunk exactly, differing only
 in what reduces the time axis: global average pooling against two bidirectional LSTM
 layers. The shared trunk makes the feature extractor identical, but **this is not a
-capacity-controlled comparison** — the recurrent block adds 135,936 parameters, 3.04
-times the CNN's own total, taking the CNN-BiLSTM to 4.04 times it — so recurrence
+capacity-controlled comparison**: the recurrent block adds 135,936 parameters, 3.04
+times the CNN's own total, taking the CNN-BiLSTM to 4.04 times it, so recurrence
 cannot be separated from the capacity accompanying it. Subject-averaged, ten paired
 differences:
 
@@ -1274,15 +1241,15 @@ not called the cleanest *ablation*, for the capacity reason above.
 > horizontally against pooled accuracy vertically, with nothing joining them. The
 > dashed rule is that construction's always-alert accuracy, without which an accuracy
 > cannot be read at this prevalence; **on Arm B all five architectures lie below it.**
-> Each panel gives the Spearman correlation between accuracy and recall — ρ = −1.000,
-> −0.900, −0.600 — with its exact two-sided permutation p over the 120 orderings of
+> Each panel gives the Spearman correlation between accuracy and recall (ρ = −1.000,
+> −0.900, −0.600) with its exact two-sided permutation p over the 120 orderings of
 > five ranks. Only Arm A reaches significance; the attainable floor over five
 > architectures is 0.0167, so only a perfect reversal clears 0.05.
 
 True positives come from the per-fold recall and drowsy-window counts in
 `ALL_FOLDS.csv`; false positives are counted directly from the predictions in
 `ALL_POOLED.csv`. They are **not** obtained by inverting per-fold precision, which is
-undefined at precision zero — the case for every degenerate fold, including folds that
+undefined at precision zero, the case for every degenerate fold, including folds that
 predicted some windows drowsy and got all of them wrong. Inverting precision
 **under-counts false positives** by 0 to 17 windows per architecture here and moves
 the accuracy column by up to 0.23 points, so Table 4 uses the recorded counts.
@@ -1371,8 +1338,8 @@ recall 0.800 and S3 164 at 0.548. Both conventions are reported so that a reader
 pools the predictions obtains Section 7.3's figures rather than concluding the
 subject-averaged figures elsewhere are in error.
 
-Degenerate folds — the model predicts no drowsy window at 0.5, so F1 = 0 and balanced
-accuracy = 0.500 by construction — occur for every architecture on every arm:
+Degenerate folds (the model predicts no drowsy window at 0.5, so F1 = 0 and balanced
+accuracy = 0.500 by construction) occur for every architecture on every arm:
 
 | Arm | EEGNet | ShallowConvNet | CNN | DeepConvNet | CNN-BiLSTM |
 |---|---|---|---|---|---|
@@ -1432,9 +1399,9 @@ prevalence before correlating, removing the chance baseline:
 | DeepConvNet | +0.927 / +0.891 | +0.915 / +0.891 | +0.903 / +0.879 |
 | CNN-BiLSTM | +0.976 / +0.915 | +0.794 / +0.794 | +0.939 / +0.903 |
 
-The correction answers the obvious objection — the chance level of PR-AUC being the
+The correction answers the obvious objection (the chance level of PR-AUC being the
 prevalence itself, a subject with more drowsy windows would score higher even from a
-model that had learned nothing — and the correlation survives it almost undiminished:
+model that had learned nothing) and the correlation survives it almost undiminished:
 **after correction ρ ≥ +0.79 with p ≤ 0.0061 on fourteen of the fifteen model–arm
 combinations**. The exception is CNN on Arm B (ρ = +0.442, p = 0.200), the
 architecture with the most degenerate folds there; on Arm C the same architecture
@@ -1459,12 +1426,12 @@ result can be read.
 > **Figure 5. Three of five architectures score worse than a constant predictor,
 > identically on all three constructions.** Each mark is one architecture's pooled
 > Brier score on one construction, minus that construction's class-prior reference
-> π(1 − π) — 0.0762, 0.0645 and 0.0674 for Arms A, B and C. Plotting the margin
+> π(1 − π): 0.0762, 0.0645 and 0.0674 for Arms A, B and C. Plotting the margin
 > rather than the raw score is what lets three different references share one axis:
 > zero is the constant predictor that ignores the EEG and emits the prior, and a mark
 > to its right is a model whose probabilities are worse than that constant. Which
-> side of the rule a mark falls on is the whole encoding — no colour coding, marker
-> shape alone identifying the construction — so the figure reads unchanged in
+> side of the rule a mark falls on is the whole encoding: no colour coding, marker
+> shape alone identifying the construction, so the figure reads unchanged in
 > greyscale. **The partition is the same three architectures above and the same two
 > below on every construction**, despite three different prevalences.
 
@@ -1600,14 +1567,14 @@ column above, and no analysis in this paper mixes them.
 > subjects, brings every measured architecture below the reference.** (a)–(c) one
 > construction each, on shared axes. Horizontal axis: **subject-averaged** Brier score
 > minus the same construction's class-prior reference, zero being the constant
-> predictor — the reference of Figure 5, but against the subject-averaged score, since
+> predictor, the reference of Figure 5, but against the subject-averaged score, since
 > every value in this section is subject-averaged. One row per architecture: open mark
 > raw, filled mark after out-of-subject Platt scaling, hairline the change, on Figure
 > 4's convention and without colour. Rows are ordered by raw score, worst at the top.
 > Every architecture that began right of the rule ends left of it, on all three
 > constructions. **The three architectures per panel are those whose per-window
 > probabilities were retained, and they are not the same three on each
-> construction** — CNN, CNN-BiLSTM and EEGNet on Arm A; DeepConvNet, EEGNet and
+> construction**: CNN, CNN-BiLSTM and EEGNet on Arm A; DeepConvNet, EEGNet and
 > ShallowConvNet on Arms B and C. **On Arm A, where the released scores allow it to be
 > measured**, recalibration leaves the subject-averaged ROC-AUC and PR-AUC unchanged
 > at the reported precision; that measurement does not extend to Arms B and C.
@@ -1628,7 +1595,7 @@ recalibration is given in **Table 6**.
 **Table 6. Expected calibration error and Brier score, raw and after each
 recalibration, all three constructions.** **Bold marks a Brier + Platt value that
 Platt recalibration carried from above the construction's class-prior Brier
-reference to below it** — 0.0762 on Arm A, 0.0645 on Arm B, 0.0674 on Arm C. The
+reference to below it**: 0.0762 on Arm A, 0.0645 on Arm B, 0.0674 on Arm C. The
 mark appears in that one column only: the reference is π(1 − π), a Brier-scale
 quantity, and there is no corresponding reference against which a calibration error
 could be marked. Only three architectures
@@ -1691,8 +1658,8 @@ that needs none.
 
 **Platt scaling leaves the subject-averaged ROC-AUC and PR-AUC unchanged at the
 reported precision, and this was measured rather than assumed.** A logistic map
-preserves the ordering only when its fitted slope is positive, and on Arm A — the arm
-whose per-window scores are released — all 150 fitted slopes are positive (0.3243 to
+preserves the ordering only when its fitted slope is positive, and on Arm A (the arm
+whose per-window scores are released), all 150 fitted slopes are positive (0.3243 to
 1.3312). The residual within-fold movement has an identified cause: the ε-clip before
 the logit maps every score below it to one value, creating ties on 10 of the 150 folds
 and up to 95 on one, moving a single fold's ROC-AUC by at most 0.0000397267 and its
@@ -1704,8 +1671,8 @@ EEGNet, with CNN and CNN-BiLSTM showing zero change at the reported precision.
 fifteen architecture-by-arm cells Table 3 reports, because the recomputation needs
 per-window scores and those are released for Arm A only. For the other twelve cells
 the property is untested rather than established. **Nor does the invariance extend to
-pooled post-recalibration metrics** — separate Platt maps per fold need not preserve
-the ordering of scores across folds — so pooled post-recalibration ROC-AUC and PR-AUC
+pooled post-recalibration metrics**: separate Platt maps per fold need not preserve
+the ordering of scores across folds, so pooled post-recalibration ROC-AUC and PR-AUC
 were not used as reported ranking metrics.
 
 Read together, these measurements are consistent with the reliability gap being a
@@ -1721,13 +1688,13 @@ with its greater flexibility being a liability at these fold sizes.
 
 Two repeated-execution checks exist, and they cover different things.
 
-**Check 1 — Arm B, three architectures.** Arm B was executed twice, several hours
+**Check 1: Arm B, three architectures.** Arm B was executed twice, several hours
 apart, under identical preprocessing, seeds and validation-subject pairs (all 150
 confirmed identical), so the runs differ only in GPU non-determinism. CNN and
-CNN-BiLSTM were *not* re-executed — their rows in the earlier file are bit-identical
-to the later one — so the check covers the three architectures tabulated below.
+CNN-BiLSTM were *not* re-executed: their rows in the earlier file are bit-identical
+to the later one, so the check covers the three architectures tabulated below.
 
-**Check 2 — Arm A, EEGNet only.** An earlier Arm A execution of EEGNet agrees with
+**Check 2: Arm A, EEGNet only.** An earlier Arm A execution of EEGNet agrees with
 the current run to full floating-point precision on balanced accuracy and F1 for 44
 of 50 folds and on recall for 49 of 50; no mean differs by more than 0.0008 (ROC-AUC
 0.8840 against 0.8840, PR-AUC 0.4317 against 0.4314, balanced accuracy 0.7092 against
@@ -1812,7 +1779,7 @@ restates, it does not add.
    as unsupported, not refuted: five points cannot settle it either way (Section 6.5).
 4. **Balancing matters; trimming does not** (Section 7.1.1 to Section 7.1.2): balancing moves
    DeepConvNet 0.0217 and CNN-BiLSTM 0.0259 in ROC-AUC (both p = 0.0488), EEGNet
-   unchanged — seven of twenty significant; trimming, **zero of twenty, smallest
+   unchanged: seven of twenty significant; trimming, **zero of twenty, smallest
    p = 0.1309**, despite costing about 7 % of the data.
 5. **The recurrent block improves detection at a fixed threshold on all three arms**
    (Section 7.2): balanced accuracy and F1 nominal on all three, no ROC-AUC change nominal on
@@ -1844,15 +1811,13 @@ restates, it does not add.
     case. Only three architectures were re-executed, so for the rest the reported ±
     is untested as an uncertainty estimate.
 
----
-
 ## 7.10 Multiplicity
 
 This study performs **190 distinct inferential comparisons** across 12 analysis
 families, of which **82 yielded nominal p < 0.05**. That count is not homogeneous:
 **32 of the 82 come from the 45-comparison drowsy-count family** and **50 from the
 remaining 145**. The family is separated throughout for that reason, and because what
-it measures — that PR-AUC rises with a subject's event count — is close to a property
+it measures (that PR-AUC rises with a subject's event count) is close to a property
 of the metric, which is why Section 7.4 also reports the prevalence-corrected form.
 For context on the disclosure rather than as a test: 82 against a global-null
 reference count of 9.5 at α = 0.05, and 50 against 7.25 once the prevalence family is
@@ -1874,25 +1839,19 @@ or arbitrary-dependence control. Section 6.5.1 reaches the same conclusion from 
 other direction: past a family of twenty-five ten-subject Wilcoxon tests, Holm
 cannot reject for any dataset at all. **This paper therefore does not claim that its
 findings survive multiplicity control.** Results are stated as nominal, and the two
-depending most directly on inference — that balancing changes architecture ranking
+depending most directly on inference, that balancing changes architecture ranking
 where trimming does not (Section 7.1.1), and that threshold selection improves
-balanced accuracy and F1 (Supplementary Note 2) — are the two that weaken most under
+balanced accuracy and F1 (Supplementary Note 2), are the two that weaken most under
 correction and are worded accordingly.
-
----
 
 
 A finding is claimed for all three constructions only where it replicates on all three. The analyses that do not cover all three, and what each one does cover, are set out in Supplementary Note 3 and Table S3.
 
 
----
-
 # 8. Discussion
 
 All values are subject-averaged unless explicitly identified as pooled.
 
-
----
 
 The results section reports what was measured. This section states what those
 measurements do and do not license, taking the findings in the order in which a
@@ -1916,8 +1875,8 @@ separate readily on balanced accuracy, four to five of six per arm, Section 8.2'
 ablation among them: the architectures are distinguishable, but not by how well they
 order windows.
 
-**The capacity hypothesis is withdrawn.** The natural reading — that a smaller model
-wins because the training set is small — was tested as a rank correlation between
+**The capacity hypothesis is withdrawn.** The natural reading (that a smaller model
+wins because the training set is small) was tested as a rank correlation between
 parameter count and ROC-AUC, giving ρ = −0.900 (p = 0.0833), −0.500 (0.4500) and
 −0.100 (0.9500), significant on none and decaying monotonically to nothing. Two
 constructions would support only the weaker description "not replicated"; the third is
@@ -2006,7 +1965,7 @@ itself (0.0832, 0.0694, 0.0727), rather than against 0.5.
 ## 8.4 Of the two construction choices, balancing is the one that matters
 
 Two constructions alone cannot say which construction
-choice — trimming to equal duration, or how the class ratio is handled — is
+choice (trimming to equal duration, or how the class ratio is handled) is
 responsible for the differences between arms, because Arms A and B differ in both. **Arm C settles both**, completing three of the
 four cells and so giving two controlled contrasts: A and C share their trimming and
 differ only in balancing, B and C share their balancing rule and differ only in
@@ -2035,8 +1994,8 @@ the two constructions differing only in balancing, against 0.0217 and 0.0259 for
 two largest architectures.
 
 The prevalence-sensitive metrics move the other way for the architectures that do not
-gain — ShallowConvNet's PR-AUC falls 0.411 → 0.372 (p = 0.0039), the CNN's
-0.338 → 0.295 (p = 0.0020) — which is expected at Arm C's lower prevalence rather
+gain: ShallowConvNet's PR-AUC falls 0.411 → 0.372 (p = 0.0039), the CNN's
+0.338 → 0.295 (p = 0.0020), which is expected at Arm C's lower prevalence rather
 than contradictory. Reporting both directions is the point: one construction change
 helps one group on one family of metrics and penalises another group on another.
 
@@ -2044,7 +2003,7 @@ helps one group on one family of metrics and penalises another group on another.
 ## 8.5 Ranking quality and probability reliability are separate properties
 
 The clearest replication in the study is the Brier partition, which now holds three
-times (**Figure 5**). Against the class-prior reference π(1 − π) — 0.0762, 0.0645, 0.0674 — the same three architectures exceed it on all three constructions (EEGNet,
+times (**Figure 5**). Against the class-prior reference π(1 − π) (0.0762, 0.0645, 0.0674), the same three architectures exceed it on all three constructions (EEGNet,
 ShallowConvNet, CNN-BiLSTM) and the same two fall below (CNN, DeepConvNet), despite
 three different prevalences, two different window counts and three different
 reference values.
@@ -2065,8 +2024,8 @@ It is tempting to read the partition as an inverse coupling between ranking and
 reliability, but none is claimed: the rank correlation between ROC-AUC and raw Brier
 reaches significance on no arm and ranges from ρ = −0.100 to +0.800 with the choice
 of averaging and the construction, so it is not a measurement. What is claimed is
-only the separation — **the architectures with the strongest ranking performance were
-not those with the most reliable raw probabilities** — which rests on which side of
+only the separation: **the architectures with the strongest ranking performance were
+not those with the most reliable raw probabilities**, which rests on which side of
 the reference each falls, a sign rather than a rank, and does not depend on the
 estimator.
 
@@ -2107,8 +2066,8 @@ fitting a two-parameter correction to a distribution that does not need one.
 
 The interpretive weight rests on monotonicity, so monotonicity was measured rather
 than assumed. A logistic function of the logit is strictly increasing **when its
-fitted slope is positive**, and a negative slope — possible on a fold where scores
-anti-correlate with labels — would reverse the ranking instead of preserving it. On
+fitted slope is positive**, and a negative slope (possible on a fold where scores
+anti-correlate with labels) would reverse the ranking instead of preserving it. On
 Arm A, the construction whose per-window scores were retained, **all 150 fitted
 slopes are positive**, 0.3243 to 1.3312, and Platt moves ROC-AUC by at most 4 × 10⁻⁵
 and PR-AUC by at most 0.0034. Neither is exactly zero, for an identifiable reason
@@ -2149,16 +2108,16 @@ analyses: **the architecture that recalibration helped least is the one that thr
 selection helped most.** DeepConvNet is the only architecture whose raw calibration
 was already below the reference, the only one Platt scaling did not significantly
 improve, and the only one that gained from threshold selection. The two operations
-address the same defect from opposite ends — recalibration reshapes the score
+address the same defect from opposite ends: recalibration reshapes the score
 distribution so a fixed threshold is correct, threshold selection moves the threshold
-to where the unreshaped distribution has put it — so scores that are well-shaped but
+to where the unreshaped distribution has put it, so scores that are well-shaped but
 shifted are helped by the second and not the first, and mis-shaped scores by the first
 and not the second.
 
 The recommendation therefore stands for a stated reason rather than as a blanket
-result. Recalibration applies more widely — six of six architectures whose raw
+result. Recalibration applies more widely: six of six architectures whose raw
 calibration was above the reference improved significantly on both Brier score and
-calibration error, against one of six that threshold selection helped — the Platt
+calibration error, against one of six that threshold selection helped; the Platt
 route leaves the subject-averaged ranking metrics unchanged at the reported precision,
 and it preserves a fixed, interpretable operating point. **Recalibrate out of subject
 and keep a fixed threshold; select a threshold only where the score distribution is
@@ -2170,9 +2129,9 @@ assuming it.**
 
 For every architecture on every construction the standard deviation of subject-level
 PR-AUC across the ten subjects exceeds that across the five seed-level means by a
-wide margin — 12 to 48 times on Arm A (EEGNet 0.2692 against 0.0058, CNN 0.2399
+wide margin: 12 to 48 times on Arm A (EEGNet 0.2692 against 0.0058, CNN 0.2399
 against 0.0050, CNN-BiLSTM 0.2440 against 0.0207), 6 to 18 on Arm B, 10 to 36 on
-Arm C — and
+Arm C, and
 subject-level PR-AUC ranges from 0.027 to 0.810, 0.079 to 0.825 and 0.022 to 0.818,
 the worst subject being S9 on the trimmed constructions and S8 on the untrimmed one,
 the best S7 on all three.
@@ -2192,9 +2151,9 @@ The same relationship appears in the opposite sign from the other direction, and
 reported because a reviewer who computes it will find it. The ratio of PR-AUC to
 prevalence (the multiple of chance rather than the margin over it) correlates
 *negatively* with the event count, significantly on Arm B for four of five
-architectures — CNN-BiLSTM ρ = −0.879 (p = 0.0008), EEGNet −0.806 (0.0049), CNN
+architectures: CNN-BiLSTM ρ = −0.879 (p = 0.0008), EEGNet −0.806 (0.0049), CNN
 −0.709 (0.0217), ShallowConvNet −0.673 (0.0330), DeepConvNet −0.479 (0.162, not
-significant) — and for none on Arms A and C, where all five are still negative. There is no contradiction: absolute PR-AUC rises
+significant), and for none on Arms A and C, where all five are still negative. There is no contradiction: absolute PR-AUC rises
 with event count while the multiple of chance falls, the ordinary behaviour of a
 ratio whose denominator grows faster than its numerator. Citing only the favourable
 framing would be selective.
@@ -2209,7 +2168,7 @@ far one subject's result can be interpreted.
 ## 8.8 Reproducibility is architecture-dependent, and this affects how the tables are read
 
 Arm B was executed twice under identical preprocessing, seeds and validation-subject
-assignments — all 150 pairs confirmed identical — differing only in GPU
+assignments (all 150 pairs confirmed identical), differing only in GPU
 non-determinism. EEGNet reproduced to four decimal places, largest single-fold
 ROC-AUC difference 0.0002 and 27 of 50 folds identical to full precision;
 ShallowConvNet and DeepConvNet did not, at 0.2219 and 0.2020 with 1 and 0 folds
@@ -2244,8 +2203,8 @@ things follow.
 **On architecture.** EEGNet attains the highest subject-averaged ROC-AUC on all three
 constructions, is the only architecture whose advantage survives the construction
 choice that moves the others (Section 8.4), and the only one of three tested for
-reproducibility that reproduces across executions. It is not best on every measure —
-DeepConvNet is ahead of it on pooled Brier and pooled precision on Arm C — so this is
+reproducibility that reproduces across executions. It is not best on every measure:
+DeepConvNet is ahead of it on pooled Brier and pooled precision on Arm C, so this is
 a statement about ranking quality.
 
 **On probabilities.** EEGNet's raw scores should not be read as probabilities: their
@@ -2258,8 +2217,8 @@ calibrated out of subject and checked against the class-prior reference first.
 **On thresholds.** For EEGNet the F1-optimal rule transferred worse than leaving the
 threshold alone on both constructions where it was tested (balanced accuracy
 p = 0.0273 and p = 0.0098), while the balanced-accuracy rule moved it significantly on
-neither. **This evidence covers Arms A and C only — threshold selection was not run on
-Arm B** — so it supports validating a threshold rule separately rather than adopting
+neither. **This evidence covers Arms A and C only: threshold selection was not run on
+Arm B**, so it supports validating a threshold rule separately rather than adopting
 one on these two arms.
 
 **On uncertainty.** A figure quoted for expected performance should carry an interval
@@ -2270,8 +2229,6 @@ architecture-by-arm combinations.
 None of these four is visible in a table of accuracies, which is the practical
 argument for the protocol used here.
 
-
----
 
 ## 8.10 Limitations
 
@@ -2292,7 +2249,7 @@ they bound the conclusions.
    are built from the same ten recordings and are not independent. A finding holding
    on all three is evidence that it is not specific to one evaluated construction
    choice, not external replication, and no such claim is made. Both factors are
-   isolated — A and C differ only in balancing, B and C only in trimming — but each by
+   isolated: A and C differ only in balancing, B and C only in trimming, but each by
    a single pair; the fourth cell, untrimmed with every drowsy window kept, was not run
    and would give a second instance of each contrast.
 
@@ -2315,9 +2272,9 @@ they bound the conclusions.
    untested on a third.
 
 5. **Four channels and one montage.** All results are for O1, O2, C3 and C4 at 128 Hz.
-   The architectures' relative standing may depend on the channel count — the
+   The architectures' relative standing may depend on the channel count: the
    depthwise-separable factorisation's advantage is plausibly tied to a small channel
-   set — and nothing here tests that.
+   set, and nothing here tests that.
 
 6. **One dataset, one recording protocol.** A single sustained-attention driving
    protocol with one annotation scheme. Labels from a different behavioural criterion,
@@ -2335,8 +2292,8 @@ they bound the conclusions.
    documented in the dataset README: volunteers were instructed to press an event
    button when they felt drowsy, and the annotation files contain the resulting
    event-button time marks. DD-Database is nevertheless a standalone deposit with no
-   accompanying article — the Dryad landing page lists no related work, the Zenodo
-   mirror no related publications, and no data descriptor exists in the usual venues —
+   accompanying article: the Dryad landing page lists no related work, the Zenodo
+   mirror no related publications, and no data descriptor exists in the usual venues,
    so the procedure is documented by the depositors but is not described in a
    peer-reviewed data descriptor. The documentation does not establish whether each
    mark represents the onset of a drowsiness episode or another point within it. The
@@ -2369,11 +2326,6 @@ they bound the conclusions.
    are lower bounds on uncertainty for every architecture on Arm C, and for every
    architecture except EEGNet on Arms A and B.
 
-
----
-
-
----
 
 # 9. Conclusion
 
@@ -2408,8 +2360,8 @@ three constructions and is significant on none, so only the claim about the sing
 compact architecture survives.
 
 **Both design questions were answered, and asymmetrically.** Balancing moves the
-intermediate architectures — DeepConvNet and CNN-BiLSTM gain 0.0217 and 0.0259 in
-ROC-AUC, both p = 0.0488, while EEGNet moves by 0.0009 — whereas trimming moves
+intermediate architectures: DeepConvNet and CNN-BiLSTM gain 0.0217 and 0.0259 in
+ROC-AUC, both p = 0.0488, while EEGNet moves by 0.0009, whereas trimming moves
 nothing, **no test of the twenty reaching significance** (smallest p = 0.1309) despite
 discarding roughly 7 % of the windows. With ten subjects that is weak evidence of
 absence rather than evidence of none, and the fourth cell was not run, so the trimming
@@ -2433,11 +2385,6 @@ rather than any one alone. The paper reports that evidence; it does not recommen
 architecture for deployment, which would require more than ten subjects, one dataset
 and one simulator protocol.
 
-
----
-
-
----
 
 # Code and Data Availability
 
@@ -2470,10 +2417,6 @@ and one simulator protocol.
 > reference implementation [A1], obtained from
 > https://github.com/vlawhern/arl-eegmodels.
 
----
-
-
----
 
 # References
 
@@ -2486,14 +2429,10 @@ A collection of physiological signals during the use of a driving simulator
 (mirrored at Zenodo, https://doi.org/10.5281/zenodo.8284057)
 
 
----
-
 **[R1]** Garcés Correa, A., Orosco, L., & Laciar, E. (2014). Automatic detection
 of drowsiness in EEG records based on multimodal analysis. *Medical Engineering
 & Physics*, 36(2), 244–249. https://doi.org/10.1016/j.medengphy.2013.07.011
 
-
----
 
 ## Architectures evaluated
 
@@ -2510,8 +2449,6 @@ decoding and visualization. *Human Brain Mapping*, 38(11), 5391–5420.
 https://doi.org/10.1002/hbm.23730
 
 
----
-
 ## Comparable cross-subject EEG drowsiness work
 
 **[C1]** Cui, J., Lan, Z., Sourina, O., & Müller-Wittig, W. (2022). EEG-based
@@ -2519,8 +2456,6 @@ cross-subject driver drowsiness recognition with an interpretable convolutional
 neural network. *IEEE Transactions on Neural Networks and Learning Systems*.
 https://doi.org/10.1109/TNNLS.2022.3147208
 
-
----
 
 ## Surveys establishing what the field reports
 
@@ -2543,8 +2478,6 @@ and future directions. *Measurement*, 279, 121676.
 https://doi.org/10.1016/j.measurement.2026.121676
 
 
----
-
 ## Evaluation methodology
 
 **[E1]** Saito, T., & Rehmsmeier, M. (2015). The precision-recall plot is more
@@ -2557,8 +2490,6 @@ https://doi.org/10.1371/journal.pone.0118432
 to large error bars. *NeuroImage*, 180, 68–77.
 https://doi.org/10.1016/j.neuroimage.2017.06.061
 
-
----
 
 ## Probability calibration
 
@@ -2593,7 +2524,5 @@ probability. *Monthly Weather Review*, 78(1), 1–3.
 https://doi.org/10.1175/1520-0493(1950)078<0001:VOFEIT>2.0.CO;2
 
 
----
-
-*Build 3c5cb5bf85fd · 2026-10-05 · 25003 words · registry 1977 rows.*
+*Build e2947f1c635f · 2026-10-08 · 24883 words · registry 1977 rows.*
 *Rebuild: `python3 tools/build_manuscript.py manuscript manuscript/MANUSCRIPT.md`. A copy whose build id differs from the one the repository produces is not the current manuscript.*

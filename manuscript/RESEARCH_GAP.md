@@ -8,8 +8,6 @@ a forward reference to a measurement made later in the paper; none is new eviden
 > **हिंदी।** यह section चार कमियाँ एक जगह रखता है। पहले ये बातें Introduction और Related
 > Work दोनों में बिखरी थीं — अब एक ही बार, यहीं।
 
----
-
 ## 3.1 Subject-independent evaluation is not consistently reported
 
 A drowsiness detector is deployed on a driver it has never seen, so evaluation should
@@ -17,16 +15,16 @@ hold out whole subjects; a protocol mixing one subject's windows across training
 test measures something closer to within-subject memorisation. The strongest
 cross-subject work adopts leave-one-subject-out explicitly (Section 2.3), but how
 common the practice is cannot be established from the surveys: [S2] names the
-obstacle — "incomplete reporting in several studies, including missing details on
-sample characteristics, annotation methods, and validation schemes" — and [S1] does
+obstacle: "incomplete reporting in several studies, including missing details on
+sample characteristics, annotation methods, and validation schemes", and [S1] does
 not address the question at all. **That silence is the gap.** It is not a claim that
 the field evaluates badly, but that from the published record a reader often cannot
 tell.
 
 ## 3.2 Accuracy is reported without the two quantities that make it readable
 
-Drowsiness events are rare — the positive class is 6.94 %, 7.27 % or 8.32 % of windows
-in the three constructions used here — so accuracy is dominated by the majority class
+Drowsiness events are rare: the positive class is 6.94 %, 7.27 % or 8.32 % of windows
+in the three constructions used here, so accuracy is dominated by the majority class
 and the precision–recall curve is the more informative summary [E1].
 
 That much is well understood. The gap is that **the class ratio and the majority-class

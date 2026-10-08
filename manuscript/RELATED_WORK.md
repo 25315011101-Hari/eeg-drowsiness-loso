@@ -9,8 +9,6 @@ repository record; none was written from memory.
 > **हिंदी।** यह section सिर्फ़ उन्हीं papers को cite करता है जिन्हें 16 सितम्बर को publisher
 > के record पर जाकर verify किया गया। कोई भी citation याददाश्त से नहीं लिखी गई।
 
----
-
 ## 2.1 What the field detects, and how it reports it
 
 EEG-based driver-drowsiness detection is active and well surveyed. The most recent
@@ -31,9 +29,9 @@ review rates 27 of its 69 studies at high risk of bias, citing "dataset construc
 labeling procedures, insufficient reporting of ground-truth generation, and inadequate
 validation strategies" [S2].
 
-The 2026 review names the problem without pursuing its consequence — accuracy "can be
+The 2026 review names the problem without pursuing its consequence: accuracy "can be
 misleading in imbalanced settings where drowsy samples are relatively rare", with a
-call to "move beyond accuracy-centered comparisons" [S3] — while its own vocabulary
+call to "move beyond accuracy-centered comparisons" [S3], while its own vocabulary
 stops at accuracy, precision, recall, specificity and F1, all threshold metrics
 computed after a decision has been taken. This study extends that concern with a
 measurement: on all three constructions the two most accurate architectures are
@@ -78,9 +76,9 @@ comparison a reader is most likely to want.
 was seen.** EEGNet, ShallowConvNet and DeepConvNet were taken from their authors'
 reference implementations without architectural change beyond the output-layer
 adaptation of Section 5; the CNN and CNN-BiLSTM have no published configuration to
-adopt and were fixed in advance rather than tuned. This bounds the claim — the
+adopt and were fixed in advance rather than tuned. This bounds the claim: the
 comparison is between these configurations, not between architectures at their best,
-and for two of the five the configuration is ours — but it buys the fact that no
+and for two of the five the configuration is ours, but it buys the fact that no
 search was fitted to ten subjects.
 
 ## 2.3 The closest cross-subject work
@@ -110,9 +108,9 @@ pooled prevalence understates how uneven the comparison is subject by subject; t
 point stands at the aggregate level, which is where they report.
 
 Neither survey establishes how common subject-independent evaluation actually is. [S2]
-gives the reason — "incomplete reporting in several studies, including missing details
+gives the reason: "incomplete reporting in several studies, including missing details
 on sample characteristics, annotation methods, and validation schemes restricts the
-reliability of cross-study synthesis" — and [S1] makes no such statement, so this is
+reliability of cross-study synthesis", and [S1] makes no such statement, so this is
 one review's finding and not two. That is itself the finding.
 
 ## 2.4 Calibration: a literature this field has not drawn on
@@ -203,8 +201,6 @@ recordings, but to test whether findings persist under three plausible construct
 of them. A finding surviving all three is evidence that it is not specific to one
 evaluated construction choice, without establishing generalisation beyond this
 dataset; a single-construction analysis cannot test that sensitivity at all.
-
----
 
 ## Notes for the next pass — not part of the paper
 

@@ -132,8 +132,8 @@ size. Holm's first threshold is α/m, so a test whose smallest attainable p exce
 Wilcoxon floor gives a ceiling of m = 25, the nine-pair floor m = 12, and the
 five-point Spearman floor m = 3; beyond those sizes the procedure returns the same
 verdict whatever the data show, which is an absence of measurement rather than
-conservatism. The Spearman ceiling is reached with exact equality — 2/5! and α/3 are
-both 1/60 — so this study's accuracy-against-recall result sits precisely on the
+conservatism. The Spearman ceiling is reached with exact equality: 2/5! and α/3 are
+both 1/60, so this study's accuracy-against-recall result sits precisely on the
 Holm boundary for its three-test family, and whether it survives turns on whether
 the comparison is written ≤ or <. A criterion that a convention decides is not one
 this paper will rest a claim on.
@@ -218,14 +218,14 @@ it does not leak test labels, which is the property that matters for validity.
 Setting a seed does not make a GPU run deterministic, and this study does not claim
 that it does. Two repeated-execution checks were made, and they differ in strength.
 
-**Check 1 — Arm B, three architectures, validation pairs verified.** Arm B was
+**Check 1: Arm B, three architectures, validation pairs verified.** Arm B was
 executed twice, several hours apart, under the same preprocessing, the same five
 seeds and validation-subject assignments confirmed identical on all 150 folds, so the
 two runs differ only in GPU non-determinism. EEGNet, ShallowConvNet and DeepConvNet
 were genuinely re-executed; CNN and CNN-BiLSTM were not, which is verifiable rather
 than assumed: every one of their folds is bit-identical between the two files.
 
-**Check 2 — Arm A, EEGNet only, validation pairs unverified.** An earlier Arm A
+**Check 2: Arm A, EEGNet only, validation pairs unverified.** An earlier Arm A
 execution of EEGNet was retained. Against the current run it agrees to full
 floating-point precision on balanced accuracy and F1 for 44 of the 50 folds and on
 recall for 49 of 50; no mean over folds differs by more than 0.0008 (ROC-AUC 0.8840
@@ -241,8 +241,6 @@ in Section 7.
 
 All 750 folds are retained individually with their metrics, epoch count and
 validation-subject pair.
-
----
 
 
 ## Notes for the next pass — not part of the paper

@@ -5,8 +5,6 @@ Written against Results draft 4, Discussion draft 4 and the verified reference
 list. Every number appears in `MASTER_NUMBERS.csv` or `LITERATURE_NUMBERS.csv`.
 <!-- not-for-submission:end -->
 
----
-
 Driver drowsiness is a condition that a monitoring system must detect *before*
 it produces a lapse, and electroencephalography is the modality closest to the
 state itself rather than to its consequences. A camera sees a closed eyelid; the
@@ -143,8 +141,6 @@ Section 4 describes the dataset and the three constructions, Section 5 the five
 architectures, Section 6 the evaluation protocol and its two averaging conventions.
 Section 7 reports the results, Section 8 discusses what they license, Section 8.10 the
 limitations, and Section 9 concludes.
-
----
 
 ## Notes for the next pass — not part of the paper
 

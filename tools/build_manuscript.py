@@ -140,7 +140,12 @@ def main(argv):
         body = re.sub(r"\A#\s[^\n]*\n", "", body)
         body = strip(body)
         if label:
-            parts.append("\n\n---\n\n# %s\n\n%s" % (label, body))
+            # No horizontal rule before the heading. It used to put one here while
+            # each section file ended with one of its own, so two rules printed one
+            # under the other before seven of the nine sections. Removed on the
+            # corresponding author's instruction of 8 October 2026, together with the
+            # rules in the section files; the headings separate the sections.
+            parts.append("\n\n# %s\n\n%s" % (label, body))
         else:
             parts.append(body)
 
@@ -162,7 +167,7 @@ def main(argv):
             rows = sum(1 for _ in _csv.DictReader(fh))
     except OSError:
         rows = 0
-    stamp = ("\n\n---\n\n*Build %s · %s · %d words · registry %d rows.*\n"
+    stamp = ("\n\n*Build %s · %s · %d words · registry %d rows.*\n"
              "*Rebuild: `python3 tools/build_manuscript.py manuscript "
              "manuscript/MANUSCRIPT.md`. A copy whose build id differs from the one "
              "the repository produces is not the current manuscript.*\n"

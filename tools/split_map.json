@@ -256,7 +256,7 @@
     },
     "4.5 Dataset construction is verified, not assumed": {
       "dest": "SUPPLEMENTARY",
-      "becomes": "Supplementary Note 1 — Dataset construction is verified, not assumed",
+      "becomes": "Supplementary Note 1: Dataset construction is verified, not assumed",
       "reason": "This is about the verification machinery: that the window counts were recomputed rather than trusted. A reader needs to know it was done, not how the check works.",
       "main_retains": "One sentence at the end of 4.4 stating that every window count in Table 1 is regenerated from the recordings by the released code, and that Arm B's counts are independently checkable without them, with a pointer to the supplementary section and to results/README.md."
     },
@@ -397,7 +397,7 @@
     },
     "7.8 Where threshold selection helped, the scores were stably offset": {
       "dest": "SUPPLEMENTARY",
-      "becomes": "Supplementary Note 2 — Where threshold selection helped, the scores were stably offset",
+      "becomes": "Supplementary Note 2: Where threshold selection helped, the scores were stably offset",
       "reason": "A sensitivity analysis on a secondary intervention. Threshold selection is not the paper's proposal; recalibration is. The full per-arm, per-architecture offset analysis is supporting evidence for a negative result.",
       "main_retains": "In 7.6 and again in 8.6: the sentence naming the single architecture-and-arm combination where threshold selection helped, with its value and the statement that it did not help in the others, and a pointer to the supplementary section for the per-fold offsets."
     },
@@ -413,7 +413,7 @@
     },
     "Coverage of each analysis": {
       "dest": "SUPPLEMENTARY",
-      "becomes": "Supplementary Note 3 — Coverage of each analysis",
+      "becomes": "Supplementary Note 3: Coverage of each analysis",
       "reason": "A completeness audit: which of the three constructions each analysis covers, and where a blank means missing coverage. It is about the study's own gaps rather than about its findings.",
       "main_retains": "The statement, in the Section 7 opening, that a finding is claimed for all three constructions only where it replicates on all three, and that the analyses not covering all three are named in Table S3 -- plus, in 8.10, the limitation that the calibration analysis has released per-window scores for Arm A alone."
     },

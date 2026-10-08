@@ -65,3 +65,10 @@ docx/
 #   manuscript/  the section files the manuscript is built from
 # A .gitignore that swallowed any of those would turn a reproducible package back
 # into a claim, which is the failure this repository exists to avoid.
+
+# 8 October 2026. Built submission copies, the same as docx/ above. The directory
+# was left behind holding build 3c5cb5bf85fd after the manuscript moved to
+# e2947f1c635f, which is exactly the superseded-draft hazard this repository was
+# reorganised to remove: a reviewer opens the newest-looking folder and quotes a
+# sentence the current manuscript no longer contains.
+final/

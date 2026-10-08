@@ -31,8 +31,8 @@ three constructions and is significant on none, so only the claim about the sing
 compact architecture survives.
 
 **Both design questions were answered, and asymmetrically.** Balancing moves the
-intermediate architectures — DeepConvNet and CNN-BiLSTM gain 0.0217 and 0.0259 in
-ROC-AUC, both p = 0.0488, while EEGNet moves by 0.0009 — whereas trimming moves
+intermediate architectures: DeepConvNet and CNN-BiLSTM gain 0.0217 and 0.0259 in
+ROC-AUC, both p = 0.0488, while EEGNet moves by 0.0009, whereas trimming moves
 nothing, **no test of the twenty reaching significance** (smallest p = 0.1309) despite
 discarding roughly 7 % of the windows. With ten subjects that is weak evidence of
 absence rather than evidence of none, and the fourth cell was not run, so the trimming
@@ -60,6 +60,4 @@ and one simulator protocol.
 > reference से ऊपर और वही दो नीचे; और एक logistic fit सबको नीचे ले आता है बिना ranking बदले।
 > एक परिकल्पना — "parameters कम तो बेहतर" — जाँच कर हटा दी गई। और एक design सवाल का जवाब मिला:
 > बीच के models का क्रम balancing बदलता है, trimming नहीं।
-
----
 

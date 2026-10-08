@@ -103,23 +103,23 @@ result towards the subjects with the longest usable recordings. An equal budget 
 therefore drawn from every subject, the budget being the smallest subject total, and
 windows within a subject were drawn without replacement using a fixed seed.
 
-Three arms were constructed from two binary choices — whether recordings are trimmed
-to a common length, and how each subject's class ratio is handled — three of the four
+Three arms were constructed from two binary choices (whether recordings are trimmed
+to a common length, and how each subject's class ratio is handled), three of the four
 combinations being run.
 
-**Arm A — trimmed, drowsy-preserving.** Every recording was first trimmed to the
+**Arm A: trimmed, drowsy-preserving.** Every recording was first trimmed to the
 length of the shortest, 887,040 samples (1.925 h), keeping the later portion, so
 that all sessions contribute an equal duration; total duration is then 38.5 h. All
 drowsy windows of a subject were retained and the budget filled with alert windows.
 This yields **9,260 windows, 926 per subject, of which 770 (8.32 %) are drowsy**.
 
-**Arm B — untrimmed, prevalence-preserving.** No trimming; the full 40.29 h is
+**Arm B: untrimmed, prevalence-preserving.** No trimming; the full 40.29 h is
 used. The number of drowsy windows kept for a subject is the budget multiplied by
 that subject's own prevalence, so each subject's class ratio is carried through
 unchanged. This yields **9,920 windows, 992 per subject, of which 688 (6.94 %) are
 drowsy**.
 
-**Arm C — trimmed, prevalence-preserving.** Trimming as in Arm A, balancing as in
+**Arm C: trimmed, prevalence-preserving.** Trimming as in Arm A, balancing as in
 Arm B. This yields **9,260 windows, 926 per subject, of which 673 (7.27 %) are
 drowsy**.
 

@@ -185,7 +185,11 @@ def test_a_renamed_heading_is_refused_rather_than_guessed():
 
 def test_a_section_without_bullets_is_refused():
     text = manuscript_text()
-    tampered = re.sub(r"(## Highlights\n)(.*?)(\n---)", r"\1\n\3", text, flags=re.S)
+    # Anchored on the next heading, not on a horizontal rule: the rules were removed
+    # from the manuscript on 8 October 2026, the pattern then matched nothing, and the
+    # "corruption did not fire" line below is what said so instead of the test
+    # quietly passing on an unmodified manuscript.
+    tampered = re.sub(r"(## Highlights\n)(.*?)(\n## )", r"\1\n\3", text, flags=re.S)
     assert tampered != text, "the corruption did not fire"
     with pytest.raises(SystemExit):
         B.bullets_from(tampered)

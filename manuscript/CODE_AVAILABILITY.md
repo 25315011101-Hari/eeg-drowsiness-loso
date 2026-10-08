@@ -44,8 +44,6 @@ reproducibility detail in the body rather than in a back-matter statement.
 > reference implementation [A1], obtained from
 > https://github.com/vlawhern/arl-eegmodels.
 
----
-
 <!-- not-for-submission:start -->
 
 ## Longer version (for the end of Methods)
@@ -88,8 +86,6 @@ reproducibility detail in the body rather than in a back-matter statement.
 > the repeated-execution check of Section 7.7 quantifies what varies between
 > identical runs, and the reported seed-level standard deviations should be read
 > as lower bounds for every architecture except EEGNet.
-
----
 
 ## Note on the false-positive correction (16 September 2026)
 

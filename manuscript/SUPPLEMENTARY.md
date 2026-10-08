@@ -11,13 +11,11 @@ its place so that the claim it supports is still made and still checkable there.
 
 *Cross-references of the form "Section 7.6" refer to the main article.*
 
----
-
-## Supplementary Figure S1 — the whole comparison on one page
+## Supplementary Figure S1: the whole comparison on one page
 
 Cited at the opening of Section 7 of the article. It is supplementary rather than a
-main figure because its reliability panels can be drawn only for Arm A — the one
-construction whose per-window scores are released — and the article reports findings
+main figure because its reliability panels can be drawn only for Arm A (the one
+construction whose per-window scores are released) and the article reports findings
 where they replicate on all three.
 
 ![Figure S1. Five architectures, three constructions, one page.](../figures/figureS1_overview.png)
@@ -40,9 +38,7 @@ where they replicate on all three.
 > be identified by counting as well as by hue, and the palette was checked for
 > colour-vision deficiency rather than chosen by eye.
 
----
-
-## Supplementary Note 1 — Dataset construction is verified, not assumed
+## Supplementary Note 1: Dataset construction is verified, not assumed
 
 The construction script performs two checks on every run and writes nothing unless
 both pass. The **internal** check recomputes, from the raw counts that run itself
@@ -56,8 +52,6 @@ their targets exactly: 9,260 / 770, 9,920 / 688 and 9,260 / 673, with all ten
 per-subject counts matching in every case. The produced file carries its own provenance stamp: the trimming mode,
 the balancing mode, the subject list and the per-subject drowsy counts are stored
 alongside the arrays, and every downstream script asserts them before training.
-
----
 
 **Table S1. Windows available per subject before any construction rule is applied.**
 Counts pool each subject's two sessions. Prevalence here is the recording's own
@@ -76,9 +70,7 @@ drowsy fraction; the constructions in Table 1 change it.
 | S9 | 1,431 | 7 | 1,424 | 0.49 % |
 | S10 | 1,417 | 10 | 1,407 | 0.71 % |
 
----
-
-## Supplementary Note 2 — Where threshold selection helped, the scores were stably offset
+## Supplementary Note 2: Where threshold selection helped, the scores were stably offset
 
 Thresholds maximising F1 and maximising balanced accuracy were selected out of
 subject, on the same nine-subject basis as the calibrators of Section 7.6, and applied
@@ -86,7 +78,7 @@ to the held-out subject. The analysis covers the three architectures per arm for
 which probability files were retained, on **Arms A and C**; it was not run on Arm B.
 Each entry is a paired test on the ten subject-level differences.
 
-**Arm A** — CNN, CNN-BiLSTM, EEGNet
+**Arm A**: CNN, CNN-BiLSTM, EEGNet
 
 | Model | Rule | Balanced accuracy | F1 |
 |---|---|---|---|
@@ -97,7 +89,7 @@ Each entry is a paired test on the ten subject-level differences.
 | EEGNet | F1-optimal | 0.709 → 0.667, **p = 0.0273** | 0.389 → 0.348, p = 0.1641 |
 | EEGNet | BA-optimal | 0.709 → 0.707, p = 0.8457 | 0.389 → 0.368, p = 0.3594 |
 
-**Arm C** — DeepConvNet, EEGNet, ShallowConvNet
+**Arm C**: DeepConvNet, EEGNet, ShallowConvNet
 
 | Model | Rule | Balanced accuracy | F1 |
 |---|---|---|---|
@@ -110,7 +102,7 @@ Each entry is a paired test on the ten subject-level differences.
 
 **Across the twenty-four tests, seven changes reach significance: three gains and
 four losses, and all three gains belong to one architecture.** DeepConvNet on Arm C
-improves under both rules — balanced accuracy 0.628 → 0.661 and F1 0.300 → 0.342
+improves under both rules: balanced accuracy 0.628 → 0.661 and F1 0.300 → 0.342
 under the F1-optimal rule, balanced accuracy 0.628 → 0.694 under the
 balanced-accuracy rule. Every other architecture on either arm either does not move
 or moves down, and all four losses are the same failure: the F1-optimal rule
@@ -146,7 +138,7 @@ CNN's F1-optimal threshold has a spread of 0.1626 on a mean of 0.4606 (a third o
 
 There is a symmetry worth stating. **The architecture that needed recalibration
 least (Section 7.6: DeepConvNet, whose raw calibration was already below the
-reference — as was CNN's — and the only architecture Platt scaling improved on
+reference, as was CNN's, and the only architecture Platt scaling improved on
 neither Brier score nor calibration error, the CNN having failed only on the latter
 at p = 0.0840) is the one that threshold selection helped most.** The two operations address the same
 defect from opposite ends: recalibration reshapes the score distribution so that a
@@ -156,19 +148,17 @@ well-shaped but shifted is helped by the second and not the first; an architectu
 whose scores are mis-shaped is helped by the first and not the second.
 
 Recalibration remains the preferable route in general, for three reasons: it applies
-more widely — every architecture whose raw calibration was above the class-prior
+more widely: every architecture whose raw calibration was above the class-prior
 reference improved significantly on both Brier score and expected calibration error,
 six of six across the three arms, against one architecture of six that threshold
-selection helped — the Platt route leaves the subject-averaged ranking metrics
+selection helped; the Platt route leaves the subject-averaged ranking metrics
 unchanged at the reported precision, which was measured rather than guaranteed and
 is *not* true of isotonic regression on the same folds (Section 6.6), and it
 preserves a fixed, interpretable 0.5 threshold. But the blanket statement that threshold
 selection never helps, made in an earlier analysis on Arm A evidence alone, is
 withdrawn.
 
----
-
-## Supplementary Note 3 — Coverage of each analysis
+## Supplementary Note 3: Coverage of each analysis
 
 Stated once, so that no section has to be read as covering more than it does.
 **Table S3** gives it.
@@ -189,8 +179,6 @@ Per-window probability files are what the last four rows require, and they were
 retained for three architectures per arm. The Arm A set differs from the Arm B and
 Arm C set, so all five architectures are covered on at least one construction, and
 EEGNet on all three.
-
----
 
 **Table S5. Multiplicity, per analysis family.** Comparisons performed, those reaching
 the nominal level, and those surviving Benjamini–Hochberg and Benjamini–Yekutieli
@@ -219,10 +207,8 @@ per-family rows above it and the two-way split below. Generated by
 | drowsy-count / prevalence family | 45 | 32 | 32 | 30 |
 | remaining comparisons | 145 | 50 | 22 | 0 |
 
----
-
 **Table S2. Pooled confusion matrices at the default 0.5 threshold, all three
-constructions — complete.** This is Table 4 of the article with the four raw counts
+constructions, complete.** This is Table 4 of the article with the four raw counts
 restored. Counts are summed over the ten folds within a seed and then averaged over
 the five seeds. The four count columns are seed means and carry no ±, since a count
 rounded to the nearest window would carry a dispersion narrower than the rounding.
@@ -247,11 +233,9 @@ does not, for the reason given with Table 4.
 | **C** | CNN-BiLSTM | 7,774 | 813 | 180 | 493 | 0.732 ± 0.062 | 0.377 | 89.28 ± 0.87 % |
 | **C** | ShallowConvNet | 7,092 | 1,495 | 155 | 518 | 0.770 ± 0.057 | 0.257 | 82.19 ± 1.54 % |
 
----
-
 
 **Table S4. Expected calibration error and Brier score, raw and after each
-recalibration, all three constructions — complete.** This is Table 6 of the article
+recalibration, all three constructions, complete.** This is Table 6 of the article
 with the three expected-calibration-error columns restored. Only three architectures
 per construction retained per-window probabilities, and the two sets differ, so
 between them all five are covered and only EEGNet is covered on all three. Bold marks
@@ -269,6 +253,4 @@ class-prior Brier reference to below it.
 | **C** | DeepConvNet | 0.0460 | 0.0502 | 0.0509 | 0.0511 | 0.0529 | 0.0528 |
 | **C** | EEGNet | 0.1918 | 0.0580 | 0.0576 | 0.0952 | **0.0573** | 0.0551 |
 | **C** | ShallowConvNet | 0.2001 | 0.0724 | 0.0709 | 0.1383 | **0.0658** | 0.0663 |
-
----
 

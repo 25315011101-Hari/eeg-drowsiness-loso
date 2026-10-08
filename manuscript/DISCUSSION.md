@@ -19,8 +19,6 @@ than a section of its own: it constrains the claims made in Section 8.1 to Secti
 better beside them than after them.
 <!-- not-for-submission:end -->
 
----
-
 The results section reports what was measured. This section states what those
 measurements do and do not license, taking the findings in the order in which a
 reader is likely to question them.
@@ -45,8 +43,8 @@ separate readily on balanced accuracy, four to five of six per arm, Section 8.2'
 ablation among them: the architectures are distinguishable, but not by how well they
 order windows.
 
-**The capacity hypothesis is withdrawn.** The natural reading — that a smaller model
-wins because the training set is small — was tested as a rank correlation between
+**The capacity hypothesis is withdrawn.** The natural reading (that a smaller model
+wins because the training set is small) was tested as a rank correlation between
 parameter count and ROC-AUC, giving ρ = −0.900 (p = 0.0833), −0.500 (0.4500) and
 −0.100 (0.9500), significant on none and decaying monotonically to nothing. Two
 constructions would support only the weaker description "not replicated"; the third is
@@ -145,7 +143,7 @@ itself (0.0832, 0.0694, 0.0727), rather than against 0.5.
 ## 8.4 Of the two construction choices, balancing is the one that matters
 
 Two constructions alone cannot say which construction
-choice — trimming to equal duration, or how the class ratio is handled — is
+choice (trimming to equal duration, or how the class ratio is handled) is
 responsible for the differences between arms, because Arms A and B differ in both. **Arm C settles both**, completing three of the
 four cells and so giving two controlled contrasts: A and C share their trimming and
 differ only in balancing, B and C share their balancing rule and differ only in
@@ -174,8 +172,8 @@ the two constructions differing only in balancing, against 0.0217 and 0.0259 for
 two largest architectures.
 
 The prevalence-sensitive metrics move the other way for the architectures that do not
-gain — ShallowConvNet's PR-AUC falls 0.411 → 0.372 (p = 0.0039), the CNN's
-0.338 → 0.295 (p = 0.0020) — which is expected at Arm C's lower prevalence rather
+gain: ShallowConvNet's PR-AUC falls 0.411 → 0.372 (p = 0.0039), the CNN's
+0.338 → 0.295 (p = 0.0020), which is expected at Arm C's lower prevalence rather
 than contradictory. Reporting both directions is the point: one construction change
 helps one group on one family of metrics and penalises another group on another.
 
@@ -187,7 +185,7 @@ helps one group on one family of metrics and penalises another group on another.
 ## 8.5 Ranking quality and probability reliability are separate properties
 
 The clearest replication in the study is the Brier partition, which now holds three
-times (**Figure 5**). Against the class-prior reference π(1 − π) — 0.0762, 0.0645, 0.0674 — the same three architectures exceed it on all three constructions (EEGNet,
+times (**Figure 5**). Against the class-prior reference π(1 − π) (0.0762, 0.0645, 0.0674), the same three architectures exceed it on all three constructions (EEGNet,
 ShallowConvNet, CNN-BiLSTM) and the same two fall below (CNN, DeepConvNet), despite
 three different prevalences, two different window counts and three different
 reference values.
@@ -208,8 +206,8 @@ It is tempting to read the partition as an inverse coupling between ranking and
 reliability, but none is claimed: the rank correlation between ROC-AUC and raw Brier
 reaches significance on no arm and ranges from ρ = −0.100 to +0.800 with the choice
 of averaging and the construction, so it is not a measurement. What is claimed is
-only the separation — **the architectures with the strongest ranking performance were
-not those with the most reliable raw probabilities** — which rests on which side of
+only the separation: **the architectures with the strongest ranking performance were
+not those with the most reliable raw probabilities**, which rests on which side of
 the reference each falls, a sign rather than a rank, and does not depend on the
 estimator.
 
@@ -253,8 +251,8 @@ fitting a two-parameter correction to a distribution that does not need one.
 
 The interpretive weight rests on monotonicity, so monotonicity was measured rather
 than assumed. A logistic function of the logit is strictly increasing **when its
-fitted slope is positive**, and a negative slope — possible on a fold where scores
-anti-correlate with labels — would reverse the ranking instead of preserving it. On
+fitted slope is positive**, and a negative slope (possible on a fold where scores
+anti-correlate with labels) would reverse the ranking instead of preserving it. On
 Arm A, the construction whose per-window scores were retained, **all 150 fitted
 slopes are positive**, 0.3243 to 1.3312, and Platt moves ROC-AUC by at most 4 × 10⁻⁵
 and PR-AUC by at most 0.0034. Neither is exactly zero, for an identifiable reason
@@ -295,16 +293,16 @@ analyses: **the architecture that recalibration helped least is the one that thr
 selection helped most.** DeepConvNet is the only architecture whose raw calibration
 was already below the reference, the only one Platt scaling did not significantly
 improve, and the only one that gained from threshold selection. The two operations
-address the same defect from opposite ends — recalibration reshapes the score
+address the same defect from opposite ends: recalibration reshapes the score
 distribution so a fixed threshold is correct, threshold selection moves the threshold
-to where the unreshaped distribution has put it — so scores that are well-shaped but
+to where the unreshaped distribution has put it, so scores that are well-shaped but
 shifted are helped by the second and not the first, and mis-shaped scores by the first
 and not the second.
 
 The recommendation therefore stands for a stated reason rather than as a blanket
-result. Recalibration applies more widely — six of six architectures whose raw
+result. Recalibration applies more widely: six of six architectures whose raw
 calibration was above the reference improved significantly on both Brier score and
-calibration error, against one of six that threshold selection helped — the Platt
+calibration error, against one of six that threshold selection helped; the Platt
 route leaves the subject-averaged ranking metrics unchanged at the reported precision,
 and it preserves a fixed, interpretable operating point. **Recalibrate out of subject
 and keep a fixed threshold; select a threshold only where the score distribution is
@@ -323,9 +321,9 @@ assuming it.**
 
 For every architecture on every construction the standard deviation of subject-level
 PR-AUC across the ten subjects exceeds that across the five seed-level means by a
-wide margin — 12 to 48 times on Arm A (EEGNet 0.2692 against 0.0058, CNN 0.2399
+wide margin: 12 to 48 times on Arm A (EEGNet 0.2692 against 0.0058, CNN 0.2399
 against 0.0050, CNN-BiLSTM 0.2440 against 0.0207), 6 to 18 on Arm B, 10 to 36 on
-Arm C — and
+Arm C, and
 subject-level PR-AUC ranges from 0.027 to 0.810, 0.079 to 0.825 and 0.022 to 0.818,
 the worst subject being S9 on the trimmed constructions and S8 on the untrimmed one,
 the best S7 on all three.
@@ -345,9 +343,9 @@ The same relationship appears in the opposite sign from the other direction, and
 reported because a reviewer who computes it will find it. The ratio of PR-AUC to
 prevalence (the multiple of chance rather than the margin over it) correlates
 *negatively* with the event count, significantly on Arm B for four of five
-architectures — CNN-BiLSTM ρ = −0.879 (p = 0.0008), EEGNet −0.806 (0.0049), CNN
+architectures: CNN-BiLSTM ρ = −0.879 (p = 0.0008), EEGNet −0.806 (0.0049), CNN
 −0.709 (0.0217), ShallowConvNet −0.673 (0.0330), DeepConvNet −0.479 (0.162, not
-significant) — and for none on Arms A and C, where all five are still negative. There is no contradiction: absolute PR-AUC rises
+significant), and for none on Arms A and C, where all five are still negative. There is no contradiction: absolute PR-AUC rises
 with event count while the multiple of chance falls, the ordinary behaviour of a
 ratio whose denominator grows faster than its numerator. Citing only the favourable
 framing would be selective.
@@ -365,7 +363,7 @@ far one subject's result can be interpreted.
 ## 8.8 Reproducibility is architecture-dependent, and this affects how the tables are read
 
 Arm B was executed twice under identical preprocessing, seeds and validation-subject
-assignments — all 150 pairs confirmed identical — differing only in GPU
+assignments (all 150 pairs confirmed identical), differing only in GPU
 non-determinism. EEGNet reproduced to four decimal places, largest single-fold
 ROC-AUC difference 0.0002 and 27 of 50 folds identical to full precision;
 ShallowConvNet and DeepConvNet did not, at 0.2219 and 0.2020 with 1 and 0 folds
@@ -404,8 +402,8 @@ things follow.
 **On architecture.** EEGNet attains the highest subject-averaged ROC-AUC on all three
 constructions, is the only architecture whose advantage survives the construction
 choice that moves the others (Section 8.4), and the only one of three tested for
-reproducibility that reproduces across executions. It is not best on every measure —
-DeepConvNet is ahead of it on pooled Brier and pooled precision on Arm C — so this is
+reproducibility that reproduces across executions. It is not best on every measure:
+DeepConvNet is ahead of it on pooled Brier and pooled precision on Arm C, so this is
 a statement about ranking quality.
 
 **On probabilities.** EEGNet's raw scores should not be read as probabilities: their
@@ -418,8 +416,8 @@ calibrated out of subject and checked against the class-prior reference first.
 **On thresholds.** For EEGNet the F1-optimal rule transferred worse than leaving the
 threshold alone on both constructions where it was tested (balanced accuracy
 p = 0.0273 and p = 0.0098), while the balanced-accuracy rule moved it significantly on
-neither. **This evidence covers Arms A and C only — threshold selection was not run on
-Arm B** — so it supports validating a threshold rule separately rather than adopting
+neither. **This evidence covers Arms A and C only: threshold selection was not run on
+Arm B**, so it supports validating a threshold rule separately rather than adopting
 one on these two arms.
 
 **On uncertainty.** A figure quoted for expected performance should carry an interval
@@ -433,8 +431,6 @@ argument for the protocol used here.
 > **हिंदी।** निचोड़ — और यह सिर्फ़ इसी protocol के भीतर: compact model का ranking सबसे अच्छा रहा,
 > उसकी probabilities को out-of-subject logistic fit से ठीक करना ज़रूरी है, threshold का नियम अलग
 > से जाँचना होगा (Arm B पर चला ही नहीं), और अनिश्चितता subjects पर बतानी चाहिए।
-
----
 
 ## 8.10 Limitations
 
@@ -455,7 +451,7 @@ they bound the conclusions.
    are built from the same ten recordings and are not independent. A finding holding
    on all three is evidence that it is not specific to one evaluated construction
    choice, not external replication, and no such claim is made. Both factors are
-   isolated — A and C differ only in balancing, B and C only in trimming — but each by
+   isolated: A and C differ only in balancing, B and C only in trimming, but each by
    a single pair; the fourth cell, untrimmed with every drowsy window kept, was not run
    and would give a second instance of each contrast.
 
@@ -478,9 +474,9 @@ they bound the conclusions.
    untested on a third.
 
 5. **Four channels and one montage.** All results are for O1, O2, C3 and C4 at 128 Hz.
-   The architectures' relative standing may depend on the channel count — the
+   The architectures' relative standing may depend on the channel count: the
    depthwise-separable factorisation's advantage is plausibly tied to a small channel
-   set — and nothing here tests that.
+   set, and nothing here tests that.
 
 6. **One dataset, one recording protocol.** A single sustained-attention driving
    protocol with one annotation scheme. Labels from a different behavioural criterion,
@@ -498,8 +494,8 @@ they bound the conclusions.
    documented in the dataset README: volunteers were instructed to press an event
    button when they felt drowsy, and the annotation files contain the resulting
    event-button time marks. DD-Database is nevertheless a standalone deposit with no
-   accompanying article — the Dryad landing page lists no related work, the Zenodo
-   mirror no related publications, and no data descriptor exists in the usual venues —
+   accompanying article: the Dryad landing page lists no related work, the Zenodo
+   mirror no related publications, and no data descriptor exists in the usual venues,
    so the procedure is documented by the depositors but is not described in a
    peer-reviewed data descriptor. The documentation does not establish whether each
    mark represents the onset of a drowsiness episode or another point within it. The
@@ -539,8 +535,6 @@ they bound the conclusions.
 > नहीं है**, इसलिए labels किस मापदंड पर लगाए गए यह कहीं दर्ज नहीं। इससे models की आपसी तुलना पर
 > कोई असर नहीं पड़ता (सबको एक ही marks पर नापा गया), पर absolute आँकड़ों का बाहरी अर्थ सीमित हो
 > जाता है — यह साफ़ लिख दिया गया है।
-
----
 
 ## Notes for the next pass — not part of the paper
 

@@ -81,8 +81,8 @@ requirement (tools/journal_requirements.json, not_enforced_here.article_title).*
 
 Reported accuracies for EEG-based driver-drowsiness detection routinely exceed 90 %,
 yet cannot be interpreted without the class ratio and the majority-class baseline.
-We evaluate EEGNet, ShallowConvNet, a one-dimensional CNN, DeepConvNet and a CNN-
-BiLSTM on a four-channel montage under leave-one-subject-out cross-validation with
+We evaluate EEGNet, ShallowConvNet, a one-dimensional CNN, DeepConvNet and a
+CNN-BiLSTM on a four-channel montage under leave-one-subject-out cross-validation with
 five seeds, across three window-set constructions of the same ten recordings, giving
 750 folds. A finding is claimed for all three only where it replicates on all three;
 the three are cells of a two-by-two design of trimming against balancing, giving two

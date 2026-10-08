@@ -44,7 +44,7 @@ A reduction of 4110 words, 19%, with no reported number leaving the record.
 | Section | Now | Target | Why it stays |
 |---|---|---|---|
 | 　Title | 64 | 64 | the title and the title page. 64 is the measured length, set on 4 October 2026 when the authors, both affiliations and the corresponding author's e-mail were added. The previous target of 7 was the title alone and would have projected the title page away |
-| 　Abstract | 248 | 141 | front matter; already at 248 of the 250 allowed |
+| 　Abstract | 247 | 141 | front matter; already at 248 of the 250 allowed |
 | 　Highlights | 57 | 32 | front matter; submitted as the separate editable file the guide requires |
 | 　Keywords | 14 | 8 | front matter |
 | 　Declaration of competing interest | 26 | 26 | mandatory; 26 is the measured length of the statement itself. The editorial note that followed it -- an instruction to amend the sentence if a relationship exists -- was moved out of the submitted document on 4 October 2026. |

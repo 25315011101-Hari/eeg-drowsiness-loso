@@ -18,8 +18,8 @@ of Technology Bhopal, Bhopal, Madhya Pradesh 462003, India
 
 Reported accuracies for EEG-based driver-drowsiness detection routinely exceed 90 %,
 yet cannot be interpreted without the class ratio and the majority-class baseline.
-We evaluate EEGNet, ShallowConvNet, a one-dimensional CNN, DeepConvNet and a CNN-
-BiLSTM on a four-channel montage under leave-one-subject-out cross-validation with
+We evaluate EEGNet, ShallowConvNet, a one-dimensional CNN, DeepConvNet and a
+CNN-BiLSTM on a four-channel montage under leave-one-subject-out cross-validation with
 five seeds, across three window-set constructions of the same ten recordings, giving
 750 folds. A finding is claimed for all three only where it replicates on all three;
 the three are cells of a two-by-two design of trimming against balancing, giving two
@@ -2524,5 +2524,5 @@ probability. *Monthly Weather Review*, 78(1), 1–3.
 https://doi.org/10.1175/1520-0493(1950)078<0001:VOFEIT>2.0.CO;2
 
 
-*Build e2947f1c635f · 2026-10-08 · 24883 words · registry 1977 rows.*
+*Build ac8042372e15 · 2026-10-08 · 24882 words · registry 1977 rows.*
 *Rebuild: `python3 tools/build_manuscript.py manuscript manuscript/MANUSCRIPT.md`. A copy whose build id differs from the one the repository produces is not the current manuscript.*

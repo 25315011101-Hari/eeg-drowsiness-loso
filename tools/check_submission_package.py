@@ -61,6 +61,18 @@ EXPECTED = {
 
 PLACEHOLDER = re.compile(r"<[A-Za-z][^<>\n]{2,60}>")
 
+# The declarations the article has to carry, by the heading each one is written under.
+# Named here rather than counted, because the failure this catches is one of them
+# going missing, and a count cannot tell you which. The wording of each declaration is
+# the authors'; this only asks whether it is in the file that leaves the building.
+DECLARATIONS = [
+    "Declaration of competing interest",
+    "CRediT author contribution statement",
+    "Acknowledgements",
+    "Funding",
+    "Data availability",
+]
+
 
 def say(ok, label, detail=""):
     print("  %-22s %-4s %s" % (label, "PASS" if ok else "FAIL", detail))
@@ -80,6 +92,20 @@ def find(out_dir, pattern, bid):
             if re.match(r"^%s_BSPC_\d{4}-\d{2}-\d{2}_build_[0-9a-f]+\.%s$"
                         % (re.escape(label), ext), n)]
     return hits
+
+
+def missing_declarations(path):
+    """Which required declarations are absent from the built .docx.
+
+    A function rather than four lines inside run(), so that a test can call it on a
+    real built document. The comparison is over the document's visible text: the
+    builder strips the not-for-submission blocks, so a declaration that survives only
+    inside one of those is absent here, which is the point.
+    """
+    with zipfile.ZipFile(path) as z:
+        doc = z.read("word/document.xml").decode("utf-8")
+    text = "".join(re.findall(r"<w:t[^>]*>([^<]*)</w:t>", doc))
+    return [d for d in DECLARATIONS if d not in text]
 
 
 def pdf_text(path):
@@ -179,6 +205,19 @@ def main(argv):
                   "%d bullets, longest %d of %d characters"
                   % (len(bullets), max(len(b) for b in bullets), L["highlight_chars"])
                   if not (hp or over) else (hp[0] if hp else "a bullet is over the limit")))
+
+    # 3a. the declarations the journal requires are actually in the submitted file
+    #
+    # They are checked in the BUILT .docx rather than in the sources, because the
+    # builder strips the not-for-submission blocks and a declaration that only exists
+    # inside one of those would read as present everywhere except where it counts. The
+    # competing-interest declaration also goes through the journal's own tool; that
+    # submission cannot be seen from here, and this check is not a substitute for it.
+    absent = missing_declarations(paths["manuscript docx"])
+    ok.append(say(not absent, "declarations present",
+                  "all %d in the submitted .docx: %s"
+                  % (len(DECLARATIONS), ", ".join(DECLARATIONS))
+                  if not absent else "missing from the .docx: " + ", ".join(absent)))
 
     # 4. no two words printed on top of each other, in either PDF
     for label in ("manuscript pdf", "supplementary pdf"):

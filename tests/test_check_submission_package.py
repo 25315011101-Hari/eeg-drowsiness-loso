@@ -167,6 +167,52 @@ def test_the_pdf_and_the_docx_are_not_confused(tmp_path):
         ["Manuscript_BSPC_2026-10-07_build_abc123abc123.pdf"]
 
 
+def test_the_declarations_are_named_rather_than_counted():
+    """Five headings, each spelled out, because a count cannot say which one went."""
+    assert len(P.DECLARATIONS) == len(set(P.DECLARATIONS))
+    for d in P.DECLARATIONS:
+        assert isinstance(d, str) and len(d) > 4, d
+    # The two the journal is strictest about must be among them.
+    assert "Declaration of competing interest" in P.DECLARATIONS
+    assert "Data availability" in P.DECLARATIONS
+
+
+def built_docx_with(tmp, text):
+    """The smallest thing missing_declarations() will read: a .docx holding `text`."""
+    import zipfile
+    path = os.path.join(tmp, "m.docx")
+    body = "".join("<w:p><w:r><w:t>%s</w:t></w:r></w:p>" % t for t in text)
+    with zipfile.ZipFile(path, "w") as z:
+        z.writestr("word/document.xml",
+                   '<?xml version="1.0"?><w:document xmlns:w="w"><w:body>'
+                   + body + "</w:body></w:document>")
+    return path
+
+
+def test_a_document_carrying_every_declaration_passes(tmp_path):
+    path = built_docx_with(str(tmp_path), P.DECLARATIONS)
+    assert P.missing_declarations(path) == []
+
+
+def test_a_declaration_missing_from_the_submitted_file_is_caught(tmp_path):
+    """Drop each one in turn; each time, that one and only that one must be named."""
+    for dropped in P.DECLARATIONS:
+        kept = [d for d in P.DECLARATIONS if d != dropped]
+        assert dropped not in " ".join(kept), "the corruption did not fire for %r" % dropped
+        path = built_docx_with(str(tmp_path), kept)
+        assert P.missing_declarations(path) == [dropped], dropped
+
+
+def test_the_real_submitted_file_carries_them_all():
+    """Against the package in docx/, if it has been built. Skipped if it has not."""
+    import glob
+    hits = glob.glob(os.path.join(P.HERE, "docx", "Manuscript_*.docx")) or \
+        glob.glob(os.path.join(P.HERE, "pkg", "Manuscript_*.docx"))
+    if not hits:
+        pytest.skip("no built package to check; run the builders first")
+    assert P.missing_declarations(hits[0]) == []
+
+
 def test_a_missing_directory_is_refused_rather_than_passed(tmp_path):
     with pytest.raises(SystemExit):
         P.main([str(tmp_path / "there-is-no-such-directory")])
